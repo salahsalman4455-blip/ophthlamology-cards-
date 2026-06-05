@@ -6,7 +6,9 @@ import {
   HelpCircle,
   Eye, 
   CheckCircle2, 
-  ListFilter
+  ListFilter,
+  AlertTriangle,
+  AlertCircle
 } from 'lucide-react';
 import { Question, Chapter, DifficultyLevel } from '../types';
 
@@ -36,6 +38,42 @@ export default function StudySession({
   const [showAnswer, setShowAnswer] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [masteredThisSession, setMasteredThisSession] = useState<Set<string>>(new Set());
+
+  // Distraction tracking states
+  const [timeSpent, setTimeSpent] = useState(0);
+  const [showDistracted, setShowDistracted] = useState<boolean>(false);
+  const [hasReturned, setHasReturned] = useState(false);
+
+  const currentQuestion = sessionQuestions[currentIndex] || null;
+
+  // Reset distraction state when shifting questions
+  useEffect(() => {
+    setTimeSpent(0);
+    setShowDistracted(false);
+    setHasReturned(false);
+  }, [currentIndex, currentQuestion?.id]);
+
+  // Interval timer for question distraction detection
+  useEffect(() => {
+    if (showDistracted || isFinished || !currentQuestion || isTopicSelectorOpen) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setTimeSpent(prev => {
+        const nextTime = prev + 1;
+        // 3 minutes = 180 seconds
+        if (nextTime >= 180) {
+          clearInterval(interval);
+          setShowDistracted(true);
+          return 0; // reset counter after triggering
+        }
+        return nextTime;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentQuestion?.id, currentIndex, showDistracted, isFinished, isTopicSelectorOpen]);
 
   // 1. Process filtering by selected topics.
   const startSession = () => {
@@ -78,8 +116,6 @@ export default function StudySession({
       }
     });
   };
-
-  const currentQuestion = sessionQuestions[currentIndex] || null;
 
   const remainingCount = useMemo(() => {
     const uniqueIds = new Set(sessionQuestions.map(q => q.id));
@@ -131,6 +167,65 @@ export default function StudySession({
   return (
     <div id="study-session-container" className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
       
+      {/* Distraction Alerts */}
+      <AnimatePresence>
+        {showDistracted && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="bg-white rounded-[2rem] p-8 max-w-sm w-full text-center shadow-2xl border border-slate-100 flex flex-col items-center"
+              dir="rtl"
+            >
+              {!hasReturned ? (
+                <>
+                  <div className="w-20 h-20 bg-yellow-50 rounded-full flex items-center justify-center text-yellow-500 mb-6 shadow-inner animate-bounce">
+                    <AlertTriangle className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-3xl font-black text-yellow-500 mb-8 font-sans">
+                    متسرحش!
+                  </h3>
+                  <button
+                    onClick={() => {
+                      setShowDistracted(false);
+                      setHasReturned(true);
+                      setTimeSpent(0);
+                    }}
+                    className="w-full py-4 bg-yellow-450 hover:bg-yellow-500 text-slate-900 font-extrabold text-base rounded-2xl transition-all shadow-lg shadow-yellow-100 active:scale-95 bg-yellow-400"
+                  >
+                    يلا بينا
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div className="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center text-red-500 mb-6 shadow-inner animate-pulse">
+                    <AlertCircle className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-3xl font-black text-red-600 mb-8 font-sans">
+                    كفاية سرحان!
+                  </h3>
+                  <button
+                    onClick={() => {
+                      setShowDistracted(false);
+                      setTimeSpent(0);
+                    }}
+                    className="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-black text-base rounded-2xl transition-all shadow-lg shadow-red-200 active:scale-95"
+                  >
+                    يلا بينا
+                  </button>
+                </>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* 1. Topic Selection "Middle window" */}
       <AnimatePresence>
         {isTopicSelectorOpen && (
