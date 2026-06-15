@@ -5,6 +5,7 @@ export const CHAPTERS: Chapter[] = [
     id: 1,
     title: 'Eyelid',
     topics: [
+      'Anatomy & Physiology of the Eyelid',
       'Blepharitis',
       'Inflammations of the Eyelid Glands (Hordeolum & Chalazion)',
       'Disorders of Eyelashes (Distichiasis & Trichiasis)',
@@ -20,13 +21,15 @@ export const CHAPTERS: Chapter[] = [
     topics: [
       'Tear Film & Dry Eye Syndrome',
       'Clinical Approach & Workup of Watering (Epiphora)',
-      'Acute & Chronic Dacryocystitis'
+      'Acute & Chronic Dacryocystitis',
+      'Anatomy & Diseases of the Lacrimal Gland'
     ]
   },
   {
     id: 3,
     title: 'Conjunctiva',
     topics: [
+      'Anatomy, Histology & Vessels of the Conjunctiva',
       'Acute Bacterial Conjunctivitis (Mucopurulent & Purulent)',
       'Ophthalmia Neonatorum & Inclusion Conjunctivitis',
       'Viral Conjunctivitis',
