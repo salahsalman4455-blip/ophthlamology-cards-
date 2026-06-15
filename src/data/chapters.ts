@@ -53,11 +53,13 @@ export const CHAPTERS: Chapter[] = [
     id: 5,
     title: 'Lens',
     topics: [
+      'Applied Anatomy & Physiology of the Crystalline Lens',
       'Congenital & Developmental Cataract',
       'Senile Cortical Cataract (Progression & Hypermaturity)',
       'Senile Nuclear Cataract',
       'Preoperative Evaluation & Surgical Techniques',
-      'Complicated & Traumatic Cataract'
+      'Complicated & Traumatic Cataract',
+      'Lens Displacement & Aphakia'
     ]
   },
   {
@@ -96,6 +98,7 @@ export const CHAPTERS: Chapter[] = [
     id: 9,
     title: 'Uveitis',
     topics: [
+      'Anatomy & Physiology of the Uveal Tract',
       'Anterior Uveitis (Iridocyclitis)',
       'Suppurative Uveitis (Endophthalmitis & Panophthalmitis)',
       'Systemic Syndromes & Optic Atrophy Comparison'

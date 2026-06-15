@@ -1575,14 +1575,66 @@ export const INITIAL_QUESTIONS: Question[] = [
   // --- CHAPTER 5: LENS ---
   // ===========================================================================
 
-  // --- Topic 1: Congenital & Developmental Cataract ---
+  // --- Topic 1: Applied Anatomy & Physiology of the Crystalline Lens ---
+  {
+    id: 'lens_anatomy_q1',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'Applied Anatomy of the Crystalline Lens',
+    content: 'What is the applied anatomy of the crystalline lens?',
+    answer: '1. Shape & Surfaces:\n   - It is a biconvex, transparent crystalline structure located in the anterior segment of the eye, directly behind the iris and pupil.\n   - It has two surfaces:\n     * Anterior Surface: Less convex (curvature radius of ~10 mm).\n     * Posterior Surface: More convex (curvature radius of ~6 mm).\n   - These two surfaces meet peripherally at the Equator.\n\n2. Suspension & Position:\n   - It is suspended in position behind the iris by the Zonules of Zinn (suspensory ligament of the lens), which attach to the ciliary body processes.\n\n3. Dimensions:\n   - Diameter: ~9-10 mm.\n   - Thickness: ~4 mm.',
+    isClinical: false,
+    topic: 'Applied Anatomy & Physiology of the Crystalline Lens'
+  },
+  {
+    id: 'lens_anatomy_q2',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'Structure of the Crystalline Lens',
+    content: 'Describe the anatomical structure of the lens.',
+    answer: 'The crystalline lens consists of three principal structures:\n\n1. Lens Capsule:\n   - A transparent, elastic, semipermeable basement membrane enclosing the entire lens.\n   - It is thicker anteriorly than posteriorly and is secreted by the anterior lens epithelium.\n   - It represents the thickest basement membrane in the human body and serves as the attachment point for the zonules of Zinn.\n\n2. Anterior Lens Epithelium:\n   - A single layer of cuboidal cells located immediately beneath the anterior capsule (absent on the posterior capsule).\n   - Peripherally at the equator, these cells remain active, dividing and elongating to form new lens fibers throughout life.\n\n3. Lens Fibers (Cortex and Nucleus):\n   - Elongated, ribbon-like, highly organized cellular structures devoid of nuclei to maintain transparency.\n   - Cortex: The outer, younger, softer layers of lens fibers.\n   - Nucleus: The central, older, harder layers of compressed lens fibers that sclerose progressively with age.\n   - Sutures: Linear joints where the lens fibers meet anteriorly (Y-shape) and posteriorly (inverted Y-shape).',
+    isClinical: false,
+    topic: 'Applied Anatomy & Physiology of the Crystalline Lens'
+  },
+  {
+    id: 'lens_anatomy_q3',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'Factors Maintaining Lens Transparency',
+    content: 'What factors maintain lens transparency?',
+    answer: 'Lens transparency is crucial for clear vision and is maintained by several unique mechanisms:\n\n1. Avascularity:\n   - The lens is completely devoid of blood vessels and lymphatics. It relies entirely on passive diffusion and active transport from the aqueous humor for nutrients and metabolic exchange.\n\n2. Highly Packed Lens Cells:\n   - The lens fibers are narrow, tightly packed together, and meticulously parallel, which minimizes light scattering at cell boundaries.\n\n3. Uniform Arrangement of Lens Proteins:\n   - The cellular proteins (crystallins) are distributed uniformly in high concentration, preventing structural irregularity.\n\n4. Semipermeable Lens Capsule:\n   - Acts as a selective physical barrier that controls the movement of molecules and prevents the entry of high-molecular-weight proteins or inflammatory mediators.\n\n5. Membrane Pump Mechanism (Dehydration Potency):\n   - An active sodium-potassium ATPase pump (Na+/K+-ATPase) located in the anterior epithelium continually pumps sodium out of the lens, which draws water out osmotically. This active mechanism maintains the lens in a state of relative dehydration (containing ~66% water). Disruptions to this pump cause hydration, swelling, and cataract formation.',
+    isClinical: false,
+    topic: 'Applied Anatomy & Physiology of the Crystalline Lens'
+  },
+  {
+    id: 'lens_anatomy_q4',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'Process of Accommodation in the Lens',
+    content: 'Explain the process of accommodation in the lens.',
+    answer: 'Accommodation is the active mechanism by which the eye increases its refractive power to focus on near objects:\n\n1. Trigger:\n   - Initiated by the perception of a blurred image on the retina when viewing a near object. This sends signals through the visual pathway and parasympathetic fibers (CN III) to the ciliary muscle.\n\n2. Muscle Contraction:\n   - The circular fibers of the ciliary muscle contract, which moves the ciliary body anteriorly and inward (closer to the lens equator).\n\n3. Zonular Laxity:\n   - Consequently, the tension on the suspensory ligaments (zonules of Zinn) is relaxed.\n\n4. Curvature Increase of Lens:\n   - Relaxed zonules allow the inherent elasticity of the lens capsule and fibers to round up the lens, increasing its biconvexity.\n   - The posterior surface curvature remains almost unchanged, but the anterior surface becomes highly convex (curvature radius decreases from 10 mm to ~6 mm).\n\n5. Refractive Convergence:\n   - This structural thickening increases the dioptric power of the eye, shifting the focal point forward to align perfectly with the retina.',
+    isClinical: false,
+    topic: 'Applied Anatomy & Physiology of the Crystalline Lens'
+  },
+
+  // --- Topic 2: Congenital & Developmental Cataract ---
   {
     id: 'lens_congenital_q1',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Congenital Cataract Etiologies',
-    content: 'Enumerate four major metabolic or maternal etiologies of Congenital Cataract.',
-    answer: '1. Maternal infection during the first trimester (particularly Rubella virus).\n2. Maternal malnutrition or infantile malnutrition (deficient Vitamin D, Calcium, or proteins).\n3. Metabolic disorders (Galactosemia, Galactokinase deficiency, or Lowe syndrome).\n4. Fetal hypoxia due to placental hemorrhage.',
+    title: 'Cataract Definition & Broad Classification',
+    content: 'What is a cataract, and how are cataracts broadly classified?',
+    answer: '1. Definition:\n   - Cataract is defined as any opacity of the crystalline lens or its capsule, regardless of whether it is visually significant.\n\n2. Broad Classification:\n   - Congenital/Developmental Cataract: Present at birth or during early childhood/development.\n   - Acquired Cataract: Develops later in life, and includes:\n     * Senile (Age-related) Cataract: The commonest form.\n     * Complicated Cataract: Secondary to local eye or systemic disease.\n     * Traumatic Cataract: Due to physical, chemical, or mechanical injury.\n     * Toxic Cataract: Induced by drugs (e.g., prolonged corticosteroid use) or toxins.\n     * Metabolic Cataract: Associated with systemic metabolic disorders.',
+    isClinical: false,
+    topic: 'Congenital & Developmental Cataract'
+  },
+  {
+    id: 'lens_congenital_q1_alt',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'Congenital and Developmental Cataract Features',
+    content: 'What is congenital and developmental cataract?',
+    answer: '1. Definition:\n   - It is an opacity of the crystalline lens or its capsule dating since birth or soon after (early childhood).\n\n2. General Features:\n   - It is usually bilateral.\n   - It is partial in most cases.\n   - It is stationary (rarely progresses, except in rubella total cataract).\n   - It is soft in consistency.',
     isClinical: false,
     topic: 'Congenital & Developmental Cataract'
   },
@@ -1590,9 +1642,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'lens_congenital_q2',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Congenital Cataract General Features',
-    content: 'List the general features that characterize a Congenital Cataract.',
-    answer: '1. It is usually bilateral.\n2. It is partial (visually significant or non-axial).\n3. It is stationary (rarely progresses, except in rubella total cataract).\n4. It is a soft cataract in consistency.',
+    title: 'Causes of Congenital Cataract',
+    content: 'What are the causes of congenital cataract?',
+    answer: 'Congenital and developmental cataracts arise from multiple factors:\n\n1. Hereditary/Genetic Factors:\n   - Responsible for ~1/3 of cases. Usually inherited as an Autosomal Dominant trait.\n   - Can be associated with chromosomal abnormalities (such as Down syndrome) or systemic syndromes (e.g., Lowe syndrome).\n\n2. Maternal/Prenatal Infections:\n   - Intrauterine infections during the first trimester (TORCH complex), especially Maternal Rubella. Other pathogens include Toxoplasmosis, CMV, and Syphilis.\n\n3. Metabolic Disorders in the Infant:\n   - Galactosemia (classic "oil-droplet" cataract).\n   - Infantile Hypoglycemia.\n   - Hypocalcemia/Hypoparathyroidism.\n\n4. Nutritional or Environmental Deficiencies:\n   - Maternal malnutrition or severe prenatal vitamin deficiencies (Vitamin D, A, folic acid) during pregnancy.\n\n5. Idiopathic:\n   - No identifiable cause can be discovered in a large percentage of cases.',
     isClinical: false,
     topic: 'Congenital & Developmental Cataract'
   },
@@ -1600,9 +1652,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'lens_congenital_q3',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Zonular (Lamellar) Cataract Presentation',
-    content: 'Describe the clinical presentation (symptoms and signs) of Zonular (Lamellar) Cataract.',
-    answer: 'Symptoms: The mother notices a white color in the child\'s pupil ("Leukocoria") and poor fixation due to dropped vision.\n\nSigns on oblique illumination/slit lamp: Grayish-white disc-shaped opacity in the central lens nucleus while the periphery is clear, with radial riders or spokes projecting out like a steering wheel.\n\nSigns on Red Reflex: Central dim or blackened reflex with a bright red peripheral reflex.',
+    title: 'Clinical Picture of Congenital Cataract',
+    content: 'Describe the clinical picture of congenital cataract.',
+    answer: '1. Symptoms:\n   - Asymptomatic if the opacity is small, partial, or peripheral.\n   - Leukocoria (white pupillary reflex): Noticed by the mother or pediatrician when the opacity is extensive.\n   - Defective Vision / Poor Fixation: The child fails to track moving objects or make eye contact.\n\n2. Signs & Assessment:\n   - Assessed by Visual Acuity (VA): Evaluated via fixation patterns (CSM), optokinetic nystagmus (OKN) drum, or Teller acuity cards.\n   - Oblique Illumination & Slit-lamp: Performed under full pupillary dilation to define the exact size and morphology.\n   - Red Reflex Examination: Shows a black or dimmed area against a bright red background.\n   - Nystagmus: Jerky or oscillating eye movements, which may develop especially in bilateral dense/extensive cases due to sensory deprivation.',
     isClinical: true,
     topic: 'Congenital & Developmental Cataract'
   },
@@ -1610,41 +1662,51 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'lens_congenital_q4',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Rubella Total Cataract Features',
-    content: 'Enumerate the systemic and ocular features associated with Rubella Total Cataract.',
-    answer: 'Systemic features: Microcephaly, mental retardation, deafness, and congenital heart defects (PDA, VSD).\n\nOcular features: Microphthalmos, buphthalmos, and total lens opacification with complete loss of the red reflex.',
-    isClinical: true,
+    title: 'Main Types of Congenital and Developmental Cataract',
+    content: 'What are the main types of congenital and developmental cataract?',
+    answer: 'Congenital and developmental cataracts are classified morphologically based on the location of the opacity:\n\n1. Anterior Polar Cataract: A small, highly defined white dot at the anterior pole of the lens. Visually insignificant.\n2. Zonular or Lamellar Cataract: A disk-shaped opacity wrapping around the central embryonic nucleus while the outer cortex remains clear. The commonest type.\n3. Posterior Polar Cataract: Opacity at the posterior pole. Dropping vision due to proximity to the nodal point.\n4. Blue-Dotted (Punctate) Cataract: Multiple tiny, translucent blue-white dots scattered through the cortex. Visually insignificant.\n5. Coronary Cataract: A ring of club-shaped peripheral opacities around the equator (resembling a crown), leaving the visual axis clear.\n6. Rubella Total Cataract: Dense, chalky-white total opacification.',
+    isClinical: false,
     topic: 'Congenital & Developmental Cataract'
   },
   {
     id: 'lens_congenital_q5',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Untreated Congenital Cataract Complications',
-    content: 'Enumerate three major functional complications of an untreated dense Congenital Cataract.',
-    answer: '1. Sensory deprivation amblyopia (lazy eye).\n2. Sensory nystagmus (in bilateral extensive cases).\n3. Strabismus / Squint (commonly in unilateral cases).',
-    isClinical: true,
+    title: 'Zonular or Lamellar Cataract Description',
+    content: 'Describe zonular or lamellar cataract.',
+    answer: 'Zonular (lamellar) cataract is the commonest form:\n\n1. Description:\n   - It is a disk-shaped opacity with a completely clear lens periphery.\n   - Shows outward-projecting linear spokes ("riders") extending from the central opacity like a steering wheel.\n\n2. Symptoms:\n   - Leukocoria (white pupil) if extensive.\n   - Defective vision of varying degrees depending on the size and density of the central opacity.\n\n3. Signs:\n   - On Red Reflex Examination: Shows central dim or black disk with a bright, clear red peripheral reflex on a dilated pupil.',
+    isClinical: false,
     topic: 'Congenital & Developmental Cataract'
   },
   {
     id: 'lens_congenital_q6',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Congenital Cataract Management & Technique',
-    content: 'State the management rules and the specific named surgical technique for Congenital Cataract.',
-    answer: '- Visually significant/dense cataract: Operated as early as possible (ASAP) to avoid amblyopia.\n- Non-visually significant (partial/peripheral): Follow-up until age 5 to test visual acuity.\n- Surgical technique of choice: "Lensectomy and anterior vitrectomy" performed via a pars plana or corneal approach.',
+    title: 'Posterior Polar and Rubella Cataract',
+    content: 'Describe posterior polar cataract and rubella cataract.',
+    answer: '1. Posterior Polar Cataract:\n   - Description: Localized strictly at the posterior pole of the lens capsule.\n   - Visual Impact: Causes a marked, profound drop in visual acuity because of its proximity to the theoretical nodal point of the eye\'s optical system. Rarely presents with visible leukocoria.\n   - Risk: High tendency of capsular rupture during cataract surgery.\n\n2. Rubella Total Cataract:\n   - Cause: Triggered by maternal rubella infection during the first trimester of pregnancy.\n   - Timeline: Starts as a nuclear cataract, then rapidly progresses to a dense, total cataract.\n   - Associated Features: Often associated with microphthalmos, deafness, and congenital cardiac defects (PDA, VSD).',
+    isClinical: true,
+    topic: 'Congenital & Developmental Cataract'
+  },
+  {
+    id: 'lens_congenital_q7',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'General Treatment Lines for Congenital Cataract',
+    content: 'Outline the general treatment lines for congenital cataract.',
+    answer: 'Management depends primarily on the density, size, and visual significance of the opacity:\n\n1. Visually Significant Cataracts (Dense and Complete, or Posterior Polar >3 mm):\n   - Action: Requires urgent surgical removal as early as possible (within the first 6 to 12 weeks of life) to prevent irreversible sensory deprivation amblyopia (lazy eye).\n   - Surgical Technique of Choice: "Lensectomy and anterior vitrectomy" performed via a pars plana or limbal approach.\n   - Rehabilitation: High-power pediatric contact lenses, spectacles, or intraocular lens (IOL) implantation (IOL is usually reserved for children over 2 years of age).\n\n2. Non-Significant Cataracts (Small, Peripheral, or Off-Center):\n   - Action: Follow-up and monitor visual development carefully.\n\n3. Amblyopia Therapy:\n   - Strict patching (occlusion therapy) of the stronger/sound eye is vital postoperatively to stimulate visual pathway development.',
     isClinical: true,
     topic: 'Congenital & Developmental Cataract'
   },
 
-  // --- Topic 2: Senile Cortical Cataract (Progression & Hypermaturity) ---
+  // --- Topic 3: Senile Cortical Cataract (Progression & Hypermaturity) ---
   {
     id: 'lens_cortical_q1',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Senile Cortical Cataract Stages',
-    content: 'List the four progressive clinical stages of a Senile Cortical Cataract.',
-    answer: '1. Incipient stage\n2. Immature stage\n3. Mature stage\n4. Hypermature stage',
+    title: 'Senile Cataract Definition & Main Forms',
+    content: 'What is senile cataract, and what are its main forms?',
+    answer: '1. Definition:\n   - Senile (age-related) cataract is an acquired progressive opacity in patients above 50 years of age, occurring in the absence of obvious local or systemic disease.\n\n2. Main Forms:\n   - Senile Cortical Cataract (~75% of cases).\n   - Senile Nuclear Cataract (~25% of cases).\n   - Cortico-nuclear Cataract (combined form).',
     isClinical: false,
     topic: 'Senile Cortical Cataract (Progression & Hypermaturity)'
   },
@@ -1652,51 +1714,21 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'lens_cortical_q2',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Incipient vs. Immature Stage',
-    content: 'Contrast between the symptoms and signs of the Incipient stage versus the Immature stage.',
-    answer: '- Incipient Stage: Symptoms include gradual visual drop, uniocular diplopia (irregular refraction), and haloes around light. Signs show peripheral wedge-shaped or triangular grayish-white opacities on a dilated pupil.\n- Immature Stage: Symptoms include marked visual drop, especially at night (night blindness). Signs show incomplete uniform gray-white opacification of the deep cortex, and the iris shadow is still present.',
-    isClinical: true,
-    topic: 'Senile Cortical Cataract (Progression & Hypermaturity)'
-  },
-  {
-    id: 'lens_cortical_q3',
-    chapterId: 5,
-    type: 'short-answer',
-    title: 'Intumescent Cataract & Glaucoma Link',
-    content: 'Define the Intumescent form of Immature Cataract and state its most dangerous clinical complication.',
-    answer: 'Definition: A form where rapid lens degeneration leads to water influx from the aqueous, causing the lens to become heavily swollen with a glistening capsule.\n\nComplication: Triggers secondary pupillary block glaucoma, known as Phacomorphic Glaucoma.',
-    isClinical: true,
-    topic: 'Senile Cortical Cataract (Progression & Hypermaturity)'
-  },
-  {
-    id: 'lens_cortical_q4',
-    chapterId: 5,
-    type: 'short-answer',
-    title: 'Mature vs. Hypermature Slit-Lamp Signs',
-    content: 'Contrast between Mature and Hypermature Cortical Cataract on slit-lamp examination.',
-    answer: '- Mature Cataract: Total grayish-white opacification of the cortex, and the iris shadow is completely absent (no clear zone remains between the iris and opacity).\n- Hypermature Cataract: Glistening calcium and cholesterol crystals deposit on a wrinkled/shrunken capsule. The cortical material liquefies and escapes, causing lens shrinkage, deep anterior chamber, and tremulous iris (Iridodonesis).',
-    isClinical: true,
-    topic: 'Senile Cortical Cataract (Progression & Hypermaturity)'
-  },
-  {
-    id: 'lens_cortical_q5',
-    chapterId: 5,
-    type: 'short-answer',
-    title: 'Morgagnian Hypermature Cataract Pathology',
-    content: 'Define the Morgagnian form of Hypermature Cataract and describe its pathology.',
-    answer: 'Definition: A specific type of hypermature cataract where the cortex completely liquefies into a milky fluid.\n\nPathology: Impaired capsule permeability causes fluid retention and water absorption. The dense, proteolysis-resistant brown nucleus becomes freely mobile and sinks inferiorly within the liquefied cortex.',
+    title: 'Pathogenesis & Stages of Senile Cortical Cataract',
+    content: 'Describe the pathogenesis and stages of senile cortical cataract.',
+    answer: '1. Pathogenesis:\n   - Driven by lens hydration (osmotic water influx due to Na+/K+-ATPase pump decline) followed by denaturation and coagulation of structural lens proteins.\n\n2. The Five Progressive Clinical Stages:\n   - Incipient Stage: Characterized by peripheral water clefts and spokes. Symptoms include mild distortion or uniocular diplopia (due to irregular refraction).\n   - Immature Stage: Opacification spreads into the cortex but remains incomplete. Symptoms include progressive night blindness. On clinical exam, the "iris shadow" is still present.\n   - Intumescent Stage: The cortical fibers absorb water rapidly, swelling with a glistening/pearly capsule. Can narrow the anterior chamber angle and precipitate acute phacomorphic secondary angle-closure glaucoma.\n   - Mature Stage: The entire cortex is completely opacified, turning solid grayish-white. No clear cortex remains, and the "iris shadow" is completely absent.\n   - Hypermature Stage (Liquefactive / Morgagnian):\n     * Morgagnian Form: The cortex undergoes total enzymatic proteolysis and liquefies into milky-white fluid. The dense, brown, heavy nucleus is no longer suspended and sinks inferiorly.\n     * Sclerotic Form: The fluid leaks out through the capsule, leading to a small, wrinkled, flat, heavily calcified lens with iridodonesis (tremulous iris) and deep anterior chamber.',
     isClinical: true,
     topic: 'Senile Cortical Cataract (Progression & Hypermaturity)'
   },
 
-  // --- Topic 3: Senile Nuclear Cataract ---
+  // --- Topic 4: Senile Nuclear Cataract ---
   {
     id: 'lens_nuclear_q1',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Nuclear Cataract Pathogenesis & "Second Sight"',
-    content: 'Describe the pathogenesis and the specific hallmark symptom of a Senile Nuclear Cataract.',
-    answer: 'Pathogenesis: Exaggerated dehydration and compression of the lens nucleus, leading to denaturation and progressive opacification of the nuclear proteins.\n\nHallmark Symptom: Progressive index myopia, which temporarily corrects the patient\'s presbyopia, allowing them to read without glasses again, known as "Second Sight".',
+    title: 'Features of Senile Nuclear Cataract',
+    content: 'What are the features of senile nuclear cataract?',
+    answer: '1. Pathogenesis:\n   - It is a bilateral, progressive, hard cataract caused by nuclear dehydration, sclerosis (hardening), and progressive yellow-to-brown urochrome pigment deposition.\n\n2. Clinical Features & Symptoms:\n   - Index Myopia and "Second Sight": The increased refractive index of the sclerosed nucleus temporarily corrects presbyopia, allowing the patient to read again without near spectacles.\n   - Day Blindness (Hemeralopia): Bright daylight induces miosis, restricting incoming rays strictly to the central nuclear opacity and severely reducing vision.\n   - Progressive Central Vision Loss: Distance vision drops significantly.\n   - Slit-lamp exam: Shows yellow, amber, or black central nuclear coloration.\n   - Iris shadow: Typically negative (no clear cortical layer remains over the nuclear opacity).',
     isClinical: true,
     topic: 'Senile Nuclear Cataract'
   },
@@ -1704,41 +1736,21 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'lens_nuclear_q2',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Nuclear Cataract & "Day Blindness"',
-    content: 'Explain why a patient with a Nuclear Cataract complains specifically of "Day Blindness".',
-    answer: 'Because the nuclear opacity is located strictly in the center of the lens. Exposure to bright daylight induces physiological miosis (pupillary constriction), which confines light rays strictly to the central opaque zone, markedly dropping vision during the day.',
-    isClinical: true,
-    topic: 'Senile Nuclear Cataract'
-  },
-  {
-    id: 'lens_nuclear_q3',
-    chapterId: 5,
-    type: 'short-answer',
-    title: 'Sclerosis vs. Pathological Nuclear Cataract',
-    content: 'Provide the four-point differential diagnosis between Physiological Nuclear Sclerosis and Pathological Nuclear Cataract.',
-    answer: '1. Cause: Exaggerated physiological dehydration/compression vs Pathological denaturation and opacification.\n2. Visual Acuity: Can be corrected to normal levels with glasses vs Not improved by spectacles.\n3. Oblique Illumination: Grayish appearance of the nucleus vs Yellow, yellow-brown, or black nucleus.\n4. Red Reflex: Complete red reflex vs Black center surrounded by a red periphery.',
-    isClinical: true,
-    topic: 'Senile Nuclear Cataract'
-  },
-  {
-    id: 'lens_nuclear_q4',
-    chapterId: 5,
-    type: 'short-answer',
-    title: 'Senile Nuclear Sclerosis Clinical Presentation',
-    content: 'Describe the expected clinical presentation of Senile Nuclear Sclerosis regarding: Visual Acuity, Oblique Illumination, and Red Reflex.',
-    answer: '- Visual Acuity: Decreased for distance, but can be corrected back to normal levels using spectacle lenses (index myopic shift allows reading without near glasses).\n- Oblique Illumination: Shows a distinct grayish or dusky appearance localized within the central lens nucleus.\n- Red Reflex: Shows a complete, uninterrupted red reflex across the entire pupil.',
+    title: 'Differentiating Nuclear Sclerosis from Nuclear Cataract',
+    content: 'How do you differentiate nuclear sclerosis from nuclear cataract?',
+    answer: '1. Physiological Nuclear Sclerosis:\n   - Nature: Exaggerated, normal physiological aging change of the lens nucleus.\n   - Visual Acuity: Normal or near-normal; can be corrected to normal levels with spectacle lenses.\n   - Slit-lamp: Shows mild grayish or uniform central glare.\n   - Red Reflex: Shows a complete, uninterrupted red fundus reflex.\n\n2. Pathological Nuclear Cataract:\n   - Nature: True pathological denaturation and opacification of the nuclear proteins.\n   - Visual Acuity: Significantly reduced, and cannot be corrected to normal levels using spectacles. Requires surgery if vision is affected.\n   - Slit-lamp: Shows thick yellow, dark brown, or black central nuclear opacity.\n   - Red Reflex: Shows a dark central disk against a bright red background.',
     isClinical: true,
     topic: 'Senile Nuclear Cataract'
   },
 
-  // --- Topic 4: Preoperative Evaluation & Surgical Techniques ---
+  // --- Topic 5: Preoperative Evaluation & Surgical Techniques ---
   {
     id: 'lens_preop_q1',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Ocular Parameters Before Cataract Surgery',
-    content: 'List four essential parameters to check during the local ocular examination before cataract surgery.',
-    answer: '1. Visual Acuity (Unaided & Aided): Ensure there is at least light perception (No PL = No surgery).\n2. Intraocular Pressure (IOP): To exclude or guard the prognosis against associated glaucoma.\n3. Pupillary Reaction to Light: Vital to assess optic nerve head/retinal pathway integrity.\n4. Fundus Examination / Ocular Ultrasound (B-scan): Mandatory if the cataract is mature/dense to ensure a normal retina and macula before operating.',
+    title: 'Preoperative Preparation for Cataract Surgery',
+    content: 'Outline preoperative preparation for cataract surgery.',
+    answer: '1. General Systemic Control:\n   - Control systemic parameters (blood pressure, diabetes, respiratory cough/asthma) to minimize hemorrhage and postoperative intraocular pressure spikes.\n   - Eradicate infections (such as dental or urinary tract) to prevent bacterial endophthalmitis.\n\n2. Local Ocular Examination:\n   - Visual Acuity (VA): Must demonstrate functioning Light Perception (PL) and accurate projection of rays (PR) in all four quadrants (No PL is an absolute contraindication).\n   - Slit-lamp biomicroscopy: Direct assessment of corneal clarity, depth of anterior chamber, pupil dilation capacity, and lens stability/subluxation.\n   - Intraocular Pressure (IOP): To exclude associated glaucoma.\n   - Pupillary reaction: Assess optic nerve and retinal tract integrity.\n   - Fundus and B-scan Ultrasound: Examine macular and disk health. If the fundus is obscured by a mature, dense cataract, order a B-scan ultrasound to rule out underlying retinal detachment or mass.\n\n3. Biometry (IOL Power Calculation):\n   - Keratometry: Measures corneal curvature.\n   - A-scan Ultrasonography: Measures axial length.\n   - Formula (e.g., SRK/T, Barrett): To calculate the precise dioptric power of the custom IOL.\n\n4. Immediate Preoperative Prep:\n   - Instill topical broad-spectrum antibiotics for 1-2 days prior to surgery.\n   - Instill strong dilators (Tropicamide + Phenylephrine) and preoperative NSAID drops to prevent intraoperative miosis.',
     isClinical: true,
     topic: 'Preoperative Evaluation & Surgical Techniques'
   },
@@ -1746,51 +1758,51 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'lens_preop_q2',
     chapterId: 5,
     type: 'short-answer',
-    title: 'ECCE vs. Phacoemulsification',
-    content: 'Differentiate between ECCE and Phacoemulsification regarding the mechanism of nucleus extraction and incision size.',
-    answer: '- ECCE (Extracapsular Cataract Extraction): Requires a large limbal incision; the anterior capsule is opened, and the hard nucleus is delivered out of the eye as a single whole piece, followed by cortex aspiration.\n- Phacoemulsification: Requires a tiny corneal incision; an ultrasonic probe vibrates to emulsify and fragment the lens nucleus inside the eye, which is then aspirated mechanically.',
+    title: 'Surgical Techniques for Cataract Extraction',
+    content: 'What are the main surgical techniques for cataract extraction?',
+    answer: 'There are three principal surgical techniques:\n\n1. Phacoemulsification (Phaco):\n   - Incision: A tiny, self-sealing corneal incision (~2.2 to 2.8 mm) requiring no sutures.\n   - Mechanism: An ultrasonic handpiece vibrating at high frequencies is introduced into the anterior chamber. It emulsifies and fragments the hard lens nucleus, which is then aspirated mechanically.\n   - IOL: A flexible, foldable acrylic Intraocular Lens (IOL) is injected into the intact posterior capsular bag.\n   - Advantages: Rapid visual recovery, minimal postoperative astigmatism, and low complication rates.\n\n2. Extracapsular Cataract Extraction (ECCE):\n   - Incision: A large limbal incision (~10-12 mm) requiring 5 to 7 suture loops.\n   - Mechanism: A wide opening is made in the anterior capsule. The hard nucleus is expressed out of the eye as a single intact whole piece, followed by automated aspiration of the softer cortex, leaving the posterior capsule fully intact.\n   - IOL: A rigid polymethylmethacrylate (PMMA) non-foldable IOL is inserted.\n   - Indication: Extremely hard cataracts where phaco is unsafe, or when phaco equipment is unavailable.\n\n3. Intracapsular Cataract Extraction (ICCE):\n   - Incision: A massive incision (~12-14 mm) requiring multiple sutures.\n   - Mechanism: The entire lens together with its surrounding intact capsule is removed from the eye by breaking the ciliary zonules. (Rarely used now).\n   - IOL: Can only use an Anterior Chamber IOL (ACIOL) placed over the iris, as there is no posterior capsule left for support.\n   - Indication: Reserved for extensive lens subluxation or dislocation where the ciliary zonules are completely destroyed.',
     isClinical: false,
-    topic: 'Preoperative Evaluation & Surgical Techniques'
-  },
-  {
-    id: 'lens_preop_q3',
-    chapterId: 5,
-    type: 'short-answer',
-    title: 'ICCE definition, Indication & Disadvantages',
-    content: 'Define ICCE and mention its current primary indication and its key disadvantages.',
-    answer: 'Definition: Intracapsular Cataract Extraction, which involves removing the entire lens completely out of the eye within its intact capsule.\n\nPrimary Indication: Extensive lens subluxation or dislocation.\n\nDisadvantages: High incidence of vitreous loss, retinal detachment, aphakic glaucoma, and cystoid macular edema (CME).',
-    isClinical: false,
-    topic: 'Preoperative Evaluation & Surgical Techniques'
-  },
-  {
-    id: 'lens_preop_q4',
-    chapterId: 5,
-    type: 'short-answer',
-    title: 'Postoperative Cataract Complications',
-    content: 'Enumerate six major postoperative complications of cataract extraction surgery.',
-    answer: '1. Endophthalmitis (the worst suppurative complication).\n2. Vitreous loss / Vitreous hemorrhage.\n3. Secondary glaucoma (increased eye pressure).\n4. Retinal Detachment.\n5. Severe anterior uveitis.\n6. Corneal decompensation / edema.',
-    isClinical: true,
     topic: 'Preoperative Evaluation & Surgical Techniques'
   },
 
-  // --- Topic 5: Complicated & Traumatic Cataract ---
+  // --- Topic 6: Complicated & Traumatic Cataract ---
   {
     id: 'lens_traumatic_q1',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Complicated Cataract Definition & Causes',
-    content: 'Define Complicated Cataract and list three anterior segment and three posterior segment ocular diseases that cause it.',
-    answer: 'Definition: An acquired lens opacity occurring secondary to a local intraocular disease.\n\nCauses (Anterior Segment): Chronic iridocyclitis, perforated central corneal ulcer, acute glaucoma, or prolonged topical steroid use.\n\nCauses (Posterior Segment): High degenerative myopia, retinal detachment, retinitis pigmentosa, or intraocular tumors.',
+    title: 'Complicated Cataract Definition & Features',
+    content: 'What is complicated cataract?',
+    answer: '1. Definition:\n   - A complicated cataract is an acquired opacification of the lens occurring secondary to local intraocular diseases or severe systemic conditions.\n\n2. Features:\n   - It characteristically begins in the posterior subcapsular (posterior cortical) region because this is the thinnest part of the lens capsule and lacks a protective subcapsular epithelium, leaving it highly vulnerable to toxic elements in the vitreous or posterior aqueous.\n   - On oblique illumination, it exhibits a classic iridescent, multicolored appearance like "breadcrumbs".',
     isClinical: true,
+    topic: 'Complicated & Traumatic Cataract'
+  },
+  {
+    id: 'lens_traumatic_q1_alt',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'Local Causes and Features of Complicated Cataract',
+    content: 'What are the causes and features of complicated cataract due to local eye disease?',
+    answer: '1. Local Eye Causes (Usually Unilateral):\n   - Chronic Anterior Uveitis (Iridocyclitis): The most common cause, due to constant diffusion of inflammatory mediators.\n   - Severe Degenerative High Myopia.\n   - Retinal Detachment (long-standing).\n   - Retinitis Pigmentosa.\n   - Acute Angle-Closure Glaucoma: Causes "Glaucomflecken" (small gray-white necrotic spots on/under the anterior capsule).\n   - Intraocular Tumors (e.g., choroidal melanoma).\n\n2. Features and Core Management:\n   - Begins in the posterior cortical region due to thin posterior capsule and disturbed nutrition.\n   - Treatment: Always treat the underlying active local eye cause first, and perform cataract extraction only after the eye has been completely quiet/inflammation-free for 3 to 6 months.',
+    isClinical: true,
+    topic: 'Complicated & Traumatic Cataract'
+  },
+  {
+    id: 'lens_traumatic_q1_sys',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'Systemic Causes of Complicated Cataract',
+    content: 'What are causes of complicated (presenile) cataract due to systemic disease?',
+    answer: 'Complicated cataracts triggered by systemic diseases are usually bilateral and occur in a younger age group (presenile). Key causes include:\n\n1. Diabetes Mellitus:\n   - Classically causes "diabetic snowflake cataract" (subcapsular fluid-filled vacuoles that look like snowflakes, due to sorbitol accumulation via the aldose reductase pathway) or accelerates senile cataracts.\n\n2. Myotonic Dystrophy:\n   - Classically features a "Christmas-tree cataract" (characterized by colorful, iridescent crystals structured along the sutures of the lens).\n\n3. Atopic Dermatitis:\n   - Associated with rapid bilateral shield-like subcapsular opacities in young adults.\n\n4. Galactosemia:\n   - Infantile metabolic disorder classically presenting with a central "oil-droplet" cataract.\n\n5. Neurofibromatosis Type 2:\n   - Strongly associated with early posterior subcapsular lens opacities.',
+    isClinical: false,
     topic: 'Complicated & Traumatic Cataract'
   },
   {
     id: 'lens_traumatic_q2',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Concussion Cataract Location & Shape',
-    content: 'State the characteristic initial location and pathognomonic shape of a Traumatic Concussion Cataract.',
-    answer: 'Location: Posterior subcapsular or cortical cortex, due to thin posterior capsule features and lack of subcapsular epithelium.\n\nShape: Typically Rosette-shaped with a feathery appearance along the lens sutures.',
+    title: 'Traumatic Cataract Types and Features',
+    content: 'Describe traumatic cataract and its types.',
+    answer: 'Traumatic cataract results from physical, mechanical, or chemical trauma to the eye and is classified into three main types:\n\n1. Concussion (Blunt Ocular Trauma) Cataract:\n   - Mechanism: Shockwaves propagate through the fluid contents of the eye without direct capsule tear.\n   - Appearance: Classically causes a "Rosette-shaped" or "star-shaped" cataract located in the posterior cortex or subcapsular layers, following the natural course of the lens fibers along the sutures.\n   - Vossius Ring: A pathognomonic dark ring of iris pigment deposited on the anterior lens capsule, created when the force of the blunt impact drives the iris pupillary margin against the lens.\n\n2. Perforating / Penetrating Trauma Cataract:\n   - Mechanism: Direct mechanical rupture of the lens capsule, exposing lens proteins directly to the aqueous humor.\n   - Presentation: Rapid hydration and focal swelling of the lens fibers. If the capsule rupture is large, the lens material rapidly swells, hydrates, and leaks into the anterior chamber, which can block the trabecular meshwork and cause severe phacolytic secondary glaucoma. Requires urgent surgical extraction.\n\n3. Physical Agent Cataracts:\n   - Infra-Red Radiation (Glass Blower\'s Cataract): Prolonged exposure to heat rays induces splits and exfoliation of the anterior lens capsule, progressing to complete cortical opacification.\n   - Ionizing Radiation (e.g., X-ray cancer therapy): Posterior subcapsular opacity forming after a significant latent period.\n   - Electrical Cataract (Lightning or high-voltage shock): Features rapid-onset subcapsular lens opacities.',
     isClinical: true,
     topic: 'Complicated & Traumatic Cataract'
   },
@@ -1798,31 +1810,33 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'lens_traumatic_q3',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Vossius Ring Definition',
-    content: 'Define Vossius Ring.',
-    answer: 'A pathognomonic ring of dark iris pigment deposited directly onto the anterior lens capsule, caused by the mechanical impact of blunt trauma pressing the pupillary iris border against the lens.',
+    title: 'After-Cataract (Posterior Capsule Opacification) Management',
+    content: 'What is after-cataract (PCO), and how is it managed?',
+    answer: '1. Definition:\n   - After-cataract, officially termed Posterior Capsule Opacification (PCO), is the opacification and thickening of the posterior capsular membrane that remains or develops months to years following a successful Extracapsular Cataract Extraction (ECCE) or Phacoemulsification, or after the partial absorption of a traumatic cataract.\n\n2. Pathological Forms:\n   - Elschnig\'s Pearls: Clusters of transparent, grape-like or soap-bubble-like swollen, regenerating lens epithelial cells on the capsule.\n   - Capsular Fibrosis: Architectural wrinkling, thickening, and fibrous scarring of the posterior capsule.\n   - Soemmering\'s Ring: A thick, doughnut-shaped ring of caught lens matter trapped between the anterior and posterior capsule remnants behind the iris.\n\n3. Management:\n   - Non-Invasive Neodymium:YAG (Nd:YAG) Laser Capsulotomy is the standard treatment of choice.\n   - Technique: An outpatient procedure where focused laser pulses are used to create a clean, central 3-4 mm circular opening in the opaque posterior capsule along the visual axis, immediately restoring visual acuity.',
     isClinical: true,
     topic: 'Complicated & Traumatic Cataract'
   },
+
+  // --- Topic 7: Lens Displacement & Aphakia ---
   {
-    id: 'lens_traumatic_q4',
+    id: 'lens_displacement_q1',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Physical Agents Traumatic Cataract Matching',
-    content: 'Match the physical traumatic agent (Infra-red, Radiation, Electrical) with its specific cortical cataract presentation.',
-    answer: '- Infra-Red Rays (Glass Blower\'s Cataract): Causes posterior cortical opacity that progresses to maturity.\n- Ionic Radiation (Cancer X-ray therapy): Causes posterior cortical opacity that progresses to maturity.\n- Electrical Trauma (High current shock): Causes an anterior cortical lens opacity.',
-    isClinical: false,
-    topic: 'Complicated & Traumatic Cataract'
+    title: 'Lens Displacement, Types & Pathogenesis',
+    content: 'What is lens displacement, its types, and causes?',
+    answer: 'Lens displacement occurs when there is complete or partial rupture of the suspensory ligament (zonules of Zinn) that anchors the lens in place behind the pupil:\n\n1. Clinical Types:\n   - Subluxation (Partial): The lens is tilted or shifted away from the visual axis but remains partially within the pupillary aperture, because only some of the zonular fibers are torn. On exam, it shows iridodonesis (tremulous iris), phacodonesis (tremulous lens), a deep and uneven anterior chamber, and uniocular diplopia.\n   - Dislocation (Complete): The lens is completely free of all zonular attachments and is displaced entirely out of the pupillary aperture.\n     * Anterior Dislocation: The lens slips forward into the anterior chamber, where it blocks aqueous flow through the pupil, triggering excruciating secondary pupillary-block glaucoma and corneal endothelial failure. Requires emergency surgery.\n     * Posterior Dislocation: The lens sinks backward into the vitreous cavity. The patient presents with symptoms of aphakia, and the yellow/white lens can be seen lying on the retina.\n\n2. Principal Causes:\n   - Ocular Trauma: The most common cause. Severe blunt mechanical trauma tears the zonules.\n   - Hereditary / Congenital Disorders:\n     * Marfan Syndrome: Classically causes bilateral, symmetrical superotemporal (upward-and-outward) lens subluxation.\n     * Homocystinuria: Classically causes bilateral inferonasal (downward-and-inward) lens subluxation, due to cysteine metabolic error causing weak zonules.\n     * Weill-Marchesani Syndrome: Causes microspherophakia (small, round lens) with anterior lens subluxation.\n   - Acquired Zonular Weakness: Chronic hypermature cataract, severe high myopia, or pseudoexfoliation syndrome (PXF).',
+    isClinical: true,
+    topic: 'Lens Displacement & Aphakia'
   },
   {
-    id: 'lens_traumatic_q5',
+    id: 'lens_displacement_q2',
     chapterId: 5,
     type: 'short-answer',
-    title: 'Secondary "After Cataract" (PCO) & Treatment',
-    content: 'Define "After Cataract" (Posterior Capsule Opacification - PCO), describe its two clinical forms, and state its treatment.',
-    answer: 'Definition: Opacification of the posterior lens capsule that persists or forms months after a successful ECCE or Phacoemulsification surgery.\n\nClinical forms:\n1. Elschnig\'s pearls: Cluster of transparent soap-bubble-like regenerating lens cells.\n2. Capsular fibrosis: Structural thickening and scarring of the capsule.\n\nTreatment: Non-invasive Nd:YAG laser capsulotomy (or surgical capsulotomy if dense).',
+    title: 'Aphakia Optical Problems & Clinical Correction',
+    content: 'Define aphakia and outline its optical problems and correction.',
+    answer: '1. Definition:\n   - Aphakia is defined as the complete absence of the crystalline lens from the pupillary aperture.\n\n2. Classic Clinical Signs on Examination:\n   - Presence of a limbal/corneal surgical scar.\n   - Absence of posterior Purkinje-Sanson images (as there is no lens surface to reflect light).\n   - Unusually deep anterior chamber (as the iris loses its normal posterior structural support).\n   - Iridodonesis (tremulous, shaking iris on eye movement).\n   - Jet-black pupil, with a complete, fully unobstructed red reflex on ophthalmoscopy.\n\n3. Major Optical Problems & Deficits of Aphakia:\n   - High Hypermetropia: Loss of the lens (~15-18 diopters of power) means light rays focus far behind the retina.\n   - Complete Loss of Accommodation: The eye loses all ability to adjust its power to focus on near objects.\n   - Against-The-Rule Astigmatism: Induced by surgical wound contraction at the limbal incision.\n   - Image Magnification of ~30%: If corrected with high plus spectacles, making binocular fusion impossible in unilateral cases.\n\n4. Optical Correction Methods:\n   - Intraocular Lens (IOL) Implantation (The Gold Standard): Primary IOL (placed during cataract extraction in the capsular bag or ciliary sulcus) or Secondary IOL (placed later). Restores normal anatomy and eliminates magnification problems.\n   - Contact Lenses: Preferred in young children or patients who cannot receive an IOL. Gives only ~5-10% image magnification, allowing binocular vision.\n   - High Plus Spectacles (+10 to +12 Diopters): Standard post-surgical correction if IOLs are unavailable or contraindicated, but only suitable for Bilateral Aphakia (causes 30% image magnification, barrel distortion, and a "jack-in-the-box" scotoma).',
     isClinical: true,
-    topic: 'Complicated & Traumatic Cataract'
+    topic: 'Lens Displacement & Aphakia'
   },
 
   // ===========================================================================
@@ -2605,24 +2619,146 @@ export const INITIAL_QUESTIONS: Question[] = [
   // --- CHAPTER 9: UVEITIS ---
   // ===========================================================================
 
-  // --- Topic 1: Anterior Uveitis (Iridocyclitis) ---
+  // --- Topic 1: Anatomy & Physiology of the Uveal Tract ---
+  {
+    id: 'uveitis_anatomy_q1',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'The Uveal Tract & Main Components',
+    content: 'What is the uveal tract? Enumerate its three major anatomical components and their relative positions.',
+    answer: 'The uveal tract is the middle vascular pigmented coat of the eye (situated between the outer protective fibrous sclera and the inner sensory retina).\n\nIt consists of three continuous components from anterior to posterior:\n1. Iris: The anterior part, acting as a dynamic diaphragm to control the amount of light entering the eye.\n2. Ciliary Body: The intermediate part, responsible for accommodation and the secretion of aqueous humor.\n3. Choroid: The posterior part, a highly vascularized layer that nourishes the outer layers of the retina.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q2',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Gross Anatomy of the Iris',
+    content: 'Describe the general gross anatomy, location, color variations, and surface features of the iris.',
+    answer: '1. Definition & Location:\n   - The iris is the anterior part of the uveal tract, serving as a contractile thin circular diaphragm.\n   - Placed in the coronal plane between the cornea anteriorly and the crystalline lens posteriorly, suspended in the aqueous humor, it divides the space between them into the anterior chamber (AC) and the posterior chamber (PC).\n   - Perforated centrally by an adjustable circular opening: the pupil.\n\n2. Key Borders & Attachments:\n   - Pupillary border: The free central circular margin that outlines the pupil. It rests lightly on the anterior surface of the lens.\n   - Ciliary border (Root of the iris): The peripheral circumferential margin that attaches to the anterior aspect of the ciliary body.\n\n3. Color Variations:\n   - Varies from blue at birth in light-skinned individuals (due to lack of stromal pigment) to grey or brown later in life, depending on the quantity and density of melanin pigment within the stromal chromatophores.\n\n4. Surface Features:\n   - Anterior Surface: Non-uniform, presenting a raised circular ridge called the collarette (which divides the iris into a minor pupillary zone and a major ciliary zone) along with dynamic depressions (surface crypts of Fuchs).\n   - Posterior Surface: Uniformly dark brown or black due to a dense, double-layered pigmented epithelial lining.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q3',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Minute Histology of the Iris',
+    content: 'Outline the microscopic (minute) histological layers and muscles of the iris in detail.',
+    answer: 'Microscopically, the iris is composed of four major layers from anterior to posterior:\n\n1. Anterior Endothelium/Border Layer:\n   - A discontinuous single layer of flat, branching connective tissue cells and melanocytes. It is absent over the areas of the iris crypts (which allows direct passage of aqueous humor into the stroma).\n\n2. Iris Stroma:\n   - A loose connective tissue network containing collagen fibers, fibroblasts, melanocytes, and highly prominent blood vessels (which run in a radial direction and possess a unique non-fenestrated thick adventitial sheath without a muscular coat).\n   - Contains two antagonistic intraocular muscles:\n     * Sphincter Pupillae: A circular band of smooth muscle (about 1 mm wide) located in the stroma of the pupillary zone close to the margin. Innervated by parasympathetic postganglionic fibers via the oculomotor nerve (CN III) to constrict the pupil (miosis).\n     * Dilator Pupillae: Radial fibers of myoepithelial cells located in the ciliary zone. Innervated by sympathetic fibers from the superior cervical ganglion to dilate the pupil (mydriasis).\n\n3. Pigment Epithelium Layer:\n   - Composed of two densely pigmented layers of cuboidal/columnar cells (the anterior layer being the myoepithelial dilator muscle tail, and the posterior layer being highly pigmented) continuous with the ciliary body epithelium. This thick dark coating prevents stray light from penetrating the iris.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q4',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Vascular & Nerve Supply of the Iris',
+    content: 'Describe the arterial supply, venous drainage, and nerve innervation of the iris.',
+    answer: '1. Arterial Supply:\n   - Composed of a rich anastomotic network derived from two main arterial circles:\n     * Circulus Arteriosus Major (Greater Arterial Circle of Iris): Located at the root of the iris within the anterior part of the ciliary body. It is formed by the anastomosis of the two long posterior ciliary arteries (entering posteriorly) and the seven anterior ciliary arteries (derived from muscular branches of recti muscles).\n     * Circulus Arteriosus Minor (Lesser Arterial Circle of Iris): Located near the pupillary collarette, formed by anastomosing radial branches extending from the major circle.\n\n2. Venous Drainage:\n   - Blood drains radially from the pupil toward the root of the iris into the ciliary body veins, finally emptying into the four vortex veins (and partially via the anterior ciliary veins).\n\n3. Nerve Supply (Trigeminal and Autonomic Innervations):\n   - Motor Innervation:\n     * Parasympathetic fibers: Arise from the Edinger-Westphal nucleus of CN III, synapse in the ciliary ganglion, and travel via the short ciliary nerves to supply the sphincter pupillae.\n     * Sympathetic fibers: Arise from the ciliospinal center of Budge (C8-T2), ascend to synapse in the superior cervical ganglion, and travel via the long ciliary nerves (and short ciliary nerves) to supply the dilator pupillae.\n   - Sensory Innervation:\n     * Provided by the long ciliary nerves (branches of the ophthalmic division of the Trigeminal nerve [CN V1]).',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q5',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Gross Anatomy of the Ciliary Body',
+    content: 'Describe the gross anatomy, triangular boundaries, and anatomical regions of the ciliary body.',
+    answer: '1. Definition & Shape:\n   - The ciliary body is the intermediate, thickened part of the uveal tract extending between the iris root anteriorly and the choroid posteriorly.\n   - In antero-posterior (sagittal) section, it appears triangular with:\n     * Anterior Base: Faces the anterior chamber, where its inner portion is continuous with the iris root and the outer portion with the trabecular meshwork (at the scleral spur).\n     * Posterior Apex: Points backward, continuing directly with the choroid and outer retina at the ora serrata.\n     * External Surface: Separated from the overlying rigid sclera by a thin, potential perichoroidal cleft: the supraciliary space.\n     * Internal Surface: Faces the vitreous cavity, gives attachment and origin to the suspensory zonules of the lens.\n\n2. Geographical Divisions of the Internal Surface: Divided into two zones:\n   - Pars Plicata (Corona Ciliaris; Anterior 2 mm):\n     * Characterized by a ring of 70 to 80 prominent, radially oriented, pale finger-like ridges called the ciliary processes. These are packed with blood vessels and are responsible for secreting aqueous humor.\n   - Pars Plana (Orbiculus Ciliaris; Posterior 4 mm):\n     * A smooth, flat, pigment-rich zone that extends from the pars plicata to the scalloped boundary of the retina (ora serrata). Lacks processes, making it the safest surgical entry site (pars plana vitrectomy).',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q6',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Minute Histology of the Ciliary Body',
+    content: 'Detail the microscopic (minute) histology of the ciliary body, including its smooth muscle fibers and dual-layered epithelium.',
+    answer: 'Histologically, the ciliary body is composed of three primary functional layers:\n\n1. Ciliary Muscle:\n   - A robust band of smooth muscle fibers arranged in three distinct architectural directions:\n     * Longitudinal (Meridional) fibers (Brucke\'s muscle): Outer fibers running antero-posteriorly, inserting into the scleral spur. Contraction pulls the trabecular meshwork open, aiding aqueous drainage.\n     * Radial (Oblique) fibers: Interlacing intermediate fibers.\n     * Circular (Muller\'s muscle) fibers: Inner fibers arranged in a circular ring. Contraction reduces the ring diameter, relaxing the lens zonules for accommodation.\n\n2. Ciliary Stroma & Processes:\n   - A highly vascularized layer of loose connective tissue containing melanocytes and fenestrated capillaries within the ciliary processes (enabling rapid fluid exchange for aqueous humor formation).\n\n3. Ciliary Epithelium:\n   - A dual-layered epithelial sheet covering the inner surface of the ciliary body:\n     * Outer Pigmented Epithelium: Consists of flat pigmented cells, continuous anteriorly with the anterior pigment epithelium of the iris and posteriorly with the retinal pigment epithelium (RPE).\n     * Inner Non-Pigmented Epithelium: Consists of active cubical or columnar secretory cells, continuous anteriorly with the posterior pigment epithelium of the iris and posteriorly with the sensory retina. Together, they form the blood-aqueous barrier.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q7',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Vascular & Nerve Supply of the Ciliary Body',
+    content: 'Detail the blood and nerve supply of the ciliary body.',
+    answer: '1. Arterial Supply:\n   - Derived from the Circulus Arteriosus Major (Greater Arterial Circle of Iris), which resides within the anterior stroma of the ciliary body.\n   - Highly branched to form rich vascular plexuses within each of the 70-80 ciliary processes.\n\n2. Venous Drainage:\n   - Drains posteriorly into the ciliary veins, which empty into the four vortex veins, and anteriorly via the anterior ciliary veins.\n\n3. Nerve Supply:\n   - Motor Innervation:\n     * Parasympathetic fibers (dominant): Orginate from the Edinger-Westphal nucleus (CN III), synapse in the ciliary ganglion, and travel via the short ciliary nerves to supply the ciliary muscle (mediating accommodation).\n     * Sympathetic fibers: Exert a minor inhibitory effect on the ciliary muscle.\n   - Sensory Innervation:\n     * Provided by the long ciliary nerves (branches of the ophthalmic nerve, CN V1).',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q8',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Anatomy of the Choroid',
+    content: 'Detail the gross anatomy and microscopic (minute) layers of the choroid.',
+    answer: '1. Gross Anatomy:\n   - The choroid is the posterior, highly chocolate-brown vascular component of the uveal tract.\n   - Extends from the ciliary body (at the ora serrata) anteriorly to the margins of the optic nerve head posteriorly.\n   - It is thin, elastic, and extremely vascular, lining the inner surface of the sclera (separated from it by the suprachoroidal space).\n\n2. Microscopic (Minute) Layers: Composed of four layers from external to internal:\n   - Suprachoroidal Lamina (Suprachoroid / Lamina Fusca):\n     * A thin transition zone containing collagen fibers, elastic tissue, and heavily pigmented melanocytes. It contains the long/short ciliary nerves and arteries.\n   - Vascular Layer (Choroidal Stroma):\n     * Haller\'s Layer: Outer zone with large-caliber blood vessels.\n     * Sattler\'s Layer: Intermediate zone with medium-caliber vessels.\n   - Choriocapillaris Layer (Choriocapillary Lamina):\n     * A unique, dense single layer of extremely wide, fenestrated capillaries. This layer is highly specialized to supply oxygen and nutrients directly to the outer layers of the retina (photoreceptors and RPE).\n   - Bruch\'s Membrane (Lamina Vitrea):\n     * A thin (2-4 µm), transparent, highly elastic structure directly contacting the retinal pigment epithelium. It serves as a semi-permeable physical filter regulating molecular exchange between the choriocapillaris and the retina.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q9',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Vascular Supply of the Choroid',
+    content: 'Describe the arterial supply and venous drainage of the choroid.',
+    answer: '1. Arterial Supply:\n   - Posterior Part (Majority): Supplied by the short posterior ciliary arteries (about 15-20 branches arising from the ophthalmic artery), which pierce the sclera around the optic nerve and immediately arborize in the choroid.\n   - Anterior Part: Supplied by branches of the long posterior ciliary arteries and the anterior ciliary arteries (connecting with the anterior uveal circulation).\n\n2. Venous Drainage:\n   - A unique, extremely efficient system where venous blood from the entire uveal tract (choroid, ciliary body, and iris) drains into four large, symmetrically placed Vortex Veins (Venae Vorticosae) located in the quadrants of the equatorial sclera. These drain directly into the superior and inferior ophthalmic veins.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q10',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Functions of the Uveal Tract',
+    content: 'Detail the major physiological functions of each part of the uveal tract (iris, ciliary body, and choroid).',
+    answer: '1. Functions of the Iris:\n   - Regulates Light Entrance: The pupil dynamically constricts (miosis) under bright light or near vision, and dilates (mydriasis) under dim light to optimize retinal illumination.\n   - Sharpens Image & Focus: Constriction of the pupil cuts off peripheral divergent light rays, reducing spherical/chromatic aberrations and significantly increasing the depth of focus.\n   - Aqueous Drainage & Phagocytosis: Frontal iris crypts absorb small amounts of aqueous humor, and stromal macrophages actively phagocytose cellular debris.\n\n2. Functions of the Ciliary Body:\n   - Accommodation: Active contraction of the circular ciliary muscle fibers reduces the diameter of the ciliary ring, relaxing the suspensory zonules, which allows the elastic crystalline lens to thicken and become more spherical to focus on near objects.\n   - Aqueous Humor secretion: The fenestrated capillaries and active dual-layered epithelium of the ciliary processes continuously produce aqueous humor (via ultrafiltration and active secretion), maintaining normal IOP (10-21 mmHg) and nourishing avascular tissues (cornea, lens).\n   - Trabecular Outflow Assistance: Contraction of the longitudinal fibers of the ciliary muscle pulls the scleral spur backward, opening the trabecular meshwork to facilitate aqueous drainage.\n\n3. Functions of the Choroid:\n   - Retinal Nutrition: The highly specialized choriocapillaris provides essential oxygen and nutrients to the metabolically demanding, avascular outer layers of the retina (photoreceptors and RPE; which account for the outer 1/3 of total retinal thickness).\n   - Optical Dark Coat: Its intense pigmentation absorbs stray light within the ocular cavity, preventing internal scattering and reflection, which ensures high image resolution.\n   - Heat Dissipation: The massive blood flow acts as a thermal sink to dissipate heat generated by intense light absorption in the retina.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q11',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Mechanism of Accommodation',
+    content: 'Define accommodation and explain the physiological mechanism of its execution (the Helmholtz theory).',
+    answer: '1. Definition:\n   Accommodation is the active, reversible process by which the optical dioptric power of the crystalline lens is dynamically increased, allowing the eye to form a sharp, clear image of near objects on the retina.\n\n2. Mechanism of Execution (Helmholtz/Fincham Theory):\n   - Rest State (Distant Vision):\n     * The ciliary muscle is completely relaxed. This increases the diameter of the ciliary ring, placing the suspensory zonules of the lens under high tension.\n     * The tense zonules pull radially on the elastic lens capsule, flattening the lens (especially its anterior surface), lowering its refractive power to focus parallel light rays from infinity onto the retina.\n   - Active State (Near Vision):\n     * Contraction of the circular ciliary muscle fibers (Muller\'s muscle) occurs (triggered by parasympathetic discharges via CN III).\n     * This contraction narrows and pulls the ciliary body ring anteriorly and inward toward the lens.\n     * This movement relaxes the tension on the suspensory zonules.\n     * The relieved tension allows the highly elastic crystalline lens capsule to spring back, making the lens naturally become thicker, more convex, and spherical (particularly the anterior surface).\n     * This increased convexity raises the refractive power of the lens, focusing divergent rays from near objects sharply onto the retina.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q12',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Uveitis Definitions & Classifications',
+    content: 'Define Uveitis and outline its anatomical, clinical, and pathological classifications.',
+    answer: '1. Definition:\n   Uveitis is the inflammation of any part of the uveal tract (iris, ciliary body, and choroid). Due to close anatomical proximity, adjacent tissues (retina, vitreous, optic nerve) are frequently involved.\n\n2. Anatomical Classification (Standardized Uveitis Nomenclature [SUN]):\n   - Anterior Uveitis: Includes Iritis (inflammation of the iris alone) and Iridocyclitis (iris and ciliary body; the commonest form).\n   - Intermediate Uveitis: Inflammation primarily localized to the vitreous cavity, pars plana (pars planitis), and peripheral retina.\n   - Posterior Uveitis: Includes Choroiditis (choroid alone), Retinitis (retina), or Chorioretinitis/Retinochoroiditis (both).\n   - Panuveitis: Diffuse inflammation involving the anterior, intermediate, and posterior ocular segments simultaneously.\n\n3. Clinical Classification:\n   - Acute: Sudden onset and limited duration (less than 3 months).\n   - Chronic: Persistent or recurrent inflammation lasting more than 3 months with rapid relapse when treatment is tapered.\n\n4. Pathological Classification:\n   - Granulomatous Uveitis: Characterized by chronic, slow-onset nodular inflammation with large epithelioid cells, giant cells, and mutton-fat Keratic Precipitates (KPs); often caused by chronic systemic infections (e.g., Tuberculosis, Sarcoidosis, Syphilis).\n   - Non-Granulomatous Uveitis: Characterized by acute, sudden onset with fine KPs and rich fibrinous/cellular exudation; typically associated with HLA-B27 and autoimmune etiologies.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+  {
+    id: 'uveitis_anatomy_q13',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Etiology of Uveitis',
+    content: 'Enumerate and detail the underlying infective, non-infective, and systemic syndromic etiologies of Uveitis.',
+    answer: 'The etiology of uveitis is highly diverse, broadly categorized into three major groups:\n\n1. Infective Etiology:\n   - Bacterial: Tuberculosis, Syphilis, Leprosy.\n   - Viral: Herpes Simplex Virus (HSV), Varicella Zoster Virus (VZV), Cytomegalovirus (CMV; in immunocompromised individuals).\n   - Protozoal/Parasitic: Toxoplasmosis (most common cause of posterior focal necrotizing retinochoroiditis), Toxocariasis.\n   - Fungal: Candidiasis, Histoplasmosis.\n\n2. Non-Infective / Autoimmune Etiology:\n   - Traumatic: Penetrating or surgical trauma (releasing uveal antigens).\n   - Lens-Induced (Allergic): E.g., Phacoanaphylactic endophthalmitis (induced by retained lens proteins after extracapsular cataract surgery or trauma).\n   - Sympathetic Ophthalmitis: Bilateral diffuse granulomatous uveitis occurring after penetrating injury in one eye.\n   - HLA-B27 Associated: Ankylosing Spondylitis, Inflammatory Bowel Disease (Crohn\'s/Colitis), Reactive Arthritis (Reiter\'s syndrome), Psoriatic Arthritis.\n\n3. Syndromes of Unknown/Idiopathic Etiology:\n   - Behçet\'s Disease: Multi-systemic occlusive vasculitis presenting with recurrent aphthous oral and genital ulcers associated with acute anterior uveitis and retinal vasculitis.\n   - Vogt-Koyanagi-Harada (VKH) Syndrome: Granulomatous panuveitis with systemic meningeal, auditory (tinnitus, dysacusis), and integumentary (vitiligo, poliosis, alopecia) manifestations.\n   - Fuchs Uveitis Syndrome (Fuchs Heterochromic Iridocyclitis): Unilateral, chronic, low-grade non-granulomatous uveitis featuring iris atrophy, heterochromia, fine stellate KPs, and early cataract.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Uveal Tract'
+  },
+
+  // --- Topic 2: Anterior Uveitis (Iridocyclitis) ---
   {
     id: 'uveitis_anterior_q1',
     chapterId: 9,
     type: 'short-answer',
-    title: 'Iridocyclitis Definition, Symptoms & Visual Loss Causes',
-    content: 'Define Iridocyclitis and list its commonest symptoms and the specific causes of vision drop in an acute attack.',
-    answer: 'Definition: Acute or chronic inflammation of the iris and ciliary body tissue.\n\nSymptoms: Severe ocular pain, marked photophobia, lacrimation, and drop of vision.\n\nCauses of drop of vision:\n1. Turbidity of the aqueous humor (aqueous flare and cells).\n2. Induced ciliary and pupillary muscle spasm (causing temporary myopia).\n3. Toxic Maculopathy (Cystoid Macular Edema).\n4. Secondary glaucoma.',
-    isClinical: true,
-    topic: 'Anterior Uveitis (Iridocyclitis)'
-  },
-  {
-    id: 'uveitis_anterior_q2',
-    chapterId: 9,
-    type: 'short-answer',
-    title: 'Acute Anterior Uveitis Clinical Signs',
-    content: 'Enumerate the clinical signs found on examination of a patient with Acute Anterior Uveitis.',
-    answer: '1. Circumcorneal ciliary injection (CCCI).\n2. Keratic Precipitates (KPs): Inflammatory cells deposited on the corneal endothelium (graded as small, medium, or large/mutton-fat).\n3. Aqueous Flare and cells (detected by slit-lamp biomicroscopy).\n4. Miosis (constricted pupil due to sphincter muscle spasm).\n5. Loss of normal Iris pattern (blurring of the collarette and crypts due to edema).\n6. Posterior Synechiae (adhesions between iris and lens capsule) causing a "Festooned pupil" configuration upon dilation.\n7. Vitreous opacities and variable intraocular pressure (IOP).',
+    title: 'Iridocyclitis Clinical Picture (Symptoms & Signs)',
+    content: 'Describe the clinical symptoms and signs of acute iridocyclitis (anterior uveitis) in detail.',
+    answer: '1. Symptoms:\n   - Pain: Severe neuralgic pain (dull ache radiating along the branches of the trigeminal nerve, referred to the eyebrow and temple, characteristically worse at night due to ciliary muscle spasm and congestion).\n   - Photophobia and blepharospasm.\n   - Lacrimation (tearing).\n   - Significant and rapid drop/diminution of vision (due to: 1. Aqueous turbidity, flare, cells, and hypopyon; 2. Keratic precipitates and corneal haziness/edema; 3. Ciliary muscle spasm inducing transient myopia; 4. Toxic macular edema; 5. Secondary glaucoma).\n\n2. Clinical Signs:\n   - Eyelids & Conjunctiva: Mild edema and redness of the eyelids; marked circumcorneal ciliary injection (CCCI; deep congestion of vessels around the limbus, dusky red, fades toward the fornices).\n   - Cornea: Keratic Precipitates (KPs; cellular deposits on the endothelium forming an Arlt\'s triangle with the base down) and corneal haziness/edema.\n   - Anterior Chamber: Deep AC with aqueous flare (Tyndall effect), inflammatory cells, and potential Hypopyon (exudates/pus settling at the bottom) or Hyphema (blood).\n   - Iris: Blurring of the normal iris pattern ("muddy iris" due to stromal edema and congestion).\n   - Pupil: Miotic (constricted), irregular shape, sluggish or absent reaction to light.\n   - Posterior Synechiae: Adhesions of the iris to the anterior lens capsule, leading to a "festooned" pupil pattern when dilated.\n   - Ciliary Tenderness: Severe tenderness on gentle palpation over the ciliary body region.\n   - Lens: Inflammatory precipitates on the anterior lens capsule.\n   - Vitreous: Turbidity (exudation of inflammatory cells into the anterior vitreous).\n   - IOP: Fluctuating tension, initially low (ciliary hyposecretion) but possibly elevated (secondary inflammatory glaucoma).',
     isClinical: true,
     topic: 'Anterior Uveitis (Iridocyclitis)'
   },
@@ -2630,9 +2766,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'uveitis_anterior_q3',
     chapterId: 9,
     type: 'short-answer',
-    title: 'Chronic/Recurrent Iridocyclitis Complications',
-    content: 'Enumerate six major ocular complications of chronic or recurrent Iridocyclitis.',
-    answer: '1. Seclusio pupillae (360-degree posterior synechiae) and Occlusio pupillae (inflammatory membrane covering the pupil).\n2. Secondary Glaucoma (due to pupillary block or peripheral anterior synechiae - PAS).\n3. Complicated Cataract (typically starting as a posterior subcapsular lens opacity).\n4. Cyclitic membrane formation behind the lens.\n5. Hypotony leading to Phthisis Bulbi (shrunken atrophic eye) due to ciliary body shutdown.\n6. Tractional Retinal Detachment (TRD) or Exudative Retinal Detachment (ERD).',
+    title: 'Ocular Complications of Chronic or Recurrent Uveitis',
+    content: 'Enumerate the major ocular complications of chronic, unresolved, or recurrent uveitis (iridocyclitis).',
+    answer: 'Chronic, recurrent iridocyclitis can result in severe permanent visual loss through several structural complications:\n\n1. Synechiae:\n   - Posterior synechiae: Adhesions between the iris and lens capsule. Can progress to "Seclusio pupillae" (360-degree adhesion sealing the pupil, causing "Iris bombe" and secondary glaucoma) or "Occlusio pupillae" (an organized inflammatory membrane completely covering the pupillary aperture).\n   - Total posterior synechiae: Complete adhesion of the entire posterior surface of the iris to the lens capsule.\n   - Peripheral anterior synechiae (PAS): Adhesion of the iris root to the trabecular meshwork, sealing the AC angle.\n\n2. Pupil and Lens Pathologies:\n   - Complicated Cataract: Begins as a posterior subcapsular cataract due to impaired nutrition from turbulent aqueous humor.\n   - Cyclitic Membrane: A dense fibrous membrane behind the lens, which pulls on the ciliary body and can lead to lens opacification and hypotony.\n\n3. Glaucoma (Secondary Glaucoma):\n   - Early: Trabecular clogging by inflammatory proteins, cells, or fibrin.\n   - Late: Angle-closure glaucoma from PAS or pupillary block (Seclusio pupillae with iris bombe).\n\n4. Suppurative Extension:\n   - Progression to Endophthalmitis or Panophthalmitis in rare, virulent suppurative cases.\n\n5. End-Stage Globe Destruction (Atrophia / Phthisis Bulbi):\n   - Complete ciliary body atrophy and destruction halts aqueous humor secretion, resulting in persistent severe hypotony (IOP near zero) and a shrunken, non-functional, atrophic eyeball (Atrophia bulbi or Phthisis bulbi).',
     isClinical: true,
     topic: 'Anterior Uveitis (Iridocyclitis)'
   },
@@ -2640,9 +2776,19 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'uveitis_anterior_q4',
     chapterId: 9,
     type: 'short-answer',
-    title: 'Iridocyclitis Management Protocol',
-    content: 'Outline the therapeutic management protocol for an active attack of Iridocyclitis.',
-    answer: 'Local Therapy:\n1. Topical Atropine Sulphate (Cycloplegic/Mydriatic): Paralyses the ciliary and sphincter muscles to relieve severe spasm pain, and breaks/prevents posterior synechiae.\n2. Topical Corticosteroids: Main stay to suppress the active ocular inflammation.\n\nSystemic Therapy: Systemic corticosteroids or NSAIDs for severe/bilateral cases, combined with specific antibiotics or antivirals if an infective etiology is identified.',
+    title: 'General Approach to the Diagnosis & Treatment of Uveitis',
+    content: 'Describe the general diagnostic approach and complete medical protocol for managing uveitis.',
+    answer: '1. Diagnostic Evaluation:\n   - Detailed History: Age, sex, race, onset (acute vs chronic), laterality (unilateral vs bilateral), joint pains, back stiffness, oral/genital ulcers, skin rashes, or exposure to pets (cats/dogs) or uncooked meats.\n   - Slit-Lamp Biomicroscopy: Grading of AC flare/cells, KPs (fine vs mutton-fat), iris nodules (Koeppe/Busacca), and posterior synechiae.\n   - Complete Fundus Examination: Indirect ophthalmoscopy to rule out vitritis, focal retinochoroiditis (e.g., toxoplasmosis), vasculitis, or macular edema.\n   - Laboratory & Imaging Investigations (tailored to suspect etiology):\n     * HLA-B27 typing (for spondyloarthropathies).\n     * Chest X-ray / CT or serum ACE levels (for Sarcoidosis).\n     * Serology (ELISA/PCR) for Toxoplasmosis, Syphilis (VDRL/FTA-ABS), TB (Mantoux/QuantiFERON).\n\n2. Comprehensive Multimodal Treatment Protocol:\n   - Prophylactic & Symptomatic Local Therapy:\n     * Topical Cycloplegics/Mydriatics (Atropine Sulphate 1% or cyclopentolate): Paralyses the ciliary and sphincter pupillae muscles to relieve severe spasm pain, and prevents or breaks fresh posterior synechiae.\n     * Topical Corticosteroids (e.g., Prednisolone Acetate 1% drops): Instilled frequently to aggressively suppress intraocular inflammation.\n   - Specific Curative Therapy (directed at the underlying cause):\n     * Infective Cases: Systemic/local antimicrobials (e.g., Pyrimethamine + Sulfadiazine for Toxoplasmosis; systemic acyclovir/valacyclovir for herpetic uveitis; intensive antituberculous therapy for TB).\n     * Non-Infective Autoimmune Cases (Severe/Bilateral Refractory): Systemic corticosteroids (oral Prednisolone) or steroid-sparing Immunosuppressive agents (e.g., Cyclosporine, Methotrexate, or biologicals like Adalimumab).\n   - Surgical Management: Reserved for managing complications (e.g., Cataract extraction, glaucoma filtering surgery/valve implantation, or Pars Plana Vitrectomy for persistent vitritis or tractional retinal detachment).',
+    isClinical: true,
+    topic: 'Anterior Uveitis (Iridocyclitis)'
+  },
+  {
+    id: 'uveitis_anterior_q6',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Traumatic Iris Detachment: Diagnosis & Treatment of Iridodialysis',
+    content: 'Define iridodialysis, explain how it is diagnosed, and outline its clinical indications and surgical treatment options.',
+    answer: '1. Definition:\n   - Iridodialysis is the traumatic tear or detachment of the iris root (the thinnest portion of the iris) from its attachment at the anterior base of the ciliary body (scleral spur).\n\n2. Diagnosis:\n   - Clinically diagnosed during slit-lamp biomicroscopy or gonioscopy, showing a dark, crescentic or D-shaped defect at the peripheral periphery of the iris.\n   - Patients frequently complain of monocular diplopia or polyopia (due to light entering through the accessory peripheral opening), photophobia, glare, and disfigurement. Often accompanied by traumatic hyphema (bleeding into the anterior chamber due to tears in the iris/ciliary body blood vessels).\n\n3. Indications for Surgical Intervention:\n   - Large defect causing significant visual symptoms (bothersome monocular diplopia, severe glare/photophobia).\n   - Cosmetic disfigurement.\n\n4. Treatment Options:\n   - Small, asymptomatic cases: Conservative monitoring without surgery.\n   - Surgical Repair (Iridoplasty / Suture Pupilloplasty):\n     * Done under local or general anesthesia.\n     * The detached peripheral iris root is anchored and secured back to the scleral spur/sclera using micro-sutures (typically 10-0 Prolene sutures) using special needle-passing techniques (e.g., McCannel or hollow-needle loop techniques).',
     isClinical: true,
     topic: 'Anterior Uveitis (Iridocyclitis)'
   },
@@ -2656,6 +2802,36 @@ export const INITIAL_QUESTIONS: Question[] = [
     isClinical: true,
     topic: 'Anterior Uveitis (Iridocyclitis)'
   },
+  {
+    id: 'uveitis_anterior_q7',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Etiology of Iridocyclitis (Primary & Secondary)',
+    content: 'Define iridocyclitis, outline its primary etiopathogeny (infective, non-infective, and idiopathic syndromes), and enumerate the causes of secondary iridocyclitis.',
+    answer: '1. Definition:\n   - Iridocyclitis is the acute or chronic inflammation of the iris and ciliary body tissue.\n\n2. Primary Etiology:\n   - Infective Causes:\n     * Exogenous: Direct entry (e.g., perforated corneal ulcers, penetrative trauma, postoperative infection).\n     * Endogenous: Blood-borne spread or focal infection of bacteria, viruses, fungi, or protozoa (e.g., Herpes Simplex, Tuberculosis, Syphilis, Toxoplasmosis).\n   - Non-Infective (Allergic/Autoimmune) Causes:\n     * Bacterial allergy (immuno-allergic reactions to endogenous bacterial toxins).\n     * Retained lens proteins (Phacoanaphylactic uveitis).\n     * Uveal pigment auto-sensitivity (Sympathetic Ophthalmitis).\n     * Constitutional / HLA-B27 associated autoimmune diseases.\n\n3. Causes of Secondary Iridocyclitis (due to spread of inflammation or mechanical/vascular irritation from other ocular conditions):\n   - Keratitis (especially severe/perforating corneal ulcers).\n   - Scleritis and episcleritis.\n   - Ocular trauma (causing reactive mechanical iridocyclitis).\n   - Intraocular tumors (necrosis or tumor-shedding reaction).\n   - Lens displacement/subluxation (causing mechanical irritation of the ciliary body).\n   - Retinal detachment (often chronic, causing low-grade uveitis).',
+    isClinical: true,
+    topic: 'Anterior Uveitis (Iridocyclitis)'
+  },
+  {
+    id: 'uveitis_anterior_q8',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Differential Diagnosis of Acute Red Eye (Acute Iridocyclitis)',
+    content: 'How is acute iridocyclitis differentially diagnosed from other major causes of red eye?',
+    answer: 'Acute iridocyclitis must be differentiated from three other primary, sight-threatening causes of acute red eye:\n\n1. Corneal Ulcer (Keratitis):\n   - Pain/Sensation: Intense foreign body sensation, sharp pain, and severe photophobia.\n   - Injection: Ciliary injection.\n   - Slit-lamp / Cornea: Epithelial defect that stains green with fluorescein, often with a grayish stromal infiltrate.\n   - Pupil: Normal size or slightly miotic.\n   - Discharge: Purulent/mucopurulent discharge.\n\n2. Acute Glaucoma (Acute Angle-Closure Glaucoma):\n   - Pain: Extremely severe, excruciating ocular pain accompanied by headache, nausea, and vomiting.\n   - Visual Acuity: Rapid, profound drop in vision (seeing colored halos around light).\n   - Cornea: Diffusely hazy, dull, and edematous (like steam/ground glass).\n   - Pupil: Vertically oval, semi-dilated, and completely non-reactive to light.\n   - Injection: Ciliary and conjunctival (mixed) congestion.\n   - IOP: Extremely high, stony hard eyeball on digital palpation (>50-60 mmHg).\n\n3. Acute Conjunctivitis:\n   - Sensation: Mild discomfort, burning, or gritty foreign body sensation, but no actual boring ocular pain.\n   - Discharge: Profuse mucopurulent or purulent discharge gluing the eyelids in the morning.\n   - Injection: Superficial conjunctival injection (bright red, fades towards the limbus, vessels move with conjunctival movement).\n   - Cornea: Completely clear and transparent.\n   - Pupil: Normal size, shape, and briskly reactive to light.\n   - IOP: Normal.',
+    isClinical: true,
+    topic: 'Anterior Uveitis (Iridocyclitis)'
+  },
+  {
+    id: 'uveitis_anterior_q9',
+    chapterId: 9,
+    type: 'short-answer',
+    title: 'Differentiating Anterior Uveitis (Iridocyclitis) vs Posterior Uveitis (Choroiditis)',
+    content: 'What are the key clinical differences between anterior uveitis (iridocyclitis) and posterior uveitis (choroiditis)?',
+    answer: 'The key differences between anterior uveitis and posterior uveitis include:\n\n1. Pain:\n   - Anterior Uveitis: Severe, neuralgic pain (worse at night, referred to eyebrow) due to ciliary muscle spasm.\n   - Posterior Uveitis: Completely painless (as the choroid and retina lack sensory pain receptors).\n\n2. Redness:\n   - Anterior Uveitis: Prominent circumcorneal ciliary injection (red eye).\n   - Posterior Uveitis: Completely quiet, white eye.\n\n3. Visual Symptoms:\n   - Anterior Uveitis: Rapid drop of vision (due to aqueous turbidity, KPs, ciliary spasm).\n   - Posterior Uveitis: Gradual or localized vision drop (scotoma, floaters/myodesopsia, photopsia, micropsia/macropsia), but marked central visual loss only occurs if the macula or optic nerve is directly involved.\n\n4. Slit-Lamp Findings:\n   - Anterior Uveitis: Abundant flare, inflammatory cells, and KPs in the anterior chamber.\n   - Posterior Uveitis: Minimal to no AC reaction; dominant signs are vitreous haziness/cells, inflammatory choroidal/retinal lesions, and macular edema.\n\n5. Secondary Glaucoma:\n   - Anterior Uveitis: Highly common (due to pupillary block or clogging of trabecular meshwork).\n   - Posterior Uveitis: Uncommon.\n\n6. Therapeutic Focus:\n   - Anterior Uveitis: Topical atropine (cycloplegics) is crucial (rests ciliary muscle and prevents synechiae), alongside topical steroids.\n   - Posterior Uveitis: Topical atropine is of no value; treatment relies heavily on periocular (sub-Tenon\'s) or systemic corticosteroids, or systemic immunosuppressive/cytotoxic/cytostatic therapy for severe, sight-threatening cases.',
+    isClinical: true,
+    topic: 'Anterior Uveitis (Iridocyclitis)'
+  },
 
   // --- Topic 2: Suppurative Uveitis (Endophthalmitis & Panophthalmitis) ---
   {
@@ -2663,8 +2839,8 @@ export const INITIAL_QUESTIONS: Question[] = [
     chapterId: 9,
     type: 'short-answer',
     title: 'Endophthalmitis Definition & Clinical Presentation',
-    content: 'Define Endophthalmitis and describe its typical clinical presentation (symptoms and signs).',
-    answer: 'Definition: Suppurative inflammation of the entire uveal tract and adjacent intraocular cavities, typically sparing the outer scleral coat.\n\nSymptoms: Severe ocular pain, intense photophobia, lacrimation, marked eye redness, and a rapid, profound drop of vision.\n\nSigns: Severe conjunctival injection and chemosis, corneal haze, hypopyon (layer of pus in the anterior chamber), and a yellow pupillary reflex (due to vitreous abscess/pus).',
+    content: 'Define Endophthalmitis and describe its typical clinical presentation (symptoms and signs) and potential complications.',
+    answer: '1. Definition:\n   - Endophthalmitis is acute suppurative inflammation affecting the internal structures of the eyeball (entire uveal tract and adjacent cavities like vitreous and anterior chamber), characteristically sparing the outer scleral coat and Tenon\'s capsule.\n\n2. Clinical Picture:\n   - Symptoms: Severe pain, photophobia, lacrimation, severe drop in vision (rapidly progressing to light perception or hand motions), and constitutional symptoms (fever, headache).\n   - Signs:\n     * Eyelids: Edematous and hyperemic.\n     * Conjunctiva: Chemosis and marked conjunctival/ciliary injection.\n     * Cornea: Hazy and edematous, with keratic precipitates.\n     * Anterior Chamber: Deep AC with abundant cells, flare, and a thick yellow Hypopyon (pus).\n     * Pupil: Sluggish or non-reactive; grey/yellow pupillary reflex instead of black (known as a "yellow fundus reflex" or "amaurotic cat\'s eye" due to vitreous abscess/pus).\n\n3. Complications:\n   - Panophthalmitis (extension of suppurative inflammation to the sclera and orbital tissues).\n   - Pseudoglioma (an organized yellow mass of vitreous pus mimics a tumor in children).\n   - Atrophia Bulbi or Phthisis Bulbi (total destruction and shrinkage of the eyeball).',
     isClinical: true,
     topic: 'Suppurative Uveitis (Endophthalmitis & Panophthalmitis)'
   },
@@ -2672,9 +2848,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'uveitis_suppurative_q2',
     chapterId: 9,
     type: 'short-answer',
-    title: 'Postoperative Endophthalmitis Guidelines',
-    content: 'State the management guidelines for an active case of Postoperative Endophthalmitis.',
-    answer: '1. Intensive, urgent antibiotic administration via all possible routes, including topical, systemic, and mandatory Intravitreal antibiotic injection.\n2. Pars Plana Vitrectomy (PPV) if light perception (PL) is preserved but visual acuity is highly deteriorated.\n3. Evisceration or Enucleation if the condition progresses to a completely blind, painful eye.',
+    title: 'Medical & Surgical Management of Endophthalmitis',
+    content: 'Outline the treatment strategy for a patient with acute Endophthalmitis, distinguishing between early and late stages.',
+    answer: '1. Early Stage Management (Where visual potential is preserved):\n   - Intensive Medical Therapy:\n     * Antimicrobial Therapy: Urgent delivery of broad-spectrum antibiotics. Intravitreal antibiotic injection (e.g., Vancomycin + Ceftazidime or Amikacin) is the most critical route, combined with frequent topical fortified antibiotic drops and systemic antibiotics.\n     * Cycloplegics: Topical atropine (dilates pupil, relieves pain, rests uvea).\n     * Corticosteroids: Introduced locally/systemically *after* 24-48 hours of effective antibiotic control, to minimize structural damage from inflammatory enzymes.\n   - Surgical Therapy (Pars Plana Vitrectomy [PPV]): Preformed urgently if vision is down to light perception (PL) and the vitreous cavity is heavily packed with suppurative debris, to physically debulk the infectious reservoir and inject direct intravitreal antibiotics.\n\n2. Late Stage Management (When the eye becomes completely blind, painful, and visual potential is lost):\n   - Surgical Evisceration (scooping out the infected intraocular contents, leaving the sclera intact) to relieve agonizing pain.',
     isClinical: true,
     topic: 'Suppurative Uveitis (Endophthalmitis & Panophthalmitis)'
   },
@@ -2683,8 +2859,8 @@ export const INITIAL_QUESTIONS: Question[] = [
     chapterId: 9,
     type: 'short-answer',
     title: 'Panophthalmitis Definition & Features vs Endophthalmitis',
-    content: 'Define Panophthalmitis and contrast its clinical signs with Endophthalmitis.',
-    answer: 'Definition: Severe, acute suppurative inflammation involving all three coats of the eyeball (including the sclera) and extending into the orbital tissues.\n\nDifferentiating Signs (In addition to endophthalmitis features):\n1. Marked eyelid edema and prominent Proptosis (due to orbital involvement).\n2. Total loss of light perception (No PL occurs very early).\n3. Complete ophthalmoplegia (limitation of eye movements).\n4. High risk of spontaneous perforation and self-evisceration.',
+    content: 'Define Panophthalmitis, discuss its etiology, and explain how it clinically differs from Endophthalmitis.',
+    answer: '1. Definition:\n   - Panophthalmitis is acute suppurative inflammation of the entire eyeball, involving all three ocular coats (including the outer cornea and sclera), Tenon\'s capsule, and surrounding orbital tissues.\n\n2. Etiology:\n   - Usually caused by extremely virulent pyogenic organisms (e.g., Pseudomonas aeruginosa, Staphylococcus aureus, or Bacillus cereus).\n   - Transmission is dominantly exogenous (perforating trauma, infected surgical wounds, or corneal ring abscesses) but can be endogenous.\n\n3. Key Differentiating Features from Endophthalmitis:\n   - Orbital Involvement: Panophthalmitis is characterized by prominent Proptosis, chemosis, and absolute complete ophthalmoplegia (restricted eye movements) due to involvement of the extraocular muscles, Tenon\'s capsule, and orbital tissues. These orbital signs are completely absent in Endophthalmitis (where Tenon\'s capsule and sclera are spared).\n   - Corneal Abscess: Often features a distinctive, rapid "ring corneal abscess" with sloughing, which is rare in endophthalmitis.\n   - Severity & Pain: Constitutional symptoms (high fever, severe headache) and ocular pain are far more agonizing and severe in panophthalmitis.\n   - Vision Loss: Total loss of light perception (No PL) occurs almost immediately in panophthalmitis, whereas endophthalmitis may retain some light perception.',
     isClinical: true,
     topic: 'Suppurative Uveitis (Endophthalmitis & Panophthalmitis)'
   },
@@ -2704,10 +2880,10 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'uveitis_syndromes_q1',
     chapterId: 9,
     type: 'short-answer',
-    title: 'Behçet\'s Disease Oral/Genital Aphthosis Syndromic Match',
-    content: 'Mention the systemic syndrome characterized by uveitis accompanied by recurrent oral and genital aphthous ulcers.',
-    answer: 'Behçet\'s Disease (a chronic systemic vasculitis of unknown etiology).',
-    isClinical: false,
+    title: 'Main Syndromes of Unknown Etiology Associated with Uveitis',
+    content: 'What are the main syndromes of unknown (idiopathic) etiology associated with uveitis? Describe their diagnostic systemic and ocular features.',
+    answer: 'The three principal syndromes of unknown etiology characterized by uveitis are:\n\n1. Behçet’s Syndrome:\n   - Ocular Features: Bilateral, chronic, recurrent iridocyclitis with a classic "transient hypopyon" that shifts with gravity, accompanied by retinal vasculitis and occlusive vascular disease.\n   - Systemic Features: Recurrent, painful aphthous oral mucosal ulcers and similar genital mucocutaneous ulcerations, alongside skin lesions and joint symptoms.\n\n2. Heterochromic Iridocyclitis of Fuchs (Fuchs Heterochromic Uveitis):\n   - Ocular Features: Unilateral, chronic, completely quiet (no red eye) low-grade iridocyclitis with fine, translucent stellate KPs scattered evenly over the entire corneal endothelium. Characterized by progressive iris stroma heterochromia (depigmentation of the affected iris, making it lighter/greyer) and a high association with early/juvenile complicated cataract and secondary open-angle glaucoma.\n   - Systemic Features: None (completely localized to the eye).\n\n3. Vogt-Koyanagi-Harada (VKH) Syndrome:\n   - Ocular Features: Bilateral exudative/exudative retinal detachment with severe granulomatous panuveitis.\n   - Systemic Features: Multi-system involvement including:\n     * Neuromeningeal signs: Headache, neck stiffness (meningismus), and cerebrospinal fluid pleocytosis.\n     * Auditory signs: Sudden tinnitus, vertigo, and dysacusis.\n     * Cutaneous/Integumentary signs: Vitiligo (patchy skin depigmentation), poliosis (premature whitening of eyelashes/eyebrows), and alopecia (hair loss).',
+    isClinical: true,
     topic: 'Systemic Syndromes & Optic Atrophy Comparison'
   },
   {
@@ -3074,9 +3250,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_anatomy_q1',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Visual Pathway Gross Anatomy',
-    content: 'Describe the gross anatomy of the visual pathway, mentioning the sequential structures involved.',
-    answer: 'The visual pathway consists of the following sequential structures:\n1. The Optic Nerve (2nd cranial nerve, ~4 cm long extending from the lamina cribrosa of the sclera to the optic chiasm).\n2. The Optic Chiasm (where nasal fibers cross/decussate to the opposite side, while temporal fibers remain uncrossed).\n3. The Optic Tract (contains temporal fibers of the same side and nasal fibers of the opposite side).\n4. The Lateral Geniculate Body (LGB, the primary synapse point of visual fibers).\n5. The Optic Radiation (extends from the LGB through the posterior limb of the internal capsule to the occipital lobe).\n6. The Visual Cortex (located on the medial aspect and posterior pole of the occipital lobe, primarily Brodmann area 17).',
+    title: 'Anatomy of the Visual Pathway',
+    content: 'What is the anatomy of the visual pathway?',
+    answer: 'The visual pathway starts from the optic nerve (2nd cranial nerve, ~4 cm long from lamina cribrosa to optic chiasm), where nasal retinal fibers cross at the optic chiasm. It continues to the optic tract (containing temporal fibers of the same eye and nasal fibers of the opposite eye), lateral geniculate body (synapse point), optic radiation (through internal capsule to occipital lobe), and visual cortex on the medial posterior occipital lobe.',
     isClinical: false,
     topic: 'Anatomy & Physiology of the Visual Pathway'
   },
@@ -3084,9 +3260,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_anatomy_q2',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Visual Pathway Orders of Neurons',
-    content: 'Explain the physiology of the visual pathway in terms of the three main orders of neurons.',
-    answer: 'Excluding the photoreceptors (rods and cones), the visual pathway is composed of three orders of neurons:\n- 1st Order Neurons: The bipolar cells located within the inner nuclear layer of the retina.\n- 2nd Order Neurons: The retinal ganglion cells and their axons, which form the nerve fiber layer, converge to form the optic nerve, pass through the chiasm/tracts, and terminate/synapse in the lateral geniculate body (LGB).\n- 3rd Order Neurons: Extend from the LGB, forming the optic radiations that travel to the visual cortex of the occipital lobe.',
+    title: 'Physiology of the Visual Pathway',
+    content: 'Describe the physiology of the visual pathway.',
+    answer: 'It involves three orders of neurons (excluding photoreceptors):\n- First-order are bipolar cells.\n- Second-order are retinal ganglion cells and their axons to the lateral geniculate body.\n- Third-order extend from the lateral geniculate body via optic radiation to the visual cortex.',
     isClinical: false,
     topic: 'Anatomy & Physiology of the Visual Pathway'
   },
@@ -3094,9 +3270,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_anatomy_q3',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Visual Pathway Lesions and Field Defects',
-    content: 'Enumerate the characteristic visual field defects according to the site of the lesion in the visual pathway.',
-    answer: 'Visual field defects correspond directly to the site of the lesion:\n- Left Optic Nerve: Complete blindness of the left eye.\n- Optic Chiasm (central lesion): Bitemporal hemianopia (loss of both temporal visual fields).\n- Optic Tract / LGB / Optic Radiation: Contralateral homonymous hemianopia.\n- Parietal Lobe (optic radiation): Contralateral inferior homonymous quadrantanopia ("pie in the floor").\n- Temporal Lobe (optic radiation - Meyer\'s loop): Contralateral superior homonymous quadrantanopia ("pie in the sky").\n- Occipital Lobe: Contralateral homonymous hemianopia, often with macular sparing due to collateral blood supply or bilateral representation.',
+    title: 'Visual Field Defects in the Visual Pathway',
+    content: 'What are the visual field defects corresponding to lesions in the visual pathway?',
+    answer: 'Visual field defects corresponding to lesions in the visual pathway:\n- Left optic nerve: blind left eye.\n- Optic chiasm: bitemporal hemianopia.\n- Optic tract/LGB/optic radiation/occipital lobe: contralateral homonymous hemianopia.\n- Parietal lobe: contralateral inferior quadrantanopia.\n- Temporal lobe: contralateral superior quadrantanopia.\nNote: Macular sparing often occurs in occipital lesions.',
     isClinical: true,
     topic: 'Anatomy & Physiology of the Visual Pathway'
   },
@@ -3106,39 +3282,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_swelling_q1',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Optic Disc Swelling Clinical Demographics',
-    content: 'Contrast between Optic Neuritis, Papilledema, and Non-Arteritic Anterior Ischemic Optic Neuropathy (NAION) regarding typical age of presentation, gender predilection, and laterality.',
-    answer: '1. Optic Neuritis:\n- Typical Age: Younger age group (20-45 years)\n- Gender: Females > Males\n- Laterality: Predominantly Unilateral (10% bilateral)\n\n2. Papilledema:\n- Typical Age: Variable age group (often <35 years)\n- Gender: Females > Males\n- Laterality: Almost always Bilateral\n\n3. NAION:\n- Typical Age: Older age group (typically >50 years)\n- Gender: Equal gender incidence (Females = Males)\n- Laterality: Rarely bilateral and simultaneous (usually unilateral or sequential)',
-    isClinical: true,
-    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
-  },
-  {
-    id: 'neuro_swelling_q2',
-    chapterId: 12,
-    type: 'short-answer',
-    title: 'Optic Disc Swelling Vision & Pupil contrast',
-    content: 'Differentiate between the initial visual functions and pupillary findings in recent cases of Optic Neuritis, Papilledema, and NAION.',
-    answer: '1. Optic Neuritis:\n- Vision: Variable but typically severe early visual drop (20/25 or worse), dyschromatopsia (abnormal color vision in 90%), and central or nerve fiber layer defects.\n- Pupils: Relative Afferent Pupillary Defect (RAPD) is positive.\n\n2. Papilledema:\n- Vision: Visual acuity is usually completely normal in early cases, with enlarged blind spots and nerve fiber layer defects.\n- Pupils: RAPD is typically absent in bilateral symmetric disease.\n\n3. NAION:\n- Vision: 50% have normal or fair vision (20/40 or better) while 20% are worse than 20/200, with variable nerve fiber layer defects.\n- Pupils: RAPD is positive in the involved eye.',
-    isClinical: true,
-    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
-  },
-  {
-    id: 'neuro_swelling_q3',
-    chapterId: 12,
-    type: 'short-answer',
-    title: 'Optic Disc Swelling Ophthalmoscopic Features',
-    content: 'Contrast the clinical ophthalmoscopic appearance of the optic nerve head between Optic Neuritis, Papilledema, and NAION.',
-    answer: '1. Optic Neuritis: 67% appear completely normal on funduscopy (Retrobulbar Neuritis); 33% show papillitis or disk hyperemia.\n\n2. Papilledema: Shows bilateral, symmetric optic disc swelling graded from early to chronic elevations based on intracranial pressure.\n\n3. NAION: Shows sector-based or diffuse optic disc edema, accompanied by superficial flame-shaped hemorrhages and disk hyperemia.',
-    isClinical: true,
-    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
-  },
-  {
-    id: 'neuro_swelling_q4',
-    chapterId: 12,
-    type: 'short-answer',
-    title: 'Optic Disc Swelling Symptoms & Systemic Associations',
-    content: 'Enumerate the specific associated symptoms and accompanying systemic disorders for Optic Neuritis, Papilledema, and NAION.',
-    answer: '1. Optic Neuritis:\n- Symptoms: Associated with pain upon eye movement.\n- Systemic: Accompanied by demyelinating diseases like Multiple Sclerosis (MS) or Neuromyelitis Optica (NMO).\n\n2. Papilledema:\n- Symptoms: Associated with headache, nausea, vomiting, transient obstruction of vision, pulse-synchronous tinnitus, and diplopia.\n- Systemic: Accompanied by Idiopathic Intracranial Hypertension (IIH/PTC), cerebral venous sinus thrombosis, or intracranial space-occupying masses.\n\n3. NAION:\n- Symptoms: Usually has no associated ocular pain.\n- Systemic: Accompanied by systemic cardiovascular diseases, Diabetes Mellitus, Hypertension, or obstructive sleep apnea.',
+    title: 'Causes of Optic Disc Swelling',
+    content: 'What are the causes of optic disc swelling?',
+    answer: 'Primary causes are optic neuritis, papilledema, and non-arteritic anterior ischemic optic neuropathy (NAION). They differ by typical age, symptoms, laterality, and systemic/imaging risks:\n- Optic Neuritis: Typically affects young adults, accompanied by eye pain on movement, and is usually unilateral.\n- Papilledema: Affects any age, presents bilaterally, accompanied by signs of raised ICP (headache, vomiting, etc.) with preserved vision early.\n- NAION: Affects older patients (typically >50) unilaterally without pain, associated with cardiovascluar or vascular risk factors.',
     isClinical: true,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
@@ -3147,8 +3293,8 @@ export const INITIAL_QUESTIONS: Question[] = [
     chapterId: 12,
     type: 'short-answer',
     title: 'Optic Neuritis Definition & Classification',
-    content: 'Define Optic Neuritis and outline its ophthalmoscopic and etiological classifications.',
-    answer: 'Definition: An inflammatory, infective, or demyelinating process affecting the optic nerve fibers.\n\nClassifications:\n1. Ophthalmoscopic Classification:\n   - Papillitis: Primary inflammation of the optic disc (nerve head), showing disc swelling, congestion, and hemorrhages.\n   - Retrobulbar Neuritis: Inflammation behind the eyeball (optic disc appears completely normal, hence "the patient sees nothing and the doctor sees nothing").\n   - Neuro-retinitis: Inflammation of the optic nerve head extending into the surrounding macular area, typically forming a "macular star" of hard exudates.\n\n2. Etiological Classification:\n   - Demyelinating: The most common cause (associated with Multiple Sclerosis [MS] or Devic disease).\n   - Para-infectious: Following viral infections (e.g., measles, mumps, influenza) or vaccinations.\n   - Infectious: Direct spread (meningitis, orbital cellulitis, sinus disease) or systemic infections (syphilis, tuberculosis).\n   - Autoimmune: Associated with systemic conditions (e.g., systemic lupus erythematosus, sarcoidosis).',
+    content: 'Define optic neuritis and classify it.',
+    answer: 'Optic neuritis is an inflammatory, infective, or demyelinating process affecting the optic nerve.\n\nOphthalmoscopic classification:\n- Papillitis: Acute active disc swelling with visual loss.\n- Retrobulbar Neuritis: Inflammation behind the globe with normal disc appearance.\n- Neuro-retinitis: Inflammation of the nerve head extending into the surrounding retina/macula (often showing a macular star pattern).\n\nEtiological classification:\n- Demyelinating (most common, e.g., Multiple Sclerosis).\n- Para-infectious.\n- Infectious (e.g., syphilis).\n- Autoimmune.',
     isClinical: false,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
@@ -3157,8 +3303,8 @@ export const INITIAL_QUESTIONS: Question[] = [
     chapterId: 12,
     type: 'short-answer',
     title: 'Papillitis Presentation & Management',
-    content: 'Describe the typical clinical picture (symptoms and signs), fate, and treatment of Papillitis.',
-    answer: '1. Clinical Presentation:\n   - Symptoms: Rapidly progressive unilateral visual loss (severe drop, sometimes to perception of light [PL]), and deep retrobulbar aching eyeball pain typically exacerbated by eye movements.\n   - Signs: Elevated and hyperemic optic disc (<3 diopters of elevation) with lost physiological cup, congested retinal veins, splinter hemorrhages near the disc margin, relative afferent pupillary defect (RAPD), and a central or cecocentral scotoma (with severe loss of red/green color vision).\n\n2. Fate (Outcome): Vision usually recovers back to normal or near-normal within 1-4 weeks, but recurrences may occur, or it may transition into secondary optic atrophy.\n\n3. Treatment: Consists of treating the underlying cause, administration of systemic corticosteroids (e.g., intravenous methylprednisolone followed by oral prednisone) to accelerate recovery, and a comprehensive neurological consultation (especially to assess risk for Multiple Sclerosis).',
+    content: 'What is papillitis? Describe its clinical picture.',
+    answer: 'Papillitis is acute active disc swelling with visual loss.\n\n- Symptoms: Rapid progressive visual loss, pain on eye movement.\n- Signs: Hyperemic elevated disc (≤3D), splinter hemorrhages, relative afferent pupillary defect (RAPD), and central scotoma (red/green).\n- Fate: Recovery within 1-4 weeks, with potential post-neuritic optic atrophy.\n- Treatment: Identify and address the underlying cause, corticosteroids, and neurological consultation (e.g., for Multiple Sclerosis).',
     isClinical: true,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
@@ -3166,9 +3312,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_swelling_q7',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Retrobulbar Neuritis Clinical Manifestations',
-    content: 'Outline the key clinical features, typical patient age group, and normal ocular exam findings of Retrobulbar Neuritis.',
-    answer: '- Key Features: Acute unilateral visual loss, ocular/retrobulbar pain exacerbated by eye movements, and a positive Relative Afferent Pupillary Defect (RAPD).\n- Typical Patient Profile: Young adults aged 20–40, with a strong association with demyelinating diseases like Multiple Sclerosis (MS).\n- Ocular Exam Findings: The fundus initially appears completely normal ("the patient sees nothing and the doctor sees nothing") because the inflammatory focus is located posterior to the lamina cribrosa, away from the optic nerve head.',
+    title: 'Retrobulbar Neuritis Characteristics',
+    content: 'What is retrobulbar neuritis?',
+    answer: 'Retrobulbar neuritis is inflammation of the optic nerve behind the globe.\n\n- Clinical features: Acute unilateral visual loss (usually in patients aged 20-40 years), pain on eye movement, RAPD, and a usually normal-appearing fundus (unless combined with papillitis).\n- Fate and treatment: Similar to papillitis.',
     isClinical: true,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
@@ -3176,9 +3322,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_swelling_q8',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Papilledema Definition & Etiologies',
-    content: 'Define Papilledema and list its three main underlying etiologies.',
-    answer: 'Definition: Passive, non-inflammatory edema of the optic disc (almost always bilateral) caused by elevated intracranial pressure (ICP).\n\nMain Etiologies:\n1. Idiopathic Intracranial Hypertension (Pseudotumor cerebri, most common in young, obese females of childbearing age).\n2. Space-Occupying Intracranial Lesions (e.g., brain tumors, abscesses, or hematomas obstructing cerebrospinal fluid pathways).\n3. Cerebral Venous Sinus Thrombosis (obstructing venous outflow from the brain).\n4. Traumatic brain injury / Subarachnoid hemorrhage.',
+    title: 'Papilledema Definition & Etiology',
+    content: 'Define papilledema and list its etiology.',
+    answer: 'Papilledema is passive non-inflammatory edema of the optic disc due to increased intracranial pressure.\n\nEtiology:\n- Benign intracranial hypertension (pseudo-tumor cerebri, common in young females).\n- Intracranial space-occupying tumors.\n- Other causes (e.g., cavernous sinus thrombosis, subarachnoid hemorrhage).',
     isClinical: false,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
@@ -3186,9 +3332,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_swelling_q9',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Papilledema Stages & Symptoms',
-    content: 'Describe the typical symptoms of increased intracranial pressure and outline the fundus appearance across the four stages of Papilledema.',
-    answer: '1. Symptoms of Raised ICP: Severe headache (worse in the morning), projectile vomiting, projectile nausea, diplopia (due to 6th cranial nerve palsy), and transient visual obscurations (momentary blurring/graying out of vision upon standing up or bending down).\n\n2. Fundus Signs across Stages:\n   - Early Stage: Mild hyperemia of the disc, blurring of the nasal first and then temporal margins, and loss of normal spontaneous venous pulsations (SVPs).\n   - Established Stage: Severe hyperemia, marked elevation of the disc (up to 9D) with "halo" appearance, complete obliteration of the cup, engorged/tortuous retinal veins, flame-shaped hemorrhages, and fluffy white cotton-wool spots.\n   - Long-Standing Stage: Elevation remains but hyperemia/hemorrhages resolve; disc has a pale, dusty, "champagne-cork" appearance with optociliary shunt vessels.\n   - Atrophic Stage: Post-papilledemic optic atrophy characterized by a greyish-white, dirty disc with blurred margins and severely attenuated retinal vessels.',
+    title: 'Clinical Picture of Papilledema',
+    content: 'Describe the clinical picture of papilledema.',
+    answer: '- Symptoms: Headache, vomiting, transient visual obscurations, and diplopia.\n- Signs (Fundus Copy):\n  * Early: Blurred disc edges, hyperemia, and lost venous pulsations.\n  * Established: Marked disc elevation (up to 9D), hemorrhages, cotton-wool spots, and engorged veins.\n  * Chronic: "Champagne cork" disc appearance, opto-ciliary shunts.\n  * Atrophic: Post-papilledema optic atrophy.\n- Visual Fields: Enlarged blind spot early.',
     isClinical: true,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
@@ -3196,9 +3342,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_swelling_q10',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Papilledema vs Papillitis & Other Swelling Causes',
-    content: 'Differentiate between Papilledema and Papillitis, and list other non-neurological causes of optic disc swelling.',
-    answer: '1. Differentiation:\n   - Papilledema: Almost always bilateral; early visual acuity is preserved (normal); pupillary reaction is normal; accompanied by prominent symptoms of raised ICP (headache, vomiting); marked elevation up to 9 diopters.\n   - Papillitis: Almost always unilateral; presents with immediate, severe visual drop; central/cecocentral scotoma; positive RAPD; pain upon eye movement; milder disc elevation (<3 diopters).\n\n2. Other Causes of Optic Disc Swelling:\n   - Ocular: Central Retinal Vein Occlusion (CRVO), severe ocular hypotony, or low tension.\n   - Orbital: Orbital tumors, Graves\' orbitopathy, or orbital cellulitis compressing the nerve.\n   - Systemic: Malignant systemic hypertension, diabetic papillopathy, or toxemia of pregnancy.',
+    title: 'Differentiate Papilledema from Papillitis',
+    content: 'Differentiate papilledema from papillitis.',
+    answer: '- Papilledema is usually bilateral, presents with normal early vision, exhibits no pain on movement, shows an enlarged blind spot, and exhibits marked disc swelling (up to 9D).\n- Papillitis is often unilateral, presents with rapid and severe vision loss, exhibits pain on eye movement, features a relative afferent pupillary defect (RAPD), shows a central scotoma (red/green), and exhibits milder disc swelling (≤3D).',
     isClinical: true,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
@@ -3206,9 +3352,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_swelling_q11',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Papilledema Management Guidelines',
-    content: 'Outline the diagnostic and treatment approach for Papilledema.',
-    answer: '1. Diagnostic Approach: Urgent neuroimaging (brain CT or MRI) to rule out an intracranial mass or sinus thrombosis BEFORE performing a lumbar puncture (LP) to measure cerebrospinal fluid opening pressure.\n\n2. Treatment Approach:\n   - Etiological Treatment: Direct medical or surgical intervention targeting the underlying cause (e.g., tumor resection, vascular shunting, or steroid/weight loss therapy for idiopathic intracranial hypertension).\n   - Medical: Carbonic anhydrase inhibitors (e.g., Acetazolamide/Diamox) or diuretics to lower ICP.\n   - Surgical (Visual sparing): Optic nerve sheath fenestration (decompression) to protect visual function from chronic damage if pressure remains high, or lumboperitoneal/ventriculoperitoneal shunt procedures.',
+    title: 'Treatment of Papilledema',
+    content: 'What is the treatment of papilledema?',
+    answer: '1. Treat the underlying primary cause (e.g., surgical resection of an intracranial tumor).\n2. Optic nerve decompression (fenestration) for severely affected vision to preserve optic nerve function.',
     isClinical: true,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
@@ -3218,9 +3364,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_atrophy_q1',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Optic Atrophy Definition & Types',
-    content: 'Define Optic Atrophy and list its four major clinical types.',
-    answer: 'Definition: Death of the optic nerve fibers resulting in loss of visual or pupillary function, caused by a lesion located at any site from the ganglion cells to the lateral geniculate body.\n\nTypes: Primary, Secondary, Consecutive, and Post-Glaucomatous Optic Atrophy.',
+    title: 'Optic Atrophy Definition & Etiology classification',
+    content: 'Define optic atrophy and classify its etiology.',
+    answer: 'Optic atrophy is the degeneration of the optic disc due to interruption of nerve fibers between retinal ganglion cells and the lateral geniculate body.\n\nEtiological Classification:\n- Primary: CNS (e.g., Multiple Sclerosis, neurosyphilis) or direct optic nerve damage (injury, compression, ischemia).\n- Secondary: Post-papilledema or post-neuritic.\n- Consecutive: Chorio-retinal disease (e.g., central retinal artery occlusion [CRAO], retinitis pigmentosa).\n- Post-glaucomatous.',
     isClinical: false,
     topic: 'Optic Atrophy Comparison'
   },
@@ -3228,19 +3374,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_atrophy_q2',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Primary vs Secondary Optic Atrophy',
-    content: 'Differentiate between Primary and Secondary Optic Atrophy based on the disc color, disc edge, and state of the retinal vessels.',
-    answer: '1. Primary Optic Atrophy:\n- Disc Color: White\n- Disc Edges: Sharply defined\n- Retinal Vessels: Attenuated over a normal surrounding retina\n\n2. Secondary Optic Atrophy:\n- Disc Color: White\n- Disc Edges: Completely blurred and elevated\n- Retinal Vessels: Heavily attenuated with secondary proliferation of the retinal pigment epithelium (RPE).',
-    isClinical: true,
-    topic: 'Optic Atrophy Comparison'
-  },
-  {
-    id: 'neuro_atrophy_q3',
-    chapterId: 12,
-    type: 'short-answer',
-    title: 'Consecutive vs Post-Glaucomatous Optic Atrophy',
-    content: 'Describe the unique fundus features that characterize Consecutive Optic Atrophy versus Post-Glaucomatous Optic Atrophy.',
-    answer: '1. Consecutive Optic Atrophy: Disc color has a characteristic waxy yellow hue with blurred edges; the optic cup is filled; retinal blood vessels are severely attenuated, with clear fundus evidence of the primary causative disease (e.g., bone spicules in Retinitis Pigmentosa).\n\n2. Post-Glaucomatous Optic Atrophy: Disc color is white with sharply defined edges; characterized by an extremely deep glaucomatous cup showing a prominent nasal shift of the retinal blood vessels, accompanied by high IOP values.',
+    title: 'Differentiation of Optic Atrophy Types',
+    content: 'Differentiate the types of optic atrophy by fundus appearance.',
+    answer: '- Primary: Milky white disc, well-defined sharp edges, shallow/enlarged cup, visible lamina cribrosa, and normal surrounding vessels/fundus.\n- Secondary: Grayish, ill-defined blurred edges, obliterated physiological cup, and attenuated sheathed vessels.\n- Consecutive: Waxy pale yellow-to-orange disc, ill-defined edges, marked vessel attenuation, accompanied by causative chorioretinal changes (e.g., bone spicules in retinitis pigmentosa).\n- Post-glaucomatous: Pale disc, deep and large glaucomatous cup, interrupted or nasalized retinal vessels, and a tigroid fundus pattern.',
     isClinical: true,
     topic: 'Optic Atrophy Comparison'
   },
@@ -3250,9 +3386,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_pupil_q1',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Pupil Definition, Muscles and Functions',
-    content: 'Define the Pupil, name its controlling muscles and their respective autonomic innervation, and state its key physiological functions.',
-    answer: '1. Definition: A central, active hole located in the iris diaphragm (usually slightly nasal to the center) measuring 3-4 mm in diameter.\n\n2. Controlling Muscles and Innervation:\n   - Sphincter Pupillae: A circular muscle layer responsible for pupillary constriction (miosis); supplied by parasympathetic fibers traveling on the 3rd cranial nerve (oculomotor).\n   - Dilator Pupillae: A radial muscle muscle layer responsible for pupillary dilatation (mydriasis); supplied by sympathetic nerve fibers from the superior cervical ganglion.\n\n3. Key Functions:\n   - Regulates the amount of light entering the eye to optimize retinal illumination.\n   - Reduces optical aberrations (by cutting off divergent peripheral light rays, allowing only central parallel rays to enter the eye).',
+    title: 'The Pupil and its Functions',
+    content: 'What is the pupil and its functions?',
+    answer: 'The pupil is a central hole in the iris diaphragm measuring approximately 3-4 mm.\n\nFunctions:\n1. Regulate the amount of light entering the eye to optimize retinal illumination.\n2. Reduce optical aberrations by limiting peripheral light rays.\n\nControl: Regulated by the sphincter pupillae (parasympathetic control) and dilator pupillae (sympathetic control) muscles.',
     isClinical: false,
     topic: 'Pupillary Reflexes & Anomalies'
   },
@@ -3260,9 +3396,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_pupil_q2',
     chapterId: 12,
     type: 'short-answer',
-    title: 'Pupillary Light Reflex Pathway',
-    content: 'Describe the complete anatomical pathway of the pupillary light reflex (Sensory to Motor components).',
-    answer: 'The pupillary light reflex pathway consists of:\n1. Receptors: Photoreceptors (rods and cones) and specialized intrinsically photosensitive retinal ganglion cells (ipRGCs) in the retina.\n2. Afferent Pathway: Decussate partly at the optic chiasm. Axons run through the optic nerve and optic tract, bypassing the lateral geniculate body, to terminate in the Pretectal Nucleus of the midbrain.\n3. Interneurons: Fibers travel bilaterally from each pretectal nucleus to both Edinger-Westphal nuclei (the parasympathetic centers of CN III), ensuring a bilateral consensual pupil response.\n4. Efferent Pathway: Parasympathetic preganglionic fibers travel along the Oculomotor (3rd) nerve to the Ciliary Ganglion, where they synapse.\n5. Postganglionic Efferents: Short ciliary nerves travel to the eye to supply the Sphincter Pupillae muscle, causing pupillary constriction (direct and consensual miosis).',
+    title: 'Pupillary Light Reflex Reflex & Pathway',
+    content: 'Describe the pupillary light reflex.',
+    answer: 'Light thrown on one eye causes direct constriction of the pupil (ipsilateral) and consensual constriction in the opposite eye (contralateral).\n\nPathway:\nRetina → Optic nerve/tract → Pretectal nucleus (midbrain) → Edinger-Westphal nuclei (bilateral) → Oculomotor (3rd) nerve → Ciliary ganglion → Sphincter pupillae.',
     isClinical: false,
     topic: 'Pupillary Reflexes & Anomalies'
   },
@@ -3270,10 +3406,20 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'neuro_pupil_q3',
     chapterId: 12,
     type: 'short-answer',
-    title: 'The Near Response Triad Components',
-    content: 'Enumerate the three distinct physiological components of the ocular Near Response (Accommodation Triad) and explain their purpose.',
-    answer: 'The near response (synkinesis) is triggered when focusing on a near object, consisting of three co-dependent actions:\n1. Accommodation: Contraction of the ciliary muscle relaxes the zonules, causing the lens to become more globular/powerful to focus divergent rays of near objects clearly on the retina.\n2. Convergence: Simultaneous contraction of both medial recti muscles aligns both eyes toward the near object to prevent binocular diplopia.\n3. Miosis: Constriction of the pupil (sphincter pupillae contraction) blocks peripheral divergent rays, increasing the depth of focus and reducing optical blur.',
+    title: 'Pupillary Near Response',
+    content: 'Describe the near response.',
+    answer: 'Fixation on a near object triggers an integrated triad synkinesis consisting of:\n1. Accommodation (ciliary muscle contraction increases lens refractive power).\n2. Convergence (medial recti contraction aligns both eyes).\n3. Miosis (pupil constriction via sphincter pupillae increases depth of focus and limits aberrations).',
     isClinical: false,
+    topic: 'Pupillary Reflexes & Anomalies'
+  },
+  {
+    id: 'neuro_pupil_q4',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Retinitis Pigmentosa & Optic Nerve Involvement',
+    content: 'Define and describe retinitis pigmentosa (as related to neuro-ophthalmology/optic nerve involvement).',
+    answer: 'Retinitis pigmentosa is a bilateral progressive hereditary degenerative dystrophy starting at the photoreceptors (rods in the periphery) and eventually affecting the macula and optic nerve.\n\n- Symptoms: Night blindness, progressive peripheral field loss (tunnel vision), and late central or color vision impairment.\n- Signs: Classic bone-spicule mid-peripheral pigments, marked retinal arteriolar attenuation, and consecutive optic atrophy (waxy pale yellow-to-orange disc pallor).\n- Management: Genetic counseling and treatment of associated ocular complications; no definitive curative therapy.',
+    isClinical: true,
     topic: 'Pupillary Reflexes & Anomalies'
   },
 

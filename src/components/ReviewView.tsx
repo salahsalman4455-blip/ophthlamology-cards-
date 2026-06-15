@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, CheckCircle2, Clock, AlertTriangle, ChevronDown, ChevronUp, Brain } from 'lucide-react';
 import { Question, Chapter } from '../types';
 import { CHAPTERS } from '../data/chapters';
+import QuestionPrompt, { AnswerFormatter } from './QuestionFormatter';
 
 interface ReviewViewProps {
   reviewIds: string[];
@@ -171,7 +172,9 @@ function ReviewCard({
         </div>
       </div>
 
-      <p className="text-slate-800 text-base md:text-lg font-medium leading-relaxed mt-1">{q.content}</p>
+      <div className="w-full">
+        <QuestionPrompt content={q.content} topic={q.topic} type={q.type} title={q.title} answer={q.answer} />
+      </div>
 
       {/* Answer Reveal Panel */}
       <div className="mt-2 border-t border-slate-100 pt-4">
@@ -201,17 +204,8 @@ function ReviewCard({
               className="mt-3 bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2 overflow-hidden"
             >
               <div className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-3">Model Answer details</div>
-              <div className="space-y-3">
-                {q.answer.split('\n').map((line, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
-                      <div className="w-1.5 h-1.5 bg-blue-600 rounded-full" />
-                    </div>
-                    <p className="text-slate-700 text-sm md:text-base leading-relaxed font-semibold">
-                      {line.replace('• ', '').replace('- ', '')}
-                    </p>
-                  </div>
-                ))}
+              <div className="w-full">
+                <AnswerFormatter answer={q.answer} topic={q.topic} title={q.title} />
               </div>
             </motion.div>
           )}
