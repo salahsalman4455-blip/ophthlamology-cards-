@@ -1,6 +1,98 @@
 import { Question } from '../types';
 
 export const INITIAL_QUESTIONS: Question[] = [
+  // --- Topic 0: Anatomy & Physiology of the Eyelids ---
+  {
+    id: 'eyelid_anatomy_q1',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Gross Anatomy of Eyelids & Palpebral Fissure',
+    content: 'Define the palpebral fissure, describe its normal dimensions and describe the angles (canthi).',
+    answer: 'Definition: The palpebral fissure is the elliptical space between the opened eyelids.\n\nDimensions:\n- The upper eyelid normally covers 1-2 mm (or 1-3 mm) of the upper part of the cornea.\n- The lower eyelid lies just below the cornea or touches the lower limbus.\n\nAngles (Canthi):\n- Medial Canthus: Rounded and surrounds the tear lake (lacus lacrimalis), containing the caruncle and plica semilunaris.\n- Lateral Canthus: Forms an acute angle.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_anatomy_q2',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Anatomy of the Eyelid Margin',
+    content: 'Describe the anatomical landmarks of the ciliary and lacrimal parts of the eyelid margin.',
+    answer: 'The eyelid margin is the free margin of the lid, 2-3 mm in width, divided by the lacrimal papilla (with the punctum) into:\n\n1. Lacrimal part (medial 1/6th, from punctum to medial canthus): Contains no eyelashes (cilia) or tarsal glands. It contains the lacrimal canaliculus.\n\n2. Ciliary part (lateral 5/6th, from punctum to lateral canthus): Includes:\n   - Anterior border: Rounded, carries eyelashes in 2-3 rows with Zeis\' sebaceous glands and Moll\'s sweat glands.\n   - Grey line: The neurovascular bundle and represents the surgical splitting point between the anterior and posterior lamellae.\n   - White line: Formed by the orifices of the Meibomian glands.\n   - Sharp posterior border: Assists in tear conduction and stays closely apposed to the globe.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_anatomy_q3',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Layers of the Eyelid',
+    content: 'Enumerate the layers of the eyelid from outside inwards.',
+    answer: 'The layers of the eyelid from outside inwards are:\n1. Skin: Very thin, elastic, and loosely adherent.\n2. Subcutaneous areolar tissue: Free of fat.\n3. Muscle layer: Striated muscles (Orbicularis oculi and Levator palpebrae superioris) and non-striated muscles (Müller\'s muscle and lower lid retractors).\n4. Submuscular areolar tissue: Contains the peripheral arterial arcade and sensory nerves.\n5. Fibrous layer: Formed of the tarsal plates (dense fibrous skeleton), Meibomian glands, and orbital septum.\n6. Palpebral conjunctiva: Thin, highly vascular, and firmly adherent to the tarsal plate (contains the sulcus subtarsalis 2 mm above the lid margin).',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_anatomy_q4',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'The Fibrous Layer of the Eyelid',
+    content: 'What are the main components of the fibrous layer of the eyelid and their structural functions?',
+    answer: 'The fibrous layer consists of:\n1. Tarsal plates: Dense fibrous skeleton of the eyelids (upper is 8-12 mm in height, lower is 4-5 mm). They fuse medially and laterally with the palpebral ligaments.\n2. Meibomian (tarsal) glands: Modified elongated sebaceous glands (around 30 in the upper lid, 25 in the lower lid) embedded inside the tarsus. They secrete an oily lipid film that prevents tear evaporation.\n3. Orbital septum: A thin fibrous diaphragm separating the eyelids from the orbit. It arises from the periosteum of the orbital margin and attaches to the levator aponeurosis (upper lid) or lower tarsus (lower lid), keeping the orbital fat in place.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_anatomy_q5',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Anatomy of the Orbicularis Oculi Muscle',
+    content: 'Describe the anatomical parts, functions, and nerve supply of the Orbicularis Oculi muscle, and state the consequences of its paralysis.',
+    answer: 'Parts and Functions:\n1. Orbital part: Responsible for tight/forced eyelid closure.\n2. Palpebral part: Responsible for gentle/reflex closure (blinking). It is subdivided into preseptal, pretarsal, and the muscle of Riolan (located along the lid margin for apposition of the lid margin to the globe).\n3. Lacrimal part (Horner\'s muscle): Draws the lacrimal canaliculi medially to assist the lacrimal pump mechanism.\n\nNerve Supply: Facial Nerve (7th Cranial Nerve).\n\nParalysis Consequences: Causes lagophthalmos (inability to close the eye), epiphora (overflow of tears due to pump failure), and paralytic ectropion.',
+    isClinical: true,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_anatomy_q6',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Anatomy of the Levator Palpebrae Superioris (LPS) Muscle',
+    content: 'State the origin, course, insertions, and nerve supply of the Levator Palpebrae Superioris muscle.',
+    answer: 'Function: Elevates the upper eyelid.\n\nOrigin: Lesser wing of the sphenoid at the apex of the orbit.\n\nCourse: Runs forward above the superior rectus muscle and ends anteriorly in an aponeurosis.\n\nInsertions:\n1. Main insertion: Anterior surface of the tarsal plate.\n2. Cutaneous: Skin of the upper eyelid, forming the eyelid crease.\n3. Medial and lateral horns: Attach to the palpebral ligaments.\n4. Inferior: Superior conjunctival fornix.\n\nNerve Supply: Oculomotor Nerve (3rd Cranial Nerve). Paralysis causes severe ptosis.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_anatomy_q7',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Non-Striated (Smooth) Muscles of the Eyelids',
+    content: 'Describe the smooth/non-striated muscles of the eyelids, their innervation, and clinical pathology.',
+    answer: '1. Müller\'s Muscle (Superior Tarsal Muscle):\n   - Origin & Course: Arises from the under surface of the levator palpebrae superioris and inserts onto the superior border of the tarsal plate.\n   - Innervation: Sympathetic nervous system.\n   - Function: Sustains physiological elevation of the upper lid.\n   - Pathology: Paralysis causes mild ptosis as part of Horner\'s syndrome.\n\n2. Lower Lid Retractors (Inferior Tarsal Muscle):\n   - Origin & Course: Smooth muscle fibers extending from the inferior rectus complex and inserting into the lower tarsus.\n   - Innervation: Sympathetic nervous system.\n   - Function: Retracts the lower lid on downward gaze to maintain vertical stability of the palpebral fissure.',
+    isClinical: true,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_anatomy_q8',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Vascular and Lymphatic Supply of Eyelids',
+    content: 'Describe the arterial, venous, and lymphatic networks of the eyelids.',
+    answer: 'Arterial Supply:\n- Forms marginal arcades (close to the margin) and peripheral arcades (on the superior border of the tarsus).\n- Formed by the anastomoses of the medial palpebral arteries (branch of Ophthalmic artery) and lateral palpebral arteries (branch of Lacrimal artery).\n\nVenous Drainage:\n- Pretarsal tissues drain into the Angular and Ophthalmic veins.\n- Post-tarsal tissues drain into the Ophthalmic veins.\n\nLymphatic Drainage:\n- Lateral half of lids: Drains into preauricular and parotid lymph nodes.\n- Medial half of lids: Drains into submandibular lymph nodes.\n- All eventually load into the deep cervical lymph nodes.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_anatomy_q9',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Innervation and Key Functions of the Eyelids',
+    content: 'Enumerate the sensory, motor, and autonomic nerve supply of the eyelids, and summarize the primary protective and physiological functions of the eyelids.',
+    answer: 'Nerve Supply:\n1. Sensory: Trigeminal nerve (V) — ophthalmic division (V1) for the upper lid, maxillary division (V2) for the lower lid.\n2. Motor: Facial nerve (VII) to the orbicularis oculi; Oculomotor nerve (III) to the levator palpebrae superioris.\n3. Autonomic: Sympathetic fibers to Müller\'s muscle.\n\nPrimary Functions:\n1. Protection of the eyeball (globe) from traumatic injury and excessive light.\n2. Distribution of tears (blinking) to keep the cornea wet.\n3. Assisting drainage of tears into the lacrimal sac (lacrimal pump).\n4. Promoting aqueous outflow via normal eyeball massage.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+
   // --- Topic 1: Blepharitis ---
   {
     id: 'eyelid_blepharitis_q1',
@@ -649,7 +741,49 @@ export const INITIAL_QUESTIONS: Question[] = [
   // --- CHAPTER 3: CONJUNCTIVA ---
   // ===========================================================================
 
-  // --- Topic 1: Acute Bacterial Conjunctivitis (Mucopurulent & Purulent) ---
+  // --- Topic 1: Anatomy & Histology of the Conjunctiva ---
+  {
+    id: 'conjunctiva_anatomy_q1',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Histology of the Conjunctiva',
+    content: 'What is the histology of the conjunctiva? Describe its two major cellular layers in detail.',
+    answer: 'The conjunctiva is a thin, translucent mucous membrane consisting of two histological layers:\n\n1. Epithelium:\n   - Composed of non-keratinized stratified squamous epithelium (which transitions to stratified columnar epithelium in the palpebral and fornical zones).\n   - Contains goblet cells, which are unicellular mucous glands that secrete mucus. This mucus forms the inner mucin layer of the tear film, rendering the hydrophobic corneal epithelial surface hydrophilic.\n\n2. Substantia Propria (Stroma):\n   - Superficial adenoid layer: Composed of loose connective tissue rich in leukocytes and lymphatic channels. It does not develop until 3-4 months after birth (which explains the absence of follicular tissue in newborn conjunctival responses).\n   - Deep fibrous layer: Composed of dense, tough fibro-elastic connective tissue that attaches to the underlying tarsal plates in the palpebral part, and contains major blood vessels and nerves.',
+    isClinical: false,
+    topic: 'Anatomy & Histology of the Conjunctiva'
+  },
+  {
+    id: 'conjunctiva_anatomy_q2',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Vascular, Lymphatic & Nerve Supply of the Conjunctiva',
+    content: 'Describe the arterial supply, venous drainage, lymphatic drainage, and nerve supply of the conjunctiva.',
+    answer: '1. Arterial Supply:\n   - Anterior conjunctival arteries: Branches of the anterior ciliary arteries (which supply the bulbar part near the limbus).\n   - Posterior conjunctival arteries: Branches of the palpebral arches of the eyelids (which supply the palpebral and fornical parts).\n   - These two arterial networks anastomose freely to form a highly vascular, rich plexus.\n\n2. Venous Drainage:\n   - Drains backward into the palpebral veins (from the palpebral conjunctiva) and the ophthalmic veins (from the bulbar conjunctiva).\n\n3. Lymphatic Drainage:\n   - Lateral half of the conjunctiva: Drains into the preauricular and parotid lymph nodes.\n   - Medial half of the conjunctiva: Drains into the submandibular lymph nodes.\n   - Both pathways eventually empty into the upper deep cervical lymph nodes.\n\n4. Nerve Supply:\n   - Formed by branches of the ophthalmic and maxillary divisions of the Trigeminal Nerve (V):\n     * Upper conjunctiva: Supplied by the supraorbital, supratrochlear, and infratrochlear nerves (branches of V1).\n     * Lower conjunctiva: Supplied by the infraorbital and lacrimal nerves (V2 and V1).\n     * Limbal conjunctiva (around the cornea): Supplied by the short and long ciliary nerves.',
+    isClinical: false,
+    topic: 'Anatomy & Histology of the Conjunctiva'
+  },
+  {
+    id: 'conjunctiva_anatomy_q3',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Anatomical Parts of the Conjunctiva',
+    content: 'What are the main geographical parts of the conjunctiva? Describe their anatomical relations.',
+    answer: 'The conjunctiva is anatomically divided into three continuous segments:\n\n1. Palpebral Conjunctiva:\n   - Lines the internal posterior surface of the eyelids.\n   - It is thin, pink, highly vascular, and extremely adherent to the underlying tarsal plates (which prevents it from wrinkling or shifting during blinking).\n\n2. Conjunctival Fornix (Fornical Conjunctiva):\n   - The transitional loose redundant fold that connects the palpebral and bulbar conjunctiva.\n   - Composed of the superior, inferior, lateral, and medial fornices. It is highly elastic and loosely attached to underlying tissue, allowing completely free movement of the eyeball.\n\n3. Bulbar Conjunctiva:\n   - Overlies the anterior aspect of the sclera up to the corneal limbus.\n   - It is extremely thin and completely transparent, allowing the white sclera to show through. It is loosely attached to the underling Tenon\'s capsule (allowing it to shift easily), but becomes firmly adherent and fused with the cornea at the limbus.',
+    isClinical: false,
+    topic: 'Anatomy & Histology of the Conjunctiva'
+  },
+  {
+    id: 'conjunctiva_anatomy_q4',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Conjunctivitis Definition & Clinical Features',
+    content: 'Define conjunctivitis and describe its general clinical features/signs.',
+    answer: '1. Definition:\n   Conjunctivitis is the inflammation of the conjunctiva, presenting as a highly common causative etiology of "acute red eye".\n\n2. General Clinical Signs:\n   - Conjunctival hyperemia (redness): Marked superficial congestion of blood vessels that is clinically most severe and pronounced at the fornices and fades towards the limbus.\n   - Chemosis: Edema of the loose bulbar subconjunctival tissue, causing it to look translucent, swollen, or jelly-like.\n   - Discharge: Exudates produced by inflamed tissue. Can be watery/serous (viral/allergic), mucoid (allergic/vernal), mucopurulent (acute bacterial), or purulent (hyperacute gonococcal).',
+    isClinical: true,
+    topic: 'Anatomy & Histology of the Conjunctiva'
+  },
+
+  // --- Topic 2: Acute Bacterial Conjunctivitis (Mucopurulent & Purulent) ---
   {
     id: 'conjunctiva_acute_q1',
     chapterId: 3,
@@ -2151,15 +2285,81 @@ export const INITIAL_QUESTIONS: Question[] = [
   // --- CHAPTER 8: GLAUCOMA ---
   // ===========================================================================
 
-  // --- Topic 1: Congenital Glaucoma (Buphthalmos) ---
+  // ===========================================================================
+  // --- CHAPTER 8: GLAUCOMA ---
+  // ===========================================================================
+
+  // --- Topic 1: Anatomy & Physiology of the AC Angle & Aqueous Humor ---
+  {
+    id: 'glaucoma_anatomy_q1',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'Anatomy of the Anterior Chamber Angle',
+    content: 'Describe the anatomical boundaries, exam method, and gonioscopic structures of the anterior chamber angle.',
+    answer: '1. Definition: The angle located between the periphery of the cornea and the root of the iris.\n\n2. Examination Method: It cannot be visualized by direct illumination due to total internal reflection. It requires Gonioscopy (e.g., using a Goldmann 3-mirror contact lens with a slit lamp).\n\n3. Gonioscopic Appearance (from anterior to posterior):\n   - Schwalbe\'s line: A white-opaque line representing the termination of Descemet\'s membrane.\n   - Trabecular Meshwork: A sponge-like band with holes extending from Schwalbe\'s line to the scleral spur, through which aqueous filters.\n   - Scleral Spur: A whitish ridge of sclera that serves as the origin point for the longitudinal fibers of the ciliary muscle.\n   - Anterior surface of ciliary body.\n   - Root of the iris.\n\n4. Structures NOT visualized on Gonioscopy:\n   - Canal of Schlemm (located inside the limbus).\n   - Aqueous veins (which drain from Schlemm\'s canal to episcleral veins).',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the AC Angle & Aqueous Humor'
+  },
+  {
+    id: 'glaucoma_anatomy_q2',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'Aqueous Humor Physiology & Circulation',
+    content: 'Describe the properties, volume, secretion mechanism, physiological functions, and drainage pathways of the aqueous humor.',
+    answer: '1. Properties & Volume: A clear, colorless, transparent fluid with a volume of around 1.25 ml filling the anterior and posterior chambers.\n\n2. Secretion Mechanism (by the ciliary body processes):\n   - Active secretion (80%): Mediated by the non-pigmented ciliary epithelium using the carbonic anhydrase enzyme system to actively transport ions.\n   - Passive secretion (20%): Occurs via ultrafiltration and diffusion dependent on capillary hydrostatic pressure in the ciliary body.\n\n3. Physiological Functions:\n   - Maintains and regulates the intraocular pressure (IOP).\n   - Provides nutrition and oxygen to avascular ocular structures (cornea, lens, anterior vitreous).\n   - Acts as an optical refractive medium (Refractive Index = 1.33).\n   - Carries high concentrations of antibodies during intraocular inflammation (forming plasmoid aqueous).\n\n4. Circulation & Drainage Flow:\n   - Secreted into the Posterior Chamber -> passes through the pupil -> enters the Anterior Chamber.\n   - Trabecular Outflow Route (80%): Passes through the Trabecular Meshwork (TM) -> Canal of Schlemm -> Collector Channels -> Aqueous veins -> Episcleral veins.\n   - Uveoscleral Outflow Route (20%): Passes across the ciliary body into the suprachoroidal space -> drains into the choroid and scleral vessels.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the AC Angle & Aqueous Humor'
+  },
+  {
+    id: 'glaucoma_anatomy_q3',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'Intraocular Pressure (IOP) & Devices',
+    content: 'Define intraocular pressure (IOP), state its normal range, explain its diurnal variation, and list the methods of measurement.',
+    answer: '1. IOP Definition: The pressure exerted by the intraocular contents on the coats of the eyeball; it is a major risk factor for glaucoma, with no single, absolute "safe" or "unsafe" threshold.\n\n2. Normal Range: Average is ~16 mmHg, with a standard deviation (SD) of 3 mmHg (giving a physiological range of 10-21 mmHg).\n\n3. Diurnal Variation: Fluctuates naturally throughout the day, usually highest in the morning and lowest in the evening. Normal variation is 2-3 mmHg. A diurnal variation exceeding 4-5 mmHg is highly suspicious of glaucoma. The rise during sleep is due to venous stagnation and lack of extraocular muscle massage.\n\n4. Measurement Methods (Tonometry):\n   - Indentation (Schiotz) Tonometry: Performed with the patient in a supine position. Measures the depth of indentation made on the cornea by a plunger. Disadvantage: Influenced by ocular/scleral rigidity (underestimates IOP in low rigidity eyes like high myopes).\n   - Applanation (Goldmann) Tonometry: The gold standard. Measures the force required to flatten (applanate) a fixed area of the cornea (3.06 mm diameter). Does not depend heavily on scleral rigidity.\n   - Non-contact (Air puff) Tonometry: Uses a rapid puff of air to applanate the cornea; completely noninvasive.\n   - Icare rebound tonometry: Does not require topical anesthetics.',
+    isClinical: true,
+    topic: 'Anatomy & Physiology of the AC Angle & Aqueous Humor'
+  },
+  {
+    id: 'glaucoma_anatomy_q4',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'Optic Nerve Head (ONH) Relevance in Glaucoma',
+    content: 'Describe the anatomy of the normal optic nerve head and its structural relevance in glaucomatous damage.',
+    answer: '1. General Anatomy: Composed of about 1.2 million retinal ganglion cell axons passing through the posterior scleral canal (lamina cribrosa).\n\n2. Optic Disc Details: Measures ~1.5 mm in diameter, appears as a pale pink disc with a clearly defined margin. It features a central white depression called the physiological cup (normal Cup-to-Disc [C/D] ratio is ~0.3).\n\n3. Neuroretinal Rim: The healthy pink area representing the nerve fibers located between the edge of the cup and the outer edge of the disc.\n\n4. Pathological Relevance: In glaucoma, chronically elevated IOP or ischemia triggers progressive retinal ganglion cell death. This causes thinning of the neuroretinal rim, vertical elongation of the cup, bayoneting of blood vessels, and progressive cupping that corresponds directly to characteristic visual field defects.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the AC Angle & Aqueous Humor'
+  },
+  {
+    id: 'glaucoma_anatomy_q5',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'Glaucoma Definition & General Classification',
+    content: 'Define Glaucoma and outline its main classifications.',
+    answer: '1. Definition: A progressive, chronic optic neuropathy characterized by progressive excavation/cupping of the optic nerve head and corresponding visual field defects, where elevated intraocular pressure (IOP) is the major modifiable risk factor.\n\n2. General Classification:\n   - Congenital / Developmental Glaucoma: Manifests at birth or in early childhood due to developmental angle anomalies.\n   - Acquired Glaucoma: Subdivided into:\n     * Primary Glaucomas (no pre-existing ocular disease): Primary Open-Angle Glaucoma (POAG) or Primary Angle-Closure Glaucoma (PACG).\n     * Secondary Glaucomas (secondary to local ocular or systemic diseases): Can be open-angle or closed-angle.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the AC Angle & Aqueous Humor'
+  },
+
+  // --- Topic 2: Congenital Glaucoma (Buphthalmos) ---
   {
     id: 'glaucoma_congenital_q1',
     chapterId: 8,
     type: 'short-answer',
     title: 'Congenital Glaucoma Definition & Etiology',
     content: 'Define Congenital Glaucoma and describe its primary underlying trabeculo-dysgenesis etiology.',
-    answer: 'Definition: An increase in intraocular pressure (IOP) manifesting at birth or early infancy that results in damage to the optic nerve.\n\nEtiology (Trabeculo-dysgenesis):\nCongenital anomalies in the angle of the anterior chamber, including:\n1. Failure of complete separation of the iris from the cornea due to deficient mesodermal atrophy.\n2. Abnormal anterior insertion of the iris or the longitudinal bundle of the ciliary muscle into the trabecular meshwork.\n3. Complete absence or fibrosis of the canal of Schlemm.',
+    answer: 'Definition: An increase in intraocular pressure (IOP) manifesting at birth or early infancy that results in damage to the optic nerve.\n\nEtiology (Trabeculo-dysgenesis):\nCongenital anomalies in the angle of the anterior chamber, including:\n1. Failure of complete separation of the iris from the cornea due to deficient mesodermal atrophy (incomplete recess formation).\n2. Abnormal anterior insertion of the iris or the longitudinal bundle of the ciliary muscle into the trabecular meshwork.\n3. Complete absence or fibrosis of the canal of Schlemm.',
     isClinical: false,
+    topic: 'Congenital Glaucoma (Buphthalmos)'
+  },
+  {
+    id: 'glaucoma_congenital_q1b',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'Congenital Glaucoma Types & Syndromic Associations',
+    content: 'Enumerate the clinical classifications/types of congenital/developmental glaucoma and list the ocular and systemic conditions associated with secondary infantile glaucoma.',
+    answer: '1. Clinical Classification:\n   - Primary Congenital (Infantile) Glaucoma: Due to isolated trabeculodysgenesis. Symptoms typically manifest from birth up to 1 year of age.\n   - Developmental Glaucoma with Associated Anomalies (Secondary Infantile Glaucoma).\n\n2. Secondary Infantile Glaucoma Associations:\n   - Ocular Anomalies: Microphthalmos, Aniridia (absent iris), Ectopia lentis, Persistent Hyperplastic Primary Vitreous (PHPV), Retinopathy of Prematurity (ROP), and developmental uveitis.\n   - Systemic & Metabolic Syndromes: Sturge-Weber Syndrome (encephalotrigeminal angiomatosis), Marfan Syndrome, Congenital Rubella Syndrome, and Mucopolysaccharidosis (metabolic lysosomal storage disease).\n   - Traumatic, Inflammatory, or Neoplastic processes in early childhood.',
+    isClinical: true,
     topic: 'Congenital Glaucoma (Buphthalmos)'
   },
   {
@@ -2178,7 +2378,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     type: 'short-answer',
     title: 'Advanced Buphthalmos Clinical Signs',
     content: 'Describe the clinical signs found on examination of a child with advanced Buphthalmos.',
-    answer: '1. Cornea (3 signs): Corneal edema, corneal enlargement (diameter >12 mm), and corneal opacity due to tears in Descemet\'s membrane (Haab\'s striae).\n2. Eyeball: Enlarged globe due to stretching of the thin, elastic outer coats under high pressure.\n3. Sclera: Appears bluish in color due to thinning of the sclera, which exposes the underlying dark uveal pigment.\n4. Anterior Chamber: Markedly deep anterior chamber.\n5. Optic Disc: Glaucomatous optic cupping (a late sign).\n6. Refraction: Axial myopia due to globe elongation (partially balanced by corneal flattening).',
+    answer: '1. Cornea (3 signs): Corneal edema, corneal enlargement (diameter >12 mm), and corneal opacity due to tears in Descemet\'s membrane (Haab\'s striae).\n2. Eyeball: Enlargement of the entire globe (buphthalmos / ox-eye) due to stretching of the thin, elastic outer coats under high pressure before age 3.\n3. Sclera: Appears bluish in color due to thinning of the sclera, exposing the underlying dark uveal pigment.\n4. Anterior Chamber: Markedly deep anterior chamber (due to backward displacement of iris-lens diaphragm).\n5. Iris & Pupil: Tremulous iris (iridodonesis) and iris atrophy; large, sluggishly reacting pupil; lens may show mild subluxation due to stretched zonules.\n6. Optic Disc: Glaucomatous optic cupping (a late sign showing progressive excavation).\n7. Refraction: Axial myopia due to globe elongation (partially balanced by corneal flattening).\n8. Gonioscopy: Shows flat iris insertion and complete absence of the angle recess.',
     isClinical: true,
     topic: 'Congenital Glaucoma (Buphthalmos)'
   },
@@ -2188,7 +2388,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     type: 'short-answer',
     title: 'Buphthalmos Differential Diagnosis',
     content: 'Enumerate the differential diagnosis of Buphthalmos regarding a large cornea versus a cloudy cornea.',
-    answer: '- Large Cornea DD: Megalocornea, High axial myopia, and Keratoglobus.\n- Cloudy Cornea DD: Birth trauma (forceps injury), metabolic disorders (mucopolysaccharidosis), and congenital Rubella syndrome.',
+    answer: '- Large Cornea DD: Megalocornea (isolated corneal enlargement with normal IOP and no optic nerve damage), High axial myopia, and Keratoglobus.\n- Cloudy Cornea DD: Birth trauma (forceps injury tearing Descemet\'s membrane), metabolic disorders (mucopolysaccharidosis), and congenital Rubella syndrome with keratitis.\n- Other DD: Secondary infantile glaucoma causes (phacolytic, uveitic, traumatic, neoplastic like retinoblastoma).',
     isClinical: true,
     topic: 'Congenital Glaucoma (Buphthalmos)'
   },
@@ -2198,7 +2398,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     type: 'short-answer',
     title: 'Buphthalmos Diagnostic & Surgical Guidelines',
     content: 'Outline the diagnostic workflow under General Anesthesia (GA) and the definitive surgical guidelines for Buphthalmos based on corneal diameter.',
-    answer: 'Diagnostic Workflow: Measurement of corneal diameter (suspicious if >11 mm), Gonioscopy (using a Koeppe lens), and measurement of IOP.\n\nSurgical Guidelines (Always Surgical):\n* Medical therapy (Diamox/Beta-blockers) is used only preoperatively to temporarily reduce IOP and clear corneal edema.\n* If corneal diameter is <13 mm and the cornea is clear: Plan for Goniotomy.\n* If corneal diameter is <13 mm but the cornea is completely opaque: Plan for Trabeculotomy.\n* If corneal diameter is >13 mm or previous surgeries failed: Plan for Subscleral Trabeculectomy, Valve (Seton) Implantation, or a Cyclodestructive procedure.',
+    answer: 'Diagnostic Workflow: Measurement of corneal diameter (suspicious if >11 mm), Gonioscopy (using a Koeppe lens or Goldmann lens), and direct measurement of IOP.\n\nSurgical Guidelines (Always Surgical - Earlier is Better):\n* Medical therapy (Diamox or topical Beta-blockers) is used only preoperatively to temporarily reduce IOP and clear corneal edema to aid visualization.\n* If corneal diameter is <13 mm and the cornea is clear: Plan for Goniotomy (surgical splitting of the abnormal meshwork from the inside).\n* If corneal diameter is <13 mm but the cornea is completely hazy/opaque: Plan for Trabeculotomy (external approach to probe and tear open the meshwork into the AC).\n* If corneal diameter is >13 mm or previous direct angle surgeries failed: Plan for Subscleral Trabeculectomy, Valve (Ahmed) Implantation, or Cyclodestructive procedures (for advanced blind eyes).',
     isClinical: true,
     topic: 'Congenital Glaucoma (Buphthalmos)'
   },
@@ -2208,19 +2408,19 @@ export const INITIAL_QUESTIONS: Question[] = [
     type: 'short-answer',
     title: 'Primary Congenital Glaucoma Signs & Surgery',
     content: 'Regarding Primary Congenital Glaucoma (Buphthalmos):\n1. Name two diagnostic corneal signs seen in this disease.\n2. Name the definitive surgical procedure used for treatment when the corneal diameter exceeds 13 mm.',
-    answer: '1. Two Corneal Signs: Corneal enlargement (diameter >12 mm) and Haab\'s striae (horizontal/curved tears in Descemet\'s membrane).\n\n2. Surgical Procedure if diameter >13 mm: Subscleral Trabeculectomy or Valve (Seton) Implantation (since the canal of Schlemm is usually absent or fibrosed at this size).',
+    answer: '1. Two Corneal Signs: Corneal enlargement (diameter >12 mm) and Haab\'s striae (horizontal/curved tears in Descemet\'s membrane).\n\n2. Surgical Procedure if diameter >13 mm: Subscleral Trabeculectomy or Valve (Seton) Implantation (since the canal of Schlemm is usually absent or fibrosed at this size block and goniotomy is ineffective).',
     isClinical: true,
     topic: 'Congenital Glaucoma (Buphthalmos)'
   },
 
-  // --- Topic 2: Primary Open-Angle Glaucoma (POAG) ---
+  // --- Topic 3: Primary Open-Angle Glaucoma (POAG) ---
   {
     id: 'glaucoma_poag_q1',
     chapterId: 8,
     type: 'short-answer',
-    title: 'POAG Definition & Risk Factors',
-    content: 'Define Primary Open-Angle Glaucoma (POAG) and list its primary risk factors.',
-    answer: 'Definition: A bilateral, asymmetrical, non-congestive progressive optic neuropathy characterized by a chronic elevation of IOP in the presence of an anatomically open anterior chamber angle, leading to optic nerve head damage and visual field defects.\n\nRisk Factors: Positive family history (hereditary), age above 50 years, black race, systemic diseases (Diabetes Mellitus, migraine/vasospastic disorders), and ocular conditions like high myopia or prolonged topical steroid use.',
+    title: 'POAG Definition, Incidence, Risk Factors & Etiology',
+    content: 'Define Primary Open-Angle Glaucoma (POAG), state its incidence, its primary risk factors, and describe its pathophysiological etiology.',
+    answer: '1. Definition: A bilateral, asymmetrical, non-congestive progressive optic neuropathy characterized by chronic elevation of IOP in the presence of an anatomically open anterior chamber angle, leading to optic nerve head damage and characteristic visual field defects.\n\n2. Incidence: Commonly affects adults over 50 years of age, affecting males and females equally. It is strictly bilateral, though one eye usually precedes the other.\n\n3. Risk Factors:\n   - Positive family history of glaucoma.\n   - Darker races (incidence is 4x higher and occurs earlier in black populations).\n   - Ocular factors: High axial myopia, Central Retinal Vein Occlusion (CRVO), ocular hypertension.\n   - Systemic factors: Diabetes Mellitus, migraine/vasospasm, and prolonged topical steroid use.\n\n4. Pathophysiological Etiology: Age-related sclerosis and degeneration of the Trabecular Meshwork (TM), resulting in narrowed Fontana spaces. This markedly reduces the facility of aqueous outflow, elevating intraocular pressure.',
     isClinical: false,
     topic: 'Primary Open-Angle Glaucoma (POAG)'
   },
@@ -2228,9 +2428,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'glaucoma_poag_q2',
     chapterId: 8,
     type: 'short-answer',
-    title: 'POAG Symptoms & "Thief of Sight"',
-    content: 'Describe the clinical symptoms of POAG and explain why it is known as the "Thief of Sight".',
-    answer: 'Symptoms: Typically completely asymptomatic in its early stages. Later, mild symptoms may manifest, such as chronic headache, early presbyopia (due to pressure on ciliary nerves), and night blindness (due to peripheral field loss). It is called the "Thief of Sight" because patients completely fail to notice the disease until advanced irreversible peripheral visual field loss or complete central blindness in one eye occurs.',
+    title: 'POAG Symptoms & "Thief of Sight" Concept',
+    content: 'Describe the clinical symptoms of POAG and explain why it is clinically designated as the "Thief of Sight".',
+    answer: '1. Symptoms:\n   - Usually completely asymptomatic in early stages. It presents with no pain and no signs of ocular congestion.\n   - Mild non-specific symptoms may occur: Dull headache, early-onset presbyopia (due to high IOP compressing the ciliary nerves), night blindness (due to early peripheral rod-damaged field loss), or progressive loss of peripheral field in one eye.\n\n2. "Thief of Sight" Concept:\n   Since the visual acuity remains excellent (6/6) and central vision is spared until the very final end-stages, patients are completely unaware of their progressive, irreversible outer field loss. Often, they only notice the disease when absolute tunnel vision or complete blindness in one eye occurs.',
     isClinical: true,
     topic: 'Primary Open-Angle Glaucoma (POAG)'
   },
@@ -2238,9 +2438,19 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'glaucoma_poag_q3',
     chapterId: 8,
     type: 'short-answer',
-    title: 'POAG Clinical Signs',
-    content: 'Enumerate the signs of POAG found on clinical examination.',
-    answer: '1. High IOP: Sustained rise of intraocular pressure above 21 mmHg.\n2. Gonioscopy: Completely wide, open anterior chamber angle (Grade 3 or 4 on Shaffer scale).\n3. Optic Nerve Head (ONH): Glaucomatous cupping (increased C/D ratio, vertically elongated cup, asymmetric cupping between eyes, neuroretinal rim thinning, and inferior notching).\n4. Visual Field Changes: Follows the anatomical distribution of damaged retinal nerve fibers.',
+    title: 'POAG Clinical Signs (IOP, ONH, Visual Fields)',
+    content: 'Detail the clinical signs of POAG, categorizing them into Intraocular Pressure, Optic Nerve Head Cupping, and Visual Field Changes.',
+    answer: '1. Elevated IOP:\n   - Elevated IOP >21 mmHg with an open angle on gonioscopy. A high IOP is typical, but a normal IOP does not exclude "low-tension" or "normal-tension" glaucoma.\n\n2. Glaucomatous ONH Cupping:\n   - Early Signs: Cup-to-Disc (C/D) ratio >0.4, vertical elongation of the cup (due to early loss of superior/inferior rim fibers), asymmetry of C/D ratio between eyes >0.2, splinter/flame-shaped hemorrhages at the disc margin, and visible holes in the lamina cribrosa.\n   - Late Signs: Extremely deep cupping (C/D >0.7) extending to the disc margin, overhanging edge of the cup, and vessel interruption (nasal shift or "bayoneting sign" where blood vessels bend sharply over the edge).\n\n3. Visual Field Changes (correlate with rim damage):\n   - Central Changes: Paracentral scotoma, Seidel\'s scotoma (comma-shaped scotoma), Arcuate / Bjerrum scotoma (continuous arch of loss connecting blind spot to nasal meridian), and nasal step.\n   - Peripheral Changes: Nasal contraction of the field, progressing to concentric contraction, eventually resulting in a narrow tubular field (tunnel vision). The central macula is spared until the very late stages.',
+    isClinical: true,
+    topic: 'Primary Open-Angle Glaucoma (POAG)'
+  },
+  {
+    id: 'glaucoma_poag_q3b',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'POAG Confirmatory Diagnostic Elements',
+    content: 'How is POAG definitively diagnosed? Enumerate the key confirmatory elements.',
+    answer: 'Definitive diagnosis requires a combination of:\n1. Sustained high IOP: Tested with Applanation (Goldmann) tonometry, checking diurnal variation (diurnal fluctuation >4 mmHg is highly suggestive of pathology), and adjusting for Central Corneal Thickness (CCT). Tonography may show reduced facility of outflow.\n2. Open Angle on Gonioscopy: Confirms the presence of a completely open, unobstructed anterior chamber angle (ruling out angle closure).\n3. Glaucomatous Optic Cupping: Documented via direct/indirect ophthalmoscopy, slit-lamp biomicroscopy, and Optical Coherence Tomography (OCT) of the retinal nerve fiber layer (RNFL).\n4. Characteristic Visual Field Defects: Measured using Automated Perimetry (e.g., Humphrey Field Analyzer).',
     isClinical: true,
     topic: 'Primary Open-Angle Glaucoma (POAG)'
   },
@@ -2248,9 +2458,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'glaucoma_poag_q4',
     chapterId: 8,
     type: 'short-answer',
-    title: 'POAG Medical Treatment',
-    content: 'Outline the life-long topical medical lines of treatment for POAG.',
-    answer: '- First-Line Therapy:\n  * Beta-blockers (e.g., Timolol): Decrease aqueous humor formation by the ciliary body.\n  * Prostaglandin analogues (e.g., Latanoprost): Increase uveoscleral aqueous outflow.\n- Second-Line Adjuvants:\n  * Topical Carbonic Anhydrase Inhibitors (CAIs) (e.g., Dorzolamide): Decrease aqueous formation.\n  * Alpha-2 Adrenergic Agonists (e.g., Brimonidine): Decrease aqueous formation and increase outflow.',
+    title: 'POAG Medical Treatment Guidelines',
+    content: 'Outline the life-long topical medical lines of treatment for POAG, specifying their mechanisms of action.',
+    answer: 'General Principle: Medical treatment is lifelong, aimed at lowering the IOP to a "target pressure" where no further optic nerve damage occurs.\n\n1. First-Line Topical Therapy:\n   - Beta-blockers (e.g., Timolol 0.5%): Decrease aqueous humor secretion/formation by the non-pigmented ciliary epithelium.\n   - Prostaglandin analogues (e.g., Latanoprost, Travoprost): Facilitate and increase uveoscleral aqueous outflow. Highly preferred due to once-daily dosing.\n\n2. Second-Line Adjuvant Topical Therapy:\n   - Carbonic Anhydrase Inhibitors (CAIs) (e.g., Dorzolamide): Decrease aqueous humor formation/secretion.\n   - Alpha-2 Adrenergic Agonists (e.g., Brimonidine): Dual mechanism: decreases aqueous formation and increases uveoscleral outflow.\n\n3. Emergency Systemic Adjuvants:\n   - Systemic CAIs (Acetazolamide/Diamox tablets or IV): Used only temporarily as an emergency measure to control acute spikes.',
     isClinical: true,
     topic: 'Primary Open-Angle Glaucoma (POAG)'
   },
@@ -2259,20 +2469,20 @@ export const INITIAL_QUESTIONS: Question[] = [
     chapterId: 8,
     type: 'short-answer',
     title: 'POAG Surgical & Laser Indications',
-    content: 'List the surgical and laser indications and options for a POAG patient when medical therapy fails.',
-    answer: 'Indications: Failure of maximally tolerated medical therapy to control IOP, progressive deterioration of visual fields despite controlled IOP, or poor patient compliance due to poverty or negligence.\n\nOptions: Laser Trabeculoplasty, Subscleral Trabeculectomy (fistulizing/filtering surgery), Setons/Valves implantation, or Cyclodestructive procedures (Cyclocryotherapy or Laser Cyclophotocoagulation to destroy parts of the ciliary body pars plicata).',
+    content: 'List the clinical indications and surgical options for POAG when medical therapy fails.',
+    answer: '1. Indications for intervention:\n   - Failure of maximally tolerated medical therapy to control IOP.\n   - Progressive deterioration of visual fields or optic disc cupping despite apparently "controlled" IOP.\n   - Poor patient compliance due to poverty, negligence, or drug side effects.\n\n2. Laser Options:\n   - Laser Trabeculoplasty (Argon or Selective Laser Trabeculoplasty [SLT]): Applying laser energy to the trabecular meshwork to stimulate remodeling and increase aqueous outflow. Best for early, moderate POAG.\n\n3. Surgical Options:\n   - Subscleral Trabeculectomy: The standard filtering surgery. Creates a guarded sclerostomy channel allowing aqueous to drain from the AC to the subconjunctival space (forming a filtering bleb). Mitomycin C (MMC) may be used to prevent scarring.\n   - Drainage Setons / Valves (e.g., Ahmed Valve): Implantation of a silicone tube into the AC connected to an equatorial plate to drain aqueous; reserved for refractory or previously failed cases.\n   - Cyclodestructive Procedures (e.g., Laser Cyclophotocoagulation or Cyclocryotherapy): Selectively destroys parts of the ciliary processes to permanently reduce aqueous production; reserved for blind, painful advanced eyes.',
     isClinical: true,
     topic: 'Primary Open-Angle Glaucoma (POAG)'
   },
 
-  // --- Topic 3: Primary Angle-Closure Glaucoma (PACG) ---
+  // --- Topic 4: Primary Angle-Closure Glaucoma (PACG) ---
   {
     id: 'glaucoma_pacg_q1',
     chapterId: 8,
     type: 'short-answer',
-    title: 'PACG Anatomical Predispositions',
-    content: 'List the ocular anatomical predisposing factors for Primary Angle-Closure Glaucoma.',
-    answer: 'Commonly occurs in 40-45 year old females presenting with small hypermetropic eyes, characterized by a short axial length, shallow anterior chamber, narrow anterior chamber angle, a thick lens, and increased anterior curvature of the crystalline lens.',
+    title: 'PACG Predispositions, Pathogenesis & Mechanisms',
+    content: 'Detail the incidence, predisposing factors, and dual pathophysiological mechanisms of Primary Angle-Closure Glaucoma (PACG).',
+    answer: '1. Incidence: Usually bilateral (one eye precedes), more common in females over 40 (often of a hyper-sensible/neurotic personality status).\n\n2. Predisposing Factors:\n   - Mydriasis: Moderate pupillary dilatation causes peripheral iris crowding, pushing the iris root into the narrow angle.\n   - Hypermetropia: Small eyeball dimensions, short axial length, shallow AC, and narrow AC angle.\n   - Old Age: Continuous physiological growth and thickening of the crystalline lens shifts the iris-lens diaphragm forward, further narrowing the AC.\n\n3. Underlving Pathophysiological Mechanisms:\n   - Pupillary Block Mechanism (Most Common): Relative contact between the pupillary margin of the iris and the anterior lens surface blocks aqueous passage from the posterior chamber to the AC. This increases posterior chamber pressure, bulging the peripheral iris forward (Iris Bombe) and mechanically sealing the trabecular angle.\n   - Plateau Iris Configuration: The ciliary body processes are positioned abnormally far forward, crowding and pushing the peripheral iris into direct contact with the trabecular meshwork without a significant pupillary block.',
     isClinical: false,
     topic: 'Primary Angle-Closure Glaucoma (PACG)'
   },
@@ -2280,9 +2490,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'glaucoma_pacg_q2',
     chapterId: 8,
     type: 'short-answer',
-    title: 'PACG Intermittent Phase Clinical Picture',
-    content: 'Enumerate the clinical phases of PACG and describe the clinical picture of the Intermittent (Prodromal) Phase.',
-    answer: 'Phases: Intermittent (Prodromal), Acute, Chronic, and Absolute.\n\nIntermittent Phase Clinical Picture: Rapid, partial, completely reversible closure of the angle triggered by pupillary dilatation (mydriasis) or ciliary body congestion in the dark. Symptoms include sudden frontal headache, eye ache, foggy vision, and seeing rainbow haloes around lights, resolving spontaneously within 1-2 hours. Between attacks, ocular findings appear completely normal.',
+    title: 'PACG Stages and Clinical Progression',
+    content: 'List the five major clinical stages of PACG and describe their key clinical features.',
+    answer: 'PACG develops along five distinct clinical stages:\n\n1. Latent Stage:\n   - Completely asymptomatic.\n   - Shallow anterior chamber, narrow AC angle (Shaffer Grade 1 or 2 on gonioscopy).\n   - Definitively managed with prophylactic Laser Peripheral Iridotomy (LPI).\n\n2. Intermittent / Prodromal Stage:\n   - Rapid, partial, completely reversible closure of the angle resolving spontaneously.\n   - Symptoms: Transient unilateral blurred/foggy vision, seeing rainbow-colored haloes around lights (due to corneal epithelial edema), mild dull headache, and eye ache; resolving spontaneously in 1-2 hours in bright light.\n\n3. Acute Congestive Stage:\n   - Sudden, total, irreversible closure of the angle with an acute massive IOP spike (50-60 mmHg).\n   - Symptoms: Excruciating ocular pain, severe headache, rapid drop in vision, ciliary congestion, nausea, and vomiting.\n\n4. Chronic Stage:\n   - Follows unresolved or recurrent attacks where parts of the angle become permanently closed by Peripheral Anterior Synechiae (PAS).\n   - Clinically mimics POAG with a moderate, constant elevation of IOP and progressive cupping/fields loss, but with closed angle zones on gonioscopy.\n\n5. Absolute Stage:\n   - End-stage glaucoma.\n   - Clinically characterized by a completely blind eye (No Perception of Light [No PL]), stony hard eyeball on digital tension, deep cupping, and corneal staphyloma, rubeosis iridis, or corneal pannus.',
     isClinical: true,
     topic: 'Primary Angle-Closure Glaucoma (PACG)'
   },
@@ -2290,9 +2500,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'glaucoma_pacg_q3',
     chapterId: 8,
     type: 'short-answer',
-    title: 'PACG Intermittent Phase Diagnostic Tests & Management',
-    content: 'Mention the diagnostic provocative tests and management lines for the Intermittent phase of PACG.',
-    answer: 'Provocative Tests: Darkroom test, Prone test, and Darkroom-prone test.\n\nManagement:\n* During the active attack: Instill a Miotic drop (Pilocarpine 2%) to the affected eye, and a prophylactic weak miotic (Pilocarpine 1%) to the contralateral fellow eye.\n* Definitive Treatment after the attack: Bilateral Peripheral Iridectomy or Bilateral Laser Peripheral Iridotomy (using Argon or Nd:YAG laser) to bypass the pupillary block. Atropine is strictly contraindicated.',
+    title: 'PACG Provocative Tests & Intermittent Management',
+    content: 'Detail the diagnostic provocative tests and the clinical management approach for the Intermittent (Prodromal) stage of PACG.',
+    answer: '1. Provocative Diagnostic Tests (Used to confirm angle-closure susceptibility in a clinic in suspected patients):\n   - Darkroom Test: Place the patient in a dark room for 1 hour while awake (mydriasis without sleeping).\n   - Prone Test: Applanation tonometry performed after laying face-down for 1 hour (shifts lens-iris diaphragm forward).\n   - Darkroom-Prone Test: Most sensitive. Combine both methods.\n   * Positive Result: A post-test IOP rise of 8 mmHg or more suggests narrow-angle closure susceptibility.\n\n2. Management of Intermittent Phase:\n   - During the prodromal attack: Immediately administer a weak miotic (Pilocarpine 2% to the affected eye to pull iris away from the angle, and Pilocarpine 1% to the contralateral fellow eye as a prophylactic measure).\n   - Definitive Treatment: Bilateral ND:YAG Laser Peripheral Iridotomy (LPI) or surgical Peripheral Iridectomy to construct a bypass channel between the posterior and anterior chambers, permanently resolving the pupillary block. Mydriatic drops (Atropine) are strictly contraindicated.',
     isClinical: true,
     topic: 'Primary Angle-Closure Glaucoma (PACG)'
   },
@@ -2300,9 +2510,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'glaucoma_pacg_q4',
     chapterId: 8,
     type: 'short-answer',
-    title: 'PACG Acute Attack Clinical Picture',
-    content: 'Describe the full clinical picture (symptoms and signs) of an Acute Attack of Angle-Closure Glaucoma.',
-    answer: 'Symptoms: Sudden onset of excruciating, severe periocular pain and frontal headache, severe visual impairment (rapid drop of vision down to hand movement), nausea, vomiting, and abdominal distress.\n\nSigns: Circumcorneal ciliary injection (CCCI), severe corneal haze/edema, a shallow anterior chamber with peripheral iridocorneal touch, a fixed, mid-dilated vertically oval pupil that is completely irreactive to light, a bluish pupillary hue, stony hard digital tension, and an IOP spike up to 50-60 mmHg.',
+    title: 'PACG Acute Attack Clinical Signs',
+    content: 'What are the classic clinical symptoms and examination signs of an Acute Congestive Attack of Angle-Closure Glaucoma?',
+    answer: '1. Symptoms:\n   - Excruciating, unbearable periocular pain and radiating ipsilateral frontal headache.\n   - Sudden, profound drop in vision (down to hand movements or light perception only).\n   - Systemic autonomic symptoms: Nausea, projectile vomiting, abdominal pain, and bradycardia (often misdiagnosed as an acute abdominal emergency).\n\n2. Signs on Slit-Lamp Examination:\n   - Eyelid: Severe lid edema.\n   - Conjunctiva: Marked circumcorneal ciliary injection (CCCI).\n   - Cornea: Hazy, opaque, and dull cornea due to severe microcystic epithelial edema from pressure.\n   - Anterior Chamber: Obliterated, extremely shallow AC with peripheral iridocorneal touch, and aqueous flare with cells.\n   - Iris & Pupil: Single or multiple areas of iris bombé. Pupil is fixed, mid-dilated, and vertically oval, completely non-reactive to light, showing a dull greenish-bluish reflex.\n   - IOP: Stony hard digital tension, with a measured applanation IOP spike reaching 50 to 80 mmHg.',
     isClinical: true,
     topic: 'Primary Angle-Closure Glaucoma (PACG)'
   },
@@ -2310,9 +2520,9 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'glaucoma_pacg_q5',
     chapterId: 8,
     type: 'short-answer',
-    title: 'PACG Acute Attack Emergency Treatment',
-    content: 'Outline the emergency medical and operative treatment protocol for an Acute Attack of PACG.',
-    answer: '1. Immediate Hospitalization.\n2. Intensive Medical Therapy (To lower IOP rapidly): Intravenous systemic hyperosmotic agents (20% Mannitol), systemic CAIs (Acetazolamide/Diamox), topical Beta-blockers (Timolol 0.5%), and topical Miotics (Pilocarpine 2% instilled frequently once IOP begins to drop to contract the sphincter muscle).\n3. Operative Treatment: Peripheral Iridectomy or Laser Peripheral Iridotomy once the cornea clears; if extensive peripheral anterior synechiae (PAS) are present, perform a filtering procedure (Trabeculectomy). Prophylactic laser iridotomy is mandatory for the contralateral eye.',
+    title: 'PACG Acute Attack Emergency Treatment Protocol',
+    content: 'Detail the comprehensive emergency medical and surgical treatment protocol for an Acute Congestive Attack of PACG.',
+    answer: 'An acute angle-closure attack is a sight-threatening ophthalmic emergency requiring a two-phased medical and surgical treatment protocol:\n\n1. Immediate Emergency Medical Therapy (to break the block and rapidly lower IOP):\n   - Strict Hospitalization.\n   - Systemic Sedative: Administer systemic sedatives to relieve pain and anxiety.\n   - Intravenous Hyperosmotic: 20% Mannitol (infuse IV over 30-45 minutes; draws fluid osmotically from the vitreous cavity).\n   - Systemic CAI: Intravenous or oral Acetazolamide (Diamox 500 mg) to instantly reduce aqueous production.\n   - Topical Medications: Topical Beta-blockers (Timolol 0.5%) and topical Alpha-2 agonists (Brimonidine).\n   - Topical Miotics: Pilocarpine 2% drops are instilled frequently (every 15 min for 4 doses). (Note: Pilocarpine is ineffective initially when IOP is >40 mmHg due to ischemia of the sphincter pupillae; it must be used after IOP drops below 40 mmHg to drag the iris root away from the angle).\n\n2. Definitive Surgical/Laser Therapy (once the cornea clears and IOP drops):\n   - Gonioscopy-guided intervention:\n     * If the angle reopened: Plan Laser Peripheral Iridotomy (LPI) or surgical peripheral iridectomy.\n     * If the angle remains closed by permanent Peripheral Anterior Synechiae (PAS): Plan a filtration procedure (Trabeculectomy).\n   - Prophylactic Therapy: Prophylactic Laser Iridotomy MUST be performed on the contralateral, healthy fellow eye as it has an extremely high risk of experiencing a similar acute attack.',
     isClinical: true,
     topic: 'Primary Angle-Closure Glaucoma (PACG)'
   },
@@ -2320,14 +2530,14 @@ export const INITIAL_QUESTIONS: Question[] = [
     id: 'glaucoma_pacg_q6',
     chapterId: 8,
     type: 'short-answer',
-    title: 'PACG Chronic & Absolute Phases',
-    content: 'Describe the Chronic Phase and the Absolute Phase of PACG.',
-    answer: 'Chronic Phase: Occurs when progressive degrees of the angle circumference become permanently closed by synechiae (PAS), presenting clinically with a mild, constant rise in IOP and progressive cupping/field loss mimicking POAG; managed via filtering surgery.\n\nAbsolute Phase: The end-stage of neglected glaucoma, characterized by total post-glaucomatous optic atrophy, complete and irreversible loss of vision (No PL), and a stony hard eye, which can eventually progress to ciliary body atrophy, hypotony, and atrophic bulbi.',
+    title: 'PACG Management Across All Clinical Stages',
+    content: 'Outline the surgical and medical management of PACG patients depending on their clinical stage.',
+    answer: 'The management approach is customized based on the active Stage of PACG:\n\n1. Latent Stage:\n   - Prophylactic Nd:YAG Laser Peripheral Iridotomy (LPI) to BOTH eyes.\n\n2. Intermittent / Prodromal Stage:\n   - Bilateral Laser Peripheral Iridotomy (LPI).\n\n3. Acute Congestive Stage:\n   - Intensive medical emergency lowering of IOP -> followed by LPI (if open) or Trabeculectomy (if closed by permanent PAS). Prophylactic LPI is mandatory for the fellow eye.\n\n4. Chronic Stage:\n   - Managed with medical therapy and filtering surgery (Trabeculectomy with Mitomycin C). Prophylactic LPI to the other eye.\n\n5. Absolute Stage (Complete Blindness + Pain Control):\n   - Control intractable pain via: topical cycloplegics/steroids, medical anti-glaucoma drugs, retrobulbar alcohol injections (blocks the ciliary ganglion), cyclodestructive procedures (laser cyclophotocoagulation), or surgical Enucleation of the blind eye if pain remains completely uncontrollable.',
     isClinical: true,
     topic: 'Primary Angle-Closure Glaucoma (PACG)'
   },
 
-  // --- Topic 4: Secondary Glaucomas ---
+  // --- Topic 5: Secondary Glaucomas ---
   {
     id: 'glaucoma_secondary_q1',
     chapterId: 8,
@@ -2359,6 +2569,16 @@ export const INITIAL_QUESTIONS: Question[] = [
     topic: 'Secondary Glaucomas'
   },
   {
+    id: 'glaucoma_secondary_q3b',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'Secondary Glaucomas (Local vs. Systemic Causes)',
+    content: 'Define secondary glaucoma and enumerate its key local and systemic etiology.',
+    answer: 'Definition: An elevation of intraocular pressure causing optic nerve damage and fields loss, secondary to pre-existing ocular or systemic diseases.\n\n1. Systemic Causes:\n   - Chronic rise of episcleral venous pressure: E.g., Superior Vena Cava (SVC) obstruction or carotid-cavernous fistula.\n\n2. Local / Ocular Causes:\n   - Cornea: Severe corneal ulcers with deep AC inflammation or posterior synechiae.\n   - Iris & Ciliary Body (Uveitis): Exudates blocking the TM, or 360-degree posterior synechiae (seclusio pupillae) causing secondary pupillary block.\n   - Crystalline Lens:\n     * Phacomorphic (intumescent swollen lens causing angle closure).\n     * Phacolytic (leaking proteins from hypermature cataracts blocking the open angle).\n     * Pupillary block due to lens subluxation/dislocation.\n   - Hemorrhagic block: Massive traumatic hyphema (red blood cells blocking TM), or ghost-cell glaucoma following vitreous hemorrhage.\n   - Retinal/Vascular: CRVO or PDR releasing VEGF, causing rubeosis iridis and Neovascular Glaucoma.\n   - Trauma: Angle recession scarring.\n   - Intraocular Tumors: Melanoma or retinoblastoma mechanically compression or invading the angle.\n   - Corticosteroids: Steroid-induced glaucoma (decreases TM permeability).',
+    isClinical: true,
+    topic: 'Secondary Glaucomas'
+  },
+  {
     id: 'glaucoma_secondary_q4',
     chapterId: 8,
     type: 'short-answer',
@@ -2367,6 +2587,18 @@ export const INITIAL_QUESTIONS: Question[] = [
     answer: '1. Systemic paresthesia (numbness and tingling sensation in the fingers, hands, and toes).\n2. General malaise, chronic fatigue, and depression.\n3. Gastrointestinal (GIT) irritation, nausea, and abdominal cramps.\n4. Renal stone formation.\n5. Electrolyte imbalance (hypokalemia; requires potassium supplementation).',
     isClinical: true,
     topic: 'Secondary Glaucomas'
+  },
+
+  // --- Topic 6: Glaucoma Diagnosis & Evaluation ---
+  {
+    id: 'glaucoma_diagnosis_general_q1',
+    chapterId: 8,
+    type: 'short-answer',
+    title: 'General Clinical Diagnostic Parameters for Glaucoma',
+    content: 'How is Glaucoma diagnosed in a general clinical context? Enumerate the four key diagnostic pillars.',
+    answer: 'Definitive diagnosis and monitoring of glaucoma require evaluating four primary clinical pillars:\n\n1. Measurement of Intraocular Pressure (IOP):\n   - Performed via Applanation (Goldmann) tonometry, combined with checking diurnal variation patterns and adjusting for Central Corneal Thickness (CCT) via pachymetry.\n\n2. Evaluation of the Optic Nerve Head (ONH) & Retinal Nerve Fiber Layer (RNFL):\n   - Assessed by direct/indirect ophthalmoscopy, slit-lamp biomicroscopy, and Optical Coherence Tomography (OCT) to inspect the neuroretinal rim, C/D ratio, and early vertical thinning.\n\n3. Functional Assessment of Visual Fields (Perimetry):\n   - Standard Automated Perimetry (such as Humphrey Visual Fields) is conducted to identify and map central/peripheral scotomas (paracentral, Seidel, arcuate scotomas, nasal steps, and tubular fields).\n\n4. Examination of the Anterior Chamber Angle (Gonioscopy):\n   - Direct view using gonioscopic contact lenses to classify the disease as open-angle or closed-angle, and visualizes structures to rule out secondary etiology (like neovascularization, pigment dispersion, or angle recession).',
+    isClinical: true,
+    topic: 'Glaucoma Diagnosis & Evaluation'
   },
 
   // ===========================================================================
@@ -2837,7 +3069,39 @@ export const INITIAL_QUESTIONS: Question[] = [
   // --- CHAPTER 12: NEURO-OPHTHALMOLOGY ---
   // ===========================================================================
 
-  // --- Topic 1: Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION) ---
+  // --- Topic 1: Anatomy & Physiology of the Visual Pathway ---
+  {
+    id: 'neuro_anatomy_q1',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Visual Pathway Gross Anatomy',
+    content: 'Describe the gross anatomy of the visual pathway, mentioning the sequential structures involved.',
+    answer: 'The visual pathway consists of the following sequential structures:\n1. The Optic Nerve (2nd cranial nerve, ~4 cm long extending from the lamina cribrosa of the sclera to the optic chiasm).\n2. The Optic Chiasm (where nasal fibers cross/decussate to the opposite side, while temporal fibers remain uncrossed).\n3. The Optic Tract (contains temporal fibers of the same side and nasal fibers of the opposite side).\n4. The Lateral Geniculate Body (LGB, the primary synapse point of visual fibers).\n5. The Optic Radiation (extends from the LGB through the posterior limb of the internal capsule to the occipital lobe).\n6. The Visual Cortex (located on the medial aspect and posterior pole of the occipital lobe, primarily Brodmann area 17).',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Visual Pathway'
+  },
+  {
+    id: 'neuro_anatomy_q2',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Visual Pathway Orders of Neurons',
+    content: 'Explain the physiology of the visual pathway in terms of the three main orders of neurons.',
+    answer: 'Excluding the photoreceptors (rods and cones), the visual pathway is composed of three orders of neurons:\n- 1st Order Neurons: The bipolar cells located within the inner nuclear layer of the retina.\n- 2nd Order Neurons: The retinal ganglion cells and their axons, which form the nerve fiber layer, converge to form the optic nerve, pass through the chiasm/tracts, and terminate/synapse in the lateral geniculate body (LGB).\n- 3rd Order Neurons: Extend from the LGB, forming the optic radiations that travel to the visual cortex of the occipital lobe.',
+    isClinical: false,
+    topic: 'Anatomy & Physiology of the Visual Pathway'
+  },
+  {
+    id: 'neuro_anatomy_q3',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Visual Pathway Lesions and Field Defects',
+    content: 'Enumerate the characteristic visual field defects according to the site of the lesion in the visual pathway.',
+    answer: 'Visual field defects correspond directly to the site of the lesion:\n- Left Optic Nerve: Complete blindness of the left eye.\n- Optic Chiasm (central lesion): Bitemporal hemianopia (loss of both temporal visual fields).\n- Optic Tract / LGB / Optic Radiation: Contralateral homonymous hemianopia.\n- Parietal Lobe (optic radiation): Contralateral inferior homonymous quadrantanopia ("pie in the floor").\n- Temporal Lobe (optic radiation - Meyer\'s loop): Contralateral superior homonymous quadrantanopia ("pie in the sky").\n- Occipital Lobe: Contralateral homonymous hemianopia, often with macular sparing due to collateral blood supply or bilateral representation.',
+    isClinical: true,
+    topic: 'Anatomy & Physiology of the Visual Pathway'
+  },
+
+  // --- Topic 2: Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION) ---
   {
     id: 'neuro_swelling_q1',
     chapterId: 12,
@@ -2878,8 +3142,78 @@ export const INITIAL_QUESTIONS: Question[] = [
     isClinical: true,
     topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
   },
+  {
+    id: 'neuro_swelling_q5',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Optic Neuritis Definition & Classification',
+    content: 'Define Optic Neuritis and outline its ophthalmoscopic and etiological classifications.',
+    answer: 'Definition: An inflammatory, infective, or demyelinating process affecting the optic nerve fibers.\n\nClassifications:\n1. Ophthalmoscopic Classification:\n   - Papillitis: Primary inflammation of the optic disc (nerve head), showing disc swelling, congestion, and hemorrhages.\n   - Retrobulbar Neuritis: Inflammation behind the eyeball (optic disc appears completely normal, hence "the patient sees nothing and the doctor sees nothing").\n   - Neuro-retinitis: Inflammation of the optic nerve head extending into the surrounding macular area, typically forming a "macular star" of hard exudates.\n\n2. Etiological Classification:\n   - Demyelinating: The most common cause (associated with Multiple Sclerosis [MS] or Devic disease).\n   - Para-infectious: Following viral infections (e.g., measles, mumps, influenza) or vaccinations.\n   - Infectious: Direct spread (meningitis, orbital cellulitis, sinus disease) or systemic infections (syphilis, tuberculosis).\n   - Autoimmune: Associated with systemic conditions (e.g., systemic lupus erythematosus, sarcoidosis).',
+    isClinical: false,
+    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
+  },
+  {
+    id: 'neuro_swelling_q6',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Papillitis Presentation & Management',
+    content: 'Describe the typical clinical picture (symptoms and signs), fate, and treatment of Papillitis.',
+    answer: '1. Clinical Presentation:\n   - Symptoms: Rapidly progressive unilateral visual loss (severe drop, sometimes to perception of light [PL]), and deep retrobulbar aching eyeball pain typically exacerbated by eye movements.\n   - Signs: Elevated and hyperemic optic disc (<3 diopters of elevation) with lost physiological cup, congested retinal veins, splinter hemorrhages near the disc margin, relative afferent pupillary defect (RAPD), and a central or cecocentral scotoma (with severe loss of red/green color vision).\n\n2. Fate (Outcome): Vision usually recovers back to normal or near-normal within 1-4 weeks, but recurrences may occur, or it may transition into secondary optic atrophy.\n\n3. Treatment: Consists of treating the underlying cause, administration of systemic corticosteroids (e.g., intravenous methylprednisolone followed by oral prednisone) to accelerate recovery, and a comprehensive neurological consultation (especially to assess risk for Multiple Sclerosis).',
+    isClinical: true,
+    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
+  },
+  {
+    id: 'neuro_swelling_q7',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Retrobulbar Neuritis Clinical Manifestations',
+    content: 'Outline the key clinical features, typical patient age group, and normal ocular exam findings of Retrobulbar Neuritis.',
+    answer: '- Key Features: Acute unilateral visual loss, ocular/retrobulbar pain exacerbated by eye movements, and a positive Relative Afferent Pupillary Defect (RAPD).\n- Typical Patient Profile: Young adults aged 20–40, with a strong association with demyelinating diseases like Multiple Sclerosis (MS).\n- Ocular Exam Findings: The fundus initially appears completely normal ("the patient sees nothing and the doctor sees nothing") because the inflammatory focus is located posterior to the lamina cribrosa, away from the optic nerve head.',
+    isClinical: true,
+    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
+  },
+  {
+    id: 'neuro_swelling_q8',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Papilledema Definition & Etiologies',
+    content: 'Define Papilledema and list its three main underlying etiologies.',
+    answer: 'Definition: Passive, non-inflammatory edema of the optic disc (almost always bilateral) caused by elevated intracranial pressure (ICP).\n\nMain Etiologies:\n1. Idiopathic Intracranial Hypertension (Pseudotumor cerebri, most common in young, obese females of childbearing age).\n2. Space-Occupying Intracranial Lesions (e.g., brain tumors, abscesses, or hematomas obstructing cerebrospinal fluid pathways).\n3. Cerebral Venous Sinus Thrombosis (obstructing venous outflow from the brain).\n4. Traumatic brain injury / Subarachnoid hemorrhage.',
+    isClinical: false,
+    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
+  },
+  {
+    id: 'neuro_swelling_q9',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Papilledema Stages & Symptoms',
+    content: 'Describe the typical symptoms of increased intracranial pressure and outline the fundus appearance across the four stages of Papilledema.',
+    answer: '1. Symptoms of Raised ICP: Severe headache (worse in the morning), projectile vomiting, projectile nausea, diplopia (due to 6th cranial nerve palsy), and transient visual obscurations (momentary blurring/graying out of vision upon standing up or bending down).\n\n2. Fundus Signs across Stages:\n   - Early Stage: Mild hyperemia of the disc, blurring of the nasal first and then temporal margins, and loss of normal spontaneous venous pulsations (SVPs).\n   - Established Stage: Severe hyperemia, marked elevation of the disc (up to 9D) with "halo" appearance, complete obliteration of the cup, engorged/tortuous retinal veins, flame-shaped hemorrhages, and fluffy white cotton-wool spots.\n   - Long-Standing Stage: Elevation remains but hyperemia/hemorrhages resolve; disc has a pale, dusty, "champagne-cork" appearance with optociliary shunt vessels.\n   - Atrophic Stage: Post-papilledemic optic atrophy characterized by a greyish-white, dirty disc with blurred margins and severely attenuated retinal vessels.',
+    isClinical: true,
+    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
+  },
+  {
+    id: 'neuro_swelling_q10',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Papilledema vs Papillitis & Other Swelling Causes',
+    content: 'Differentiate between Papilledema and Papillitis, and list other non-neurological causes of optic disc swelling.',
+    answer: '1. Differentiation:\n   - Papilledema: Almost always bilateral; early visual acuity is preserved (normal); pupillary reaction is normal; accompanied by prominent symptoms of raised ICP (headache, vomiting); marked elevation up to 9 diopters.\n   - Papillitis: Almost always unilateral; presents with immediate, severe visual drop; central/cecocentral scotoma; positive RAPD; pain upon eye movement; milder disc elevation (<3 diopters).\n\n2. Other Causes of Optic Disc Swelling:\n   - Ocular: Central Retinal Vein Occlusion (CRVO), severe ocular hypotony, or low tension.\n   - Orbital: Orbital tumors, Graves\' orbitopathy, or orbital cellulitis compressing the nerve.\n   - Systemic: Malignant systemic hypertension, diabetic papillopathy, or toxemia of pregnancy.',
+    isClinical: true,
+    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
+  },
+  {
+    id: 'neuro_swelling_q11',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Papilledema Management Guidelines',
+    content: 'Outline the diagnostic and treatment approach for Papilledema.',
+    answer: '1. Diagnostic Approach: Urgent neuroimaging (brain CT or MRI) to rule out an intracranial mass or sinus thrombosis BEFORE performing a lumbar puncture (LP) to measure cerebrospinal fluid opening pressure.\n\n2. Treatment Approach:\n   - Etiological Treatment: Direct medical or surgical intervention targeting the underlying cause (e.g., tumor resection, vascular shunting, or steroid/weight loss therapy for idiopathic intracranial hypertension).\n   - Medical: Carbonic anhydrase inhibitors (e.g., Acetazolamide/Diamox) or diuretics to lower ICP.\n   - Surgical (Visual sparing): Optic nerve sheath fenestration (decompression) to protect visual function from chronic damage if pressure remains high, or lumboperitoneal/ventriculoperitoneal shunt procedures.',
+    isClinical: true,
+    topic: 'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)'
+  },
 
-  // --- Topic 2: Optic Atrophy Comparison ---
+  // --- Topic 3: Optic Atrophy Comparison ---
   {
     id: 'neuro_atrophy_q1',
     chapterId: 12,
@@ -2909,6 +3243,38 @@ export const INITIAL_QUESTIONS: Question[] = [
     answer: '1. Consecutive Optic Atrophy: Disc color has a characteristic waxy yellow hue with blurred edges; the optic cup is filled; retinal blood vessels are severely attenuated, with clear fundus evidence of the primary causative disease (e.g., bone spicules in Retinitis Pigmentosa).\n\n2. Post-Glaucomatous Optic Atrophy: Disc color is white with sharply defined edges; characterized by an extremely deep glaucomatous cup showing a prominent nasal shift of the retinal blood vessels, accompanied by high IOP values.',
     isClinical: true,
     topic: 'Optic Atrophy Comparison'
+  },
+
+  // --- Topic 4: Pupillary Reflexes & Anomalies ---
+  {
+    id: 'neuro_pupil_q1',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Pupil Definition, Muscles and Functions',
+    content: 'Define the Pupil, name its controlling muscles and their respective autonomic innervation, and state its key physiological functions.',
+    answer: '1. Definition: A central, active hole located in the iris diaphragm (usually slightly nasal to the center) measuring 3-4 mm in diameter.\n\n2. Controlling Muscles and Innervation:\n   - Sphincter Pupillae: A circular muscle layer responsible for pupillary constriction (miosis); supplied by parasympathetic fibers traveling on the 3rd cranial nerve (oculomotor).\n   - Dilator Pupillae: A radial muscle muscle layer responsible for pupillary dilatation (mydriasis); supplied by sympathetic nerve fibers from the superior cervical ganglion.\n\n3. Key Functions:\n   - Regulates the amount of light entering the eye to optimize retinal illumination.\n   - Reduces optical aberrations (by cutting off divergent peripheral light rays, allowing only central parallel rays to enter the eye).',
+    isClinical: false,
+    topic: 'Pupillary Reflexes & Anomalies'
+  },
+  {
+    id: 'neuro_pupil_q2',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'Pupillary Light Reflex Pathway',
+    content: 'Describe the complete anatomical pathway of the pupillary light reflex (Sensory to Motor components).',
+    answer: 'The pupillary light reflex pathway consists of:\n1. Receptors: Photoreceptors (rods and cones) and specialized intrinsically photosensitive retinal ganglion cells (ipRGCs) in the retina.\n2. Afferent Pathway: Decussate partly at the optic chiasm. Axons run through the optic nerve and optic tract, bypassing the lateral geniculate body, to terminate in the Pretectal Nucleus of the midbrain.\n3. Interneurons: Fibers travel bilaterally from each pretectal nucleus to both Edinger-Westphal nuclei (the parasympathetic centers of CN III), ensuring a bilateral consensual pupil response.\n4. Efferent Pathway: Parasympathetic preganglionic fibers travel along the Oculomotor (3rd) nerve to the Ciliary Ganglion, where they synapse.\n5. Postganglionic Efferents: Short ciliary nerves travel to the eye to supply the Sphincter Pupillae muscle, causing pupillary constriction (direct and consensual miosis).',
+    isClinical: false,
+    topic: 'Pupillary Reflexes & Anomalies'
+  },
+  {
+    id: 'neuro_pupil_q3',
+    chapterId: 12,
+    type: 'short-answer',
+    title: 'The Near Response Triad Components',
+    content: 'Enumerate the three distinct physiological components of the ocular Near Response (Accommodation Triad) and explain their purpose.',
+    answer: 'The near response (synkinesis) is triggered when focusing on a near object, consisting of three co-dependent actions:\n1. Accommodation: Contraction of the ciliary muscle relaxes the zonules, causing the lens to become more globular/powerful to focus divergent rays of near objects clearly on the retina.\n2. Convergence: Simultaneous contraction of both medial recti muscles aligns both eyes toward the near object to prevent binocular diplopia.\n3. Miosis: Constriction of the pupil (sphincter pupillae contraction) blocks peripheral divergent rays, increasing the depth of focus and reducing optical blur.',
+    isClinical: false,
+    topic: 'Pupillary Reflexes & Anomalies'
   },
 
   // ===========================================================================

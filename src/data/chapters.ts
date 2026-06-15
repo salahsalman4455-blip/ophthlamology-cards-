@@ -5,6 +5,7 @@ export const CHAPTERS: Chapter[] = [
     id: 1,
     title: 'Eyelid',
     topics: [
+      'Anatomy & Physiology of the Eyelids',
       'Blepharitis',
       'Inflammations of the Eyelid Glands (Hordeolum & Chalazion)',
       'Disorders of Eyelashes (Distichiasis & Trichiasis)',
@@ -27,6 +28,7 @@ export const CHAPTERS: Chapter[] = [
     id: 3,
     title: 'Conjunctiva',
     topics: [
+      'Anatomy & Histology of the Conjunctiva',
       'Acute Bacterial Conjunctivitis (Mucopurulent & Purulent)',
       'Ophthalmia Neonatorum & Inclusion Conjunctivitis',
       'Viral Conjunctivitis',
@@ -83,6 +85,7 @@ export const CHAPTERS: Chapter[] = [
     id: 8,
     title: 'Glaucoma',
     topics: [
+      'Anatomy & Physiology of the AC Angle & Aqueous Humor',
       'Congenital Glaucoma (Buphthalmos)',
       'Primary Open-Angle Glaucoma (POAG)',
       'Primary Angle-Closure Glaucoma (PACG)',
@@ -122,8 +125,10 @@ export const CHAPTERS: Chapter[] = [
     id: 12,
     title: 'Neuro-ophthalmology',
     topics: [
+      'Anatomy & Physiology of the Visual Pathway',
       'Optic Disc Swelling Differential Diagnosis (Optic Neuritis, Papilledema, NAION)',
-      'Optic Atrophy Comparison'
+      'Optic Atrophy Comparison',
+      'Pupillary Reflexes & Anomalies'
     ]
   },
   {
