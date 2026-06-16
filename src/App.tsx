@@ -26,6 +26,31 @@ const MIXED_CHAPTER: Chapter = {
   topics: []
 };
 
+const isQuestionCase = (q: Question): boolean => {
+  const titleLower = q.title.toLowerCase();
+  const idLower = q.id.toLowerCase();
+  if (titleLower.includes('case') || idLower.includes('case') || titleLower.includes('scenario') || idLower.includes('scenario')) {
+    return true;
+  }
+  
+  const contentLower = q.content.toLowerCase();
+  if (contentLower.includes('presents with') || 
+      contentLower.includes('presents complaining') ||
+      contentLower.includes('presents of') ||
+      /year-old/i.test(contentLower) ||
+      /\d+\s+year\s+old/i.test(contentLower) ||
+      /child\s+presents/i.test(contentLower) ||
+      /man\s+presents/i.test(contentLower) ||
+      /woman\s+presents/i.test(contentLower) ||
+      /boy\s+presents/i.test(contentLower) ||
+      /girl\s+presents/i.test(contentLower)
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
 export default function App() {
   const [view, setView] = useState<'home' | 'study' | 'review'>('home');
   const [activeChapter, setActiveChapter] = useState<Chapter | null>(null);
@@ -59,13 +84,9 @@ export default function App() {
 
   const startMixedSession = () => {
     setActiveChapter(MIXED_CHAPTER);
-    // Shuffle unmastered questions across all chapters, or all if everything is mastered
     const unmastered = INITIAL_QUESTIONS.filter(q => !masteredIds.includes(q.id));
     const pool = unmastered.length > 0 ? unmastered : INITIAL_QUESTIONS;
-    
-    // Perform standard random sort
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    setSessionQuestions(shuffled);
+    setSessionQuestions(pool);
     setView('study');
     setSidebarOpen(false);
   };

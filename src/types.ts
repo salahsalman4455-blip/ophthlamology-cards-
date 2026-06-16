@@ -21,6 +21,7 @@ export interface Question {
   answer: string;
   isClinical: boolean;
   topic?: string;
+  isPastYear?: boolean;
 }
 
 export interface Chapter {

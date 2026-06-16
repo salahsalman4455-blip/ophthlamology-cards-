@@ -1,6 +1,162 @@
 import { Question } from '../types';
 
 export const INITIAL_QUESTIONS: Question[] = [
+  // --- New High-Yield Revision Questions (Essay, Complete, T/F, Explain, Cases with MCQ Highlights) ---
+  {
+    id: 'eyelid_essay_q1',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Blepharoptosis Definition, Causes & Classification',
+    content: 'Define blepharoptosis, enumerate its causes, and classify its amount and levator function power.',
+    answer: 'Definition: Abnormal drooping of the upper eyelid, covering more than 2 mm of the upper part of the cornea in primary gaze.\n\nCauses:\n1. Congenital: ==Simple ptosis (levator dysgenesis) (MCQ)==, ==Marcus Gunn jaw-winking syndrome (MCQ)==.\n2. Acquired:\n   - Neurogenic: ==3rd nerve palsy (MCQ)==, ==Horner\'s syndrome (MCQ)==.\n   - Myogenic: Myasthenia gravis, Ocular myopathy.\n   - Aponeurotic/Senile: ==Involutional stretching of aponeurosis (MCQ)==.\n   - Mechanical: ==Chalazion (MCQ)==, tumor, edema (increased lid weight).\n   - Traumatic.\n\nAmount of Ptosis:\n- Mild: up to 2 mm drop.\n- Moderate: 3 mm drop.\n- Severe: 4 mm or more drop.\n\nLevator Function Power (LF):\n- Normal: ≥ 15 mm.\n- Good: ≥ 8 mm.\n- Fair: 5 - 7 mm.\n- Poor: ≤ 4 mm.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Assessment and Treatment of Ptosis'
+  },
+  {
+    id: 'eyelid_essay_q2',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Contraindications of Ptosis Surgery',
+    content: 'Explain the definitive contraindications of ptosis surgery and the risk associated with each.',
+    answer: '1. Poor or absent ==Bell’s phenomenon (MCQ)==:\n   - Risk: High risk of post-operative exposure keratitis/corneal ulceration because the cornea fails to roll upward during sleep while lagophthalmos is present.\n2. Unilateral complete 3rd nerve palsy:\n   - Detail: The drooped lid ==covers the pupil preventing diplopia (MCQ)==.\n   - Risk: Elevating the eyelid will expose the pupil and result in ==intolerable diplopia (MCQ)== because the eye is deviated down and out and cannot move.\n3. Corneal anesthesia / loss of corneal sensation:\n   - Risk: Severe exposure keratitis due to loss of the sensory arm of the protective blink reflex.\n4. Myasthenia Gravis:\n   - Rule: Must be managed medically first (anticholinesterases) rather than surgical.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Assessment and Treatment of Ptosis'
+  },
+  {
+    id: 'eyelid_essay_q3',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Paralytic Ectropion Complications & Treatment',
+    content: 'Discuss Paralytic Ectropion: define its cause, why it affects the lower lid only, its complications, and first-line treatment.',
+    answer: 'Definition & Cause: Outward turning of the eyelid margin caused by ==facial nerve (7th cranial nerve) palsy (MCQ)==, leading to paralysis of the orbicularis oculi muscle.\n\nLower Lid Preference: It affects the lower eyelid only because gravity pulls the flaccid lower lid downward, whereas the upper lid remains suspended by the functioning levator muscle.\n\nComplications:\n1. Epiphora (persistent tearing due to lacrimal pump failure).\n2. Lagophthalmos (inability to close the eye).\n3. Exposure keratopathy / keratitis.\n\nManagement:\n- First-line of medical treatment is ==continuous ocular lubrication (MCQ)== to prevent exposure keratitis.\n- Surgical treatment: ==Lateral tarsorrhaphy (MCQ)== or lid tightening operations if palsy becomes permanent.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Positional Anomalies (Entropion & Ectropion)'
+  },
+  {
+    id: 'eyelid_essay_q4',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Spastic Entropion Definition and Correction Measures',
+    content: 'Define spastic entropion, describe its pathophysiological trigger, and enumerate the measures to correct the lid margin.',
+    answer: 'Definition: Inward rolling of the eyelid margin caused by ==spasm of the marginal fibers of the orbicularis oculi muscle (muscle of Riolan) (MCQ)==.\n\nPathophysiological Trigger: Secondary to chronic ocular irritation, inflammation, corneal ulcers, or tight bandaging.\n\nCorrection Measures:\n1. Medical (Temporary):\n   - Treat the underlying cause of ocular irritation.\n   - Taping the lower eyelid to the cheek to forcefully pull it out.\n   - ==Botulinum toxin (Botox) (MCQ)== injection into the orbicularis oculi muscle fibers.\n2. Surgical (Definitive):\n   - ==Weiss operation (MCQ)== (transverse lid split and everting sutures to redirect the margin outward).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Positional Anomalies (Entropion & Ectropion)'
+  },
+  {
+    id: 'eyelid_essay_q5',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Ophthalmic Definitions: Hordeolum Externum, Aponeurotic Ptosis, Distichiasis',
+    content: 'Define the following terms: (1) Hordeolum externum (stye) (2) Aponeurotic ptosis (senile/involutional) (3) Distichiasis.',
+    answer: '1. Hordeolum externum (Stye):\n   - Definition: Acute, painful, suppurative staphylococcal inflammation of the ==eyelash follicle & Zeis or Moll glands (MCQ)==. Managed under acute flare with hot compresses and topical/systemic antibiotics.\n2. Aponeurotic ptosis:\n   - Definition: Drooping of the upper eyelid caused by stretching, dehiscence, or disinsertion of the ==levator aponeurosis (MCQ)==, commonly seen in elderly patients (senile).\n3. Distichiasis:\n   - Definition: A rare congenital/acquired anomaly where an ==accessory row of eyelashes (MCQ)== grows from the meibomian gland orifices, located ==behind the grey line (MCQ)==. When symptomatic, it is permanently treated via ==electrolysis (MCQ)== (for 2 lashes) or a ==Snellen\'s or Van Millingen (MCQ)== operation.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_complete_q1',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Defining Madarosis and Lagophthalmos (Complete)',
+    content: 'Complete the blanks:\n1. Madarosis means ________.\n2. Lagophthalmos means ________.\n3. Incomplete closure of the palpebral fissure on attempting to close the eye is called ________.',
+    answer: '1. Madarosis means ==permanent loss of eyelashes (MCQ)==.\n2. Lagophthalmos means ==inability to close the eyelids completely (MCQ)==.\n3. Incomplete closure of the palpebral fissure on attempting to close the eye is called ==Lagophthalmos (MCQ)==.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Lagophthalmos'
+  },
+  {
+    id: 'eyelid_complete_q2',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Surgical Options: Trichiasis and Severe Pediatric Ptosis (Complete)',
+    content: 'Complete the blanks:\n1. Van Millengen operation is commonly done in ________.\n2. The surgical choice for a 6 years old child with MRD 1 of 0.5 mm (severe ptosis) and the amount of levator function is 2 mm (poor function), would be ________.',
+    answer: '1. Van Millengen operation is commonly done in ==Trichiasis affecting the whole upper eyelid margin (MCQ)== (or ==pure trichiasis of the upper eyelid (MCQ)==).\n2. The surgical choice for a 6 years old child with MRD 1 of 0.5 mm (severe ptosis) and 2 mm levator function (poor function) would be ==Frontalis sling operation (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Disorders of Eyelashes (Distichiasis & Trichiasis)'
+  },
+  {
+    id: 'eyelid_complete_q3',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Clinical Quick-fire Definitions & Causes (Complete)',
+    content: 'Complete the blanks:\n1. Hordeolum internum occurs as a result of acute infection of the ________ glands.\n2. Senile ectropion mainly affects the ________ eyelid.\n3. Angular blepharitis is caused by Morax-Axenfeld which is a ________ organism.',
+    answer: '1. Hordeolum internum occurs as a result of acute infection of the ==Meibomian glands (MCQ)==.\n2. Senile ectropion mainly affects the ==lower eyelid (MCQ)==.\n3. Angular blepharitis is caused by Morax-Axenfeld which is a ==Gram-negative organism (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Blepharitis'
+  },
+  {
+    id: 'eyelid_explain_q8',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Importance of Bell’s Phenomenon',
+    content: 'Explain the high importance of checking the Bell’s phenomenon before committing a patient to ptosis surgery.',
+    answer: 'Bell’s phenomenon is the upward and outward rolling of the globe upon attempted eye closure.\n\nSurgical Relevance: Ptosis surgery often causes some degree of temporary or permanent post-operative lagophthalmos. Checking Bell\'s phenomenon is crucial because a positive/good Bell\'s phenomenon ensures that when the patient sleeps, the cornea rolls upward and is protected under the upper lid, preventing ==exposure keratitis / corneal ulceration (MCQ)==.\n- If Bell\'s phenomenon is absent/poor, ptosis surgery is strictly contraindicated or must be extremely conservative.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Assessment and Treatment of Ptosis'
+  },
+  {
+    id: 'eyelid_case_q1',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Clinical Case 1: Unilateral Severe Congenital Ptosis',
+    content: 'An infant is brought to the clinic with severe unilateral ptosis since birth. MRD1 is 1 mm and the levator function is measured to be 2 mm.\n\n1. What is the diagnosis?\n2. What surgical procedure is recommended?\n3. What is the optimal surgical timing for this child?',
+    answer: '1. Diagnosis: Unilateral severe congenital simple ptosis with poor levator function.\n2. Procedure: ==Frontalis sling operation (MCQ)== (suspension) to suspend the lid using frontalis muscle power.\n3. Timing: Normally postponed until pre-school age (4-5 years) for facial growth. However, if the lid covers the visual axis, surgery must be performed immediately (ASAP) to prevent ==amblyopia (sensorimotor deprivation) (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Assessment and Treatment of Ptosis'
+  },
+  {
+    id: 'eyelid_case_q2',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Clinical Case 2 & 3: Congenital Ptosis with Fair Function',
+    content: 'A 6-year-old schoolchild presents with unilateral moderate congenital ptosis (MRD1: 2 mm) and fair levator function (7 mm).\n\n1. What is the diagnosis?\n2. What is the recommended surgical procedure?\n3. Is surgical timing appropriate, and how does it compare to 2 years old guidelines?\n4. What is the surgical choice if the MRD 1 was 0 mm and levator was 2 mm instead?',
+    answer: '1. Diagnosis: Unilateral moderate congenital simple ptosis with fair levator function.\n2. Procedure: ==Levator muscle resection (MCQ)== (advancement) because levator action is fair/good.\n3. Timing Guidance: Yes, school age (6 years) is standard to prevent psychological trauma. If the child was 2 years old, we would postpone surgery to age 4-5 unless there is a threat of ==amblyopia (MCQ)== or severe abnormal head posture (torticollis).\n4. If MRD 0 mm and levator 2 mm: This is a severe ptosis with poor levator function, indicating a ==Frontalis sling operation (MCQ)== instead of levator resection.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Assessment and Treatment of Ptosis'
+  },
+  {
+    id: 'eyelid_case_q4_5',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Clinical Case 4 & 5: Blepharitis Classification',
+    content: 'Differentiate clinical presentations of Case A (yellow crusts gluing eyelashes together with minute bleeding ulcers when removed) versus Case B (greasy grayish-white scales on hyperemic lid margins associated with scalp dandruff).',
+    answer: 'Case A Diagnosis: ==Ulcerative blepharitis (MCQ)== (caused by acute Staphylococcus aureus infection of the eyelash follicles).\n\nCase B Diagnosis: ==Squamous (Seborrheic) blepharitis (MCQ)== (associated with metabolic seborrhea of the scalp/brows).\n\nKey Treatment Differences:\n- Ulcerative requires topical antibiotic ointment and lid hygiene.\n- Squamous requires dandruff shampoo, warm compresses, and removal of greasy scales with diluted baby shampoo.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Blepharitis'
+  },
+  {
+    id: 'eyelid_case_q6',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Clinical Case 6: Eyelid Trauma and Laceration',
+    content: 'A patient presents to the emergency department following a motor vehicle accident with a deep laceration on the left upper eyelid.\n\n1. What is the immediate clinical protocol to do and avoid first?\n2. Do you stitch the eyelid laceration immediately?\n3. What structures must be carefully analyzed in this laceration?',
+    answer: '1. Immediate protocol:\n   - Do: Assess visual acuity, check pupillary light reflex, and rule out globe rupture or retinal injury.\n   - Avoid: Applying any pressure on the globe (which could extrude contents if ruptured).\n2. Stitching Timing: No, do not stitch the lid until a full ophthalmic examination of the globe is completed and any foreign bodies or globe ruptures are ruled out/repaired.\n3. Structures to analyze: Check if the laceration involves the ==eyelid margin (MCQ)==, involves the ==levator aponeurosis (MCQ)== (could cause ptosis), or involves the ==lacrimal canaliculi (MCQ)== (specifically if localized in the medial canthus area).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Anatomy & Physiology of the Eyelids'
+  },
+  {
+    id: 'eyelid_case_q7',
+    chapterId: 1,
+    type: 'short-answer',
+    title: 'Clinical Case 7: Infected and Recurrent Chalazion',
+    content: 'An elderly patient presents with a localized painless swelling in the upper lid of 1 year duration. Over the last 3 days, it has become red, hot, and painful.\n\n1. What is the appropriate initial management?\n2. What is your clinical suspicion and course of action if this lesion keeps recurring in the exact same area?',
+    answer: '1. Initial Management: Treat the acute secondary staphylococcal infection first using hot compresses, topical, and ==systemic and local antibiotics (MCQ)==.\n2. Recurrent Chalazion Guidance: If it recurs in the same area in an older patient, the physician must refer the patient for ==excision and histopathological study (MCQ)== of the tissue to rule out the highly malignant ==Sebaceous gland carcinoma (MCQ)== (or ==Malignancy (MCQ)==) which mimics a chalazion.\n   - Never perform simple repeated curettage without biospy in recurrent senile chalazion!',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Inflammations of the Eyelid Glands (Hordeolum & Chalazion)'
+  },
+
   // --- Topic 0: Anatomy & Physiology of the Eyelids ---
   {
     id: 'eyelid_anatomy_q1',
@@ -521,6 +677,107 @@ export const INITIAL_QUESTIONS: Question[] = [
   // --- CHAPTER 2: LACRIMAL SYSTEM (21 Questions) ---
   // ===========================================================================
 
+  // --- New High-Yield Revision Questions & Cases (Essay, Complete, and MCQs) ---
+  {
+    id: 'lacrimal_essay_q1',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Jones Test Description and Importance',
+    content: 'Illustrate the Jones test and explain its diagnostic importance in differentiating causes of tearing.',
+    answer: 'Primary Jones Test (Jones I): A drop of fluorescein is instilled into the conjunctival sac. After 5 minutes, a cotton swab is placed in the inferior meatus of the nose. If the dye is recovered, the test is positive (lacrimal system is patent). If no dye is recovered, the test is negative (indicates obstruction or pump failure).\n\nSecondary Jones Test (Jones II): Done if Jones I is negative. The remaining dye is washed from the eye, and normal saline is irrigated through the punctum. If fluorescein-stained saline comes from the nose, the obstruction is functional (pump failure) or partial. If clear saline comes out, the dye never entered the sac (canalicular obstruction).\n\nImportance: It differentiates between anatomical obstruction and functional obstruction (lacrimal pump failure) of the lacrimal excretory system.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Clinical Approach & Workup of Watering (Epiphora)'
+  },
+  {
+    id: 'lacrimal_essay_q2',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Clinical Examination Approach to Epiphora',
+    content: 'Formulate a comprehensive clinical approach and list examinations for a patient presenting with epiphora (watering of the eye).',
+    answer: 'History Taking: Ask about onset, duration, discharge, and past facial trauma or surgeries.\n\nClinical Examination:\n- Examine the eye to rule out reflex tearing (e.g., corneal ulcer, trichiasis, foreign body).\n- Examine the eyelids for ectropion, entropion, or poor pumping (facial palsy).\n- Inspect the puncta for stenosis or malposition.\n- Regurgitation test: Press over the lacrimal sac area; if pus/mucus regurgitates from the punctum, it indicates chronic dacryocystitis.\n\nInvestigations: Fluorescein disappearance test, Syringing and probing, and Jones dye tests.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Clinical Approach & Workup of Watering (Epiphora)'
+  },
+  {
+    id: 'lacrimal_essay_q4',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Etiological Causes of Epiphora (Watering)',
+    content: 'Enumerate the main etiological causes of hypersecretion and defective drainage leading to epiphora.',
+    answer: 'Hypersecretion (Lacrimation): Reflex tearing due to corneal irritation (ulcer, foreign body), conjunctivitis, or psychogenic causes.\n\nDefective Drainage (Epiphora proper):\n- Punctal stenosis or malposition (e.g., lower lid ectropion).\n- Canalicular obstruction.\n- Lacrimal pump failure (e.g., lower motor neuron facial nerve palsy).\n- Nasolacrimal duct obstruction (congenital or acquired).\n- Chronic Dacryocystitis.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Clinical Approach & Workup of Watering (Epiphora)'
+  },
+  {
+    id: 'lacrimal_essay_q5',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Chronic Dacryocystitis Organisms, Symptoms, Signs & Surgical Treatment',
+    content: 'Regarding chronic dacryocystitis: (a) Enumerate main causative organisms, (b) Discuss the typical clinical symptom and physical sign, (c) Mention two surgical procedures to treat this condition in adults.',
+    answer: 'a) Main causative organisms: ==Streptococcus pneumoniae (MCQ)==, ==Staphylococcus aureus (MCQ)==, and ==Haemophilus influenzae (MCQ)==.\n\nb) Symptoms and Signs:\n- Symptom: Persistent epiphora (watering).\n- Sign: Positive regurgitation test (mucopus coming from puncta upon pressing the sac area) or swelling below the medial palpebral ligament.\n\nc) Surgical procedures for adults:\n- ==Dacryocystorhinostomy (DCR) (MCQ)== (The operation of choice).\n- ==Dacryocystectomy (DCT) (MCQ)== (If DCR is contraindicated, e.g., in elderly or malignant cases).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Acute & Chronic Dacryocystitis'
+  },
+  {
+    id: 'lacrimal_essay_q6',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Pathophysiological Reason for Chronic Dacryocystitis in Menopausal Females',
+    content: 'Explain why chronic dacryocystitis is clinically more common in menopausal females.',
+    answer: 'The lower end of the nasolacrimal duct is narrower in females than in males. In addition, hormonal changes during menopause cause congestion and swelling of the nasal mucosa, predisposing them to nasolacrimal duct obstruction, stasis of tears, and subsequent secondary infection.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Acute & Chronic Dacryocystitis'
+  },
+  {
+    id: 'lacrimal_case_q1',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Clinical Case 1 & 2: Congenital Nasolacrimal Duct Obstruction (CNLDO)',
+    content: 'A mother of a 6-month-old baby came complaining that her child has excessive tearing with redness and discharge.\n\n1. What is your provisional diagnosis?\n2. Explain the etiology of this condition.\n3. Describe lines of treatment for this patient.',
+    answer: 'a. Diagnosis: Congenital Nasolacrimal Duct Obstruction (CNLDO) with secondary conjunctivitis.\n\nb. Etiology: Failure of canalization of the lower end of the nasolacrimal duct at the ==valve of Hasner (MCQ)==.\n\nc. Treatment Lines: First line of treatment is conservative up to the age of ==9-12 months (MCQ)== (or 12 months): Hydrostatic massage of the lacrimal sac area with the use of topical broad-spectrum antibiotic drops. If the condition does not resolve by 12 months, ==Nasolacrimal Probing (MCQ)== is indicated.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Acute & Chronic Dacryocystitis'
+  },
+  {
+    id: 'lacrimal_case_q3',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Clinical Case 3: Sjogren Dry Eye Syndrome',
+    content: 'A 50-year-old female with rheumatoid arthritis complained of red eye, tearing, and burning sensation. What is the diagnosis and physical mechanism of tearing here?',
+    answer: 'Diagnosis: ==Dry Eye Syndrome (MCQ)== (Keratoconjunctivitis Sicca) secondary to Rheumatoid Arthritis.\n\nMechanism of Tearing: Tearing here is ==reflex tearing (MCQ)== caused by the severe dry-spot irritation on the cornea, which improves temporarily when blinking spreads the scarce tears.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Tear Film & Dry Eye Syndrome'
+  },
+  {
+    id: 'lacrimal_complete_tf',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Eyelid Muscle & Anatomy role in Tear Drainage (Complete)',
+    content: 'Complete the blanks regarding tear drainage anatomy:\n1. The ________ muscle plays an important role in the drainage of tears by acting as the lacrimal pump.\n2. The lacrimal sac drains into the ________ meatus of the nose.\n3. Hypertrophy of the inferior ________ of the nose may cause epiphora by mechanical obstruction.',
+    answer: '1. The ==orbicularis muscle (MCQ)== plays an important role in the drainage of tears (acts as the lacrimal pump).\n2. The lacrimal sac drains into the ==inferior meatus (MCQ)== of the nose via the nasolacrimal duct (not the middle meatus).\n3. Hypertrophy of the inferior ==turbinate (MCQ)== of the nose may cause epiphora.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Clinical Approach & Workup of Watering (Epiphora)'
+  },
+  {
+    id: 'lacrimal_complete_q1_new',
+    chapterId: 2,
+    type: 'short-answer',
+    title: 'Lacrimal System Anatomy & Dry Eye Investigation (Complete)',
+    content: 'Complete the blanks about the lacrimal drainage and diagnostic tests:\n1. Tears are carried from the puncta to the lacrimal sac via the two ________.\n2. In correct anatomical order, the components of the lacrimal drainage system are: Puncta, Ampulla, ________, ________, and ________.\n3. Dry eye can be diagnosed by ________ test and ________ (TBUT).',
+    answer: '1. Tears are carried from the puncta to the lacrimal sac via the two ==canaliculi (MCQ)==.\n2. In correct anatomical order, the components of the lacrimal drainage system are: Puncta, Ampulla, ==Canaliculi (MCQ)==, ==Lacrimal sac (MCQ)==, and ==Nasolacrimal duct (MCQ)==.\n3. Dry eye can be diagnosed by ==Schirmer\'s (MCQ)== test and ==Tear Break-Up Time (MCQ)== (TBUT).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Tear Film & Dry Eye Syndrome'
+  },
+
   // --- Topic 1: Tear Film & Dry Eye Syndrome (Q1 - Q6) ---
   {
     id: 'lacrimal_tear_q1',
@@ -620,7 +877,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     type: 'short-answer',
     title: 'Regurgitation Test Method & Interpretation',
     content: 'Describe how to perform the Regurgitation test and interpret its clinical results.',
-    answer: '- Method: Apply firm digital pressure over the lacrimal sac region against the lacrimal bone.\n- Interpretation:\n  * Positive regurge: Reflux of mucoid fluid or pus from the puncta, which is a definitive proof of nasolacrimal duct (NLD) obstruction.\n  * Negative regurge: No reflux, indicating either completely patent passages or an obstruction located proximal to the lacrimal sac (canalicular stenosis).',
+    answer: '- Method: Apply firm digital pressure over the lacrimal sac region against the lacrimal bone.\n- Interpretation:\n  * Positive regurge: Reflux of mucoid fluid or pus from the puncta, which is a definitive proof of nasolacrimal duct (NLD) obstruction.\n  * Negative regurge: No reflux, indicating either completely patent passages or an obstruction located proximal to the lacrimal sac (canalicular stenosis).\n- Diagnostic Syringing/Irrigation: If saline syringed from the lower punctum returns immediately through the upper punctum, it indicates ==obstruction distal to the common canaliculus (MCQ)== (typically at the NLD level); the standard adult treatment is ==DCR (MCQ)==.',
     isClinical: true,
     topic: 'Clinical Approach & Workup of Watering (Epiphora)'
   },
@@ -682,7 +939,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     type: 'short-answer',
     title: 'Acute Dacryocystitis Treatment Protocol',
     content: 'Outline the treatment protocol for Acute Dacryocystitis during the acute phase and after abscess formation.',
-    answer: '- Acute Phase: Systemic and local broad-spectrum antibiotics, hot fomentation, systemic analgesics, and nasal decongestant drops.\n- After Abscess Formation: Incision and drainage of the abscess.',
+    answer: '- Acute Phase: Systemic and local broad-spectrum antibiotics, hot fomentation, systemic analgesics, and nasal decongestant drops.\n- After Abscess Formation: Incision and drainage of the abscess.\n\nNOTE: ==Acute dacryocystitis is a strict contraindication for performing DCR surgery (MCQ)==. Surgical intervention must be delayed until the active infection is completely resolved to prevent potential osteomyelitis or orbital cellulitis.',
     isClinical: true,
     topic: 'Acute & Chronic Dacryocystitis'
   },
@@ -740,6 +997,118 @@ export const INITIAL_QUESTIONS: Question[] = [
   // ===========================================================================
   // --- CHAPTER 3: CONJUNCTIVA ---
   // ===========================================================================
+
+  // --- High-Yield Diagnostic Cases (Clinical Scenarios) ---
+  {
+    id: 'conjunctiva_case_q1',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 1: Redness and Lacrimation in Contact Lens Wearer',
+    content: 'An 18-year-old contact lens wearer presents with redness, lacrimation, photophobia, and foreign body sensation. What is your diagnosis?',
+    answer: '==Giant Papillary Conjunctivitis (MCQ)== (GPC) or allergic conjunctivitis secondary to contact lens wear.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Allergic Conjunctivitis (Spring Catarrh, Phlyctenular)'
+  },
+  {
+    id: 'conjunctiva_case_q2',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 2: Bilateral Red Eyes in 5-Year-Old',
+    content: 'A 5-year-old child presents with bilateral red eyes and his eyelids are stuck together in the morning. What is your diagnosis?',
+    answer: '==Mucopurulent Conjunctivitis (MCQ)== (Bacterial).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Bacterial & Mucopurulent Conjunctivitis'
+  },
+  {
+    id: 'conjunctiva_case_q3',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 3: Schoolboy with Gelatinous Masses',
+    content: 'A schoolboy presents on a hot season rubbing his eyes, with severe itching and gelatinous masses on the limbus. What is your diagnosis?',
+    answer: '==Vernal keratoconjunctivitis (MCQ)== (Spring Catarrh - ==Bulbar type (MCQ)==).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Allergic Conjunctivitis (Spring Catarrh, Phlyctenular)'
+  },
+  {
+    id: 'conjunctiva_case_q4',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 4: 10-Year-Old Boy with Itchy Eyes and Refraction Difficulty',
+    content: 'A 10-year-old boy presents with itchy eyes. He has extreme difficulty with accurate subjective refraction and a deep anterior chamber is noticed. What corneal ectasia is associated here?',
+    answer: '==Keratoconus (MCQ)== (highly associated with chronic, vigorous eye rubbing due to Spring Catarrh).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Allergic Conjunctivitis (Spring Catarrh, Phlyctenular)'
+  },
+  {
+    id: 'conjunctiva_case_q5',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 5: 57-Year-Old Man with Unilateral Red Eye After Gardening',
+    content: 'A 57-year-old man presents with a sore, red right eye after gardening. His Visual Acuity is 6/9 in the right eye. He was misdiagnosed as having a simple allergy.\n\n1. State two reasons why this is unlikely to be an allergy.\n2. What diagnostic technique should be performed?\n3. Is there a hazard in treating this patient with topical steroids?',
+    answer: 'a) Two reasons unlikely to be allergy:\n   1. It is unilateral (allergies are almost always bilateral).\n   2. Visual acuity is reduced to 6/9 (uncomplicated allergy does NOT drop vision).\n\nb) Diagnostic techniques:\n   - ==Fluorescein staining (MCQ)== of the cornea to check for corneal lesions/ulcers (like Herpes Simplex dendritic ulcer).\n\nc) Treatment hazard:\n   - Yes, ==topical steroids (MCQ)== on a viral corneal lesion (Herpes simplex) will severely exacerbate the infection and can lead to rapid corneal perforation.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Clinical Approach & Workup of Watering (Epiphora)'
+  },
+  {
+    id: 'conjunctiva_case_q6_1',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 6 (Glaucoma): Man from Africa with Watery Blurred Eye',
+    content: 'A young man from Africa complains of blurring of vision and ocular pain lasting 2 hours, which is relieved by sleeping. Upon exam, he has ciliary flush.\n\n1. What clinical signs show this is NOT simple conjunctivitis?\n2. What is your diagnosis?\n3. What assessments are needed?\n4. What is the immediate management?',
+    answer: 'a) Signs showing this is not conjunctivitis:\n   - Reduced visual acuity.\n   - ==Ciliary flush (MCQ)== (ciliary injection indicates an intraocular or corneal problem, not superficial conjunctival injection).\n\nb) Diagnosis:\n   - ==Subacute Angle-closure glaucoma (MCQ)== (prodromal stage).\n\nc) Key assessments:\n   - Anterior chamber (AC) depth: Shallow.\n   - Pupil: Mid-dilated and vertically oval.\n   - IOP (Intraocular pressure): Highly elevated.\n\nd) Management:\n   - An immediate telephone call and referral to an ophthalmologist clinic for urgent examination.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Clinical Approach & Workup of Watering (Epiphora)'
+  },
+  {
+    id: 'conjunctiva_case_q6_2',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 7 (Viral): 23-Year-Old Teacher with Watery Discharge',
+    content: 'A 23-year-old schoolteacher presents with watery discharge from one eye and a palpable, tender preauricular node.\n\n1. What is your tentative diagnosis?\n2. What history facts would support this?\n3. What are the likely cytological findings in a conjunctival smear?\n4. Describe the management.',
+    answer: 'a) Tentative diagnosis:\n   - ==Viral conjunctivitis (MCQ)== (Adenovirus).\n\nb) History facts:\n   - Sore throat (Pharyngoconjunctival fever) or exposure to young children with active colds.\n\nc) Cytological findings:\n   - Predominantly ==lymphocytes in a smear (MCQ)==.\n\nd) Management:\n   - Cool compresses and stay home (highly contagious).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Viral & Chlamydial Conjunctivitis'
+  },
+  {
+    id: 'conjunctiva_case_q7',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 8: 9-Year-Old Son with Intense Itching',
+    content: 'A 9-year-old boy presents complaining of severe itching and photophobia in both eyes.\n\n1. What is your presumed diagnosis?\n2. How do you confirm it clinically and microscopically?\n3. Describe the lines of treatment.',
+    answer: 'a) Presumed diagnosis:\n   - ==Vernal keratoconjunctivitis (Spring Catarrh) (MCQ)==.\n\nb) Confirmation:\n   - Clinical: Evert the upper lid to find ==cobblestone papillae (MCQ)==, or find Trantas dots at the limbus.\n   - Microscopic: ==Eosinophils in conjunctival scraping (MCQ)==.\n\nc) Lines of treatment:\n   - Cold compresses, Mast cell stabilizers, Antihistamines.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Allergic Conjunctivitis (Spring Catarrh, Phlyctenular)'
+  },
+  {
+    id: 'conjunctiva_case_q8',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 9: Whitish Elevated Nodule near the Limbus',
+    content: 'A young child presents with a whitish elevated lesion at the 8 o\'clock position at the limbus surrounded by hyperemic vessels. \n\n1. What is your provisional diagnosis?\n2. Explain the etiology.\n3. State the lines of treatment.',
+    answer: 'a) Provisional diagnosis:\n   - ==Phlyctenular keratoconjunctivitis (MCQ)==.\n\nb) Etiology:\n   - Delayed hypersensitivity allergy (==Type IV hypersensitivity (MCQ)==) to endogenous bacterial toxins (most commonly TB proteins, Staph proteins, or intestinal parasites).\n\nc) Lines of treatment:\n   - Topical ==steroids (MCQ)==, topical broad-spectrum antibiotics, and investigation for the underlying systemic infection/cause.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Allergic Conjunctivitis (Spring Catarrh, Phlyctenular)'
+  },
+  {
+    id: 'conjunctiva_case_q11',
+    chapterId: 3,
+    type: 'short-answer',
+    title: 'Clinical Case 10: Schoolboy with Gelatinous Masses',
+    content: 'A schoolboy presents on a hot season rubbing his eyes, showing gelatinous masses on the limbus.\n\n1. What is the probable diagnosis?\n2. List three conditions in the differential diagnosis.',
+    answer: 'a) Probable diagnosis:\n   - ==Bulbar spring catarrh (MCQ)==.\n\nb) Differential diagnosis:\n   - Phlyctenular conjunctivitis, Pinguecula, Pterygium, Limbal dermoid.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Allergic Conjunctivitis (Spring Catarrh, Phlyctenular)'
+  },
 
   // --- Topic 1: Anatomy & Histology of the Conjunctiva ---
   {
@@ -1571,6 +1940,338 @@ export const INITIAL_QUESTIONS: Question[] = [
     topic: 'Keratoplasty & Keratorefractive Surgery'
   },
 
+  // --- Topic 7: Past Exams Questions (سنين سابقة) ---
+  {
+    id: 'cornea_essay_past_q1',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'كيراتوكونوص (Keratoconus Definition & Management) (سنين سابقة)',
+    content: 'Define keratoconus and describe how to manage. (سنين سابقة)',
+    answer: 'Definition: It is a bilateral, non-inflammatory, progressive, axial ectasia (thinning and bulging) of the central part of the cornea, assuming a conical shape.\n\nManagement:\n- Mild cases: Spectacles to correct astigmatism and myopia.\n- Moderate cases: ==Rigid Gas Permeable (RGP) contact lenses (MCQ)== to correct irregular astigmatism.\n- To halt progression: ==Corneal collagen cross-linking (CXL) (MCQ)== using Riboflavin (Vitamin B2) and UV-A light.\n- Advanced cases: Intracorneal ring segments (ICRS) or ==Corneal Transplantation (Penetrating Keratoplasty - PKP or Deep Anterior Lamellar Keratoplasty - DALK) (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Ectatic Corneal Disorders (Keratoconus)'
+  },
+  {
+    id: 'cornea_essay_past_q2',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'التهاب القرنية الفطري (Fungal Keratitis Etiology, Clinical Picture & Treatment) (سنين سابقة)',
+    content: 'Enumerate predisposing factors, clinical picture, lines of treatment of fungal keratitis. (سنين سابقة)',
+    answer: 'Predisposing factors: Ocular trauma with ==organic/vegetative matter (MCQ)== (e.g., plant branch, wood), excessive topical corticosteroids, systemic immunosuppression, and soft contact lens wear.\n\nClinical picture:\n- Symptoms: Pain, photophobia, redness, lacrimation, and drop of vision.\n- Signs: Greyish-white ulcer with a raised, dry, rough surface. It has ==feathery margins (MCQ)==, ==satellite lesions (MCQ)== (tiny infiltrates around the main ulcer), and a severe, thick, ==immobile hypopyon (MCQ)==.\n\nTreatment:\n- Topical antifungals: ==Natamycin 5% (MCQ)== (drug of choice for filamentous) or ==Amphotericin B 0.15% (MCQ)== (for Candida).\n- Systemic antifungals (e.g., Ketoconazole/Fluconazole) in deep or severe cases.\n- Cycloplegics (==Atropine 1% (MCQ)==) to relieve ciliary spasm and prevent synechiae.\n- Absolute contraindication: ==Topical corticosteroids (MCQ)==.\n- Therapeutic penetrating keratoplasty if medical treatment fails.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Fungal Ulcer'
+  },
+  {
+    id: 'cornea_essay_past_q3',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'عوامل الاستعداد لالتهاب القرنية (Predisposing Factors to Keratitis) (سنين سابقة)',
+    content: 'Enumerate the predisposing factors to keratitis. (سنين سابقة)',
+    answer: '1. ==Ocular surface trauma (MCQ)== (corneal abrasions, foreign bodies).\n2. ==Contact lens wear (MCQ)== (especially soft extended-wear).\n3. Ocular surface diseases (e.g., severe ==dry eye (MCQ)==, ==exposure lagophthalmos (MCQ)==, trichiasis).\n4. Local or systemic immunosuppression.\n5. Misuse of ==topical corticosteroids (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_essay_past_q4',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'علاج الفرج القرني (Lines of Treatment of Descemetocele) (سنين سابقة)',
+    content: 'Enumerate the lines of treatment of descemetocele. (سنين سابقة)',
+    answer: '1. Absolute rest and strict avoidance of straining or eye rubbing.\n2. ==Pressure bandage (MCQ)== to support the weakened cornea.\n3. ==Tissue adhesives (MCQ)== (==Cyanoacrylate glue (MCQ)==) applied to the area, covered by a bandage contact lens.\n4. ==Conjunctival flap (MCQ)== (==Gunderson flap (MCQ)==) to cover and nourish the defect.\n5. ==Amniotic membrane transplantation (MCQ)==.\n6. ==Therapeutic Penetrating Keratoplasty (PKP) (MCQ)== if the descemetocele is large or imminent perforation is high.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_essay_past_q5',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'تشخيص القرحة الفطرية الخيطية (Diagnosis of Filamentous Fungal Ulcer) (سنين سابقة)',
+    content: 'Describe the diagnosis of a case of filamentous fungal ulcer. (سنين سابقة)',
+    answer: 'History: Typical history of ==trauma with vegetative or organic matter (MCQ)== (e.g., tree branch) in an agricultural worker / farmer.\n\nClinical examination: Presence of a corneal ulcer with a ==dry, raised grayish surface (MCQ)==, ==feathery margins (MCQ)==, ==satellite nodules (MCQ)==, and ==thick hypopyon (MCQ)==.\n\nLaboratory Diagnosis: Corneal scraping is mandatory:\n- Smear: Using ==KOH (Potassium hydroxide) (MCQ)== preparation, ==Giemsa stain (MCQ)==, or Calcofluor white to visualize ==fungal hyphae (MCQ)==.\n- Culture: On ==Sabouraud\'s dextrose agar (MCQ)== (at room temperature).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Fungal Ulcer'
+  },
+  {
+    id: 'cornea_essay_past_q7',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'ناسور القرنية (Management of Corneal Fistula) (سنين سابقة)',
+    content: 'Formulate a plan to manage a case of corneal fistula. (سنين سابقة)',
+    answer: 'A corneal fistula occurs when a perforated ulcer heals with an epithelial ingrowth track preventing closure.\n\nManagement:\n1. Medical: Try to lower Intraocular Pressure (IOP) using ==systemic CAIs (MCQ)== or ==Beta-blockers (MCQ)==, and use a ==pressure bandage (MCQ)== or bandage contact lens to encourage spontaneous closure.\n2. Surgical (Definitive): ==Excision of the fistulous tract (MCQ)== and covering the defect with a ==conjunctival flap (MCQ)== or performing a ==Therapeutic Penetrating Keratoplasty (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_essay_past_q8',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'علاج قرح القرنية المستعصية (Treatment of Resistant Corneal Ulcers) (سنين سابقة)',
+    content: 'Enumerate the lines of treatment for managing clinical resistant corneal ulcers. (سنين سابقة)',
+    answer: '1. Re-evaluate the diagnosis and take a fresh ==corneal scraping (MCQ)== for Culture and Sensitivity (to detect resistant bacteria, fungi, or Acanthamoeba).\n2. Stop all potentially toxic topical medications (which may delay epithelial healing).\n3. Use a ==therapeutic bandage contact lens (MCQ)==.\n4. Surgical intervention: ==Amniotic membrane grafting (MCQ)==, ==Conjunctival flap (MCQ)==, or ==Therapeutic Penetrating Keratoplasty (PKP) (MCQ)== to remove the infected tissue.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_essay_past_q9',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'مضاعفات قرح القرنية وعلاجها (Treatment of Corneal Ulcers Complications) (سنين سابقة)',
+    content: 'Describe how to treat the various complications of corneal ulcers (Descemetocele, Perforation, Glaucoma, Scarring). (سنين سابقة)',
+    answer: '- Descemetocele: ==Tissue glue (MCQ)==, ==pressure bandage (MCQ)==, or therapeutic keratoplasty.\n- Corneal Perforation with Iris prolapse:\n  * If recent (<24 hours) and clean: ==Excision of the prolapsed iris (MCQ)== and suturing the cornea.\n  * If old/infected: Excision of the prolapsed iris and covering with a ==conjunctival flap (MCQ)== or therapeutic PKP.\n- Secondary Glaucoma: Lower IOP using ==systemic CAIs (MCQ)== (Acetazolamide/Diamox) and topical beta-blockers. (Avoid ==Pilocarpine (MCQ)== as miotics increase inflammation/synechiae).\n- Corneal Scarring (Nebula/Macula/Leucoma): ==Optical Penetrating Keratoplasty (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_essay_past_q10',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'علامة هاتشينسون في هربس زوستر (Hutchinson\'s Sign in HZO) (سنين سابقة)',
+    content: 'Explain the association of keratitis with the appearance of viral vesicles on the tip of the nose in a patient with herpes zoster ophthalmicus. (سنين سابقة)',
+    answer: 'This is known as ==Hutchinson\'s sign (MCQ)==. It occurs because the tip of the nose and the cornea are both innervated by the same nerve branch: the ==Nasociliary nerve (MCQ)== (a branch of the ophthalmic division of the Trigeminal nerve).\n\nThe presence of vesicles on the tip of the nose implies that the nasociliary nerve is heavily infected, predicting a ==high risk of corneal involvement (MCQ)== (keratitis).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Viral Ulcers (Dendritic Ulcer & Herpes Zoster Ophthalmicus)'
+  },
+  {
+    id: 'cornea_essay_past_q11',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'أسباب شفافية القرنية (Causes of Corneal Transparency) (سنين سابقة)',
+    content: 'Describe the anatomical and physiological causes of corneal transparency. (سنين سابقة)',
+    answer: '1. ==Avascularity (MCQ)==: The cornea lacks blood vessels.\n2. Anatomical arrangement: The ==collagen fibrils (MCQ)== in the corneal stroma are of uniform size and spacing (lattice theory), allowing light to pass without scattering.\n3. Relative Dehydration: Maintained by the ==endothelial pump (MCQ)== (active fluid transport out of the cornea) and the intact ==epithelial barrier (MCQ)==.\n4. Nerve fibers: Corneal nerves are ==unmyelinated (MCQ)==.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_case_past_1',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'حالة 1: تقرح القرنية المتكرر بعد البرد (Recurrent Herpetic Keratitis Case) (سنين سابقة)',
+    content: 'A patient with a history of a recent common cold presents with eye pain, photophobia, tearing, and an irregular dendritic pattern on fluorescein staining.\n\n1. What is the diagnosis?\n2. What is the causative organism?\n3. What triggered this recurrence? (سنين سابقة)',
+    answer: '1. Diagnosis: ==Recurrent Herpetic Keratitis (MCQ)== (Dendritic corneal ulcer).\n2. Causative organism: ==Herpes Simplex Virus (HSV) (MCQ)==.\n3. Trigger: The recent ==common cold (MCQ)== (or fever / physical stress), which reactivates the latent virus dormant in the trigeminal ganglion.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Viral Ulcers (Dendritic Ulcer & Herpes Zoster Ophthalmicus)'
+  },
+  {
+    id: 'cornea_case_past_2',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'حالة 2: التهاب القرنية الفطري بالصدمة النباتية (Fungal Keratitis with Organic Trauma) (سنين سابقة)',
+    content: 'A patient presents with a dry-textured grayish-white corneal ulcer with feathery margins and satellite lesions. They report a history of ocular trauma with vegetative matter (cotton wood) and deterioration after using broad-spectrum antibiotics.\n\n1. Diagnosis?\n2. Cause of deterioration? (سنين سابقة)',
+    answer: '1. Diagnosis: ==Fungal Keratitis (MCQ)== (usually Filamentous fungal ulcer).\n2. Deterioration is due to the misuse of ==broad-spectrum antibiotics (MCQ)== and/or corticosteroids, which suppress normal bacterial flora and local immunity, promoting opportunistic fungal growth.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Fungal Ulcer'
+  },
+  {
+    id: 'cornea_case_past_3',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'حالة 3: التهاب القرنية بالأكانثاميبا ومسبح السباحة (Acanthamoeba Keratitis in Contact Lens Wearer) (سنين سابقة)',
+    content: 'A soft contact lens wearer who recently used a swimming pool presents with excruciating ocular pain that is completely out of proportion to the clinical signs.\n\n1. What is the diagnosis?\n2. What is the classic risk factor? (سنين سابقة)',
+    answer: '1. Diagnosis: ==Acanthamoeba Keratitis (MCQ)==.\n2. Risk factor: ==Soft contact lens wear (MCQ)== paired with exposure to contaminated water (e.g., ==swimming pool (MCQ)== or tap water).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Fungal Ulcer'
+  },
+  {
+    id: 'cornea_case_past_4',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'حالة 4: قرحة قرنية بكتيرية مع انسداد القناة الدمعية (Bacterial Corneal Ulcer Secondary to Chronic Dacryocystitis) (سنين سابقة)',
+    content: 'A patient presents with a painful corneal ulcer and hypopyon. The regurgitation test over the lacrimal sac is positive for mucopus.\n\n1. What is the diagnosis?\n2. What is the likely causative organism?\n3. What is the secondary link? (سنين سابقة)',
+    answer: '1. Diagnosis: ==Bacterial Corneal Ulcer with Hypopyon (MCQ)== (typically ==Pneumococcal (MCQ)== / Hypopyon ulcer).\n2. Causative organism: ==Streptococcus pneumoniae (Pneumococcus) (MCQ)==.\n3. Link: It is secondary to ==Chronic Dacryocystitis (MCQ)== (nasolacrimal duct obstruction), which acts as a constant reservoir of infection.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_case_past_5',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'حالة 5: التهاب القرنية الهربسي وتشخيص العين الحمراء (Recurrent HSV & DD of Red Eye) (سنين سابقة)',
+    content: 'A patient presents with a painful red eye showing an irregular linear defect on fluorescein staining. They have had similar episodes after colds in the past.\n\nType of ulcer?\nWhat is the differential diagnosis of red eye in this patient?\nWhat is the management plan? (سنين سابقة)',
+    answer: '1. Ulcer: ==Recurrent Herpes Simplex Keratitis (MCQ)== (Dendritic ulcer indicated by linear defect).\n\n2. Differential Diagnosis of Red Eye:\n- ==Acute Conjunctivitis (MCQ)==.\n- ==Acute Anterior Uveitis (Iridocyclitis) (MCQ)==.\n- ==Acute Angle-closure Glaucoma (MCQ)==.\n- Other causes of ==Acute Keratitis (MCQ)==.\n\n3. Management Plan:\n- Topical antiviral: ==Acyclovir 3% ointment (MCQ)== 5x/day.\n- Cycloplegic: ==Atropine 1% drops (MCQ)==.\n- Contraindication: Strictly avoid ==Topical Corticosteroids (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Viral Ulcers (Dendritic Ulcer & Herpes Zoster Ophthalmicus)'
+  },
+  {
+    id: 'cornea_case_past_6',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'حالة 6: التهاب القرنية البكتيري الحاد لمرتدي العدسات (Acute Bacterial Keratitis in Contact Lens Wearer) (سنين سابقة)',
+    content: 'A contact lens wearer presents with acute keratitis. You suspect Pseudomonas aeruginosa infection.\n\n1. What is the presumed diagnosis?\n2. How do you confirm it?\n3. What are the core lines of treatment? (سنين سابقة)',
+    answer: '1. Presumed Diagnosis: ==Acute Bacterial Keratitis (MCQ)== (likely ==Pseudomonas aeruginosa (MCQ)== associated with contact lens wear).\n\n2. Confirmation:\n- ==Fluorescein staining (MCQ)== of the cornea.\n- Urgent ==corneal scraping (MCQ)== for ==Gram stain (MCQ)== and ==Culture & Sensitivity (MCQ)==.\n\n3. Lines of Treatment:\n- ==Stop contact lens wear (MCQ)== immediately.\n- Intensive ==topical fortified antibiotics (MCQ)== (or fluoroquinolones like ciprofloxacin).\n- ==Cycloplegics (Atropine) (MCQ)==.\n- Systemic analgesics.\n- Warning: ==Never patch the eye (MCQ)== in a contact lens wearer (due to risk of rapid Pseudomonas melting).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_case_past_7',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'حالة 7: تشخيص قرحة الهربس المتفرعة (Herpes Simplex Dendritic Ulcer Diagnosis) (سنين سابقة)',
+    content: 'A patient with suspected Recurrent Herpes Simplex Keratitis is examined.\n\n1. What is the provisional diagnosis?\n2. What do you expect to see on fluorescein stain and sensory evaluation?\n3. Name two types of eye drops needed here. (سنين سابقة)',
+    answer: '1. Provisional Diagnosis: ==Recurrent Herpes Simplex Keratitis (MCQ)== (Dendritic ulcer).\n2. Expect to see: A branching, ==linear corneal ulcer (MCQ)== with ==terminal end-bulbs (MCQ)== that stains green with fluorescein, alongside ==diminished corneal sensation (MCQ)==.\n3. Eye Drops: Topical ==Antivirals (MCQ)== (e.g., Acyclovir/Ganciclovir) and Topical ==Cycloplegics (Atropine) (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Viral Ulcers (Dendritic Ulcer & Herpes Zoster Ophthalmicus)'
+  },
+  {
+    id: 'cornea_case_past_8',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'حالة 8: التهاب القرنية الفطري بالخيوط الفطرية (Filamentous Fungi Keratitis Management) (سنين سابقة)',
+    content: 'An agricultural worker feels eye pain after trauma with agricultural material.\n\n1. What is the causative organism category?\n2. State the laboratory detection methods.\n3. Outline the lines of treatment. (سنين سابقة)',
+    answer: '1. Causative organism: ==Filamentous Fungi (MCQ)== (e.g., Aspergillus or Fusarium).\n2. Detection: ==Corneal scraping (MCQ)== followed by ==KOH (Potassium Hydroxide) (MCQ)== wet mount, ==Giemsa stain (MCQ)==, and culture on ==Sabouraud\'s dextrose agar (MCQ)==.\n3. Treatment: Topical ==Antifungals (Natamycin 5%) (MCQ)==, cycloplegics, systemic antifungals if severe, and strict avoidance of ==topical steroids (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Fungal Ulcer'
+  },
+  {
+    id: 'cornea_comp_past_q1',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'إكمال الفراغات: القرح الجرثومية والفطرية والندبات (Corneal Pathology Fills) (سنين سابقة)',
+    content: 'Complete the blanks regarding corneal pathology:\n1. The causative organism of typical hypopyon ulcer is ________.\n2. Filamentous fungal keratitis is usually caused by trauma with ________.\n3. Faint corneal scar following healing of corneal ulcer is called ________.\n4. Fungal corneal ulcer in immune-compromised eyes is caused by ________, while following organic trauma is caused by ________. (سنين سابقة)',
+    answer: '1. ==Pneumococcus (MCQ)== (Streptococcus pneumoniae).\n2. ==Trauma with organic or vegetative matter (MCQ)== (e.g., plant branch).\n3. ==Nebula (MCQ)==.\n4. ==Candida (MCQ)== (Yeast), ==Filamentous Fungi (MCQ)== (Aspergillus/Fusarium).',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_comp_past_q2',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'إكمال الفراغات: مخروطية العين والهربس والبروز العيني (Keratoconus, HSV & Staphyloma Fills) (سنين سابقة)',
+    content: 'Complete the blanks regarding cornea disorders:\n1. Fleischer’s ring is seen in ________.\n2. The causative organism of dendritic ulcer is ________.\n3. An ectasia of the outer coat of the eye in which uvea is sharing is called ________. (سنين سابقة)',
+    answer: '1. ==Keratoconus (MCQ)==.\n2. ==Herpes Simplex Virus (HSV) (MCQ)==.\n3. ==Staphyloma (MCQ)==.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Ectatic Corneal Disorders (Keratoconus)'
+  },
+  {
+    id: 'cornea_mcq_past_1',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: علاج مخروطية القرنية (MCQ: Keratoconus Treatment Limits) (سنين سابقة)',
+    content: 'Keratoconus can NOT be managed by:\na) Spectacles\nb) Soft contact lenses\nc) Rigid Gas Permeable contact lenses\nd) Corneal collagen cross-linking (سنين سابقة)',
+    answer: '==b) Soft contact lenses (MCQ)==\n\nExplanation: Soft contact lenses conform to the irregular shape of the conical cornea, making them unable to correct the irregular astigmatism. Rigid Gas Permeable (RGP) contact lenses are required.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Ectatic Corneal Disorders (Keratoconus)'
+  },
+  {
+    id: 'cornea_mcq_past_2',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: مضاعفات العنبية الكلية (MCQ: Anterior Staphyloma Origin) (سنين سابقة)',
+    content: 'Total anterior staphyloma can be a complication of:\na) Marginal ulcer\nb) Mooren\'s ulcer\nc) Pneumococcal ulcer\nd) Dendritic ulcer (سنين سابقة)',
+    answer: '==c) Pneumococcal ulcer (MCQ)==\n\nExplanation: Total anterior staphyloma can develop as a severe complication of pneumococcal (hypopyon) ulcers which cause deep, extensive perforation.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_mcq_past_3',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: القرحة وارتفاع ضغط العين (MCQ: Corneal Ulcer with High IOP) (سنين سابقة)',
+    content: 'In a patient with a corneal ulcer and secondary high Intraocular Pressure (IOP), which of the following medications is strictly CONTRAINDICATED?\na) Acetazolamide (Diamox)\nb) Pilocarpine\nc) Timolol\nd) Betaxolol (سنين سابقة)',
+    answer: '==b) Pilocarpine (MCQ)==\n\nExplanation: Miotics like Pilocarpine are strictly contraindicated because they increase pupillary block, enhance uveal inflammation, and promote posterior synechiae.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_mcq_past_4',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: حساسية الضوء والدموع بعد البرد (MCQ: Photophobia After Flu/Cold) (سنين سابقة)',
+    content: 'A patient presents with photophobia and tearing recurring shortly after an episode of influenza or the common cold. The most likely diagnosis is:\na) Spring catarrh\nb) Bacterial ulcer\nc) Fungal ulcer\nd) Herpetic keratitis (سنين سابقة)',
+    answer: '==d) Herpetic keratitis (MCQ)== (or ==dendritic ulcer (MCQ)==)\n\nExplanation: Herpetic keratitis is reactivated by fever, influenza, or common colds.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Viral Ulcers (Dendritic Ulcer & Herpes Zoster Ophthalmicus)'
+  },
+  {
+    id: 'cornea_mcq_past_5',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: التمييز بين القوس وغشاء القرنية (MCQ: Arcus Senilis vs. Pannus) (سنين سابقة)',
+    content: 'The arcus senilis is differentiated from pannus tenuis by:\na) Location\nb) Depth of infiltration\nc) The lucid interval of Vogt\nd) Fluorescein staining pattern (سنين سابقة)',
+    answer: '==c) The lucid interval of Vogt (MCQ)==\n\nExplanation: Arcus senilis (gerontoxon) has a characteristic clear zone (the lucid interval of Vogt) between the opacity and the limbus, which is absent in corneal pannus.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_mcq_past_6',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: العصب المسؤول عن علامة هاتشينسون (MCQ: Hutchinson\'s Sign Nerve) (سنين سابقة)',
+    content: 'Hutchinson\'s sign in Herpes Zoster Ophthalmicus is due to involvement of which nerve?\na) Nasociliary nerve\nb) Frontal nerve\nc) Lacrimal nerve\nd) Facial nerve (سنين سابقة)',
+    answer: '==a) Nasociliary nerve (MCQ)==\n\nExplanation: The nasociliary nerve supplies both the tip of the nose (causing vesicles) and the eyeball (causing keratitis/iridocyclitis).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Viral Ulcers (Dendritic Ulcer & Herpes Zoster Ophthalmicus)'
+  },
+  {
+    id: 'cornea_mcq_past_7',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: خدش القرنية لمستخدمي العدسات (MCQ: Contact Lens Corneal Abrasion) (سنين سابقة)',
+    content: 'A 27-year-old soft contact lens wearer presents with a 2mm corneal abrasion. What is the correct management?\na) Tight pressure bandage for 24 hours\nb) Treat with ciprofloxacin drops (never patch a contact lens wearer)\nc) Topical corticosteroid drops 4x/daily\nd) Immediate penetrating keratoplasty (سنين سابقة)',
+    answer: '==b) Treat with ciprofloxacin drops (MCQ)==\n\nExplanation: Contact lens wearers are at a high risk of Pseudomonas aeruginosa infection. You must treat with topical fluoroquinolones (ciprofloxacin) and never patch the eye under any circumstance.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_mcq_past_8',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: بريق القرنية اللامع (MCQ: Maintain Corneal Luster) (سنين سابقة)',
+    content: 'Which of the following is essential to maintain the mirror-like luster of the healthy cornea?\na) Intact epithelium and healthy tear film\nb) Complete avascularity of the stroma\nc) Unmyelinated nerve fibers\nd) Active endothelial metabolic pump (سنين سابقة)',
+    answer: '==a) intact epithelium (MCQ)==\n\nExplanation: A healthy, smooth, intact epithelium with its covering tear film acts as a high-quality optical surface, responsible for the mirror-like corneal luster.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+  {
+    id: 'cornea_mcq_past_9',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'سؤال خيارات: إصابة المزارع بغصن شجرة (MCQ: Tree Branch Injury) (سنين سابقة)',
+    content: 'A farmer presents with a corneal infiltration 5 days after injury with a tree branch or leaf. This is highly suggestive of:\na) Pneumococcal ulcer\nb) Fungal corneal ulcer\nc) Neuroparalytic keratitis\nd) Vernal keratoconus (سنين سابقة)',
+    answer: '==b) Fungal corneal ulcer (MCQ)==\n\nExplanation: Ocular trauma involving organic/vegetative matter (wood, plant branch, leaves) is the classic predisposing trigger for Filamentous fungal keratitis.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Fungal Ulcer'
+  },
+  {
+    id: 'cornea_mcq_past_10',
+    chapterId: 4,
+    type: 'short-answer',
+    title: 'مجموعة أسئلة خيارات سريعة (Cornea Quick High-Yield MCQ Bundle) (سنين سابقة)',
+    content: 'Answer the following high-yield past paper questions directly:\n1. Dense scar of the cornea with incarceration of the iris is called:\n2. Satellite nodules in the cornea are caused by:\n3. Band shaped keratopathy is caused by deposition of:\n4. Corneal ulcers secondary to acute conjunctivitis usually develop at:\n5. Most refraction occurs at:\n6. Treatment of disciform keratitis consists of: (سنين سابقة)',
+    answer: '1. ==Adherent Leucoma (MCQ)== (Dense scar with iris incarceration).\n2. ==Fungus (MCQ)== (Satellite nodules are classic for fungal keratitis).\n3. ==Calcium salt (MCQ)== (Band shaped keratopathy calcium deposition).\n4. ==Marginal (MCQ)== position (Toxic marginal keratitis secondary to conjunctivitis).\n5. ==Anterior surface of cornea (MCQ)== (Where the greatest change in refractive index occurs).\n6. ==Topical antiviral + topical steroids (MCQ)== (Since disciform is a stromal immune hypersensitivity reaction).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Hypopyon Ulcer (Acute Serpiginous Ulcer)'
+  },
+
   // ===========================================================================
   // --- CHAPTER 5: LENS ---
   // ===========================================================================
@@ -1839,6 +2540,382 @@ export const INITIAL_QUESTIONS: Question[] = [
     topic: 'Lens Displacement & Aphakia'
   },
 
+  // --- Topic 8: Past Exams Questions (سنين سابقة) ---
+  {
+    id: 'lens_essay_past_q1',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'نهج إكلينيكي لمريض كتاراكت ناضج (Clinical Approach to Mature Senile Cataract) (سنين سابقة)',
+    content: 'Formulate a clinical approach to a patient with mature senile cataract. (سنين سابقة)',
+    answer: 'History Taking: Painless, progressive, and gradual diminution of vision.\n\nExamination:\n- Visual Acuity (VA): Usually reduced to ==Hand Motion (HM) (MCQ)== or ==Perception of Light (PL) (MCQ)==.\n- Anterior Segment (Slit Lamp): Completely opaque white lens, absent iris shadow, and normal Anterior Chamber depth.\n- Fundus: No red reflex is seen.\n\nPre-operative Evaluation (Mandatory):\n- Check ==Pupillary Light Reflex (MCQ)== (Direct and Consensual) and ==Light Projection (PR) (MCQ)== to ensure optic nerve and retinal integrity.\n- ==B-scan Ultrasonography (MCQ)==: To exclude posterior segment pathology (e.g., Retinal Detachment or tumors) since the fundus cannot be seen.\n- Biometry (==A-scan (MCQ)== and ==Keratometry (MCQ)==): For IOL power calculation.\n\nTreatment: Surgical removal via ==Phacoemulsification (MCQ)== or ==Extracapsular Cataract Extraction (ECCE) (MCQ)== with ==Intraocular Lens (IOL) (MCQ)== implantation.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_essay_past_q2',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'أنواع المياه البيضاء الخلقية (Types of Congenital Cataract) (سنين سابقة)',
+    content: 'Enumerate the morphological types of congenital cataract. (سنين سابقة)',
+    answer: 'The morphological types of congenital cataract include:\n1. ==Anterior polar cataract (MCQ)==.\n2. ==Posterior polar cataract (MCQ)==.\n3. ==Nuclear cataract (MCQ)==.\n4. ==Lamellar (Zonular) cataract (MCQ)==.\n5. ==Coronary cataract (MCQ)==.\n6. ==Blue dot (Punctate) cataract (MCQ)==.\n7. ==Total congenital cataract (MCQ)==.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Congenital & Developmental Cataract'
+  },
+  {
+    id: 'lens_essay_past_q3',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'المياه البيضاء الشيخوخية المتقدمة (Hypermature Senile Cortical Cataract Features & Complications) (سنين سابقة)',
+    content: 'Regarding hypermature senile cortical cataract:\na) What is the visual acuity found in this case?\nb) With only one word, describe the anterior chamber and the iris in this condition.\nc) Name the type of glaucoma that may occur in this condition.\nd) Enumerate signs of hyper-maturity. (سنين سابقة)',
+    answer: 'a) Visual Acuity: ==Perception of Light (PL) (MCQ)== or ==Hand Motion (HM) (MCQ)==.\n\nb) Description:\n- Anterior chamber: ==Deep (MCQ)==.\n- Iris: ==Tremulous (MCQ)== (Iridodonesis).\n\nc) Glaucoma: ==Phacolytic glaucoma (MCQ)== (or ==Phacotoxic glaucoma (MCQ)==).\n\nd) Signs of hyper-maturity: Shrunken and wrinkled anterior capsule, deep anterior chamber, tremulous iris, milky liquefied cortex with a sinking brown nucleus (==Morgagnian cataract (MCQ)==), and white calcified spots on the capsule.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_essay_past_q4',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'غياب عدسة العين عن مكانها الطبيعي (Absence of Lens from Normal Position) (سنين سابقة)',
+    content: 'Find the suitable scientific term for the following statement: Absence of the crystalline lens from its normal position in the pupillary area. (سنين سابقة)',
+    answer: '==Ectopia Lentis (MCQ)== (Subluxation / Dislocation) or ==Aphakia (MCQ)==.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Lens Displacement & Aphakia'
+  },
+  {
+    id: 'lens_essay_past_q5',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'تفسير حالات المياه البيضاء (Explain: Posterior Polar in Infants & Local Pathology) (سنين سابقة)',
+    content: 'Explain:\n1. Why posterior polar cataract in infants should be treated as soon as possible?\n2. Why complicated cataract secondary to local eye pathology starts at the posterior cortex of the lens? (سنين سابقة)',
+    answer: '1. Posterior polar cataract in infants should be treated as soon as possible:\nBecause it lies very close to the nodal point of the eye, causing severe obstruction to the visual axis, which rapidly leads to irreversible ==deprivation amblyopia (MCQ)== if not removed early.\n\n2. Complicated cataract secondary to local eye pathology starts at the posterior cortex of the lens:\nBecause the ==posterior capsule is thin (MCQ)== and ==lacks an underlying protective epithelial layer (MCQ)==, making it highly permeable to inflammatory toxins diffusing from the posterior segment (e.g., in posterior uveitis or vitritis).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Congenital & Developmental Cataract'
+  },
+  {
+    id: 'lens_essay_past_q6',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'مضاعفات المياه البيضاء الخلقية (Complications of Developmental Cataract) (سنين سابقة)',
+    content: 'What are the complications of developmental cataract? (سنين سابقة)',
+    answer: 'Complications of developmental cataract:\n1. ==Deprivation Amblyopia (MCQ)==.\n2. Sensory ==Nystagmus (MCQ)==.\n3. ==Strabismus (MCQ)== (squint).',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Congenital & Developmental Cataract'
+  },
+  {
+    id: 'lens_essay_past_q7',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'مقارنة بين التصلب والعتامة النووية (Compare: Nuclear Sclerosis vs. Nuclear Cataract) (سنين سابقة)',
+    content: 'Compare between nuclear sclerosis and nuclear cataract. (سنين سابقة)',
+    answer: '- ==Nuclear Sclerosis (MCQ)==: A physiological, age-related hardening and slight yellowing of the lens nucleus. It causes a myopic shift (improving near vision temporarily) but does not significantly obscure vision.\n\n- ==Nuclear Cataract (MCQ)==: A pathological progression where the nucleus becomes densely opaque and dark (brown/black - cataracta brunescens/nigra), causing a significant drop in visual acuity.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_case_past_1',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حالة 1: المياه البيضاء المصاحبة للسكري (Case 1: Visual Drop in Diabetic Patient) (سنين سابقة)',
+    content: 'A diabetic patient came complaining of difficulty in far and near sight. Glasses were done but the vision did not improve more than 12/6. What is the diagnosis? (سنين سابقة)',
+    answer: 'Diagnosis: ==Diabetic cataract (MCQ)== (or senile cataract accelerated by diabetes) causing refractive changes and opacification that limits vision to 6/12 despite glasses.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Complicated & Traumatic Cataract'
+  },
+  {
+    id: 'lens_case_past_2',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حالة 2: قرحة وصداع من المياه البيضاء المنتفخة (Case 2: Gradual Vision Drop Followed by Acute Ocular Pain) (سنين سابقة)',
+    content: 'A 60-year-old patient complained of gradual painless diminution of vision in his eye in the last 4 years. Yesterday he came complaining of ocular pain and fronto-temporal headache. On examination, the eye showed ciliary injection, white pupil, and moderately edematous cornea. What is the diagnosis? (سنين سابقة)',
+    answer: 'Diagnosis: ==Phacomorphic Glaucoma (MCQ)== (Secondary angle-closure glaucoma due to an intumescent swollen cataract).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_case_past_3',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حالة 3: المياة البيضاء المهملة وزيادة الضغط (Case 3: Pain and Stony Hard Eye After Gradual Vision Defect) (سنين سابقة)',
+    content: 'A patient suffered few months ago from mild gradually increasing Defective vision. He was followed up without any treatment. Yesterday he suffered from pain, red eye and marked defective vision. His eye was stony hard on examination. What is the diagnosis? (سنين سابقة)',
+    answer: 'Diagnosis: ==Lens-induced Glaucoma (MCQ)== (==Phacomorphic (MCQ)== or ==Phacolytic glaucoma (MCQ)==) due to a neglected hypermature or mature cataract.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_case_past_4',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حالة 4: مياه بيضاء معقدة من التهاب القزحية (Case 4: Gradual Vision Loss and Festooned Pupil) (سنين سابقة)',
+    content: 'A female patient 55 years of age previously emmetropic is complaining of right defective vision. On examination the vision was hand movement. The lens was completely opacified. On dilatation the pupil was festooned, and the tension was 2mmHg. On ultrasonography the axial length was 20mm. What is the diagnosis? (سنين سابقة)',
+    answer: 'Diagnosis: ==Complicated Cataract secondary to chronic anterior uveitis (MCQ)== (indicated by the festooned pupil/posterior synechiae, completely opacified lens, and hypotony / tension 2mmHg).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Complicated & Traumatic Cataract'
+  },
+  {
+    id: 'lens_case_past_5',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حالة 5: تراجع الرؤية وتعتامة المنعكس الأحمر (Case 5: Difficulty in Reading with Dull Red Reflex) (سنين سابقة)',
+    content: 'A 78-year-old patient complained of mild difficulty in reading and seeing street signs. Her vision in the right eye is 24/6 and left eye is 18/6 with no improvement in pin hole in both eyes. The cornea was bilaterally clear. On direct ophthalmoscopy there was dullness of the red reflex and difficulty in seeing fundus details in both eyes. What is the diagnosis? (سنين سابقة)',
+    answer: 'Diagnosis: ==Senile Nuclear Cataract (MCQ)== (indicated by difficulty reading, unaffected pinhole, dull red reflex, and age).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_case_past_6',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حالة 6: فحص المياه البيضاء وقرار الجراحة (Case 6: Obscured Fundus and Preoperative Strategy) (سنين سابقة)',
+    content: 'A 65 years old gentleman came to your clinic complaining of diminution of vision in his left eye since 6 months. He is not diabetic nor hypertensive. By examination, visual acuity in right eye was 6/9 and in left eye was HM, intraocular pressure was 16 mmHg in both eyes and Fundus examination was normal in right eye. However, the fundus of the left eye was obscured by opaque lens.\na) What is your probable diagnosis?\nb) How will you confirm the visual prognosis in the left eye?\nc) If both eyes have the same condition, would you operate them simultaneously? Explain your answer. (سنين سابقة)',
+    answer: 'a) Probable Diagnosis: ==Mature Senile Cataract (MCQ)== in the left eye.\n\nb) Visual Prognosis Confirmation: By testing ==Pupillary Light Reflex (MCQ)== (Direct and Consensual), ==Light Projection (PR) (MCQ)==, and performing ==B-scan Ultrasonography (MCQ)== to assess the retina.\n\nc) Operating Simultaneously: No, operating both eyes simultaneously is contraindicated due to the risk of bilateral severe complications like devastating bilateral ==Endophthalmitis (MCQ)==. They should be done in separate sessions.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_case_past_7',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حالة 7: عتامة كبسولة العدسة الخلفية والمضاعفات (Case 7: Posterior Capsule Opacification & Visual Recovery) (سنين سابقة)',
+    content: 'A patient who had successful cataract surgery with posterior chamber IOL implantation complains of progressive visual deterioration. Examination shows a fibrous, greyish membrane behind the IOL.\n1. What is the diagnosis?\n2. What are the clinical signs of this condition?\n3. What is the treatment of choice?\n4. If vision does not improve after proper treatment, list the possible ocular causes. (سنين سابقة)',
+    answer: '1. Diagnosis: ==Posterior Capsule Opacification (After-Cataract) (MCQ)==.\n\n2. Clinical Signs: ==Elschnig pearls (MCQ)== (opaque bubble-like epithelial clusters), ==Soemmering\'s ring (MCQ)== (doughnut of trapped cortical matter), and a greyish fibrotic membrane/wrinkling.\n\n3. Treatment: ==Nd:YAG laser capsulotomy (MCQ)==.\n\n4. Other possible causes of poor visual recovery:\n- ==Cystoid Macular Edema (CME) (MCQ)==.\n- ==Diabetic Macular Edema (DME) (MCQ)== (or Proliferative Diabetic Retinopathy).\n- ==Retinal Detachment (MCQ)==.\n- Pre-existing ==Age-related Macular Degeneration (AMD) (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Complicated & Traumatic Cataract'
+  },
+  {
+    id: 'lens_case_past_8',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حالة 8: فقدان الرؤية غير المؤلم وغياب المنعكس الأحمر (Case 8: Gradual Vision Loss to Hand Movement) (سنين سابقة)',
+    content: 'A 55-year-old female complained of gradual painless diminution of vision in her left eye for 9 months duration. Examination of the left eye reveals that visual acuity is hand movement and the red reflex is absent.\n1. What is the probable diagnosis?\n2. Outline the preoperative management. (سنين سابقة)',
+    answer: '1. Diagnosis: ==Mature Senile Cataract (MCQ)==.\n\n2. Management:\n- Pre-operative evaluation: Check ==Light projection (PR) (MCQ)== and ==Pupillary light reflex (MCQ)==.\n- Diagnostic studies: ==B-scan ultrasound (MCQ)== to rule out retinal detachment, and ==Biometry (MCQ)== for IOL power calculation.\n- Plan: Surgical extraction (==Phacoemulsification (MCQ)== or ECCE) and ==Posterior Chamber IOL (MCQ)== implantation.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_comp_past_q1',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'إكمال الفراغات: ميزات عتامة وعدسة العين (Complete: Cataract & Aphakia Key Features) (سنين سابقة)',
+    content: 'Complete the blanks regarding lens and cataract clinical signs:\n1. Iris shadow is absent in ________ cataract.\n2. Tremulous iris and jet-black pupil are signs of ________.\n3. Intumescent form of immature cataract can lead to ________ secondary glaucoma.\n4. In mature cataract iris shadow is ________.\n5. In phacomorphic glaucoma (intumescent cataract), the anterior chamber is ________. (سنين سابقة)',
+    answer: '1. ==Hyper mature (MCQ)==\n2. ==Aphakia (MCQ)==\n3. ==Pupillary block (MCQ)==\n4. ==Absent (MCQ)==\n5. ==Shallow (MCQ)==',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_mcq_past_1',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: تصحيح فقدان العدسة أحادي الجانب (MCQ: Correction of Unilateral Aphakia) (سنين سابقة)',
+    content: 'Unilateral aphakia in adults is ideally corrected by:\na) High plus glasses\nb) Soft contact lenses\nc) Secondary IOL\nd) Bifocal glasses (سنين سابقة)',
+    answer: '==c) Secondary IOL (MCQ)==\n\nExplanation: Secondary IOL implantation restores natural ocular magnification (~1%) and prevents aniseikonia, making it the ideal choice. Contact lenses are an alternative if IOLs are contraindicated.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Lens Displacement & Aphakia'
+  },
+  {
+    id: 'lens_mcq_past_2',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: الكورتيزون وعدسة العين (MCQ: Corticosteroid-Induced Cataract) (سنين سابقة)',
+    content: 'Systemic or topical corticosteroids typically induce which type of cataract?\na) Anterior polar\nb) Nuclear\nc) Posterior subcapsular\nd) Lamellar (سنين سابقة)',
+    answer: '==c) posterior subcapsular (MCQ)== (or ==posterior cortical (MCQ)==)',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Complicated & Traumatic Cataract'
+  },
+  {
+    id: 'lens_mcq_past_3',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: مضاعفات المورغانيان (MCQ: Morgagnian Cataract Complications) (سنين سابقة)',
+    content: 'A morgagnian hypermature cataract can cause which of the following complications?\na) Intumescent pupillary block\nb) Phacoanaphylactic uveitis\nc) Acute rise of IOP (Phacolytic glaucoma)\nd) Optic atrophy (سنين سابقة)',
+    answer: '==c) Acute rise of IOP (MCQ)== (specifically ==Phacolytic glaucoma (MCQ)== caused by leaked lens proteins blocking the trabecular meshwork).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Complicated & Traumatic Cataract'
+  },
+  {
+    id: 'lens_mcq_past_4',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: تثبيت عدسة العين (MCQ: Lens Suspension Support) (سنين سابقة)',
+    content: 'The lens is held securely in its anatomical position by which structure?\na) The zonules of Zinn\nb) The Vitreous base\nc) The Iris pigment epithelium\nd) Tenon\'s capsule (سنين سابقة)',
+    answer: '==a) The zonules of Zinn (MCQ)==',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Applied Anatomy & Physiology of the Crystalline Lens'
+  },
+  {
+    id: 'lens_mcq_past_5',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: جلوكوما منع انسداد الحدقة (MCQ: Pupillary Block Glaucoma Associations) (سنين سابقة)',
+    content: 'Pupillary block glaucoma is typically found with which of the following mechanical shifts?\na) Anterior lens dislocation\nb) Posterior lens dislocation\nc) Senile nuclear sclerosis\nd) Aphakia (سنين سابقة)',
+    answer: '==a) Anterior lens dislocation (MCQ)== (or ==Intumescent cataract (MCQ)==)',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Lens Displacement & Aphakia'
+  },
+  {
+    id: 'lens_mcq_past_6',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'حساب البعد البؤري لعدسة العين (MCQ: Lens Focal Length Calculations) (سنين سابقة)',
+    content: 'Calculate the focal length of the lenses with the following power:\n1. 5 diopters power\n2. 4 diopters power\n3. 2 diopters power (سنين سابقة)',
+    answer: 'Formula: Focal Length (F) = 100 / Power (in Diopters) cm\n\n1. Lens of 5 diopters power: ==20 cm (MCQ)== (100 / 5 = 20).\n2. Lens of 4 diopters power: ==25 cm (MCQ)== (100 / 4 = 25).\n3. Lens of 2 diopters power: ==50 cm (MCQ)== (100 / 2 = 50).',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Applied Anatomy & Physiology of the Crystalline Lens'
+  },
+  {
+    id: 'lens_mcq_past_7',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: مياه بيضاء في الرضيع (MCQ: Anterior Polar Cataract in Infant) (سنين سابقة)',
+    content: 'A 6-month infant presenting with a localized dot-shaped anterior polar cataract is best managed by:\na) Emergency lamination\nb) Urgent ECCE\nc) Follow-up with visual acuity testing\nd) Urgent Phacoemulsification (سنين سابقة)',
+    answer: '==c) follow-up with visual acuity testing (MCQ)==\n\nExplanation: Small anterior polar cataracts are benign, stationary, and usually located away from the nodal center of the eye, having no significant effect on vision or amblyopia risk.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Congenital & Developmental Cataract'
+  },
+  {
+    id: 'lens_mcq_past_8',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: مضاعفات فقد العدسة أحادي الجانب (MCQ: Unilateral Aphakia After Congenital Surgery) (سنين سابقة)',
+    content: 'The commonest complication of unilateral aphakia after congenital cataract surgery is:\na) Secondary glaucoma\nb) Retinal detachment\nc) Amblyopia\nd) Senile macular degeneration (سنين سابقة)',
+    answer: '==c) amblyopia (MCQ)== (specifically sensory deprivation amblyopia due to unequal image magnification).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Lens Displacement & Aphakia'
+  },
+  {
+    id: 'lens_mcq_past_9',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: أسباب كتاراكت القرنية المعقدة (MCQ: Complicated Cataract Causes Exception) (سنين سابقة)',
+    content: 'Complicated cataract may result from the following ocular diseases EXCEPT:\na) Chronic anterior uveitis\nb) Severe degenerative high myopia\nc) Retinitis pigmentosa\nd) Paralytic squint (سنين سابقة)',
+    answer: '==d) Paralytic squint (MCQ)==\n\nExplanation: Squint/strabismus is an extraocular alignment defect that does not cause toxic direct intraocular changes or cataract, unlike chronic uveitis, high myopia, or retinitis pigmentosa.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Complicated & Traumatic Cataract'
+  },
+  {
+    id: 'lens_mcq_past_10',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: التغير الانكساري في التصلب النووي (MCQ: Index Myopia & Second Sight) (سنين سابقة)',
+    content: 'A 55-year-old or 65-year-old patient who previously used glasses for reading near objects is now able to read again without glasses, but notices an increase in myopic refractive error (e.g., from -1 D to -5 D). What is the underlying etiology?\na) Senile macular degeneration\nb) Nuclear sclerosis / Nuclear cataract\nc) Aphakia\nd) Posterior vitreous detachment (سنين سابقة)',
+    answer: '==b) Nuclear sclerosis (MCQ)== (or ==Nuclear cataract (MCQ)==)\n\nExplanation: Progressive sclerosis of the lens nucleus elevates its refractive index, inducing a myopic shift ("index myopia"). This allows presbyopic patients to read near text without reading spectacles, a phenomenon known as "second sight".',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_mcq_past_11',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: تأثر الرؤية الدائم (MCQ: Permanent Vision Affection in Elderly) (سنين سابقة)',
+    content: 'Which of the following senile changes can lead to permanent, irreversible affection of vision?\na) Senile nuclear cataract\nb) Senile cortical cataract\nc) Senile macular degeneration\nd) Presbyopia (سنين سابقة)',
+    answer: '==c) Senile macular degeneration (MCQ)==\n\nExplanation: Cataract-induced vision loss is fully treatable and reversible with lens extraction and IOL insertion. However, advanced senile macular degeneration damages the macular photoreceptors permanently.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_mcq_past_12',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: صفات المياه البيضاء الخلقية (MCQ: Congenital Cataract Criteria) (سنين سابقة)',
+    content: 'Which of the following criteria is matched with congenital cataract?\na) Bilateral but may be asymmetrical\nb) Always unilateral and non-hereditary\nc) Rapidly progressive in most cases\nd) Hard in consistency requiring phacoemulsification (سنين سابقة)',
+    answer: '==a) Bilateral but may be asymmetrical (MCQ)==',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Congenital & Developmental Cataract'
+  },
+  {
+    id: 'lens_mcq_past_13',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: جودة تصحيح جراحات الرضع (MCQ: Infant IOL Magnification Superority) (سنين سابقة)',
+    content: 'In a 2-year-old male infant post congenital cataract surgery, why is IOL superior to other options of optical correction?\na) It produces only about 1% magnification of the retinal image\nb) It restores natural accommodation completely\nc) It avoids the risk of secondary glaucoma\nd) It cannot get displaced (سنين سابقة)',
+    answer: '==a) It produces as little as 1% magnification of the retinal image (MCQ)== (which minimizes aniseikonia and prevents amblyopia compared to spectacles).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Lens Displacement & Aphakia'
+  },
+  {
+    id: 'lens_mcq_past_14',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: استخدام موسعات الحدقة تجريبياً (MCQ: Mydriatics for Central Cataract) (سنين سابقة)',
+    content: 'In which of the following conditions can mydriatic eye drops be used temporarily to overcome the visual defect and improve vision?\na) Advanced total mature cataract\nb) Faint central lens cataract\nc) Posterior capsular opacification\nd) Hypermature Morgagnian cataract (سنين سابقة)',
+    answer: '==b) Faint central cataract (MCQ)==\n\nExplanation: Dilating the pupil with mydriatics allows peripheral rays of light to pass around the localized central opacity, enhancing vision temporary.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_mcq_past_15',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: دقة قياسات المياه البيضاء (MCQ: Highest Impact in IOL Calculation) (سنين سابقة)',
+    content: 'In pre-operative IOL power calculation, which of the following parameters has the highest impact on accuracy if miscalculated?\na) Corneal curvature (Keratometry)\nb) Anterior chamber depth\nc) Axial length\nd) Corneal thickness (سنين سابقة)',
+    answer: '==c) Axial length (MCQ)==',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_mcq_past_16',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: استخدام الموجات الصوتية للتفتيت (MCQ: Ultrasonic Waves in Surgery) (سنين سابقة)',
+    content: 'Ultrasonic waves are used for cataract extraction in which of the following techniques?\na) Nd:YAG laser capsulotomy\nb) Phacoemulsification\nc) Intracapsular cataract extraction\nd) Extracapsular cataract extraction (سنين سابقة)',
+    answer: '==b) Phacoemulsification (MCQ)==',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_mcq_past_17',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: الفحص الإجباري قبل الجراحة (MCQ: Mandatory Pre-op Function Test) (سنين سابقة)',
+    content: 'In a patient with a mature senile cataract, which of the following tests is absolutely mandatory prior to surgery?\na) Corneal topography\nb) Visual check on Snellen chart\nc) Perception of Light (PL) and Projection of Rays (PR)\nd) Slit lamp assessment of the posterior capsule (سنين سابقة)',
+    answer: '==c) Light perception and projection (MCQ)==',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Preoperative Evaluation & Surgical Techniques'
+  },
+  {
+    id: 'lens_mcq_past_18',
+    chapterId: 5,
+    type: 'short-answer',
+    title: 'سؤال خيارات: الأربطة المعلقة وتكيف الرؤية (MCQ: Lens Zonules in Near Focus) (سنين سابقة)',
+    content: 'When a patient focuses on near objects (accommodation), what happens to the lens zonules?\na) They contract and tighten\nb) They split\nc) They relax\nd) They undergo atrophy (سنين سابقة)',
+    answer: '==c) Relax (MCQ)==\n\nExplanation: Ciliary muscle contraction moves the processes closer to the lens equator, relaxing the zonules of Zinn and allowing the lens elastic capsule to round up.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Applied Anatomy & Physiology of the Crystalline Lens'
+  },
+
   // ===========================================================================
   // --- CHAPTER 6: ORBIT ---
   // ===========================================================================
@@ -2041,6 +3118,283 @@ export const INITIAL_QUESTIONS: Question[] = [
     answer: 'Definition: Radical surgical removal of all intraocular and orbital contents within the orbital periosteum, including the eyelids.\n\nIndications: Aggressive, advanced malignant orbital tumors with a completely free periosteum and no systemic metastasis, or extensive malignant tumors of the eyelids/conjunctiva invading the orbit.',
     isClinical: true,
     topic: 'Surgical Operations of the Orbit'
+  },
+
+  // --- Topic 6: Past Exams Questions (سنين سابقة) ---
+  {
+    id: 'orbit_past_essay_q1',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'نهج إكلينيكي لمريض جحوظ العين أحادي الجانب (Clinical Approach to Unilateral Proptosis) (سنين سابقة)',
+    content: 'Formulate a clinical approach to a patient with unilateral proptosis. (سنين سابقة)',
+    answer: 'History Taking: Ask about the onset (acute or gradual), progression, associated pain, history of trauma, and systemic symptoms (like weight loss or heat intolerance suggesting thyroid disease).\n\nClinical Examination:\n- Inspection: Look for the direction of proptosis (axial or non-axial) and lid signs (e.g., lid retraction, lid lag).\n- Palpation: Check for any palpable masses, tenderness, thrill, and compressibility.\n- Auscultation: Listen for a bruit over the eye (suggests Carotid-cavernous fistula).\n- Measurement: Use ==Hertel Exophthalmometer (MCQ)== to measure the degree of proptosis.\n- Ocular Examination: Assess visual acuity, ocular motility (for restrictive or paralytic squint), and examine the fundus (to look for optic disc edema, atrophy, or choroidal folds).\n\nInvestigations: Laboratory tests (e.g., ==Thyroid function tests T3, T4, TSH (MCQ)==) and Imaging (==CT or MRI (MCQ)== of the orbit and brain, and Orbital Ultrasonography).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_essay_q2',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'مضاعفات التهاب النسيج الخلوي الحجاجي (Complications of Orbital Cellulitis) (سنين سابقة)',
+    content: 'Describe complications of orbital cellulitis. (سنين سابقة)',
+    answer: 'Ocular complications:\n- ==Exposure keratopathy (MCQ)== (due to severe proptosis)\n- ==Optic neuritis (MCQ)==\n- ==Optic atrophy (MCQ)==\n- ==Central retinal artery occlusion (MCQ)==\n- ==Panophthalmitis (MCQ)==\n\nOrbital & Intracranial complications:\n- ==Cavernous sinus thrombosis (MCQ)== (very dangerous)\n- ==Meningitis (MCQ)==\n- ==Brain abscess (MCQ)==\n\nSystemic complications:\n- ==Septicemia (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_case_1',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'حالة 1: جعوظ العين غير المؤلم وتضخم الغدة الدرقية (Painless Gradual Unilateral Proptosis) (سنين سابقة)',
+    content: 'One year ago, 38 years old female developed painless and gradually increasing proptosis in her right eye.\n\n1. What are the most common causes of this proptosis?',
+    answer: '1. The most common cause of unilateral and bilateral proptosis in adults is ==Thyroid eye disease (Dysthyroid orbitopathy) (MCQ)==. Other common causes of painless gradual unilateral proptosis include benign orbital tumors (e.g., ==Cavernous hemangioma (MCQ)==, ==Meningioma (MCQ)==) or ==Lacrimal gland tumors (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_case_2',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'حالة 2: جحوظ وتجلط الجيب الكهفي (Proptosis with CST) (سنين سابقة)',
+    content: 'A seriously ill patient with right proptosis, redness and chemosis developed limitation of ocular motility in both eyes and sluggish pupillary reaction in the left eye.',
+    answer: 'Diagnosis: ==Cavernous Sinus Thrombosis (MCQ)==.\n\nExplanation: The condition typically starts unilaterally and rapidly becomes bilateral with marked toxemia, multiple cranial nerve palsies causing bilateral limited motility, and sluggish pupil.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_case_3',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'حالة 3: التهاب الجيوب الأنفية والتهاب الحجاج (Ethmoiditis & Orbital Cellulitis with CST) (سنين سابقة)',
+    content: 'A patient complaining of fever, headache, and pain of the left eye. One week ago, he was diagnosed as acute ethmoiditis. On examination, the left eye showed chemosis, limited ocular motility and dilated pupil. The right eye showed esotropia.',
+    answer: 'Diagnosis: ==Orbital cellulitis (MCQ)== complicated by ==Cavernous Sinus Thrombosis (MCQ)==.\n\nExplanation: The left eye has orbital cellulitis secondary to ethmoiditis. The right eye developing esotropia indicates 6th cranial nerve palsy, which means the infection has spread to the cavernous sinus bilaterally.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_case_4',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'حالة 4: كسر أرضية الحجاج بعد صدمة (Blow-out Fracture of Orbital Floor) (سنين سابقة)',
+    content: 'An 18-year-old patient presented after a tennis ball trauma to his left eye with vertical diplopia. The examination revealed enophthalmos, hypotropia and limited upward movement of the left eye.',
+    answer: 'Diagnosis: ==Blow-out fracture of the orbital floor (MCQ)==.\n\nExplanation: The blunt trauma increased intraorbital pressure, fracturing the weak floor and entrapping the ==inferior rectus muscle (MCQ)==, leading to limited upward gaze, hypotropia, and enophthalmos.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_case_5',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'حالة 5: خيارات وجراحة جحوظ العين الدرقي (Thyroid related orbitopathy match & options) (سنين سابقة)',
+    content: 'A 50-year-old man with bilateral proptosis, double vision and chemosis. He was diagnosed as thyroid related orbitopathy.\n(تم حذف السؤال الفرعي الأول لاعتماده على صورة CT Scan)\n\n2. Enumerate surgical options in treatment of thyroid orbitopathy. And suggest the suitable order to apply these options in a thyroid patient.\n3. Match the ocular sign with the suitable description:\na. staring look with infrequent blinking.\nb. fine tremors on closing the eyelids.\nc. lack of convergence due to ocular myopathy.\nd. Increased lid retraction with visual fixation.\ne. Lid lag of the upper eyelid on downward gaze.\nI. Moebius sign\nII. Von Graefe\'s Sign\nIII. Stellwag\'s sign.',
+    answer: '2- Surgical options and their correct order:\n- First: ==Orbital decompression (MCQ)== (to relieve optic nerve compression and severe proptosis).\n- Second: ==Strabismus surgery (MCQ)== (extraocular muscle surgery to correct diplopia).\n- Third: ==Eyelid surgery (MCQ)== (to correct lid retraction).\n\n3- Matching:\n- I. Moebius sign ➔ ==c. lack of convergence due to ocular myopathy (MCQ)==.\n- II. Von Graefe\'s Sign ➔ ==e. Lid lag of the upper eyelid on downward gaze (MCQ)==.\n- III. Stellwag\'s sign ➔ ==a. staring look with infrequent blinking (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_case_6',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'حالة 6: التهاب نسيج خلوي حجاجي حاد لفتاة (Acute Orbital Cellulitis Girl Case Study) (سنين سابقة)',
+    content: 'A 15 years old girl with acute onset of right painful proptosis, ophthalmoplegia with swollen hyperaemic eyelids and conjunctiva. The left eye was completely normal. Her temperature was 39°c.\n\nA] What is your probable diagnosis?\nb] Name the probable etiological factors?\nc] Enumerate 3 potential complications for this case.\nd] List the lines of treatment for this girl?',
+    answer: 'A] Diagnosis: ==Acute Orbital Cellulitis (MCQ)==.\n\nb] Etiological factors: Extension of infection from paranasal sinuses (most commonly ==ethmoiditis (MCQ)==), penetrating orbital trauma, or spread from a nearby infection (e.g., dental or facial infection).\n\nc] Complications: ==Cavernous sinus thrombosis (MCQ)==, ==Meningitis (MCQ)==, and ==Optic neuritis (MCQ)== / Exposure keratopathy leading to blindness.\n\nd] Lines of treatment: Urgent hospitalization, massive systemic broad-spectrum intravenous antibiotics, hot compresses, analgesics, and surgical intervention (drainage) if an orbital abscess forms or paranasal sinuses need to be cleared.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_complete_q1',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'أسئلة أكمل 1: علاج التهاب الحجاج بالورم الكاذب (Mainstay of Treatment of Pseudotumor) (سنين سابقة)',
+    content: 'The mainstay of treatment of acute orbital pseudomonas (Pseudotumor)* is: (سنين سابقة)',
+    answer: '==Systemic Corticosteroids (MCQ)==.\n\n*(Note: The word "pseudomonas" in the exam is likely a typo for "Pseudotumor" because its primary treatment is steroids, while if it were pseudomonas bacteria, the treatment would be IV Antibiotics).',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_complete_q2',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'أسئلة أكمل 2: الهياكل المارة عبر الثقب البصري (Optic Foramen Passageways) (سنين سابقة)',
+    content: 'The two main structures which pass through the optic foramen include: (سنين سابقة)',
+    answer: 'The ==Optic Nerve (MCQ)== & The ==Ophthalmic Artery (MCQ)==.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q1',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 1: جحوظ العين الثنائي غير المؤلم (Bilateral Proptosis & Lid Retraction MCQ) (سنين سابقة)',
+    content: 'A previously healthy 40 year-old woman presents with bilateral proptosis and lid retraction, but she denies any pain. The most likely diagnosis is: (سنين سابقة)',
+    answer: '==d) Thyroid eye disease (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q2',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 2: جحوظ وفقدان الوزن (Loss of weight & Proptosis MCQ) (سنين سابقة)',
+    content: 'A female patient aged 30 years complaining of loss of weight despite a good appetite. Her right eye was proptosis, with conjunctival chemosis and congestion. The diagnosis is: (سنين سابقة)',
+    answer: '==A- Thyroid eye disease (MCQ)==. (Due to symptoms of Thyrotoxicosis).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q3',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 3: التمييز بين التهاب الحجاج والتهاب العين الفايروسي (Differentiating Orbital Cellulitis vs Panophthalmitis MCQ) (سنين سابقة)',
+    content: 'The most important sign differentiating orbital cellulitis from panophthalmitis is: (سنين سابقة)',
+    answer: '==A. The color of the red reflex (MCQ)==. (Normal red reflex in orbital cellulitis, lost/yellow in panophthalmitis).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q4',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 4: اتجاه جحوظ ورم ديدان العصب البصري (Optic Nerve Glioma Proptosis Direction MCQ) (سنين سابقة)',
+    content: 'In proptosis due to optic nerve glioma, the eye ball is shifted in one of the following directions: (سنين سابقة)',
+    answer: '==B. Axial (MCQ)==. (Because it is an intraconal tumor).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q5',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 5: السبب الأكثر شيوعاً لجحوظ العين أحادي الجانب (Commonest Cause of Unilateral Proptosis MCQ) (سنين سابقة)',
+    content: 'The commonest cause of unilateral proptosis is: (سنين سابقة)',
+    answer: '==a) Thyroid eye disease (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q6',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 6: استخدام المحور العيني بالموجات فوق الصوتية (A-scan in IOL Calculation MCQ) (سنين سابقة)',
+    content: 'A-scan ultrasonography is used to calculate the intraocular lens power by measuring: (سنين سابقة)',
+    answer: '==d) axial length of the globe (MCQ)==.',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q7',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 7: السبب الأكثر شيوعاً لجحوظ العين ثنائي الجانب (Commonest Cause of Bilateral Proptosis MCQ) (سنين سابقة)',
+    content: 'The commonest cause of bilateral proptosis is: (سنين سابقة)',
+    answer: '==b) dysthyroid ophthalmopathy (Thyroid eye disease) (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q8',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 8: مريضة سكري والتهاب جيب أنفي (Diabetic Sinusitis complication MCQ) (سنين سابقة)',
+    content: 'A 38-year-old female patient known to be diabetic for 10 years. She has been suffering from paranasal sinusitis for long time. Now, the patient developed painful forward protrusion of her right eye with inability to move it... Temperature was 40°C. What is the most likely diagnosis? (سنين سابقة)',
+    answer: '==c) Orbital cellulitis (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q9',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 9: السبب الأكثر شيوعاً لجحوظ العين الثنائي (Bilateral Proptosis MCQ - Repeated) (سنين سابقة)',
+    content: 'The commonest cause of bilateral proptosis is: (سنين سابقة)',
+    answer: '==a) Thyroid eye disease (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q10',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 10: شلل حركة العين لجوان مع الجحوظ (Ophthalmoplegia with Proptosis MCQ) (سنين سابقة)',
+    content: 'Twenty years old male with acute ophthalmoplegia with proptosis. Which is the most common underlying cause? (سنين سابقة)',
+    answer: '==e) Ethmoiditis (MCQ)==. (Leading to orbital cellulitis).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q11',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 11: تشخيص الجحوظ الدرقي الأبرز (Diagnosis of Commonest Proptosis MCQ) (سنين سابقة)',
+    content: 'Which of the following may help in the diagnosis of the most common proptosis? (سنين سابقة)',
+    answer: '==c) Thyroid hormones levels (MCQ)==.',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q12',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 12: طفل عمره 7 سنوات مع تورم شديد بالجفن (Grossly swollen eyelid in child MCQ) (سنين سابقة)',
+    content: 'A 7-year-old boy presents with a grossly swollen eyelid... What finding is most characteristic of orbital cellulitis? (سنين سابقة)',
+    answer: '==d- Proptosis (MCQ)==. (This differentiates it from preseptal cellulitis).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q13',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 13: العصب خارج المخروط العضلي (Nerve outside muscle cone MCQ) (سنين سابقة)',
+    content: 'This nerve to an extraocular muscle does not pass through the muscle cone on entering the orbit: (سنين سابقة)',
+    answer: '==b- CN IV (MCQ)==. (Trochlear nerve).',
+    isClinical: false,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q14',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 14: الفارق الأبرز بين التهاب الخلوي والتهاب مقلة العين (Differentiating symptom: Cellulitis vs Panophthalmitis MCQ) (سنين سابقة)',
+    content: 'The most important symptom differentiating orbital cellulitis from panophthalmitis is: (سنين سابقة)',
+    answer: '==a- Vision (MCQ)==. (Vision is rapidly lost in panophthalmitis but preserved initially in orbital cellulitis).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
+  },
+  {
+    id: 'orbit_past_mcq_q15',
+    chapterId: 6,
+    type: 'short-answer',
+    title: 'سؤال اختيار من متعدد 15: تورم شديد في جفن طفل (Grossly swollen eyelid - Repeated MCQ) (سنين سابقة)',
+    content: 'A 7-year-old boy presents with a grossly swollen eyelid... What finding is most characteristic of orbital cellulitis? (سنين سابقة)',
+    answer: '==d- Proptosis (MCQ)==. (Repeated).',
+    isClinical: true,
+    isPastYear: true,
+    topic: 'Past Exams Questions'
   },
 
   // ===========================================================================

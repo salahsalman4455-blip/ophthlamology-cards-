@@ -173,7 +173,7 @@ function ReviewCard({
       </div>
 
       <div className="w-full">
-        <QuestionPrompt content={q.content} topic={q.topic} type={q.type} title={q.title} answer={q.answer} />
+        <QuestionPrompt content={q.content} topic={q.topic} type={q.type} title={q.title} answer={q.answer} isPastYear={q.isPastYear} />
       </div>
 
       {/* Answer Reveal Panel */}
@@ -205,7 +205,7 @@ function ReviewCard({
             >
               <div className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-3">Model Answer details</div>
               <div className="w-full">
-                <AnswerFormatter answer={q.answer} topic={q.topic} title={q.title} />
+                <AnswerFormatter answer={q.answer} topic={q.topic} title={q.title} content={q.content} />
               </div>
             </motion.div>
           )}

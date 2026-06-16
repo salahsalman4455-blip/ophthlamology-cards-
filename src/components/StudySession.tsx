@@ -26,6 +26,31 @@ interface StudySessionProps {
   masteredIds: string[];
 }
 
+const isQuestionCase = (q: Question): boolean => {
+  const titleLower = q.title.toLowerCase();
+  const idLower = q.id.toLowerCase();
+  if (titleLower.includes('case') || idLower.includes('case') || titleLower.includes('scenario') || idLower.includes('scenario')) {
+    return true;
+  }
+  
+  const contentLower = q.content.toLowerCase();
+  if (contentLower.includes('presents with') || 
+      contentLower.includes('presents complaining') ||
+      contentLower.includes('presents of') ||
+      /year-old/i.test(contentLower) ||
+      /\d+\s+year\s+old/i.test(contentLower) ||
+      /child\s+presents/i.test(contentLower) ||
+      /man\s+presents/i.test(contentLower) ||
+      /woman\s+presents/i.test(contentLower) ||
+      /boy\s+presents/i.test(contentLower) ||
+      /girl\s+presents/i.test(contentLower)
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
 export default function StudySession({ 
   chapter, 
   questions, 
@@ -47,6 +72,50 @@ export default function StudySession({
   const [focusAlertInterval, setFocusAlertInterval] = useState<number>(3); // 1 to 10 minutes
   const [sessionDuration, setSessionDuration] = useState<number>(30); // 10 minutes to 2 hours (120 minutes)
   const [displayMode, setDisplayMode] = useState<'cards' | 'list'>('cards');
+  const [practiceCategory, setPracticeCategory] = useState<'study' | 'cases' | 'mixed'>('mixed');
+
+  // Compute question pool counts in real-time based on selected topics
+  const currentPoolOfSelectedTopicsAndMasteredType = useMemo(() => {
+    let filtered;
+    if (chapter.id === 0) {
+      filtered = questions;
+    } else {
+      if (selectedTopics.includes('all') || selectedTopics.length === 0) {
+        filtered = questions.filter(q => q.chapterId === chapter.id);
+      } else {
+        filtered = questions.filter(q => q.chapterId === chapter.id && q.topic && selectedTopics.includes(q.topic));
+      }
+    }
+    
+    if (excludeMastered) {
+      const unmastered = filtered.filter(q => !masteredIds.includes(q.id));
+      if (unmastered.length > 0) {
+        filtered = unmastered;
+      }
+    }
+    return filtered;
+  }, [questions, chapter.id, selectedTopics, excludeMastered, masteredIds]);
+
+  const studyCount = useMemo(() => currentPoolOfSelectedTopicsAndMasteredType.filter(q => !isQuestionCase(q)).length, [currentPoolOfSelectedTopicsAndMasteredType]);
+  const casesCount = useMemo(() => currentPoolOfSelectedTopicsAndMasteredType.filter(q => isQuestionCase(q)).length, [currentPoolOfSelectedTopicsAndMasteredType]);
+  const totalCount = currentPoolOfSelectedTopicsAndMasteredType.length;
+
+  // Auto fallback if count for selected category is 0
+  useEffect(() => {
+    if (practiceCategory === 'cases' && casesCount === 0) {
+      if (studyCount > 0) {
+        setPracticeCategory('study');
+      } else {
+        setPracticeCategory('mixed');
+      }
+    } else if (practiceCategory === 'study' && studyCount === 0) {
+      if (casesCount > 0) {
+        setPracticeCategory('cases');
+      } else {
+        setPracticeCategory('mixed');
+      }
+    }
+  }, [studyCount, casesCount, practiceCategory]);
 
   // Runtime states
   const [sessionQuestions, setSessionQuestions] = useState<Question[]>([]);
@@ -59,6 +128,8 @@ export default function StudySession({
   // Countdown timer states
   const [timeLeft, setTimeLeft] = useState<number>(1800); // countdown in seconds
   const [isTimerRunning, setIsTimerRunning] = useState<boolean>(false);
+  const [isTimerCountingUp, setIsTimerCountingUp] = useState<boolean>(false);
+  const [showContinuePrompt, setShowContinuePrompt] = useState<boolean>(false);
 
   // List view state
   const [revealedAnswers, setRevealedAnswers] = useState<Record<string, boolean>>({});
@@ -189,18 +260,31 @@ export default function StudySession({
 
     const timer = setInterval(() => {
       setTimeLeft(prev => {
+        if (isTimerCountingUp) {
+          return prev + 1;
+        }
+
         if (prev <= 1) {
           clearInterval(timer);
-          setIsFinished(true);
-          playNotificationSound(true); // play completion sound chime
-          return 0;
+          // Check if there are still questions left in this session
+          const hasLeft = currentIndex < sessionQuestions.length - 1;
+          if (hasLeft) {
+            setIsTimerRunning(false);
+            setShowContinuePrompt(true);
+            playNotificationSound(true); // play completion sound chime
+            return 0;
+          } else {
+            setIsFinished(true);
+            playNotificationSound(true); // play completion sound chime
+            return 0;
+          }
         }
         return prev - 1;
       });
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [isTimerRunning, isFinished, isTopicSelectorOpen, isConfigModalOpen]);
+  }, [isTimerRunning, isFinished, isTopicSelectorOpen, isConfigModalOpen, isTimerCountingUp, currentIndex, sessionQuestions.length]);
 
   // Initializing the session with filtered questions and starting timer
   const startSession = () => {
@@ -221,9 +305,17 @@ export default function StudySession({
         filtered = unmastered;
       }
     }
+
+    if (practiceCategory === 'study') {
+      filtered = filtered.filter(q => !isQuestionCase(q));
+    } else if (practiceCategory === 'cases') {
+      filtered = filtered.filter(q => isQuestionCase(q));
+    }
+
+    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
     
-    setSessionQuestions(filtered);
-    setInitialUniqueCount(filtered.length);
+    setSessionQuestions(shuffled);
+    setInitialUniqueCount(shuffled.length);
     setCurrentIndex(0);
     setShowAnswer(false);
     setIsFinished(false);
@@ -232,6 +324,8 @@ export default function StudySession({
     // Set timer values
     setTimeLeft(sessionDuration * 60);
     setIsTimerRunning(true);
+    setIsTimerCountingUp(false);
+    setShowContinuePrompt(false);
 
     setIsTopicSelectorOpen(false);
     setIsConfigModalOpen(false);
@@ -380,6 +474,63 @@ export default function StudySession({
               )}
             </motion.div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* 3. Continue Session Modal */}
+      <AnimatePresence>
+        {showContinuePrompt && (
+          <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-slate-900/60 backdrop-blur-md"
+            />
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="bg-white rounded-[2rem] p-8 max-w-md w-full shadow-2xl relative z-10 border border-slate-100 flex flex-col"
+              style={{ direction: 'rtl' }}
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-blue-100">
+                  <Clock className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-black text-slate-800 leading-tight">
+                  انتهى وقت الجلسة المقررة! ⏱️
+                </h3>
+                <p className="text-sm text-slate-500 mt-3 font-medium leading-relaxed font-sans">
+                  لم تنتهِ من جميع أسئلة هذه الجلسة بعد. هل تود استكمال الجلسة ومتابعة المذاكرة والأسئلة المتبقية؟
+                </p>
+                
+                <div className="mt-8 flex flex-col gap-3">
+                  <button
+                    onClick={() => {
+                      setIsTimerCountingUp(true);
+                      setTimeLeft(0); // starts counting up from 0
+                      setIsTimerRunning(true);
+                      setShowContinuePrompt(false);
+                    }}
+                    className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm rounded-2xl transition-all shadow-lg active:scale-[0.98] cursor-pointer"
+                  >
+                    نعم، استكمال الجلسة ومواصلة المذاكرة 🚀
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      setIsFinished(true);
+                      setShowContinuePrompt(false);
+                    }}
+                    className="w-full py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold text-sm rounded-2xl transition-all active:scale-[0.98] cursor-pointer"
+                  >
+                    لا، إنهاء الجلسة وعرض الملخص
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
 
@@ -645,6 +796,111 @@ export default function StudySession({
                   </div>
                 </div>
 
+                {/* D. Practice Category (Study / Cases / Mixed) Selector */}
+                <div className="space-y-3 pt-2">
+                  <span className="text-sm font-black text-slate-800 block text-right font-sans">تخصيص نمط الأسئلة للجلسة</span>
+                  <div className="grid grid-cols-3 gap-3">
+                    {/* Normal Study Type */}
+                    <button
+                      type="button"
+                      disabled={studyCount === 0}
+                      onClick={() => setPracticeCategory('study')}
+                      className={`p-3.5 rounded-2xl border-2 text-right transition-all flex flex-col justify-between h-36 ${
+                        studyCount === 0
+                          ? 'opacity-40 bg-slate-50 border-slate-200 cursor-not-allowed'
+                          : practiceCategory === 'study'
+                            ? 'bg-blue-50/50 border-blue-600 text-blue-900 shadow-md'
+                            : 'bg-white border-slate-100 text-slate-650 hover:border-slate-200'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between w-full">
+                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm shrink-0 ${
+                          practiceCategory === 'study' ? 'bg-blue-100 text-blue-600' : 'bg-slate-100 text-slate-500'
+                        }`}>
+                          📖
+                        </div>
+                        <span className={`font-mono text-[9px] font-black px-2 py-0.5 rounded-full ${
+                          practiceCategory === 'study' ? 'bg-blue-100 text-blue-700' : 'bg-slate-100 text-slate-500'
+                        }`}>
+                          {studyCount} س
+                        </span>
+                      </div>
+                      <div className="mt-2 text-right">
+                        <span className="font-extrabold text-xs block text-slate-800">أسئلة دراسة 📖</span>
+                        <p className="text-[9px] text-slate-400 mt-0.5 leading-tight font-sans">
+                          الأسئلة والشروحات والتعاريف المنهجية العامة.
+                        </p>
+                      </div>
+                    </button>
+
+                    {/* Clinical Cases Only Type */}
+                    <button
+                      type="button"
+                      disabled={casesCount === 0}
+                      onClick={() => setPracticeCategory('cases')}
+                      className={`p-3.5 rounded-2xl border-2 text-right transition-all flex flex-col justify-between h-36 ${
+                        casesCount === 0
+                          ? 'opacity-40 bg-slate-50 border-slate-200 cursor-not-allowed'
+                          : practiceCategory === 'cases'
+                            ? 'bg-emerald-50/50 border-emerald-600 text-emerald-900 shadow-md'
+                            : 'bg-white border-slate-100 text-slate-650 hover:border-slate-200'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between w-full">
+                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm shrink-0 ${
+                          practiceCategory === 'cases' ? 'bg-emerald-100 text-emerald-600' : 'bg-slate-100 text-slate-500'
+                        }`}>
+                          🩺
+                        </div>
+                        <span className={`font-mono text-[9px] font-black px-2 py-0.5 rounded-full ${
+                          practiceCategory === 'cases' ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-500'
+                        }`}>
+                          {casesCount} ح
+                        </span>
+                      </div>
+                      <div className="mt-2 text-right">
+                        <span className="font-extrabold text-xs block text-slate-800">إكلينيكي (Cases) 🩺</span>
+                        <p className="text-[9px] text-slate-400 mt-0.5 leading-tight font-sans">
+                          حالات طبية وسيناريوهات عيادية حقيقية.
+                        </p>
+                      </div>
+                    </button>
+
+                    {/* Mixed Type */}
+                    <button
+                      type="button"
+                      disabled={totalCount === 0}
+                      onClick={() => setPracticeCategory('mixed')}
+                      className={`p-3.5 rounded-2xl border-2 text-right transition-all flex flex-col justify-between h-36 border-2 ${
+                        totalCount === 0
+                          ? 'opacity-40 bg-slate-50 border-slate-200 cursor-not-allowed'
+                          : practiceCategory === 'mixed'
+                            ? 'bg-indigo-50/50 border-indigo-600 text-indigo-900 shadow-md'
+                            : 'bg-white border-slate-100 text-slate-650 hover:border-slate-200'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between w-full">
+                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm shrink-0 ${
+                          practiceCategory === 'mixed' ? 'bg-indigo-100 text-indigo-600' : 'bg-slate-100 text-slate-500'
+                        }`}>
+                          🎯
+                        </div>
+                        <span className={`font-mono text-[9px] font-black px-2 py-0.5 rounded-full ${
+                          practiceCategory === 'mixed' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'
+                        }`}>
+                          {totalCount} م
+                        </span>
+                      </div>
+                      <div className="mt-2 text-right">
+                        <span className="font-extrabold text-xs block text-slate-800">مزيج شامل 🎯</span>
+                        <p className="text-[9px] text-slate-400 mt-0.5 leading-tight font-sans">
+                          خلط عشوائي بين الأسئلة العادية والسيناريوهات.
+                        </p>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
               </div>
 
               {/* Footer configuration triggers */}
@@ -776,6 +1032,7 @@ export default function StudySession({
                   type={currentQuestion.type}
                   title={currentQuestion.title}
                   answer={currentQuestion.answer}
+                  isPastYear={currentQuestion.isPastYear}
                 />
               </div>
 
@@ -815,6 +1072,7 @@ export default function StudySession({
                             answer={currentQuestion.answer} 
                             topic={currentQuestion.topic} 
                             title={currentQuestion.title} 
+                            content={currentQuestion.content}
                           />
                         </div>
                       </div>
@@ -974,6 +1232,7 @@ export default function StudySession({
                         type={q.type}
                         title={q.title}
                         answer={q.answer}
+                        isPastYear={q.isPastYear}
                       />
                     </div>
 
@@ -1004,6 +1263,7 @@ export default function StudySession({
                                 answer={q.answer} 
                                 topic={q.topic} 
                                 title={q.title} 
+                                content={q.content}
                               />
                             </div>
                           </motion.div>
