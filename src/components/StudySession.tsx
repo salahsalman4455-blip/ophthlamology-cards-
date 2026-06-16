@@ -674,27 +674,26 @@ export default function StudySession({
               </div>
 
               {/* Options Form container */}
-              <div className="flex-1 overflow-y-auto space-y-6 pr-1 pl-1 mb-6">
+              <div className="flex-1 overflow-y-auto space-y-5 pr-1 pl-1 mb-6">
                 
                 {/* A. Focus alerts anti mind wandering settings */}
-                <div className="p-5 bg-amber-50/50 border border-amber-200 rounded-2xl space-y-4">
+                <div className="p-4 bg-amber-50/50 border border-amber-200 rounded-xl space-y-3">
                   <div className="flex items-center justify-between">
                     <div className="text-right">
-                      <span className="text-sm font-black text-amber-900 block font-sans">تنبيه عدم السرحان 🕰️</span>
-                      <span className="text-[10px] text-amber-700 block mt-0.5">تنبيه صوتي ذكي يوقظك في حال السرحان وعدم الحركة</span>
+                      <span className="text-sm font-bold text-amber-900 block font-sans">تنبيه عدم السرحان</span>
                     </div>
                     <button
                       type="button"
                       onClick={() => setFocusAlertEnabled(!focusAlertEnabled)}
-                      className={`w-12 h-6 rounded-full p-1 transition-colors duration-200 focus:outline-none ${focusAlertEnabled ? 'bg-amber-500' : 'bg-slate-300'}`}
+                      className={`w-11 h-6 rounded-full p-1 transition-colors duration-200 focus:outline-none ${focusAlertEnabled ? 'bg-amber-500' : 'bg-slate-300'}`}
                     >
-                      <div className={`bg-white w-4 h-4 rounded-full shadow-md transform duration-180 flex items-center justify-center ${focusAlertEnabled ? 'translate-x-6' : 'translate-x-0'}`} />
+                      <div className={`bg-white w-4 h-4 rounded-full shadow-md transform duration-180 flex items-center justify-center ${focusAlertEnabled ? 'translate-x-5' : 'translate-x-0'}`} />
                     </button>
                   </div>
                   
                   {focusAlertEnabled && (
                     <div className="space-y-2 animate-in fade-in duration-200">
-                      <div className="flex justify-between text-xs font-bold text-amber-800">
+                      <div className="flex justify-between text-xs font-semibold text-amber-800">
                         <span>المدة بين كل تنبيه:</span>
                         <span>كل {focusAlertInterval} {focusAlertInterval === 1 ? 'دقيقة' : focusAlertInterval === 2 ? 'دقيقتين' : 'دقائق'}</span>
                       </div>
@@ -704,26 +703,20 @@ export default function StudySession({
                         max="10"
                         value={focusAlertInterval}
                         onChange={(e) => setFocusAlertInterval(Number(e.target.value))}
-                        className="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-600 block"
+                        className="w-full h-1.5 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-600 block"
                       />
-                      <div className="flex justify-between text-[9px] text-amber-600 font-bold px-1 select-none">
-                        <span>دقيقة واحدة</span>
-                        <span>٥ دقائق</span>
-                        <span>١٠ دقائق</span>
-                      </div>
                     </div>
                   )}
                 </div>
 
                 {/* B. Session duration timer settings */}
-                <div className="p-5 bg-blue-50/30 border border-blue-200 rounded-2xl space-y-4">
+                <div className="p-4 bg-blue-50/30 border border-blue-200 rounded-xl space-y-3">
                   <div className="text-right">
-                    <span className="text-sm font-black text-[#1E40AF] block font-sans">مدة جلسة المذاكرة ⏱️</span>
-                    <span className="text-[10px] text-[#2563EB] block mt-0.5">مؤقت زمني ذكي يراجع التقدم ويصدر تنبيهاً موسيقياً عند انتهاء المجموعة</span>
+                    <span className="text-sm font-bold text-[#1E40AF] block font-sans">مدة جلسة المذاكرة</span>
                   </div>
                   
                   <div className="space-y-2">
-                    <div className="flex justify-between text-xs font-bold text-[#1E40AF]">
+                    <div className="flex justify-between text-xs font-semibold text-[#1E40AF]">
                       <span>زمن الجلسة المفضل:</span>
                       <span className="font-mono text-[#1D4ED8]">
                         {sessionDuration >= 60 
@@ -738,7 +731,7 @@ export default function StudySession({
                       step="5"
                       value={sessionDuration}
                       onChange={(e) => setSessionDuration(Number(e.target.value))}
-                      className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600 block"
+                      className="w-full h-1.5 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600 block"
                     />
                     <div className="flex justify-between text-[9px] text-blue-500 font-bold px-1 select-none font-sans">
                       <span>١٠ دقائق</span>
@@ -749,88 +742,56 @@ export default function StudySession({
                 </div>
 
                 {/* C. Question displaying system chooser */}
-                <div className="space-y-3">
-                  <span className="text-sm font-black text-slate-800 block text-right font-sans">نظام عرض الأسئلة</span>
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <span className="text-xs font-bold text-slate-500 block text-right font-sans">نظام عرض الأسئلة</span>
+                  <div className="grid grid-cols-2 gap-3">
                     {/* Cards Mode */}
                     <button
                       type="button"
                       onClick={() => setDisplayMode('cards')}
-                      className={`p-4 rounded-2xl border-2 text-right transition-all flex flex-col justify-between h-40 ${
+                      className={`py-2.5 px-4 rounded-xl border-2 text-center transition-all font-extrabold text-xs leading-normal ${
                         displayMode === 'cards' 
-                          ? 'bg-blue-50/50 border-blue-605 border-blue-600 text-blue-900 shadow-md' 
-                          : 'bg-white border-slate-100 text-slate-650 hover:border-slate-200'
+                          ? 'bg-blue-50/60 border-blue-600 text-blue-900 shadow-sm' 
+                          : 'bg-white border-slate-205 border-slate-200 text-slate-700 hover:border-slate-300'
                       }`}
                     >
-                      <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 self-start mb-2 shrink-0">
-                        <BookOpen className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <span className="font-extrabold text-sm block">نظام الكروت 🎴</span>
-                        <p className="text-[10px] text-slate-400 mt-1 leading-normal font-sans">
-                          يعرض كرت تلو كرت بأسلوب كلاسيكي تفاعلي كما بالتطبيق الحالي.
-                        </p>
-                      </div>
+                      نظام الكروت
                     </button>
 
                     {/* Scrollable list Mode */}
                     <button
                       type="button"
                       onClick={() => setDisplayMode('list')}
-                      className={`p-4 rounded-2xl border-2 text-right transition-all flex flex-col justify-between h-40 ${
+                      className={`py-2.5 px-4 rounded-xl border-2 text-center transition-all font-extrabold text-xs leading-normal ${
                         displayMode === 'list' 
-                          ? 'bg-indigo-50/50 border-indigo-600 text-indigo-900 shadow-md' 
-                          : 'bg-white border-slate-100 text-slate-650 hover:border-slate-200'
+                          ? 'bg-indigo-50/60 border-indigo-600 text-indigo-900 shadow-sm' 
+                          : 'bg-white border-slate-205 border-slate-200 text-slate-700 hover:border-slate-300'
                       }`}
                     >
-                      <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 self-start mb-2 shrink-0">
-                        <ListFilter className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <span className="font-extrabold text-sm block">نظام القائمة 📋</span>
-                        <p className="text-[10px] text-slate-400 mt-1 leading-normal font-sans">
-                          يعرض كافة الأسئلة عمودياً في صفحة واحدة تكشف الإجابات تدريجياً أو دفعة واحدة.
-                        </p>
-                      </div>
+                      نظام القائمة
                     </button>
                   </div>
                 </div>
 
                 {/* D. Practice Category (Study / Cases / Mixed) Selector */}
-                <div className="space-y-3 pt-2">
-                  <span className="text-sm font-black text-slate-800 block text-right font-sans">تخصيص نمط الأسئلة للجلسة</span>
-                  <div className="grid grid-cols-3 gap-3">
+                <div className="space-y-2 pt-1">
+                  <span className="text-xs font-bold text-slate-500 block text-right font-sans">تخصيص نمط الأسئلة للجلسة</span>
+                  <div className="grid grid-cols-3 gap-2">
                     {/* Normal Study Type */}
                     <button
                       type="button"
                       disabled={studyCount === 0}
                       onClick={() => setPracticeCategory('study')}
-                      className={`p-3.5 rounded-2xl border-2 text-right transition-all flex flex-col justify-between h-36 ${
+                      className={`py-2.5 px-2 rounded-xl border-2 text-center transition-all font-extrabold text-xs flex flex-col items-center justify-center gap-0.5 leading-tight ${
                         studyCount === 0
                           ? 'opacity-40 bg-slate-50 border-slate-200 cursor-not-allowed'
                           : practiceCategory === 'study'
-                            ? 'bg-blue-50/50 border-blue-600 text-blue-900 shadow-md'
-                            : 'bg-white border-slate-100 text-slate-650 hover:border-slate-200'
+                            ? 'bg-blue-50/60 border-blue-600 text-blue-900 shadow-sm'
+                            : 'bg-white border-slate-205 border-slate-200 text-slate-700 hover:border-slate-300'
                       }`}
                     >
-                      <div className="flex items-center justify-between w-full">
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm shrink-0 ${
-                          practiceCategory === 'study' ? 'bg-blue-100 text-blue-600' : 'bg-slate-100 text-slate-500'
-                        }`}>
-                          📖
-                        </div>
-                        <span className={`font-mono text-[9px] font-black px-2 py-0.5 rounded-full ${
-                          practiceCategory === 'study' ? 'bg-blue-100 text-blue-700' : 'bg-slate-100 text-slate-500'
-                        }`}>
-                          {studyCount} س
-                        </span>
-                      </div>
-                      <div className="mt-2 text-right">
-                        <span className="font-extrabold text-xs block text-slate-800">أسئلة دراسة 📖</span>
-                        <p className="text-[9px] text-slate-400 mt-0.5 leading-tight font-sans">
-                          الأسئلة والشروحات والتعاريف المنهجية العامة.
-                        </p>
-                      </div>
+                      <span>أسئلة دراسة</span>
+                      <span className="text-[9px] font-mono opacity-60">({studyCount} س)</span>
                     </button>
 
                     {/* Clinical Cases Only Type */}
@@ -838,32 +799,16 @@ export default function StudySession({
                       type="button"
                       disabled={casesCount === 0}
                       onClick={() => setPracticeCategory('cases')}
-                      className={`p-3.5 rounded-2xl border-2 text-right transition-all flex flex-col justify-between h-36 ${
+                      className={`py-2.5 px-2 rounded-xl border-2 text-center transition-all font-extrabold text-xs flex flex-col items-center justify-center gap-0.5 leading-tight ${
                         casesCount === 0
                           ? 'opacity-40 bg-slate-50 border-slate-200 cursor-not-allowed'
                           : practiceCategory === 'cases'
-                            ? 'bg-emerald-50/50 border-emerald-600 text-emerald-900 shadow-md'
-                            : 'bg-white border-slate-100 text-slate-650 hover:border-slate-200'
+                            ? 'bg-emerald-50/60 border-emerald-600 text-emerald-900 shadow-sm'
+                            : 'bg-white border-slate-205 border-slate-200 text-slate-700 hover:border-slate-300'
                       }`}
                     >
-                      <div className="flex items-center justify-between w-full">
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm shrink-0 ${
-                          practiceCategory === 'cases' ? 'bg-emerald-100 text-emerald-600' : 'bg-slate-100 text-slate-500'
-                        }`}>
-                          🩺
-                        </div>
-                        <span className={`font-mono text-[9px] font-black px-2 py-0.5 rounded-full ${
-                          practiceCategory === 'cases' ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-500'
-                        }`}>
-                          {casesCount} ح
-                        </span>
-                      </div>
-                      <div className="mt-2 text-right">
-                        <span className="font-extrabold text-xs block text-slate-800">إكلينيكي (Cases) 🩺</span>
-                        <p className="text-[9px] text-slate-400 mt-0.5 leading-tight font-sans">
-                          حالات طبية وسيناريوهات عيادية حقيقية.
-                        </p>
-                      </div>
+                      <span>إكلينيكي (Cases)</span>
+                      <span className="text-[9px] font-mono opacity-60">({casesCount} ح)</span>
                     </button>
 
                     {/* Mixed Type */}
@@ -871,32 +816,16 @@ export default function StudySession({
                       type="button"
                       disabled={totalCount === 0}
                       onClick={() => setPracticeCategory('mixed')}
-                      className={`p-3.5 rounded-2xl border-2 text-right transition-all flex flex-col justify-between h-36 border-2 ${
+                      className={`py-2.5 px-2 rounded-xl border-2 text-center transition-all font-extrabold text-xs flex flex-col items-center justify-center gap-0.5 leading-tight ${
                         totalCount === 0
                           ? 'opacity-40 bg-slate-50 border-slate-200 cursor-not-allowed'
                           : practiceCategory === 'mixed'
-                            ? 'bg-indigo-50/50 border-indigo-600 text-indigo-900 shadow-md'
-                            : 'bg-white border-slate-100 text-slate-650 hover:border-slate-200'
+                            ? 'bg-indigo-50/60 border-indigo-600 text-indigo-900 shadow-sm'
+                            : 'bg-white border-slate-205 border-slate-200 text-slate-700 hover:border-slate-300'
                       }`}
                     >
-                      <div className="flex items-center justify-between w-full">
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm shrink-0 ${
-                          practiceCategory === 'mixed' ? 'bg-indigo-100 text-indigo-600' : 'bg-slate-100 text-slate-500'
-                        }`}>
-                          🎯
-                        </div>
-                        <span className={`font-mono text-[9px] font-black px-2 py-0.5 rounded-full ${
-                          practiceCategory === 'mixed' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'
-                        }`}>
-                          {totalCount} م
-                        </span>
-                      </div>
-                      <div className="mt-2 text-right">
-                        <span className="font-extrabold text-xs block text-slate-800">مزيج شامل 🎯</span>
-                        <p className="text-[9px] text-slate-400 mt-0.5 leading-tight font-sans">
-                          خلط عشوائي بين الأسئلة العادية والسيناريوهات.
-                        </p>
-                      </div>
+                      <span>مزيج شامل</span>
+                      <span className="text-[9px] font-mono opacity-60">({totalCount} م)</span>
                     </button>
                   </div>
                 </div>

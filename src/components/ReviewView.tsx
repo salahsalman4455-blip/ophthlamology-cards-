@@ -25,10 +25,11 @@ export default function ReviewView({
   const reviewQuestions = allQuestions.filter(q => reviewIds.includes(q.id));
 
   // Group review questions by Chapter
-  const reviewByChapter = CHAPTERS.map(ch => {
+  const reviewByChapter = CHAPTERS.map((ch, idx) => {
     const questionsInCh = reviewQuestions.filter(q => q.chapterId === ch.id);
     return {
       chapter: ch,
+      index: idx,
       questions: questionsInCh
     };
   }).filter(group => group.questions.length > 0);
@@ -93,11 +94,11 @@ export default function ReviewView({
 
           {/* Review items grouped by Chapter */}
           <div className="space-y-10">
-            {reviewByChapter.map(({ chapter, questions }) => (
+            {reviewByChapter.map(({ chapter, index, questions }) => (
               <div key={chapter.id} className="space-y-4">
                 {/* Chapter Title Badge */}
                 <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
-                  <span className="bg-slate-900 text-white text-[10px] font-black px-2.5 py-1 rounded-lg">CH{chapter.id < 10 ? '0' : ''}{chapter.id}</span>
+                  <span className="bg-slate-900 text-white text-[10px] font-black px-2.5 py-1 rounded-lg">CH{(index + 1) < 10 ? '0' : ''}{index + 1}</span>
                   <h3 className="text-lg font-extrabold text-slate-800">{chapter.title}</h3>
                   <span className="text-[10px] font-black text-amber-700 bg-amber-50 border border-amber-100 px-2.5 py-1 rounded-full uppercase tracking-wider">
                     {questions.length} card{questions.length === 1 ? '' : 's'} in review

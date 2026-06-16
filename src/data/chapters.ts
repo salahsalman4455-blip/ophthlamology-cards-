@@ -3,7 +3,7 @@ import { Chapter } from '../types';
 export const CHAPTERS: Chapter[] = [
   {
     id: 1,
-    title: 'Eyelid',
+    title: 'Eye lid',
     topics: [
       'Anatomy & Physiology of the Eyelids',
       'Blepharitis',
@@ -31,8 +31,8 @@ export const CHAPTERS: Chapter[] = [
       'Anatomy & Histology of the Conjunctiva',
       'Acute Bacterial Conjunctivitis (Mucopurulent & Purulent)',
       'Ophthalmia Neonatorum & Inclusion Conjunctivitis',
-      'Viral Conjunctivitis',
       'Trachoma (Egyptian Ophthalmia)',
+      'Viral Conjunctivitis',
       'Allergic Conjunctivitis (Spring Catarrh & Phlyctenular)',
       'Conjunctival Degenerations & Symblepharon (Pterygium & Pinguecula)'
     ]
@@ -42,8 +42,8 @@ export const CHAPTERS: Chapter[] = [
     title: 'Cornea & Sclera',
     topics: [
       'Hypopyon Ulcer (Acute Serpiginous Ulcer)',
-      'Viral Ulcers (Dendritic Ulcer & Herpes Zoster Ophthalmicus)',
       'Fungal Ulcer',
+      'Viral Ulcers (Dendritic Ulcer & Herpes Zoster Ophthalmicus)',
       'Non-Infective Ulcers (Neurotrophic & Exposure)',
       'Ectatic Corneal Disorders (Keratoconus)',
       'Keratoplasty & Keratorefractive Surgery'
@@ -66,10 +66,10 @@ export const CHAPTERS: Chapter[] = [
     id: 6,
     title: 'Orbit',
     topics: [
-      'Orbital & Preseptal Cellulitis',
-      "Thyroid Eye Disease (TED / Graves' Disease)",
-      'Cavernous Sinus Thrombosis (CST)',
       'Proptosis & Enophthalmos',
+      'Orbital & Preseptal Cellulitis',
+      'Cavernous Sinus Thrombosis (CST)',
+      "Thyroid Eye Disease (TED / Graves' Disease)",
       'Surgical Operations of the Orbit'
     ]
   },
@@ -80,7 +80,8 @@ export const CHAPTERS: Chapter[] = [
       'Myopia (Short Sightedness)',
       'Hypermetropia (Far Sightedness)',
       'Astigmatism',
-      'Aphakia, Anisometropia & Presbyopia'
+      'Aphakia, Anisometropia & Presbyopia',
+      'Past Exams Questions'
     ]
   },
   {
@@ -88,20 +89,22 @@ export const CHAPTERS: Chapter[] = [
     title: 'Glaucoma',
     topics: [
       'Anatomy & Physiology of the AC Angle & Aqueous Humor',
+      'Glaucoma Diagnosis & Evaluation',
       'Congenital Glaucoma (Buphthalmos)',
       'Primary Open-Angle Glaucoma (POAG)',
       'Primary Angle-Closure Glaucoma (PACG)',
-      'Secondary Glaucomas'
+      'Secondary Glaucomas',
+      'Past Exams Questions'
     ]
   },
   {
     id: 9,
-    title: 'Uveitis',
+    title: 'Uveal tract',
     topics: [
       'Anatomy & Physiology of the Uveal Tract',
       'Anterior Uveitis (Iridocyclitis)',
       'Suppurative Uveitis (Endophthalmitis & Panophthalmitis)',
-      'Systemic Syndromes & Optic Atrophy Comparison'
+      'Uveitis General Classifications'
     ]
   },
   {

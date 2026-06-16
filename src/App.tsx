@@ -157,13 +157,6 @@ export default function App() {
               <span>Mixed Practice Challenge</span>
             </button>
           )}
-
-          <div className="px-3 py-1.5 bg-slate-50 border border-slate-205 rounded-xl flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[10px] text-slate-650 font-extrabold uppercase tracking-wider">
-              {masteredIds.length} / {INITIAL_QUESTIONS.length} Mastered
-            </span>
-          </div>
         </div>
       </header>
 
@@ -235,13 +228,57 @@ export default function App() {
 
                 {/* Chapters list with stats in Sidebar */}
                 <div>
-                  <div className="text-[10px] font-bold text-slate-505 uppercase tracking-widest px-3 pb-2">Chapters</div>
+                  <div className="text-[10px] font-black text-amber-500 uppercase tracking-widest px-3 pb-2 flex items-center justify-between">
+                    <span>Written Chapters</span>
+                    <span className="text-[8px] bg-amber-500/10 text-amber-400 px-1.5 py-0.5 rounded font-black tracking-widest border border-amber-500/20">WRITTEN</span>
+                  </div>
                   <div className="space-y-1">
-                    {CHAPTERS.map(ch => {
+                    {CHAPTERS.filter(ch => [1, 3, 4, 6, 7, 11].includes(ch.id)).map((ch) => {
                       const chapterQuestions = INITIAL_QUESTIONS.filter(q => q.chapterId === ch.id);
                       const totalCount = chapterQuestions.length;
                       const masteredCount = chapterQuestions.filter(q => masteredIds.includes(q.id)).length;
-                      
+                      const actualIdx = CHAPTERS.findIndex(c => c.id === ch.id);
+                      return (
+                        <button 
+                          key={ch.id}
+                          onClick={() => { startChapter(ch); }}
+                          className={`w-full flex items-center justify-between px-3 py-2 text-xs font-semibold rounded-lg transition-all border ${
+                            activeChapter?.id === ch.id && view === 'study'
+                              ? 'text-white bg-amber-500/20 border-amber-500'
+                              : 'text-amber-400 bg-slate-950 border-slate-900/50 hover:bg-slate-900 hover:text-amber-300'
+                          }`}
+                        >
+                          <span className="flex items-center gap-2 overflow-hidden mr-1">
+                            <span className="text-[10px] font-mono opacity-50 text-amber-500/60">{(actualIdx + 1) < 10 ? `0${actualIdx + 1}` : actualIdx + 1}</span>
+                            <span className="truncate">{ch.title}</span>
+                          </span>
+                          <span className="flex items-center gap-1.5 shrink-0">
+                            <span className="text-[8px] bg-amber-500/10 text-amber-402 border border-amber-400/20 px-1.5 py-0.2 rounded font-black uppercase text-center scale-90">Written</span>
+                            <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
+                              activeChapter?.id === ch.id && view === 'study' ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-900 text-amber-500/70 font-bold'
+                            }`}>
+                              {masteredCount}/{totalCount}
+                            </span>
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Elegant Divider Line in the Sidebar */}
+                  <div className="my-5 border-t border-slate-800/80 relative">
+                    <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-slate-950 px-2 text-[8px] font-black text-slate-500 uppercase tracking-widest border border-slate-800/60 rounded">
+                      ⏳ Pending Drafts
+                    </span>
+                  </div>
+
+                  <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest px-3 pb-2 mt-2">Draft Chapters</div>
+                  <div className="space-y-1">
+                    {CHAPTERS.filter(ch => ![1, 3, 4, 6, 7, 11].includes(ch.id)).map((ch) => {
+                      const chapterQuestions = INITIAL_QUESTIONS.filter(q => q.chapterId === ch.id);
+                      const totalCount = chapterQuestions.length;
+                      const masteredCount = chapterQuestions.filter(q => masteredIds.includes(q.id)).length;
+                      const actualIdx = CHAPTERS.findIndex(c => c.id === ch.id);
                       return (
                         <button 
                           key={ch.id}
@@ -249,15 +286,15 @@ export default function App() {
                           className={`w-full flex items-center justify-between px-3 py-2 text-xs font-semibold rounded-lg transition-all ${
                             activeChapter?.id === ch.id && view === 'study'
                               ? 'text-white bg-blue-600'
-                              : 'text-slate-400 hover:bg-slate-900 hover:text-slate-200'
+                              : 'text-slate-500 hover:bg-slate-900 hover:text-slate-350'
                           }`}
                         >
                           <span className="flex items-center gap-2 overflow-hidden mr-1">
-                            <span className="text-[10px] font-mono opacity-50">{ch.id < 10 ? `0${ch.id}` : ch.id}</span>
+                            <span className="text-[10px] font-mono opacity-50 text-slate-500">{(actualIdx + 1) < 10 ? `0${actualIdx + 1}` : actualIdx + 1}</span>
                             <span className="truncate">{ch.title}</span>
                           </span>
                           <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded shrink-0 ${
-                            activeChapter?.id === ch.id && view === 'study' ? 'bg-blue-700 text-white font-bold' : 'bg-slate-900 text-slate-500 font-bold'
+                            activeChapter?.id === ch.id && view === 'study' ? 'bg-blue-700 text-white font-bold' : 'bg-slate-900 text-slate-650 font-bold'
                           }`}>
                             {masteredCount}/{totalCount}
                           </span>
@@ -270,21 +307,6 @@ export default function App() {
 
               {/* Progress & Reset at bottom */}
               <div className="pt-6 border-t border-slate-909 mt-auto space-y-4">
-                <div className="px-4 py-3.5 bg-slate-900 rounded-2xl">
-                  <div className="flex items-center justify-between mb-2">
-                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Total Progress</p>
-                    <p className="text-[10px] text-blue-400 font-mono font-bold">
-                      {masteredIds.length}/{INITIAL_QUESTIONS.length}
-                    </p>
-                  </div>
-                  <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                    <div 
-                      style={{ width: `${INITIAL_QUESTIONS.length > 0 ? (masteredIds.length / INITIAL_QUESTIONS.length) * 100 : 0}%` }}
-                      className="h-full bg-blue-500 rounded-full transition-all duration-300"
-                    />
-                  </div>
-                </div>
-                
                 <button
                   onClick={resetAllProgress}
                   className="w-full flex items-center justify-center gap-2 py-3 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs font-bold uppercase tracking-wider rounded-xl transition-all border border-rose-500/20 hover:border-rose-500/40"
@@ -326,85 +348,32 @@ export default function App() {
                   </button>
                 </div>
 
-                {/* Grid listing Chapters with Individual Question stats */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-                  {CHAPTERS.map((chapter) => {
-                    const chapterQuestions = INITIAL_QUESTIONS.filter(q => q.chapterId === chapter.id);
-                    const totalCount = chapterQuestions.length;
-                    const masteredCount = chapterQuestions.filter(q => masteredIds.includes(q.id)).length;
-                    const reviewCount = chapterQuestions.filter(q => reviewList.includes(q.id)).length;
+                {/* Grid of all chapters rendered sequentially */}
+                <div className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                    {CHAPTERS.map((chapter) => {
+                      const chapterQuestions = INITIAL_QUESTIONS.filter(q => q.chapterId === chapter.id);
+                      const totalCount = chapterQuestions.length;
+                      const masteredCount = chapterQuestions.filter(q => masteredIds.includes(q.id)).length;
+                      const reviewCount = chapterQuestions.filter(q => reviewList.includes(q.id)).length;
+                      const originalIdx = CHAPTERS.findIndex(c => c.id === chapter.id);
 
-                    return (
-                      <ChapterCard 
-                        key={chapter.id} 
-                        chapter={chapter} 
-                        masteredCount={masteredCount}
-                        totalCount={totalCount}
-                        reviewCount={reviewCount}
-                        onClick={() => startChapter(chapter)}
-                      />
-                    );
-                  })}
+                      return (
+                        <ChapterCard 
+                          key={chapter.id} 
+                          chapter={chapter} 
+                          index={originalIdx}
+                          masteredCount={masteredCount}
+                          totalCount={totalCount}
+                          reviewCount={reviewCount}
+                          onClick={() => startChapter(chapter)}
+                        />
+                      );
+                    })}
+                  </div>
                 </div>
 
-                {/* BOTTOM PERSISTENT DETAILED REPORT & PROGRESS BAR CARD */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  className="bg-gradient-to-br from-slate-905 to-indigo-950 text-white rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden"
-                >
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10" />
-                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -z-10" />
-                  
-                  <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
-                    <div className="flex-1 w-full space-y-4 text-left">
-                      <div>
-                        <span className="text-[10px] font-black tracking-widest uppercase text-blue-400 font-mono">APP PROGRESS STATUS</span>
-                        <h3 className="text-xl md:text-2xl font-black text-white leading-tight mt-1">Overall Diagnostic Progress</h3>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <div className="flex justify-between text-xs md:text-sm font-bold text-slate-305">
-                          <span>Progress Bar (Overall Success Metrics)</span>
-                          <span className="font-mono text-blue-400">
-                            {masteredIds.length} of {INITIAL_QUESTIONS.length} Questions ({INITIAL_QUESTIONS.length > 0 ? Math.round((masteredIds.length / INITIAL_QUESTIONS.length) * 100) : 0}%)
-                          </span>
-                        </div>
-                        <div className="h-3.5 bg-slate-800/80 rounded-full overflow-hidden p-0.5 border border-slate-700/30">
-                          <motion.div 
-                            initial={{ width: 0 }}
-                            animate={{ width: `${INITIAL_QUESTIONS.length > 0 ? (masteredIds.length / INITIAL_QUESTIONS.length) * 100 : 0}%` }}
-                            transition={{ duration: 1, ease: 'easeOut' }}
-                            className="h-full bg-gradient-to-r from-blue-505 to-indigo-500 rounded-full" 
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Fast Stats Blocks & Double Mix Button */}
-                    <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
-                      <div className="flex gap-4 w-full sm:w-auto">
-                        <div className="flex-1 sm:flex-none px-4 py-3 bg-slate-850/65 border border-slate-800 rounded-2xl text-center min-w-[100px]">
-                          <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">IN REVIEW</p>
-                          <p className="text-xl font-black text-amber-400">{reviewList.length}</p>
-                        </div>
-                        <div className="flex-1 sm:flex-none px-4 py-3 bg-slate-850/65 border border-slate-800 rounded-2xl text-center min-w-[100px]">
-                          <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">TOTAL BANK</p>
-                          <p className="text-xl font-black text-white">{INITIAL_QUESTIONS.length}</p>
-                        </div>
-                      </div>
-
-                      <button
-                        onClick={startMixedSession}
-                        className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold text-sm rounded-2xl hover:bg-slate-50 transition-all shadow-lg flex items-center justify-center gap-2 shrink-0 whitespace-nowrap"
-                      >
-                        <Brain className="w-4 h-4 text-blue-600" />
-                        <span>Mixed Practice Challenge</span>
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
+                {/* No overall status block under chapters */}
               </motion.div>
             )}
 
@@ -548,6 +517,7 @@ const getChapterImageUrl = (id: number): string => {
 
 function ChapterCard({ 
   chapter, 
+  index,
   onClick, 
   masteredCount, 
   totalCount, 
@@ -555,23 +525,88 @@ function ChapterCard({
 }: { 
   key?: any;
   chapter: Chapter; 
+  index: number;
   onClick: () => void; 
   masteredCount: number;
   totalCount: number;
   reviewCount: number;
 }) {
   const percentage = totalCount > 0 ? Math.round((masteredCount / totalCount) * 100) : 0;
+  const isWritten = [1, 3, 4, 6, 7, 11].includes(chapter.id);
 
+  if (isWritten) {
+    return (
+      <motion.button
+        whileHover={{ y: -6, scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        onClick={onClick}
+        className="w-full h-full min-h-[240px] bg-gradient-to-b from-slate-900 via-slate-950 to-neutral-950 p-6 md:p-8 rounded-3xl border border-amber-500/25 shadow-md hover:shadow-amber-500/10 text-left group transition-all flex flex-col justify-between relative overflow-hidden"
+      >
+        {/* Subtle decorative vector circles on the background */}
+        <div className="absolute right-0 bottom-0 w-32 h-32 bg-amber-550/5 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute left-0 top-0 w-24 h-24 bg-blue-500/5 rounded-full blur-xl pointer-events-none" />
+
+        <div className="w-full relative z-10">
+          <div className="flex items-center justify-between w-full mb-4">
+            <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center overflow-hidden ring-2 ring-amber-500/30 group-hover:ring-amber-400 transition-all duration-300">
+              <img src={getChapterImageUrl(chapter.id)} alt={`${chapter.title} Icon`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="bg-amber-400/10 text-amber-400 border border-amber-400/20 text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1 select-none animate-pulse">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                written
+              </span>
+              {reviewCount > 0 && (
+                <span className="bg-amber-600/25 text-amber-200 border border-amber-500/20 text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
+                  {reviewCount} review
+                </span>
+              )}
+              <span className="text-amber-500/60 font-mono text-[9px] font-black tracking-widest uppercase ml-1">CH{(index + 1) < 10 ? '0' : ''}{index + 1}</span>
+            </div>
+          </div>
+          
+          <div className="space-y-1">
+            <h3 className="text-xl font-bold text-white capitalize leading-tight group-hover:text-amber-300 transition-colors">
+              {chapter.title}
+            </h3>
+          </div>
+        </div>
+        
+        <div className="w-full mt-6 space-y-2 relative z-10">
+          {/* Progress stat */}
+          <div className="flex justify-between items-center text-[10px] text-slate-400 font-bold uppercase tracking-wide">
+            <span>Accuracy Progress</span>
+            <span className="font-mono text-amber-400 font-extrabold">{masteredCount} / {totalCount} Mastered</span>
+          </div>
+          
+          {/* Progress bar */}
+          <div className="h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
+            <div 
+              style={{ width: `${percentage}%` }}
+              className="h-full bg-gradient-to-r from-amber-500 via-amber-450 to-yellow-350 rounded-full transition-all duration-300 shadow-[0_0_8px_rgba(245,158,11,0.4)]" 
+            />
+          </div>
+
+          <div className="pt-2 flex items-center gap-1 text-amber-400 font-bold text-xs group-hover:translate-x-1.5 transition-transform duration-200">
+            <span>Explore Flashcards</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </div>
+        </div>
+      </motion.button>
+    );
+  }
+
+  // Fallback for draft/other chapters
   return (
     <motion.button
-      whileHover={{ y: -4, scale: 1.01 }}
-      whileTap={{ scale: 0.99 }}
+      whileHover={{ y: -6, scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className="w-full h-full min-h-[230px] bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 text-left group transition-all flex flex-col justify-between"
+      className="w-full h-full min-h-[240px] bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:shadow-indigo-550/10 text-left group transition-all flex flex-col justify-between opacity-100"
     >
       <div className="w-full">
         <div className="flex items-center justify-between w-full mb-4">
-          <div className="w-11 h-11 rounded-2xl bg-blue-50 flex items-center justify-center overflow-hidden group-hover:ring-2 group-hover:ring-blue-600 transition-all duration-300 shadow-sm shadow-blue-50">
+          <div className="w-12 h-12 rounded-2xl bg-indigo-50/50 flex items-center justify-center overflow-hidden ring-1 ring-slate-100 group-hover:ring-2 group-hover:ring-indigo-550 transition-all duration-300">
             <img src={getChapterImageUrl(chapter.id)} alt={`${chapter.title} Icon`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
           </div>
           <div className="flex items-center gap-1.5">
@@ -580,33 +615,31 @@ function ChapterCard({
                 {reviewCount} review
               </span>
             )}
-            <span className="text-slate-400 font-mono text-[9px] font-black tracking-widest uppercase">CH{chapter.id < 10 ? '0' : ''}{chapter.id}</span>
+            <span className="text-slate-400 font-mono text-[9px] font-black tracking-widest uppercase ml-1">CH{(index + 1) < 10 ? '0' : ''}{index + 1}</span>
           </div>
         </div>
         
         <div className="space-y-1">
-          <h3 className="text-lg font-bold text-slate-800 leading-tight group-hover:text-blue-700 transition-colors">
+          <h3 className="text-lg font-bold text-slate-900 leading-tight group-hover:text-indigo-600 transition-colors">
             {chapter.title}
           </h3>
         </div>
       </div>
       
       <div className="w-full mt-6 space-y-2">
-        {/* Progress stat */}
         <div className="flex justify-between items-center text-[10px] text-slate-500 font-bold uppercase tracking-wide">
-          <span>Success Progress</span>
-          <span className="font-mono text-slate-800 font-extrabold">{masteredCount} / {totalCount} Mastered</span>
+          <span>Accuracy Progress</span>
+          <span className="font-mono text-indigo-600 font-extrabold">{masteredCount} / {totalCount} Mastered</span>
         </div>
         
-        {/* Small progress bar */}
-        <div className="h-2.5 bg-slate-100/80 rounded-full overflow-hidden p-0.5 border border-slate-200/50">
+        <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200">
           <div 
             style={{ width: `${percentage}%` }}
-            className="h-full bg-gradient-to-r from-blue-505 to-indigo-500 rounded-full transition-all duration-300" 
+            className="h-full bg-gradient-to-r from-blue-500 via-indigo-500 to-indigo-600 rounded-full transition-all duration-300 shadow-[0_0_6px_rgba(99,102,241,0.35)]" 
           />
         </div>
 
-        <div className="pt-2 flex items-center gap-1 text-blue-600 font-bold text-xs group-hover:translate-x-1.5 transition-transform duration-200">
+        <div className="pt-2 flex items-center gap-1 text-indigo-550 font-bold text-xs group-hover:translate-x-1.5 transition-transform duration-200">
           <span>Explore Flashcards</span>
           <ChevronRight className="w-3.5 h-3.5" />
         </div>

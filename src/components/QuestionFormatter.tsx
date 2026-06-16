@@ -450,6 +450,47 @@ export interface ComparisonData {
   isCriterionBased: boolean;
 }
 
+export function splitOuterVs(line: string): { left: string; right: string } | null {
+  let depth = 0;
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    if (char === '(' || char === '[' || char === '{') {
+      depth++;
+    } else if (char === ')' || char === ']' || char === '}') {
+      depth = Math.max(0, depth - 1);
+    } else if (depth === 0) {
+      const remaining = line.substring(i);
+      const matchVs = remaining.match(/^(?:\s+(?:vs\.?|versus|VS)\s+)/i);
+      if (matchVs) {
+        const matchStr = matchVs[0];
+        const left = line.substring(0, i);
+        const right = line.substring(i + matchStr.length);
+        return { left, right };
+      }
+    }
+  }
+  return null;
+}
+
+export function splitCriterionAndVal(left: string): { criterion?: string; val: string } {
+  let depth = 0;
+  for (let i = 0; i < left.length; i++) {
+    const char = left[i];
+    if (char === '(' || char === '[' || char === '{') {
+      depth++;
+    } else if (char === ')' || char === ']' || char === '}') {
+      depth = Math.max(0, depth - 1);
+    } else if (depth === 0 && char === ':') {
+      const criterion = left.substring(0, i).replace(/^[-*•●\d+\.\s]+/, '').trim();
+      const val = left.substring(i + 1).trim();
+      if (criterion.length > 0 && criterion.length < 60) {
+        return { criterion, val };
+      }
+    }
+  }
+  return { val: left.replace(/^[-*•●\d+\.\s]+/, '').trim() };
+}
+
 export function tryParseComparison(answer: string, title?: string, topic?: string): ComparisonData | null {
   if (!answer) return null;
   
@@ -495,30 +536,22 @@ export function tryParseComparison(answer: string, title?: string, topic?: strin
   let containsVsLines = 0;
 
   for (const line of lines) {
-    const hasVs = /\s+(?:vs\.?|versus)\s+/i.test(line);
-    if (hasVs) containsVsLines++;
-
-    // Match "Criterion: Val A vs Val B"
-    const match = line.match(/^[-*•●\d+\.\s\(\)]*?([A-Za-z0-9_ /&,\-\(\)'\.\*]+)\s*:\s*(.+?)\s+(?:vs\.?|versus|VS)\s+(.+)$/i);
-    if (match) {
-      const criterion = match[1].trim();
-      const valA = match[2].trim();
-      const valB = match[3].trim();
-      rows.push({ criterion, valA, valB });
-    } else {
-      // Split on plain " vs "
-      const parts = line.split(/\s+(?:vs\.?|versus|VS)\s+/i);
-      if (parts.length === 2 && parts[0].length > 3 && parts[1].length > 3) {
-        const valA = parts[0].replace(/^[-*•●\d\.\)\s]+/, '').trim();
-        const valB = parts[1].trim();
-        rows.push({ valA, valB });
-      }
+    const splitRes = splitOuterVs(line);
+    if (splitRes) {
+      containsVsLines++;
+      const { left, right } = splitRes;
+      const { criterion, val } = splitCriterionAndVal(left);
+      rows.push({
+        criterion,
+        valA: val,
+        valB: right.trim()
+      });
     }
   }
 
   if (rows.length >= 2 || (rows.length >= 1 && containsVsLines >= lines.length / 2)) {
-    let titleA = "Subject A";
-    let titleB = "Subject B";
+    let titleA = "";
+    let titleB = "";
     
     const subjects = extractSubjects(title, topic);
     if (subjects) {
@@ -532,6 +565,10 @@ export function tryParseComparison(answer: string, title?: string, topic?: strin
           titleB = parts[1].trim();
         }
       }
+    }
+
+    if (!titleA || !titleB) {
+      return null;
     }
 
     return {
@@ -591,7 +628,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                   ⚖️
                 </div>
                 <div>
-                  <h4 className="text-slate-900 font-extrabold text-sm md:text-base tracking-tight uppercase">
+                  <h4 className="text-[#154c59] font-extrabold text-sm md:text-base tracking-tight uppercase">
                     جدول مقارنة منظم • Structured Comparison
                   </h4>
                   <p className="text-xs text-slate-500 font-medium mt-0.5">
@@ -817,8 +854,8 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
         if (isHeading) {
           return (
             <div key={idx} className={`mt-5 mb-2.5 ${indentClass}`}>
-              <h4 className="text-slate-900 font-extrabold text-sm md:text-base tracking-tight uppercase border-b border-slate-100 pb-1.5 flex items-center gap-2">
-                <span className="w-1.5 h-3.5 bg-blue-600 rounded-full shrink-0" />
+              <h4 className="text-[#8a6d2c] font-extrabold text-sm md:text-base tracking-tight uppercase border-b border-slate-100 pb-1.5 flex items-center gap-2">
+                <span className="w-1.5 h-3.5 bg-[#154c59] rounded-full shrink-0" />
                 {renderTextWithHighlights(cleanText, title, topic)}
               </h4>
             </div>
@@ -826,28 +863,28 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
         }
 
         return (
-          <div key={idx} className={`flex items-start gap-3 leading-relaxed text-slate-700 text-sm md:text-base ${indentClass}`}>
+          <div key={idx} className={`flex items-start gap-3 leading-relaxed text-slate-705 text-slate-750 text-sm md:text-base ${indentClass}`}>
             {isBullet ? (
               customBullet ? (
-                <span className="bg-blue-50 border border-blue-105 text-blue-700 text-[10px] md:text-xs font-black min-w-[22px] h-[22px] flex items-center justify-center rounded-lg shrink-0 mt-0.5 select-none px-1 shadow-sm font-mono">
+                <span className="bg-amber-50 border border-amber-200 text-[#8a6d2c] text-[10px] md:text-xs font-black min-w-[22px] h-[22px] flex items-center justify-center rounded-lg shrink-0 mt-0.5 select-none px-1 shadow-sm font-mono">
                   {customBullet}
                 </span>
               ) : (
-                <div className="w-2 h-2 rounded-full bg-blue-500 shrink-0 mt-2 relative">
-                  <div className="absolute inset-0 rounded-full bg-blue-400 animate-pulse" />
+                <div className="w-2 h-2 rounded-full bg-[#154c59] shrink-0 mt-2 relative">
+                  <div className="absolute inset-0 rounded-full bg-[#1e5c6b] animate-pulse" />
                 </div>
               )
             ) : (
               leadingSpaces > 0 ? (
                 <div className="w-1.5 h-1.5 bg-slate-400 rounded-full shrink-0 mt-2" />
               ) : (
-                <div className="w-2 h-2 bg-blue-600 rounded-full shrink-0 mt-2" />
+                <div className="w-2 h-2 bg-[#154c59] rounded-full shrink-0 mt-2" />
               )
             )}
             
             <span className="font-sans font-medium text-slate-800">
               {prefix && (
-                <strong className="text-slate-950 font-bold inline mr-1 text-slate-900">
+                <strong className="text-[#8a6d2c] font-black inline mr-1">
                   {prefix}
                 </strong>
               )}
