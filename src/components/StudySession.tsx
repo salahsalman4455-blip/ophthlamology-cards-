@@ -289,6 +289,91 @@ export default function StudySession({
     return () => clearInterval(timer);
   }, [isTimerRunning, isFinished, isTopicSelectorOpen, isConfigModalOpen, isTimerCountingUp, currentIndex, sessionQuestions.length]);
 
+  // Keyboard Shortcuts for Study Session Cards Mode
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Safety check: Ignore shortcuts if user is typing in form fields
+      if (
+        document.activeElement?.tagName === 'INPUT' || 
+        document.activeElement?.tagName === 'TEXTAREA' || 
+        (document.activeElement as HTMLElement)?.isContentEditable
+      ) {
+        return;
+      }
+
+      // 1. Exit/Dismiss mind-wandering ("عدم السرحان") prompt
+      if (showDistracted) {
+        if (e.key === ' ' || e.key === 'Enter' || e.key === 'Escape' || ['0', '1', '2', '3'].includes(e.key)) {
+          e.preventDefault();
+          setShowDistracted(false);
+          if (!hasReturned) {
+            setHasReturned(true);
+          }
+          setTimeSpent(0);
+          return;
+        }
+      }
+
+      // Check constraints to make sure shortcut keys are only active during a true card session
+      if (
+        displayMode !== 'cards' ||
+        sessionQuestions.length === 0 ||
+        isFinished ||
+        isTopicSelectorOpen ||
+        isConfigModalOpen ||
+        showContinuePrompt
+      ) {
+        return;
+      }
+
+      // 2. Spacebar and Enter behavior
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        if (!showAnswer) {
+          setShowAnswer(true);
+        } else {
+          // If answer is already showing, space/enter rates as "متوسط" (DifficultyLevel.MEDIUM)
+          handleDifficulty(DifficultyLevel.MEDIUM);
+        }
+        return;
+      }
+
+      // 3. Digit Keys 0, 1, 2, 3
+      // Key "0" -> Easy, Key "1" -> Medium, Key "2" -> Hard, Key "3" -> Very Hard
+      if (showAnswer) {
+        if (e.key === '0') {
+          e.preventDefault();
+          handleDifficulty(DifficultyLevel.EASY);
+        } else if (e.key === '1') {
+          e.preventDefault();
+          handleDifficulty(DifficultyLevel.MEDIUM);
+        } else if (e.key === '2') {
+          e.preventDefault();
+          handleDifficulty(DifficultyLevel.HARD);
+        } else if (e.key === '3') {
+          e.preventDefault();
+          handleDifficulty(DifficultyLevel.VERY_HARD);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [
+    showDistracted, 
+    hasReturned, 
+    displayMode, 
+    showAnswer, 
+    isFinished, 
+    isTopicSelectorOpen, 
+    isConfigModalOpen, 
+    showContinuePrompt, 
+    sessionQuestions, 
+    currentIndex
+  ]);
+
   // Initializing the session with filtered questions and starting timer
   const startSession = () => {
     let filtered;
@@ -992,9 +1077,10 @@ export default function StudySession({
                         onClick={() => setShowAnswer(true)}
                         className="group relative px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl font-bold text-sm overflow-hidden transition-all hover:scale-[1.03] active:scale-95 shadow-lg shadow-slate-200 cursor-pointer"
                       >
-                        <span className="relative z-10 flex items-center gap-2.5">
+                        <span className="relative z-10 flex items-center justify-center gap-2.5">
                           <Eye className="w-4 h-4" />
                           <span>إظهار الإجابة النموذجية</span>
+                          <kbd className="mr-1.5 px-2 py-0.5 text-[11px] bg-slate-800 rounded-md text-slate-350 font-mono select-none border border-slate-700">Space / Enter</kbd>
                         </span>
                       </button>
                     </motion.div>
@@ -1024,7 +1110,10 @@ export default function StudySession({
                           onClick={() => handleDifficulty(DifficultyLevel.VERY_HARD)}
                           className="group flex flex-col items-center p-2.5 bg-white rounded-xl border border-slate-200 hover:border-rose-200 hover:bg-rose-50/30 transition-all text-center cursor-pointer"
                         >
-                          <div className="text-rose-600 font-extrabold text-xs">صعب جداً</div>
+                          <div className="text-rose-600 font-extrabold text-xs flex items-center justify-center gap-1.5">
+                            <span>صعب جداً</span>
+                            <kbd className="px-1.5 py-0.2 bg-rose-50 text-[10px] rounded-md border border-rose-200 font-mono">3</kbd>
+                          </div>
                           <div className="text-[9px] text-slate-400 font-semibold uppercase tracking-wider mt-0.5">سيعاد بعد كرتين</div>
                         </button>
                         
@@ -1033,7 +1122,10 @@ export default function StudySession({
                           onClick={() => handleDifficulty(DifficultyLevel.HARD)}
                           className="group flex flex-col items-center p-2.5 bg-amber-500/10 rounded-xl border border-amber-500/20 hover:border-amber-500/40 hover:bg-amber-500/15 transition-all text-center cursor-pointer"
                         >
-                          <div className="text-amber-700 font-extrabold text-xs">صعب</div>
+                          <div className="text-amber-700 font-extrabold text-xs flex items-center justify-center gap-1.5">
+                            <span>صعب</span>
+                            <kbd className="px-1.5 py-0.2 bg-amber-50 text-[10px] rounded-md border border-amber-200 font-mono">2</kbd>
+                          </div>
                           <div className="text-[9px] text-amber-600 font-semibold uppercase tracking-wider mt-0.5 font-mono">سيعاد بعد ٥ كروت</div>
                         </button>
 
@@ -1042,7 +1134,10 @@ export default function StudySession({
                           onClick={() => handleDifficulty(DifficultyLevel.MEDIUM)}
                           className="group flex flex-col items-center p-2.5 bg-blue-500/10 rounded-xl border border-blue-500/20 hover:border-blue-500/40 hover:bg-blue-500/15 transition-all text-center cursor-pointer"
                         >
-                          <div className="text-blue-700 font-extrabold text-xs">متوسط</div>
+                          <div className="text-blue-700 font-extrabold text-xs flex items-center justify-center gap-1.5">
+                            <span>متوسط</span>
+                            <kbd className="px-1.5 py-0.2 bg-blue-50 text-[10px] rounded-md border border-blue-200 font-mono">1</kbd>
+                          </div>
                           <div className="text-[9px] text-blue-600 font-semibold uppercase tracking-wider mt-0.5">سيعاد بعد ١٠ كروت</div>
                         </button>
 
@@ -1051,7 +1146,10 @@ export default function StudySession({
                           onClick={() => handleDifficulty(DifficultyLevel.EASY)}
                           className="group flex flex-col items-center p-2.5 bg-emerald-500/10 rounded-xl border border-emerald-500/20 hover:border-emerald-500/40 hover:bg-emerald-500/15 transition-all text-center cursor-pointer"
                         >
-                          <div className="text-emerald-700 font-extrabold text-xs">سهل (تم الإتقان)</div>
+                          <div className="text-emerald-700 font-extrabold text-xs flex items-center justify-center gap-1.5">
+                            <span>سهل (تم الإتقان)</span>
+                            <kbd className="px-1.5 py-0.2 bg-emerald-50 text-[10px] rounded-md border border-emerald-200 font-mono">0</kbd>
+                          </div>
                           <div className="text-[9px] text-emerald-600 font-semibold uppercase tracking-wider mt-0.5">جاهز ومتقن تماماً</div>
                         </button>
                       </div>
