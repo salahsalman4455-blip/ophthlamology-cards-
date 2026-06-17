@@ -88,10 +88,7 @@ export default function StudySession({
     }
     
     if (excludeMastered) {
-      const unmastered = filtered.filter(q => !masteredIds.includes(q.id));
-      if (unmastered.length > 0) {
-        filtered = unmastered;
-      }
+      filtered = filtered.filter(q => !masteredIds.includes(q.id));
     }
     return filtered;
   }, [questions, chapter.id, selectedTopics, excludeMastered, masteredIds]);
@@ -99,6 +96,12 @@ export default function StudySession({
   const studyCount = useMemo(() => currentPoolOfSelectedTopicsAndMasteredType.filter(q => !isQuestionCase(q)).length, [currentPoolOfSelectedTopicsAndMasteredType]);
   const casesCount = useMemo(() => currentPoolOfSelectedTopicsAndMasteredType.filter(q => isQuestionCase(q)).length, [currentPoolOfSelectedTopicsAndMasteredType]);
   const totalCount = currentPoolOfSelectedTopicsAndMasteredType.length;
+
+  const activeCategoryCount = useMemo(() => {
+    if (practiceCategory === 'study') return studyCount;
+    if (practiceCategory === 'cases') return casesCount;
+    return totalCount;
+  }, [practiceCategory, studyCount, casesCount, totalCount]);
 
   // Auto fallback if count for selected category is 0
   useEffect(() => {
@@ -300,10 +303,7 @@ export default function StudySession({
     }
     
     if (excludeMastered) {
-      const unmastered = filtered.filter(q => !masteredIds.includes(q.id));
-      if (unmastered.length > 0) {
-        filtered = unmastered;
-      }
+      filtered = filtered.filter(q => !masteredIds.includes(q.id));
     }
 
     if (practiceCategory === 'study') {
@@ -568,7 +568,7 @@ export default function StudySession({
                   <div className="text-right">
                     <span className="font-bold text-sm block">📚 دراسة الفصل بالكامل (All Topics)</span>
                     <span className="text-[10px] opacity-75 block mt-0.5">
-                      يحتوي على {questions.length} سؤال • ({questions.filter(q => masteredIds.includes(q.id)).length} متقن)
+                      يحتوي على {questions.length} سؤال • (المتبقي: {questions.length - questions.filter(q => masteredIds.includes(q.id)).length}) • ({questions.filter(q => masteredIds.includes(q.id)).length} متقن)
                     </span>
                   </div>
                   {selectedTopics.includes('all') && <CheckCircle2 className="w-5 h-5" />}
@@ -579,6 +579,7 @@ export default function StudySession({
                   const topicQuestions = questions.filter(q => q.topic === top);
                   const totalTopicCount = topicQuestions.length;
                   const masteredTopicCount = topicQuestions.filter(q => masteredIds.includes(q.id)).length;
+                  const remainingTopicCount = totalTopicCount - masteredTopicCount;
                   
                   return (
                     <button
@@ -590,7 +591,7 @@ export default function StudySession({
                       <div className="text-right">
                         <span className="font-bold text-sm block">{idx + 1}. {top}</span>
                         <span className="text-[10px] text-slate-400 block mt-0.5">
-                          يحتوي على {totalTopicCount} سؤال • ({masteredTopicCount} متقن)
+                          يحتوي على {totalTopicCount} سؤال • (المتبقي: {remainingTopicCount}) • ({masteredTopicCount} متقن)
                         </span>
                       </div>
                       {isSelected && <CheckCircle2 className="w-5 h-5 text-blue-600" />}
@@ -847,10 +848,19 @@ export default function StudySession({
                 )}
                 <button
                   onClick={startSession}
-                  className="flex-1 py-3.5 bg-blue-605 bg-blue-600 hover:bg-blue-750 text-white rounded-2xl text-xs font-black uppercase tracking-wider transition-all shadow-lg active:scale-95 text-center flex items-center justify-center gap-2"
+                  disabled={activeCategoryCount === 0}
+                  className={`flex-1 py-3.5 rounded-2xl text-xs font-black uppercase tracking-wider transition-all shadow-lg text-center flex items-center justify-center gap-2 ${
+                    activeCategoryCount === 0 
+                      ? 'bg-slate-300 text-slate-500 cursor-not-allowed'
+                      : 'bg-blue-600 hover:bg-blue-700 text-white active:scale-95'
+                  }`}
                 >
                   <Play className="w-3.5 h-3.5" />
-                  <span>بدء جلسة المذاكرة الآن 🚀</span>
+                  <span>
+                    {activeCategoryCount === 0 
+                      ? 'لا توجد أسئلة متبقية (تم إتقان الكل) 🏁' 
+                      : 'بدء جلسة المذاكرة الآن 🚀'}
+                  </span>
                 </button>
               </div>
             </motion.div>
@@ -962,6 +972,7 @@ export default function StudySession({
                   title={currentQuestion.title}
                   answer={currentQuestion.answer}
                   isPastYear={currentQuestion.isPastYear}
+                  isSurgical={currentQuestion.isSurgical}
                 />
               </div>
 
@@ -1162,6 +1173,7 @@ export default function StudySession({
                         title={q.title}
                         answer={q.answer}
                         isPastYear={q.isPastYear}
+                        isSurgical={q.isSurgical}
                       />
                     </div>
 

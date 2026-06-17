@@ -122,6 +122,12 @@ export default function App() {
     setSidebarOpen(false);
   };
 
+  const resetChapterProgress = (chapterId: number) => {
+    const chapterQuestionIds = INITIAL_QUESTIONS.filter(q => q.chapterId === chapterId).map(q => q.id);
+    setMasteredIds(prev => prev.filter(id => !chapterQuestionIds.includes(id)));
+    setReviewList(prev => prev.filter(id => !chapterQuestionIds.includes(id)));
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
       {/* Sleek Persistent Top Global Header Bar */}
@@ -259,6 +265,20 @@ export default function App() {
                             }`}>
                               {masteredCount}/{totalCount}
                             </span>
+                            {masteredCount > 0 && (
+                              <span
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (window.confirm(`هل أنت متأكد من تصفير تقدم ${ch.title}؟`)) {
+                                    resetChapterProgress(ch.id);
+                                  }
+                                }}
+                                className="p-1 hover:bg-rose-500/25 rounded text-rose-455 hover:text-rose-300 transition-all cursor-pointer flex items-center justify-center text-rose-400"
+                                title="تصفير تقدم الشابتر"
+                              >
+                                <RotateCcw className="w-3 h-3" />
+                              </span>
+                            )}
                           </span>
                         </button>
                       );
@@ -293,10 +313,26 @@ export default function App() {
                             <span className="text-[10px] font-mono opacity-50 text-slate-500">{(actualIdx + 1) < 10 ? `0${actualIdx + 1}` : actualIdx + 1}</span>
                             <span className="truncate">{ch.title}</span>
                           </span>
-                          <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded shrink-0 ${
-                            activeChapter?.id === ch.id && view === 'study' ? 'bg-blue-700 text-white font-bold' : 'bg-slate-900 text-slate-650 font-bold'
-                          }`}>
-                            {masteredCount}/{totalCount}
+                          <span className="flex items-center gap-1.5 shrink-0">
+                            <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
+                              activeChapter?.id === ch.id && view === 'study' ? 'bg-blue-700 text-white font-bold' : 'bg-slate-900 text-slate-650 font-bold'
+                            }`}>
+                              {masteredCount}/{totalCount}
+                            </span>
+                            {masteredCount > 0 && (
+                              <span
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (window.confirm(`هل أنت متأكد من تصفير تقدم ${ch.title}؟`)) {
+                                    resetChapterProgress(ch.id);
+                                  }
+                                }}
+                                className="p-1 hover:bg-rose-500/20 rounded text-rose-500 hover:text-rose-450 transition-all cursor-pointer flex items-center justify-center"
+                                title="تصفير تقدم الشابتر"
+                              >
+                                <RotateCcw className="w-3 h-3" />
+                              </span>
+                            )}
                           </span>
                         </button>
                       );
@@ -367,6 +403,7 @@ export default function App() {
                           totalCount={totalCount}
                           reviewCount={reviewCount}
                           onClick={() => startChapter(chapter)}
+                          onReset={() => resetChapterProgress(chapter.id)}
                         />
                       );
                     })}
@@ -521,7 +558,8 @@ function ChapterCard({
   onClick, 
   masteredCount, 
   totalCount, 
-  reviewCount 
+  reviewCount,
+  onReset
 }: { 
   key?: any;
   chapter: Chapter; 
@@ -530,6 +568,7 @@ function ChapterCard({
   masteredCount: number;
   totalCount: number;
   reviewCount: number;
+  onReset: () => void;
 }) {
   const percentage = totalCount > 0 ? Math.round((masteredCount / totalCount) * 100) : 0;
   const isWritten = [1, 3, 4, 6, 7, 11].includes(chapter.id);
@@ -576,7 +615,23 @@ function ChapterCard({
           {/* Progress stat */}
           <div className="flex justify-between items-center text-[10px] text-slate-400 font-bold uppercase tracking-wide">
             <span>Accuracy Progress</span>
-            <span className="font-mono text-amber-400 font-extrabold">{masteredCount} / {totalCount} Mastered</span>
+            <div className="flex items-center gap-1.5">
+              <span className="font-mono text-amber-400 font-extrabold">{masteredCount} / {totalCount} Mastered</span>
+              {masteredCount > 0 && (
+                <span
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (window.confirm(`هل أنت متأكد من تصفير تقدم ${chapter.title}؟`)) {
+                      onReset();
+                    }
+                  }}
+                  className="p-1 bg-slate-900 border border-slate-800 hover:bg-rose-950 hover:border-rose-900 rounded-lg text-rose-455 hover:text-rose-300 transition-all flex items-center justify-center cursor-pointer text-rose-400"
+                  title="تصفير تقدم الشابتر"
+                >
+                  <RotateCcw className="w-3 h-3" />
+                </span>
+              )}
+            </div>
           </div>
           
           {/* Progress bar */}
@@ -629,7 +684,23 @@ function ChapterCard({
       <div className="w-full mt-6 space-y-2">
         <div className="flex justify-between items-center text-[10px] text-slate-500 font-bold uppercase tracking-wide">
           <span>Accuracy Progress</span>
-          <span className="font-mono text-indigo-600 font-extrabold">{masteredCount} / {totalCount} Mastered</span>
+          <div className="flex items-center gap-1.5">
+            <span className="font-mono text-indigo-600 font-extrabold">{masteredCount} / {totalCount} Mastered</span>
+            {masteredCount > 0 && (
+              <span
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (window.confirm(`هل أنت متأكد من تصفير تقدم ${chapter.title}؟`)) {
+                    onReset();
+                  }
+                }}
+                className="p-1 bg-slate-50 border border-slate-200 hover:bg-rose-50 hover:border-rose-200 rounded-lg text-rose-500 hover:text-rose-600 transition-all flex items-center justify-center cursor-pointer"
+                title="تصفير تقدم الشابتر"
+              >
+                <RotateCcw className="w-3 h-3" />
+              </span>
+            )}
+          </div>
         </div>
         
         <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200">
