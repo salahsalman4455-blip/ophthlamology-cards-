@@ -318,13 +318,49 @@ export default function StudySession({
 
       // Check constraints to make sure shortcut keys are only active during a true card session
       if (
-        displayMode !== 'cards' ||
         sessionQuestions.length === 0 ||
         isFinished ||
         isTopicSelectorOpen ||
         isConfigModalOpen ||
         showContinuePrompt
       ) {
+        return;
+      }
+
+      // --- List Mode Keyboard Interactions ---
+      if (displayMode === 'list') {
+        if (e.key === ' ') {
+          e.preventDefault();
+          const elements: (HTMLElement | null)[] = sessionQuestions.map((_, idx) => 
+            document.getElementById(`list-question-${idx}`)
+          );
+
+          // Find current reading index (first element whose bottom is at least 120px down has not been scrolled past completely)
+          const currIdx = elements.findIndex(el => {
+            if (!el) return false;
+            const rect = el.getBoundingClientRect();
+            return rect.bottom >= 120;
+          });
+
+          if (currIdx !== -1) {
+            const nextIdx = currIdx + 1;
+            if (nextIdx < elements.length) {
+              const targetEl = elements[nextIdx];
+              if (targetEl) {
+                targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            } else {
+              const footerEl = document.getElementById('list-footer');
+              if (footerEl) {
+                footerEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }
+          }
+        }
+        return;
+      }
+
+      if (displayMode !== 'cards') {
         return;
       }
 
@@ -1263,6 +1299,7 @@ export default function StudySession({
                 return (
                   <div 
                     key={q.id} 
+                    id={`list-question-${idx}`}
                     className={`bg-white rounded-3xl border transition-all duration-300 p-6 md:p-8 flex flex-col gap-6 relative overflow-hidden text-right leading-relaxed ${
                       isMastered ? 'border-emerald-300 bg-emerald-50/10' : 'border-slate-200 shadow-sm'
                     }`}
@@ -1357,7 +1394,7 @@ export default function StudySession({
             </div>
 
             {/* List footer banner */}
-            <div className="p-8 bg-gradient-to-r from-blue-600 to-indigo-650 text-white rounded-3xl text-center space-y-4 shadow-lg" dir="rtl">
+            <div id="list-footer" className="p-8 bg-gradient-to-r from-blue-600 to-indigo-650 text-white rounded-3xl text-center space-y-4 shadow-lg" dir="rtl">
               <span className="text-[10px] font-bold tracking-widest text-blue-300">لقد وصلت للنهاية 🎉</span>
               <h3 className="text-xl font-black font-sans">عمل رائع في مراجعة القائمة بالكامل!</h3>
               <p className="text-xs text-blue-100 max-w-sm mx-auto leading-relaxed">
