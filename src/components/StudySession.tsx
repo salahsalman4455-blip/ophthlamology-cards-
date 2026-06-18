@@ -15,6 +15,7 @@ import {
   BookOpen
 } from 'lucide-react';
 import { Question, Chapter, DifficultyLevel } from '../types';
+import { sortChapterQuestions } from '../utils/sorting';
 import QuestionPrompt, { AnswerFormatter } from './QuestionFormatter';
 
 interface StudySessionProps {
@@ -73,6 +74,7 @@ export default function StudySession({
   const [sessionDuration, setSessionDuration] = useState<number>(30); // 10 minutes to 2 hours (120 minutes)
   const [displayMode, setDisplayMode] = useState<'cards' | 'list'>('cards');
   const [practiceCategory, setPracticeCategory] = useState<'study' | 'cases' | 'mixed'>('mixed');
+  const [cardOrder, setCardOrder] = useState<'logical' | 'shuffled'>(chapter.id === 0 ? 'shuffled' : 'logical');
 
   // Compute question pool counts in real-time based on selected topics
   const currentPoolOfSelectedTopicsAndMasteredType = useMemo(() => {
@@ -397,10 +399,15 @@ export default function StudySession({
       filtered = filtered.filter(q => isQuestionCase(q));
     }
 
-    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+    let sessionList = [...filtered];
+    if (cardOrder === 'logical') {
+      sessionList = sortChapterQuestions(chapter.id, sessionList);
+    } else {
+      sessionList.sort(() => Math.random() - 0.5);
+    }
     
-    setSessionQuestions(shuffled);
-    setInitialUniqueCount(shuffled.length);
+    setSessionQuestions(sessionList);
+    setInitialUniqueCount(sessionList.length);
     setCurrentIndex(0);
     setShowAnswer(false);
     setIsFinished(false);
@@ -912,6 +919,40 @@ export default function StudySession({
                     >
                       <span>مزيج شامل</span>
                       <span className="text-[9px] font-mono opacity-60">({totalCount} م)</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* E. Card / List Question Ordering Choice (Logical vs Shuffled) */}
+                <div className="space-y-2 pt-2 border-t border-slate-100 mt-2">
+                  <span className="text-xs font-bold text-slate-500 block text-right font-sans">تسلسل وترتيب الأسئلة</span>
+                  <div className="grid grid-cols-2 gap-3" dir="rtl">
+                    {/* Logical Sequence */}
+                    <button
+                      type="button"
+                      onClick={() => setCardOrder('logical')}
+                      className={`py-2 px-3 rounded-xl border-2 text-center transition-all font-semibold text-xs flex flex-col items-center justify-center gap-1.5 leading-snug h-[68px] cursor-pointer ${
+                        cardOrder === 'logical'
+                          ? 'bg-blue-50/60 border-blue-600 text-blue-900 shadow-sm'
+                          : 'bg-white border-slate-205 border-slate-200 text-slate-700 hover:border-slate-300'
+                      }`}
+                    >
+                      <span className="font-extrabold flex items-center gap-1 text-[11px]"><span className="text-[13px]">🔄</span> تسلسل طبي متدرج</span>
+                      <span className="text-[9px] opacity-75 leading-tight text-center">تناسب المذاكرة والتأصيل العلمي (من التعريف للعلاج)</span>
+                    </button>
+
+                    {/* Random Shuffled Sequence */}
+                    <button
+                      type="button"
+                      onClick={() => setCardOrder('shuffled')}
+                      className={`py-2 px-3 rounded-xl border-2 text-center transition-all font-semibold text-xs flex flex-col items-center justify-center gap-1.5 leading-snug h-[68px] cursor-pointer ${
+                        cardOrder === 'shuffled'
+                          ? 'bg-amber-50/60 border-amber-600 text-amber-900 shadow-sm'
+                          : 'bg-white border-slate-205 border-slate-200 text-slate-700 hover:border-slate-300'
+                      }`}
+                    >
+                      <span className="font-extrabold flex items-center gap-1 text-[11px]"><span className="text-[13px]">🔀</span> ترتيب عشوائي مخلوط</span>
+                      <span className="text-[9px] opacity-75 leading-tight text-center">لمحاكاة الامتحانات واختبار كفاءة الاسترجاع الذهني</span>
                     </button>
                   </div>
                 </div>

@@ -15,8 +15,11 @@ import {
   RotateCcw
 } from 'lucide-react';
 import { CHAPTERS } from './data/chapters';
-import { INITIAL_QUESTIONS } from './data/questions';
+import { INITIAL_QUESTIONS as RAW_INITIAL_QUESTIONS } from './data/questions';
 import { Question, Chapter } from './types';
+import { sortAllQuestions } from './utils/sorting';
+
+const INITIAL_QUESTIONS = sortAllQuestions(RAW_INITIAL_QUESTIONS);
 import StudySession from './components/StudySession';
 import ReviewView from './components/ReviewView';
 
