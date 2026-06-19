@@ -965,16 +965,6 @@ export const INITIAL_QUESTIONS: Question[] = [
     "topic": "Acute & Chronic Dacryocystitis"
   },
   {
-    "id": "lacrimal_dacryo_q8",
-    "chapterId": 2,
-    "type": "short-answer",
-    "title": "Dacryocystorhinostomy (DCR) Principle",
-    "content": "State the definitive treatment of acquired NLD obstruction in adults, explaining its underlying principal.",
-    "answer": "Treatment: Dacryocystorhinostomy (DCR).\\n\\nPrincipal: The lacrimal sac mucosa is connected directly to the nasal mucosa of the middle meatus after surgical removal of the intervening bone of the lacrimal fossa, creating a permanent fistula to drain tears into the nose.",
-    "isClinical": true,
-    "topic": "Acute & Chronic Dacryocystitis"
-  },
-  {
     "id": "lacrimal_dacryo_q9",
     "chapterId": 2,
     "type": "short-answer",
@@ -2179,10 +2169,11 @@ export const INITIAL_QUESTIONS: Question[] = [
     "id": "lens_congenital_q4",
     "chapterId": 5,
     "type": "short-answer",
-    "title": "Main Types of Congenital and Developmental Cataract",
-    "content": "What are the main types of congenital and developmental cataract?",
+    "title": "أنواع المياه البيضاء الخلقية (Main Types of Congenital and Developmental Cataract) (سنين سابقة)",
+    "content": "What are the main types of congenital and developmental cataract? (سنين سابقة)",
     "answer": "Congenital and developmental cataracts are classified morphologically based on the location of the opacity:\n1. ==Anterior Polar Cataract (MCQ)==: A small, highly defined white dot at the anterior pole of the lens. It is usually stationary and visually insignificant.\n2. ==Zonular or Lamellar Cataract (MCQ)==: A disk-shaped opacity wrapping around the central embryonic nucleus while the outer cortex remains clear. This is the commonest type.\n3. ==Posterior Polar Cataract (MCQ)==: Opacity at the posterior pole. It causes a progressive drop in vision due to proximity to the nodal point.\n4. ==Blue-Dotted / Punctate Cataract (MCQ)==: Multiple tiny, translucent blue-white dots scattered through the cortex. Visually insignificant.\n5. ==Coronary Cataract (MCQ)==: A ring of club-shaped peripheral opacities around the equator (resembling a crown), leaving the visual axis clear.\n6. ==Rubella Total Cataract (MCQ)==: Dense, chalky-white total opacification.",
     "isClinical": false,
+    "isPastYear": true,
     "topic": "Congenital & Developmental Cataract"
   },
   {
@@ -2356,17 +2347,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     "isPastYear": false,
     "topic": "Preoperative Evaluation & Surgical Techniques"
   },
-  {
-    "id": "lens_essay_past_q2",
-    "chapterId": 5,
-    "type": "short-answer",
-    "title": "أنواع المياه البيضاء الخلقية (Types of Congenital Cataract) (سنين سابقة)",
-    "content": "Enumerate the morphological types of congenital cataract. (سنين سابقة)",
-    "answer": "The morphological types of congenital cataract include:\n1. ==Anterior polar cataract (MCQ)==.\n2. ==Posterior polar cataract (MCQ)==.\n3. ==Nuclear cataract (MCQ)==.\n4. ==Lamellar (Zonular) cataract (MCQ)==.\n5. ==Coronary cataract (MCQ)==.\n6. ==Blue dot (Punctate) cataract (MCQ)==.\n7. ==Total congenital cataract (MCQ)==.",
-    "isClinical": false,
-    "isPastYear": false,
-    "topic": "Congenital & Developmental Cataract"
-  },
+
   {
     "id": "lens_essay_past_q3",
     "chapterId": 5,
@@ -2524,10 +2505,11 @@ export const INITIAL_QUESTIONS: Question[] = [
     "id": "orbit_cellulitis_q3",
     "chapterId": 6,
     "type": "short-answer",
-    "title": "Orbital Cellulitis Complications",
-    "content": "Enumerate the ocular and intracranial complications of untreated Orbital Cellulitis.",
-    "answer": "1. **Ocular Complications**:\n   - ==Exposure keratopathy / corneal ulceration (MCQ)== due to severe, unprotected proptosis.\n   - ==Orbital abscess (MCQ)== formation.\n   - Compressive ==optic neuritis / optic atrophy (MCQ)== leading to permanent blindness.\n   - ==Panophthalmitis (MCQ)== (pus infiltrating all layers of the globe).\n   - ==Central Retinal Artery Occlusion (CRAO) (MCQ)== or vein occlusion due to extremely high intraorbital pressure.\n2. **Intracranial Complications**:\n   - ==Cavernous Sinus Thrombosis (CST) (MCQ)== (most dangerous, spreading via superior/inferior ophthalmic veins).\n   - Purulent ==Meningitis (MCQ)== and brain abscess.",
+    "title": "مضاعفات التهاب النسيج الخلوي الحجاجي (Orbital Cellulitis Complications) (سنين سابقة)",
+    "content": "Enumerate the ocular, intracranial and systemic complications of untreated Orbital Cellulitis. (سنين سابقة)",
+    "answer": "1. **Ocular Complications**:\n   - ==Exposure keratopathy / corneal corneal ulceration (MCQ)== due to severe, unprotected proptosis.\n   - ==Orbital abscess (MCQ)== formation.\n   - Compressive ==optic neuritis / optic atrophy (MCQ)== leading to permanent blindness.\n   - ==Panophthalmitis (MCQ)== (pus infiltrating all layers of the globe).\n   - ==Central Retinal Artery Occlusion (CRAO) (MCQ)== or vein occlusion due to extremely high intraorbital pressure.\n2. **Intracranial Complications**:\n   - ==Cavernous Sinus Thrombosis (CST) (MCQ)== (most dangerous, spreading via superior/inferior ophthalmic veins).\n   - Purulent ==Meningitis (MCQ)== and brain abscess.\n3. **Systemic Complications**:\n   - ==Septicemia (MCQ)==.",
     "isClinical": false,
+    "isPastYear": true,
     "topic": "Orbital & Preseptal Cellulitis"
   },
   {
@@ -2696,7 +2678,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     "type": "short-answer",
     "title": "Exenteration Definition & Indications",
     "content": "Define Exenteration and mention its primary indications.",
-    "answer": "1. **Definition**: Extremely radical surgical ==removal of all orbital contents== (including the eyeball, extraocular muscles, orbital fat, ciliary ganglion, lacrimal gland, optic nerve, and surrounding periosteum), which may also include complete excision of the ==eyelids (MCQ)==.\n2. **Primary Clinical Indications**:\n   - Highly aggressive, advanced malignant primary orbital tumors: Classically, pediatric ==Rhabdomyosarcoma (MCQ)== unresponsive to radiotherapy/chemotherapy, or lacrimal gland adenocarcinoma.\n   - Epibulbar/eyelid malignancies with deep orbital invasion: e.g., advanced eyelid ==squamous cell carcinoma (MCQ)==, sebaceous gland carcinoma, or malignant melanoma of the conjunctiva extending posterior to the septum.",
+    "answer": "1. **Definition**: Extremely radical surgical ==removal of all orbital contents== (including the eyeball, extraocular muscles, orbital fat, ciliary ganglion, lacrimal gland, optic nerve, and surrounding periosteum), which may also include complete excision of the ==eyelids (MCQ)==.\n2. **Primary Clinical Indications**:\n   - Highly aggressive, advanced malignant primary orbital tumors: Classically, pediatric ==Rhabdomyosarcoma (MCQ)== unresponsive to radiotherapy/chemotherapy, or lacrimal gland adenocarcinoma.\n   - Epibulbar/eyelid malignancies with deep orbital invasion: e.g., advanced eyelid ==squamous cell carcinoma (MCQ)==, sebaceous gland carcinoma, or malignant melanoma of the conjunctiva extending posterior to the septum.\n   - ==Severe orbital infections (MCQ)==: e.g., life-threatening orbital mucormycosis / fungal infection in diabetic patients.",
     "isClinical": false,
     "topic": "Surgical Operations of the Orbit"
   },
@@ -2710,17 +2692,6 @@ export const INITIAL_QUESTIONS: Question[] = [
     "isClinical": false,
     "isPastYear": false,
     "topic": "Proptosis & Enophthalmos"
-  },
-  {
-    "id": "orbit_past_essay_q2",
-    "chapterId": 6,
-    "type": "short-answer",
-    "title": "مضاعفات التهاب النسيج الخلوي الحجاجي (Complications of Orbital Cellulitis) (سنين سابقة)",
-    "content": "Describe complications of orbital cellulitis. (سنين سابقة)",
-    "answer": "Ocular complications:\n- ==Exposure keratopathy (MCQ)== (due to severe proptosis)\n- ==Optic neuritis (MCQ)==\n- ==Optic atrophy (MCQ)==\n- ==Central retinal artery occlusion (MCQ)==\n- ==Panophthalmitis (MCQ)==\n\nOrbital & Intracranial complications:\n- ==Cavernous sinus thrombosis (MCQ)== (very dangerous)\n- ==Meningitis (MCQ)==\n- ==Brain abscess (MCQ)==\n\nSystemic complications:\n- ==Septicemia (MCQ)==.",
-    "isClinical": false,
-    "isPastYear": false,
-    "topic": "Orbital & Preseptal Cellulitis"
   },
   {
     "id": "orbit_past_case_1",
@@ -4390,16 +4361,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     "isClinical": false,
     "topic": "Suppurative Uveitis (Endophthalmitis & Panophthalmitis)"
   },
-  {
-    "id": "uveitis_essay_q5a",
-    "chapterId": 9,
-    "type": "short-answer",
-    "title": "Causes of Rapid Vision Loss in Acute Iridocyclitis",
-    "content": "Explain why rapid, severe diminution of vision is a cardinal presenting sign in acute iridocyclitis.",
-    "answer": "The sudden onset of visual impairment in acute anterior uveitis is caused by key inflammatory alterations in the clear optical media of the eye:\n\n1. ==Leakage of High-Molecular-Weight Proteins (Aqueous Flare) (MCQ)==:\n   - Inflammatory disruption of the blood-aqueous barrier causes massive plasma protein leakage into the clear aqueous humor, inducing physical **turbidity (Tyndall optical scattering effect)**.\n\n2. ==Infiltration of Inflammatory Cells (Aqueous Cells) (MCQ)==:\n   - Active migration of leukocytes (white blood cells) into the anterior chamber, which float directly in the visual axis.\n\n3. ==Keratic Precipitates (KPs) (MCQ)==:\n   - Cellular aggregates (lymphocytes, plasma cells, macrophages) adhere to the central posterior corneal endothelium, blocking the pathway of light.\n\n4. ==Localized Corneal Endothelial Dysfunction (MCQ)==:\n   - Toxins released in the AC inhibit the metabolic pump of endothelial cells, leading to localized water accumulation (corneal edema) that disrupts stromal transparency.",
-    "isClinical": false,
-    "topic": "Anterior Uveitis (Iridocyclitis)"
-  },
+
   {
     "id": "uveitis_essay_q5b",
     "chapterId": 9,
@@ -4581,28 +4543,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     "isSurgical": true,
     "topic": "Disorders of Eyelashes (Distichiasis & Trichiasis)"
   },
-  {
-    "id": "surgical_eyelid_hordeolum_internum",
-    "chapterId": 1,
-    "type": "short-answer",
-    "title": "Surgical Principle: Hordeolum internum (Infected chalazion)",
-    "content": "What is the surgical principle for Evacuation in Hordeolum internum (Infected chalazion)?",
-    "answer": "==Evacuation==: evacuation may be needed through a ==vertical or cruciate incision on the conjunctival side==.",
-    "isClinical": false,
-    "isSurgical": true,
-    "topic": "Inflammations of the Eyelid Glands (Hordeolum & Chalazion)"
-  },
-  {
-    "id": "surgical_eyelid_chalazion",
-    "chapterId": 1,
-    "type": "short-answer",
-    "title": "Surgical Principle: Chalazion",
-    "content": "What is the surgical principle for Incision and curettage in Chalazion?",
-    "answer": "==Incision and curettage==: incision (==cruciate or vertical==) and ==curettage or scraping== of its contents from the conjunctival side.",
-    "isClinical": false,
-    "isSurgical": true,
-    "topic": "Inflammations of the Eyelid Glands (Hordeolum & Chalazion)"
-  },
+
   {
     "id": "surgical_eyelid_distichiasis",
     "chapterId": 1,
@@ -4955,17 +4896,7 @@ export const INITIAL_QUESTIONS: Question[] = [
     "isSurgical": true,
     "topic": "Preoperative Evaluation & Surgical Techniques"
   },
-  {
-    "id": "surgical_eyelid_ectropion_z_plasty",
-    "chapterId": 1,
-    "type": "short-answer",
-    "title": "Surgical Principle: Large cicatricial ectropion scar",
-    "content": "What is the surgical procedure and principle of Z-plasty for a large cicatricial ectropion scar?",
-    "answer": "==Z-plasty==: scar removal or release in ==Z shape incision==, ==transposition of skin flaps==.",
-    "isClinical": false,
-    "isSurgical": true,
-    "topic": "Positional Anomalies (Entropion & Ectropion)"
-  },
+
   {
     "id": "surgical_eyelid_ptosis_management_deduced",
     "chapterId": 1,
@@ -5064,5 +4995,398 @@ export const INITIAL_QUESTIONS: Question[] = [
     "isClinical": false,
     "isSurgical": true,
     "topic": "Central Retinal Vein Occlusion (CRVO)"
+  },
+  {
+    "id": "eyelid_case_additional_ectropion",
+    "chapterId": 1,
+    "type": "short-answer",
+    "title": "Clinical Case: Lower Lid Ectropion and Epiphora",
+    "content": "A 65-year-old man presents with eversion of his left lower eyelid, epiphora, and exposure of the tarsal conjunctiva.\n\n1. What is your diagnosis, and what are its degrees of severity?\n2. Name the surgical principle for treating the most common type of this condition.",
+    "answer": "1. **Diagnosis**: ==Ectropion (MCQ)==.\n- ==Mild (MCQ)==: Lacrimal punctum is visible.\n- ==Moderate (MCQ)==: Tarsal conjunctiva is exposed.\n- ==Severe (MCQ)==: Complete eversion with exposure of the conjunctival fornix.\n\n2. **Surgical Principle for treating the most common type (Senile/Involutional Ectropion)**:\n- Shorten and tighten the lax eyelid horizontally and vertically. This can be done via procedures like the ==Kuhnt-Szymanowski operation (MCQ)== or ==lateral tarsal strip (MCQ)==.",
+    "isClinical": true,
+    "topic": "Positional Anomalies (Entropion & Ectropion)"
+  },
+  {
+    "id": "eyelid_essay_additional_trichiasis",
+    "chapterId": 1,
+    "type": "short-answer",
+    "title": "Disorders of Eyelashes: Trichiasis vs. Distichiasis",
+    "content": "Define trichiasis, enumerate its causes, and differentiate it from distichiasis.",
+    "answer": "1. **Definition of Trichiasis**:\n- Acquired condition where ==more than 4 lashes (MCQ)== are directed posteriorly, rubbing against the globe.\n\n2. **Causes of Trichiasis**:\n- ==Trachoma (most common) (MCQ)==\n- ==Ulcerative blepharitis (MCQ)==\n- Trauma / Chemical burns\n- Cicatrizing diseases (e.g., Ocular cicatricial pemphigoid)\n\n3. **Difference from Distichiasis**:\n- Distichiasis is usually ==congenital (MCQ)==, where an ==extra row of lashes (MCQ)== arises from the ==Meibomian gland orifices (MCQ)== (located behind the grey line).\n- Trichiasis is acquired misdirection from normal follicles.",
+    "isClinical": false,
+    "topic": "Disorders of Eyelashes (Distichiasis & Trichiasis)"
+  },
+  {
+    "id": "cornea_case_additional_fungal",
+    "chapterId": 4,
+    "type": "short-answer",
+    "title": "Clinical Case: Contact Lens Wearer with Fluffy Corneal Ulcer",
+    "content": "A 30-year-old contact lens wearer presents with a painful red eye, photophobia, and a corneal ulcer with a grey, dry, fluffy surface and feathery margins.\n\n1. What is the most likely diagnosis and causative organism?\n2. How do you confirm the diagnosis?\n3. Enumerate the lines of treatment.",
+    "answer": "1. **Most likely diagnosis**: ==Fungal Keratitis (Keratomycosis) (MCQ)==.\n- **Causative organism**: Filamentous fungi like ==Fusarium or Aspergillus (MCQ)==.\n\n2. **Diagnosis Confirmation**:\n- ==Corneal scraping (MCQ)== or corneal biopsy for:\n  * ==Gram stain and Giemsa stain (MCQ)==.\n  * ==Culture on Sabouraud\\'s agar (MCQ)== or Blood agar.\n\n3. **Lines of Treatment**:\n- **Medical**:\n  * ==Epithelial debridement (MCQ)== (improves drug penetration).\n  * Topical antifungal drugs (e.g., ==Natamycin (MCQ)== for filamentous, ==Amphotericin B (MCQ)== for yeasts).\n  * Cycloplegics (==Atropine drops (MCQ)==) to relieve ciliary spasm and pain.\n- **Surgical** (for resistant cases):\n  * ==Superficial keratectomy (MCQ)==.\n  * ==Conjunctival flap (MCQ)==.\n  * ==Therapeutic penetrating keratoplasty (PKP) (MCQ)==.",
+    "isClinical": true,
+    "topic": "Fungal Ulcer"
+  },
+  {
+    "id": "cornea_comp_hypopyon_dendritic",
+    "chapterId": 4,
+    "type": "short-answer",
+    "title": "Comparison: Hypopyon Ulcer vs. Dendritic Ulcer",
+    "content": "Compare between a hypopyon ulcer and a dendritic ulcer in terms of Causative organism, Pain, Shape, Corneal sensation, Hypopyon, and Treatment.",
+    "answer": "Here is the comparison:\n\n- **Causative Organism**:\n  * Hypopyon Ulcer: ==Pneumococcus (Streptococcus pneumoniae) (most common) (MCQ)==.\n  * Dendritic Ulcer: ==Herpes Simplex Virus (HSV) (MCQ)==.\n- **Pain**:\n  * Hypopyon Ulcer: Severe pain.\n  * Dendritic Ulcer: Mild pain due to ==corneal hypoesthesia (MCQ)==.\n- **Shape**:\n  * Hypopyon Ulcer: Crescentic or ==serpiginous (creeping) (MCQ)== shape, paracentral.\n  * Dendritic Ulcer: Branching, ==linear dendritic shape with terminal knobs (MCQ)==.\n- **Corneal Sensation**:\n  * Hypopyon Ulcer: Normal corneal sensation.\n  * Dendritic Ulcer: ==Diminished or absent corneal sensation (anesthetic) (MCQ)==.\n- **Hypopyon**:\n  * Hypopyon Ulcer: ==Common, early, and sterile/clean (MCQ)==.\n  * Dendritic Ulcer: Rare (only if secondarily infected).\n- **Treatment**:\n  * Hypopyon Ulcer: Intensive ==fortified topical antibiotics (MCQ)== and cycloplegics.\n  * Dendritic Ulcer: ==Topical antivirals (e.g., Acyclovir) (MCQ)== and cycloplegics. ==Corticosteroids are strictly contraindicated (MCQ)==.",
+    "isClinical": false,
+    "topic": "Hypopyon Ulcer (Acute Serpiginous Ulcer)"
+  },
+  {
+    "id": "cornea_essay_additional_keratoplasty",
+    "chapterId": 4,
+    "type": "short-answer",
+    "title": "Keratoplasty: Definition, Types and Indications",
+    "content": "Define keratoplasty and enumerate its types and indications.",
+    "answer": "1. **Definition**:\n- Surgical replacement of diseased, damaged, or opaque corneal tissue with healthy donor corneal tissue.\n\n2. **Types**:\n- ==Lamellar Keratoplasty (MCQ)==: Replacing only the superficial corneal layers.\n- ==Penetrating Keratoplasty (PK) (MCQ)==: Full-thickness replacement of the host cornea.\n\n3. **Indications**:\n- ==Optical Indication (MCQ)==: To restore or improve vision (e.g., in ==Keratoconus (MCQ)==, corneal scars/leucoma).\n- ==Therapeutic Indication (MCQ)==: To remove active, resistant corneal disease (e.g., severe ==fungal keratitis (MCQ)== or acanthamoeba keratitis that fails medical therapy).\n- ==Tectonic/Structural Indication (MCQ)==: To restore or protect structural integrity of the eyeball (e.g., in progressive corneal thinning, imminent ==perforation or fistula (MCQ)==).\n- ==Cosmetic Indication (MCQ)==: To improve appearance of a non-seeing blind eye with an unsightly white scar.",
+    "isClinical": false,
+    "topic": "Keratoplasty & Keratorefractive Surgery"
+  },
+  {
+    "id": "retina_case_additional_crvo",
+    "chapterId": 11,
+    "type": "short-answer",
+    "title": "Clinical Case: CRVO and Ischemic vs. Non-Ischemic Differentiations",
+    "content": "A 60-year-old hypertensive diabetic patient presents with sudden painless loss of vision in his right eye. Fundus examination reveals extensive intraretinal hemorrhages, cotton wool spots, and disc edema.\n\n1. What is the most probable diagnosis?\n2. How do you differentiate between the ischemic and non-ischemic types?",
+    "answer": "1. **Most probable diagnosis**:\n- ==Central Retinal Vein Occlusion (CRVO) (MCQ)==.\n\n2. **Ischemic vs. Non-Ischemic CRVO**:\n- **Vision**:\n  * Non-Ischemic: Moderate visual loss (e.g., 6/60 or better).\n  * Ischemic: Severe visual loss (==worse than 6/60, often counting fingers or PL) (MCQ)==.\n- **Afferent Pupillary Defdynamic**:\n  * Non-Ischemic: Absent or mild.\n  * Ischemic: ==Marked RAPD (MCQ)==.\n- **Fundus Features**:\n  * Non-Ischemic: Mild hemorrhages, and very few/no cotton wool spots.\n  * Ischemic: Extensive, massive splashy hemorrhages (==\"Blood & Thunder\" fundus (MCQ)==), and multiple cotton wool spots.\n- **Vascular Complications**:\n  * Non-Ischemic: Usually resolves without neovascularization.\n  * Ischemic: ==High risk (approx. 50%) of developing Neovascular Glaucoma / Rubeosis Iridis (MCQ)==.",
+    "isClinical": true,
+    "topic": "Central Retinal Vein Occlusion (CRVO)"
+  },
+  {
+    "id": "retina_essay_additional_laser_diabetic",
+    "chapterId": 11,
+    "type": "short-answer",
+    "title": "Indications for Laser Photocoagulation in Diabetic Retinopathy",
+    "content": "Enumerate the indications for laser photocoagulation in diabetic retinopathy.",
+    "answer": "The indications for laser therapy are:\n\n1. ==Pan-retinal Photocoagulation (PRP) (MCQ)==:\n- Indicated in ==Proliferative Diabetic Retinopathy (PDR) (MCQ)== (characterized by neovascularization of the disc NVD or elsewhere NVE) to reduce ischemia and VEGF production.\n- Indicated in ==Neovascular Glaucoma (MCQ)== (rubeosis iridis).\n\n2. ==Focal/Grid Laser (MCQ)==:\n- Indicated for treating ==Clinically Significant Macular Edema (CSME) (MCQ)== to reduce microaneurysm leakage.\n\n3. **Pre-proliferative NPDR**:\n- High-risk eyes with very severe ==Non-Proliferative Diabetic Retinopathy (NPDR) (MCQ)== (to prevent rapid progression in patients with poor follow-up or before cataract surgery).",
+    "isClinical": false,
+    "topic": "Hypertensive & Diabetic Retinopathy"
+  },
+  {
+    "id": "retina_essay_additional_retinitis_pigmentosa",
+    "chapterId": 11,
+    "type": "short-answer",
+    "title": "Retinitis Pigmentosa: Definition and Classic Triad",
+    "content": "Define retinitis pigmentosa and describe the classic triad of signs.",
+    "answer": "1. **Definition of Retinitis Pigmentosa**:\n- A bilateral, inherited, progressive retinal dystrophy characterized by progressive loss of photoreceptors (primarily ==rods first (MCQ)==, leading to ==night blindness (nyctalopia) (MCQ)== and progressive ==tunnel vision (MCQ)==).\n\n2. **Classic Triad of Signs (under Fundus examination)**:\n- ==Bone-spicule pigment clumps (MCQ)== in the mid-periphery.\n- ==Arteriolar attenuation (narrowing) (MCQ)== of retinal vessels.\n- ==Waxy disc pallor (MCQ)== (pale optic disc due to consecutive optic atrophy).",
+    "isClinical": false,
+    "topic": "Retinitis Pigmentosa"
+  },
+  {
+    "id": "eor_essay_additional_myopia",
+    "chapterId": 7,
+    "type": "short-answer",
+    "title": "Myopia: Definition, Etiology, and High Myopia Fundus Changes",
+    "content": "Define myopia, illustrate its etiology, and describe the fundus changes in high myopia.",
+    "answer": "1. **Definition of Myopia**:\n- A refractive error where parallel rays of light focus ==in front of the retina (MCQ)== when accommodation is completely relaxed.\n\n2. **Etiology**:\n- ==Axial Myopia (MCQ)==: Increased axial length of the eyeball (most common).\n- ==Refractive Myopia (MCQ)==: Increased curvature (e.g., Keratoconus) or high refractive index of the lens (e.g., Nuclear cataract / nuclear sclerosis).\n- ==Positional Myopia (MCQ)==: Forward displacement/dislocation of the lens.\n\n3. **Fundus Changes in High (Pathological) Myopia**:\n- ==Tessellated / tigroid fundus (MCQ)== (visible choroidal vessels due to thin RPE).\n- ==Myopic crescent (MCQ)== (temporal white crescent at the optic nerve head margin).\n- ==Posterior staphyloma (MCQ)== (bulging of the weakened posterior sclera).\n- ==Fuchs\\' spot (MCQ)== (macular pigment spot secondary to choroidal neovascularization or hemorrhages).\n- ==Lattice degeneration (MCQ)== in the far periphery (increasing risk of ==retinal detachment (MCQ)==).",
+    "isClinical": false,
+    "topic": "Myopia (Short Sightedness)"
+  },
+  {
+    "id": "eor_problem_additional_near_point",
+    "chapterId": 7,
+    "type": "short-answer",
+    "title": "Presbyopia: Calculation of Reading Glasses Power",
+    "content": "An emmetropic patient at 45 years of age finds it difficult to read at 33 cm. His near point (Punctum Proximum) is 50 cm. Calculate the power of the reading glasses he needs.",
+    "answer": "Here is the calculation step-by-step:\n\n1. **Calculate Amplitude of Accommodation**:\n- Amplitude = 1 / Near Point (in meters) = 1 / 0.50m = ==2 D (diopters) (MCQ)==.\n\n2. **Determine Reserve Accommodation**:\n- General rule: The patient must keep ==1/3 (one-third) of their accommodation in reserve (MCQ)== to avoid eye strain.\n- Reserve accommodation = 1/3 * 2D = 0.67 D.\n\n3. **Calculate Allowable Accommodation**:\n- Allowable Accommodation = Total Amplitude - Reserve = 2 D - 0.67 D = ==1.33 D (MCQ)==.\n\n4. **Calculate Power needed for reading distance (33 cm / 0.33m)**:\n- Target accommodation power = 1 / 0.33m = ==3 D (MCQ)==.\n\n5. **Calculate Lens Power Prescription**:\n- Required glasses power = Target power - Allowable accommodation = 3 D - 1.33 D = ==+1.67 D (diopters) (MCQ)==.\n- Clinically, the patient is prescribed reading glasses of ==+1.5 D or +1.75 D sphere (MCQ)==.",
+    "isClinical": true,
+    "topic": "Aphakia, Anisometropia & Presbyopia"
+  },
+  {
+    "id": "eor_essay_additional_astigmatism",
+    "chapterId": 7,
+    "type": "short-answer",
+    "title": "Astigmatism Classifications: Simple, Compound, and Mixed",
+    "content": "Differentiate between simple, compound, and mixed astigmatism with examples.",
+    "answer": "1. **Simple Astigmatism**:\n- One principal meridian is emmetropic (focus lies on the retina), while the other principal meridian is ametropic (myopic or hypermetropic).\n- *Example*: Plano / -2.00 x 180 (Simple Myopic) or Plano / +1.50 x 90 (Simple Hypermetropic).\n\n2. **Compound Astigmatism**:\n- Both principal meridians are ametropic and of the same refractive error type, but in different degrees.\n- *Example*: -1.00 DS / -2.00 DC x 180 (Compound Myopic) or +1.00 DS / +1.50 DC x 90 (Compound Hypermetropic).\n\n3. **Mixed Astigmatism**:\n- One principal meridian is myopic (focus is in front of the retina), while the other principal meridian is hypermetropic (focus is behind the retina).\n- *Example*: +1.00 DS / -3.00 DC x 180 (Mixed) where one meridian has +1.00 D and the other meridian has -2.00 D refractive error.",
+    "isClinical": false,
+    "topic": "Astigmatism"
+  },
+  {
+    "id": "conjunctiva_case_additional_vkc",
+    "chapterId": 3,
+    "type": "short-answer",
+    "title": "Clinical Case: Vernal Keratoconjunctivitis (VKC) vs. Trachoma",
+    "content": "A 10-year-old boy presents with severe bilateral itching, ropy mucoid discharge, and photophobia. On examination, you see large, flat-topped papillae on the upper tarsal conjunctiva.\n\n1. What is your diagnosis?\n2. How do you differentiate these papillae from trachomatous papillae?",
+    "answer": "1. **Diagnosis**:\n- ==Vernal Kerato-conjunctivitis (VKC / Spring Catarrh) (MCQ)== (specifically the Palpebral type).\n\n2. **Differentiation between VKC Papillae and Trachoma Papillae**:\n- **Etiology**:\n  * VKC: ==Allergic / Type I Hypersensitivity (MCQ)==.\n  * Trachoma: Infection by ==Chlamydia trachomatis (MCQ)==.\n- **Size & Shape**:\n  * VKC: Large, flat-topped, polygonal (==\"Cobblestone / Giant papillae\" (MCQ)==).\n  * Trachoma: ==Small, fine, round (MCQ)== papillae.\n- **Color**:\n  * VKC: ==Bluish-white (MCQ)== (due to milky film/exudate layer over the papillae).\n  * Trachoma: ==Red / velvety (MCQ)== appearance.\n- **Upper Fornix Involvement**:\n  * VKC: The upper conjunctival fornix is ==always free (MCQ)==.\n  * Trachoma: The upper fornix is ==severely affected / involved (MCQ)==.\n- **Discharge**:\n  * VKC: ==Ropy, elastic mucoid discharge (rich in eosinophils) (MCQ)==.\n  * Trachoma: Mucopurulent discharge (no eosinophils).",
+    "isClinical": true,
+    "topic": "Allergic Conjunctivitis (Spring Catarrh & Phlyctenular)"
+  },
+  {
+    "id": "conjunctiva_essay_additional_neonatorum",
+    "chapterId": 3,
+    "type": "short-answer",
+    "title": "Ophthalmia Neonatorum: Definition, Causes and Onset Timing",
+    "content": "Define Ophthalmia Neonatorum and name the causative organisms and their time of onset.",
+    "answer": "1. **Definition of Ophthalmia Neonatorum**:\n- Any acute purulent/mucopurulent ==conjunctivitis occurring in the first month of life (MCQ)== (specifically within the first 28 days).\n\n2. **Causative Organisms & Time of Onset**:\n- ==Chemical Irritation (e.g., from Silver Nitrate prophylactic drops) (MCQ)==: Occurs within the ==first 24 hours==.\n- ==Gonococcal Conjunctivitis (Neisseria gonorrhoeae) (MCQ)==: Occurs within ==1 to 3 days (typically 24-48 hours)==; highly severe, hyperacute with danger of rapid corneal perforation.\n- ==Chlamydial Inclusion Conjunctivitis (Chlamydia trachomatis serotypes D-K) (MCQ)==: Occurs within ==5 to 14 days== (most common infectious etiology).\n- ==Viral infection (Herpes Simplex Virus type 2 - HSV-2) (MCQ)==: Occurs within ==1 to 2 weeks==.\n- Other bacteria (Staph aureus, Strep pneumoniae): Occurs at 5-14 days.",
+    "isClinical": false,
+    "topic": "Ophthalmia Neonatorum & Inclusion Conjunctivitis"
+  },
+  {
+    "id": "conjunctiva_surgical_additional_pterygium",
+    "chapterId": 3,
+    "type": "short-answer",
+    "title": "Surgical Principle: Recurrent Pterygium Management",
+    "content": "What is the surgical principle for treating a recurrent pterygium?",
+    "answer": "1. **Surgical Principle**:\n- Excise the fibrovascular pterygium tissue completely, but ==prevent aggressive recurrence== by building a barrier against corneal regrowth from the residual conjunctival edge.\n\n2. **Key Prevention Methods**:\n- ==Excision with conjunctival autograft (CAG) (MCQ)==: Replacing bare sclera with a free conjunctival transplant (the gold standard technique with lowest recurrence).\n- ==Amniotic Membrane Transplantation (AMT) (MCQ)== used to cover bare sclera.\n- ==Intraoperative Mitomycin C (MMC) (MCQ)==: Local application of antimetabolite to inhibit Tenon's cell fibroblast proliferation.\n- ==Postoperative Beta-irradiation (Strontium-90) (MCQ)== (to inhibit vascular and fibroblastic growth).",
+    "isClinical": false,
+    "topic": "Conjunctival Degenerations & Symblepharon (Pterygium & Pinguecula)"
+  },
+  {
+    "id": "orbit_case_additional_cellulitis",
+    "chapterId": 6,
+    "type": "short-answer",
+    "title": "Clinical Case: Orbital Cellulitis vs. Preseptal Cellulitis",
+    "content": "A 38-year-old diabetic lady with known sinusitis develops a sudden, painful, forward protrusion of her right eye with ophthalmoplegia and fever.\n\n1. What is the most likely diagnosis?\n2. How do you differentiate it from Preseptal Cellulitis?",
+    "answer": "1. **Most likely diagnosis**:\n- ==Orbital Cellulitis (MCQ)== (often secondary to ethmoid or maxillary sinusitis).\n\n2. **Differentiation between Orbital Cellulitis and Preseptal Cellulitis**:\n- ==Proptosis (foward eyeball protrusion) (MCQ)==:\n  * Orbital Cellulitis: Present (marked).\n  * Preseptal Cellulitis: Absent (eyelid is swollen but eyeball is in normal position).\n- ==Ophthalmoplegia (painful restriction of eye movements) (MCQ)==:\n  * Orbital Cellulitis: Present (limited movement and painful).\n  * Preseptal Cellulitis: Absent (completely full and painless eye movements).\n- ==Visual Acuity (MCQ)==:\n  * Orbital Cellulitis: May be reduced (optic nerve threat).\n  * Preseptal Cellulitis: Always normal.\n- ==Systemic Signs (Fever, Leucocytosis, Toxic state) (MCQ)==:\n  * Orbital Cellulitis: Severe and prominent.\n  * Preseptal Cellulitis: Absent or very mild.\n- ==Pathological Plane (Orbital Septum Relationship) (MCQ)==:\n  * Orbital Cellulitis: Infection is ==posterior to the orbital septum (MCQ)==.\n  * Preseptal Cellulitis: Infection is strictly ==anterior to the orbital septum (MCQ)==.",
+    "isClinical": true,
+    "topic": "Orbital & Preseptal Cellulitis"
+  },
+  {
+    "id": "orbit_case_additional_ccf",
+    "chapterId": 6,
+    "type": "short-answer",
+    "title": "Clinical Case: Carotid-Cavernous Sinus Fistula (CCF)",
+    "content": "A patient presents with pulsating proptosis, a bruit over the eye, and dilated episcleral veins.\n\n1. What is the most probable diagnosis?\n2. What is the surgical principle for treating this condition?",
+    "answer": "1. **Most probable diagnosis**:\n- ==Carotid-Cavernous Fistula (CCF) (MCQ)==.\n- Classic signs include ==pulsating proptosis (MCQ)== (eyeball pulsates in synchrony with the heartbeat), visible/audible ==bruit (MCQ)== (whooshing sound), and intensely engorged ==caput medusae / corkscrew episcleral vessels (MCQ)==.\n\n2. **Surgical / Intervention Principle**:\n- Close the abnormal, high-flow vascular shunt between the internal carotid artery and the cavernous sinus to normalize intravascular pressures.\n- **Most common method**: ==Endovascular embolization (MCQ)== (using detachable platinum coils, balloons, or liquid embolic agents) introduced via angiographic catheterization to seal the fistula.",
+    "isClinical": true,
+    "topic": "Proptosis & Enophthalmos"
+  },
+  {
+    "id": "eyelid_essay_additional_blepharitis_types",
+    "chapterId": 1,
+    "type": "short-answer",
+    "title": "Blepharitis: Definition and Types",
+    "content": "Define blepharitis and enumerate its types.",
+    "answer": "1. **Definition**: ==Blepharitis (MCQ)== is a chronic inflammation of the eyelid margins.\n\n2. **Types**:\n- ==Ulcerative (Bacterial) Blepharitis (MCQ)==: Characterized by yellow crusts gluing lashes together, leaving minute bleeding ulcers when removed, and lash loss.\n- ==Squamous / Scaly (Seborrheic) Blepharitis (MCQ)==: Characterized by greasy scales on hyperemic lid margins, commonly associated with scalp dandruff.\n- ==Allergic Blepharitis (MCQ)==: Characterized by itching, redness, mucus discharge, and history of allergen exposure.",
+    "isClinical": false,
+    "topic": "Blepharitis"
+  },
+
+  {
+    "id": "eyelid_surgical_additional_cicatricial_ectropion",
+    "chapterId": 1,
+    "type": "short-answer",
+    "title": "Surgical Principle: Cicatricial Ectropion Correction",
+    "content": "Give the surgical principle of correction for cicatricial ectropion.",
+    "answer": "1. **Surgical Principle**: To release the contracting scar tissue and restore the normal length of the anterior lamella of the eyelid.\n\n2. **Surgical Methods**:\n- ==Scar release (MCQ)== combined with ==skin grafting (MCQ)== to replace deficient lid tissue.\n- ==Z-plasty or V-Y advancement flap (MCQ)== to rearrange skin tension and reposition the lid margin back against the globe.",
+    "isClinical": false,
+    "topic": "Positional Anomalies (Entropion & Ectropion)"
+  },
+  {
+    "id": "eyelid_essay_additional_entropion_types",
+    "chapterId": 1,
+    "type": "short-answer",
+    "title": "Entropion: Definition and Types",
+    "content": "Define entropion and name its types.",
+    "answer": "1. **Definition**: ==Entropion (MCQ)== is the inward turning of the eyelid margin, leading to misdirected lashes rubbing against the cornea (trichiasis).\n\n2. **Types**:\n- ==Involutional / Senile Entropion (MCQ)==: Due to age-related laxity of canthal tendons and tissues.\n- ==Cicatricial Entropion (MCQ)==: Due to tarsal/conjunctival scarring (e.g., from chronic trachoma).\n- ==Spastic Entropion (MCQ)==: Secondary to severe ocular irritation and spasm of the orbicularis oculi muscle.\n- ==Congenital Entropion (MCQ)==: Rare inward turning present since birth.",
+    "isClinical": false,
+    "topic": "Positional Anomalies (Entropion & Ectropion)"
+  },
+  {
+    "id": "eyelid_essay_additional_lagophthalmos_comp",
+    "chapterId": 1,
+    "type": "short-answer",
+    "title": "Lagophthalmos: Enumerate Complications",
+    "content": "Enumerate the complications of lagophthalmos (inability to close the eyelids completely).",
+    "answer": "The complications of lagophthalmos are caused by continuous corneal exposure and tear film evaporation:\n1. ==Exposure Keratopathy (MCQ)==: Severe dry spots on the cornea leading to epithelial desquamation.\n2. ==Corneal Ulceration / Keratolysis (MCQ)==: Non-healing, pain-inducing exposure corneal ulcers.\n3. ==Secondary pyogenic bacterial infection (MCQ)== (endophthalmitis/panophthalmitis risk) if left untreated.",
+    "isClinical": false,
+    "topic": "Positional Anomalies (Entropion & Ectropion)"
+  },
+  {
+    "id": "cornea_essay_additional_keratitis_types",
+    "chapterId": 4,
+    "type": "short-answer",
+    "title": "Keratitis: Definition and Main Types",
+    "content": "Define keratitis and enumerate its main types.",
+    "answer": "1. **Definition**: ==Keratitis (MCQ)== is inflammation of the cornea, which can be infectious or non-infectious.\n\n2. **Main Types**:\n- ==Bacterial Keratitis (MCQ)==: Often acute and suppurative (e.g., Pneumococcal, Pseudomonas).\n- ==Viral Keratitis (MCQ)==: Frequently presents as herpetic herpetic epithelial keratitis (e.g., ==Herpes Simplex dendritic ulcer (MCQ)==).\n- ==Fungal Keratitis (Keratomycosis) (MCQ)==: Commonly presents with a dry, fluffy surface, feathery margins, and satellite lesions.\n- ==Acanthamoeba Keratitis (MCQ)==: Strongly associated with contact lens wearers and exposure to contaminated water, causing ring-shaped infiltrates.",
+    "isClinical": false,
+    "topic": "Basic Diagnostic Criteria (Normal and Slit-Lamp Findings)"
+  },
+  {
+    "id": "cornea_essay_additional_perforation_causes",
+    "chapterId": 4,
+    "type": "short-answer",
+    "title": "Corneal Perforation: Causes and Diagnostic Signs",
+    "content": "Enumerate the causes of corneal perforation and name its classic diagnostic signs.",
+    "answer": "1. **Causes**:\n- ==Untreated bacterial ulcers (MCQ)== (e.g., rapidly melting Pseudomonas or Pneumococcal ulcers).\n- ==Severe ocular trauma (MCQ)== (penetrating injuries).\n- ==Keratomalacia (MCQ)== (due to extreme Vitamin A deficiency causing structural corneal melting).\n\n2. **Classic Diagnostic Signs**:\n- ==Positive Seidel\\'s test (Seidel-positive) (MCQ)==: A dynamic green stream of aqueous washing orange fluorescein away under cobalt blue light.\n- ==Shallow or flat anterior chamber (MCQ)== due to rapid evacuation of aqueous.\n- Severe ==ocular hypotony (MCQ)==.",
+    "isClinical": false,
+    "topic": "Hypopyon Ulcer (Acute Serpiginous Ulcer)"
+  },
+  {
+    "id": "cornea_surgical_additional_perforation_mgmt",
+    "chapterId": 4,
+    "type": "short-answer",
+    "title": "Surgical Principle: Corneal Perforation Management",
+    "content": "Give the surgical principle of management for corneal perforation.",
+    "answer": "The surgical approach depends entirely on the size, location, and cause of the perforation:\n- **For Small Perforations**: Supported using non-surgical or micro-surgical options like a ==therapeutic bandage contact lens (BCL) (MCQ)== or applying ==cyanoacrylate tissue glue (MCQ)== to seal the defect dynamically.\n- **For Larger Perforations**: Requires urgent surgical reconstruction with a ==therapeutic penetrating keratoplasty (PKP) (MCQ)== or patch graft to restore structural integrity and preserve the globe.",
+    "isClinical": false,
+    "topic": "Hypopyon Ulcer (Acute Serpiginous Ulcer)"
+  },
+  {
+    "id": "cornea_essay_additional_keratoconus_signs",
+    "chapterId": 4,
+    "type": "short-answer",
+    "title": "Keratoconus: Definition and Clinical Signs",
+    "content": "Define keratoconus and name its classic clinical signs.",
+    "answer": "1. **Definition**: ==Keratoconus (MCQ)== is a progressive, non-inflammatory ectatic thinning of the central or paracentral cornea, causing it to assume a conical shape.\n\n2. **Classic Clinical Signs**:\n- ==Irregular Astigmatism (MCQ)== with progressive visual impairment.\n- ==Scissoring reflex (MCQ)== observed on retinoscopy.\n- ==Vogt\\'s striae (MCQ)==: Fine, vertical, stress line patterns in the deep stroma which temporarily disappear with physical globe pressure.\n- ==Fleischer\\'s ring (MCQ)==: An iron deposition line encircling the base of the cone in the corneal epithelium.\n- ==Munson\\'s sign (MCQ)==: Inward angulation of the lower eyelid in downward gaze.",
+    "isClinical": false,
+    "topic": "Ectatic Corneal Disorders (Keratoconus)"
+  },
+
+  {
+    "id": "retina_essay_additional_rd_types",
+    "chapterId": 11,
+    "type": "short-answer",
+    "title": "Retinal Detachment: Definition and Types",
+    "content": "Define retinal detachment and enumerate its types.",
+    "answer": "1. **Definition**: ==Retinal Detachment (RD) (MCQ)== is the separation of the neurosensory retina from the underlying ==retinal pigment epithelium (RPE) (MCQ)==, leading to ischemia and visual loss.\n\n2. **Types**:\n- ==Rhegmatogenous RD (MCQ)==: Caused by a full-thickness retinal break (tear or hole) allowing fluid to pass; associated with high myopia, lattice degeneration, and trauma.\n- ==Tractional RD (MCQ)==: Caused by mechanical pulling on the retina by contracting vitreous membranes or fibrous tissue (e.g., in advanced ==Proliferative Diabetic Retinopathy (MCQ)==; has no break).\n- ==Exudative / Serious RD (MCQ)==: Caused by liquid accumulation beneath the retina in the absence of a break (e.g., in choroidal tumors or severe inflammation).",
+    "isClinical": false,
+    "topic": "Retinal Detachment & Dialysis"
+  },
+  {
+    "id": "retina_essay_additional_pdr_signs",
+    "chapterId": 11,
+    "type": "short-answer",
+    "title": "Proliferative Diabetic Retinopathy: Signs",
+    "content": "Enumerate the hallmark signs of proliferative diabetic retinopathy (PDR).",
+    "answer": "The hallmark signs of Proliferative Diabetic Retinopathy (PDR) include:\n1. ==Neovascularization at the Disc (NVD) (MCQ)==: Fine, abnormal, leaky new blood vessels growing on or within 1 disc diameter of the optic nerve head.\n2. ==Neovascularization Elsewhere (NVE) (MCQ)==: New blood vessels growing in the retinal periphery along the vascular arcades.\n3. ==Preretinal or Vitreous Hemorrhage (MCQ)==: Bleeding from fragile new vessels into the sub-hyaloid space or the vitreous cavity.\n4. ==Tractional Retinal Detachment (MCQ)==: Fibrovascular tissue contraction pulling the neurosensory retina away from the RPE.",
+    "isClinical": false,
+    "topic": "Hypertensive & Diabetic Retinopathy"
+  },
+  {
+    "id": "retina_surgical_additional_scleral_buckling",
+    "chapterId": 11,
+    "type": "short-answer",
+    "title": "Surgical Principle: Scleral Buckling",
+    "content": "Give the surgical principle of scleral buckling for rhegmatogenous retinal detachment.",
+    "answer": "The surgical goals and principles of Scleral Buckling are:\n1. ==Indent the sclera (MCQ)== using an external silicone band/sponge to physically approximate and re-appose the retinal pigment epithelium (RPE) back against the detached sensory retina.\n2. ==Seal the retinal break (MCQ)== using local ==cryotherapy (cryopexy) (MCQ)== or thermal laser to trigger sterile scarring around the tear, blocking future liquid ingress into the subretinal space.\n3. Drain subretinal fluid if needed to facilitate complete mechanical re-attachment.",
+    "isClinical": false,
+    "topic": "Retinal Detachment & Dialysis"
+  },
+  {
+    "id": "retina_essay_additional_cherry_red_causes",
+    "chapterId": 11,
+    "type": "short-answer",
+    "title": "Macular Cherry-Red Spot: Enumerate Causes",
+    "content": "Name the primary clinical causes of a cherry-red spot in the macula.",
+    "answer": "The primary clinical causes of a macular cherry-red spot include:\n1. ==Central Retinal Artery Occlusion (CRAO) (MCQ)== (the most common vascular cause; inner retina is opaque/white, fovea shines red).\n2. ==Commotio Retinae / Berlin\\'s Edema (MCQ)== following blunt ocular trauma swelling the macula.\n3. ==Tay-Sachs disease (MCQ)== (and other inherited sphingolipidoses or storage disorders representing lipid accumulation in ganglion cells around the fovea).",
+    "isClinical": false,
+    "topic": "Central Retinal Artery Occlusion (CRAO)"
+  },
+
+  {
+    "id": "eor_essay_additional_myopia_types",
+    "chapterId": 7,
+    "type": "short-answer",
+    "title": "Myopia: Definition and Types",
+    "content": "Define myopia and enumerate its types.",
+    "answer": "1. **Definition**: ==Myopia (Short Sightedness) (MCQ)== is a refractive error where parallel rays of light focus ==in front of the retina (MCQ)== when accommodation is completely relaxed.\n\n2. **Types based on Etiology**:\n- ==Axial Myopia (MCQ)==: The antero-posterior axis of the eyeball is abnormally long (most common type).\n- ==Index Myopia (MCQ)==: Increased refractive index of the lens nucleus (e.g., in ==Nuclear Cataract / Nuclear Sclerosis (MCQ)==).\n- ==Curvature Myopia (MCQ)==: Increased curvature of the cornea (e.g., Keratoconus) or lens.",
+    "isClinical": false,
+    "topic": "Myopia (Short Sightedness)"
+  },
+  {
+    "id": "eor_essay_additional_astigmatism_types",
+    "chapterId": 7,
+    "type": "short-answer",
+    "title": "Astigmatism: Enumerate Types",
+    "content": "Enumerate the principal clinical types of astigmatism.",
+    "answer": "The principal types of regular astigmatism are:\n1. ==Simple Astigmatism (MCQ)==: One prime meridian is emmetropic, the other is ametropic (e.g., ==Simple Myopic (MCQ)== or ==Simple Hypermetropic (MCQ)==).\n2. ==Compound Astigmatism (MCQ)==: Both meridians are ametropic and of the same type but differ in power (e.g., ==Compound Myopic (MCQ)== or ==Compound Hypermetropic (MCQ)==).\n3. ==Mixed Astigmatism (MCQ)==: One meridian is myopic while the opposite meridian is hypermetropic.",
+    "isClinical": false,
+    "topic": "Astigmatism"
+  },
+  {
+    "id": "eor_essay_additional_unilateral_aphakia",
+    "chapterId": 7,
+    "type": "short-answer",
+    "title": "Surgical Principle: Correction of Unilateral Aphakia",
+    "content": "Give the optical principle of correction for unilateral aphakia.",
+    "answer": "1. **Ideal Correction Choice**: Must be done using methods that minimize retinal image size magnification difference (==Aniseikonia (MCQ)==):\n- ==Secondary Intraocular Lens (IOL) Implantation (MCQ)== (removes magnification, restores normal refractive plane).\n- ==Contact Lenses (MCQ)== (induces only $\\sim 5-10\\%$ magnification, which is fully fuseable by the brain).\n\n2. **Why Spectacles are Contradicted**: Standard plus reading spectacles create a massive ==25% to 30% magnification (MCQ)== in the corrected eye, making binocular fusion impossible and resulting in intractable, severe ==double vision (diplopia) (MCQ)==.",
+    "isClinical": false,
+    "topic": "Aphakia, Anisometropia & Presbyopia"
+  },
+  {
+    "id": "eor_essay_additional_hypermetropia_comp",
+    "chapterId": 7,
+    "type": "short-answer",
+    "title": "Hypermetropia: Definition and Complications",
+    "content": "Define hypermetropia and name its complications.",
+    "answer": "1. **Definition**: ==Hypermetropia (Farsightedness) (MCQ)== is a refractive error where parallel rays of light focus ==behind the retina (MCQ)== when accommodation is completely relaxed.\n\n2. **Complications**:\n- ==Accommodative Esotropia / Convergent Squint (MCQ)==: Children over-accommodate to see clearly, stimulating over-convergence and turning the eyes inward.\n- ==Amblyopia (Lazy Eye) (MCQ)== in children due to chronic uncorrected uncorrected high refractive error.\n- Asthenopic symptoms, and predisposition to secondary ==Primary Angle-Closure Glaucoma (PACG) (MCQ)== due to a small, shallow-angled eyeball.",
+    "isClinical": false,
+    "topic": "Hypermetropia (Far Sightedness)"
+  },
+  {
+    "id": "conjunctiva_essay_additional_conjunctivitis_causes",
+    "chapterId": 3,
+    "type": "short-answer",
+    "title": "Conjunctivitis: Definition and Enumerate Causes",
+    "content": "Define conjunctivitis and enumerate its causes.",
+    "answer": "1. **Definition**: ==Conjunctivitis (MCQ)== is the inflammation of the mucous membrane (conjunctiva) covering the posterior surface of the eyelids and the anterior sclera.\n\n2. **Causes**:\n- ==Bacterial (MCQ)==: E.g., Staph, pneumococcus, gonococcus, or Koch-Weeks bacillus.\n- ==Viral (MCQ)==: E.g., Adenovirus (epidemic keratoconjunctivitis).\n- ==Allergic (MCQ)==: E.g., Spring Catarrh (VKC) or phlyctenular.\n- ==Chlamydial (MCQ)==: E.g., Trachoma (C. trachomatis serotypes A, B, Ba, C) leading to scarring.\n- ==Chemical / Irritative (MCQ)==: E.g., exposure to foreign acids, alkalis, toxins, or cosmetics.",
+    "isClinical": false,
+    "topic": "Acute Bacterial Conjunctivitis & Koch-Weeks"
+  },
+  {
+    "id": "conjunctiva_essay_additional_membranous_signs",
+    "chapterId": 3,
+    "type": "short-answer",
+    "title": "Membranous Conjunctivitis: Hallmark Signs",
+    "content": "Enumerate the hallmark signs of membranous conjunctivitis.",
+    "answer": "The clinical signs of Membranous Conjunctivitis include:\n1. ==True Membrane Formation (MCQ)==: A dense, yellowish-grey coagulum composed of fibrin, necrotic cells, and inflammatory exudates intimately lining the conjunctiva.\n2. ==Bleeds on removal (MCQ)==: The membrane is deeply integrated into the sub-epithelial layers; attempting to peel it off forcefully tears blood vessels and leaves a raw, bleeding, denuded surface.\n3. Intense eyelid edema, severe purulent discharge, and a high risk of subsequent corneal ulceration or ==Symblepharon scarring (MCQ)==.",
+    "isClinical": false,
+    "topic": "Ophthalmia Neonatorum & Inclusion Conjunctivitis"
+  },
+  {
+    "id": "conjunctiva_essay_additional_papillary_tx",
+    "chapterId": 3,
+    "type": "short-answer",
+    "title": "Papillary Conjunctivitis: Treatment Principles",
+    "content": "Give the principle of treatment for papillary conjunctivitis.",
+    "answer": "1. **Identify and Eliminate the Trigger**: Stop the causative agent, such as ==discontinuing contact lens wear (MCQ)==, stopping toxic eye drops, or removing environmental allergens.\n\n2. **Pharmacological Therapy**:\n- Apply ==Mast cell stabilizers (e.g., Sodium Cromoglycate) (MCQ)== or antihistamines to block local histamine release.\n- Short-term, cautious use of ==topical corticosteroids (MCQ)== (steroids) in severe, non-infective inflammatory cases to suppress giant papillae.\n- Cold compresses and preservative-free artificial tears.",
+    "isClinical": false,
+    "topic": "Allergic Conjunctivitis (Spring Catarrh & Phlyctenular)"
+  },
+  {
+    "id": "conjunctiva_essay_additional_chronic_causes",
+    "chapterId": 3,
+    "type": "short-answer",
+    "title": "Chronic Conjunctivitis: Enumerate Causes",
+    "content": "Name the common clinical causes of chronic conjunctivitis.",
+    "answer": "Common causes of active chronic conjunctivitis are:\n1. ==Trachoma (MCQ)== (C. trachomatis infection, extremely common in endemic/developing regions).\n2. ==Chronic allergic conjunctivitis (MCQ)== (continuous exposure to low-grade allergens).\n3. ==Chronic Blepharitis-associated conjunctivitis (MCQ)== (bacterial toxins and lipolytic enzymes from eyelid margins irritating the conjunctiva).\n4. Under-corrected refractive errors or dry eye syndromes (Sjögren's).",
+    "isClinical": false,
+    "topic": "Trachoma (Etiology, Stages & WHO)"
+  },
+  {
+    "id": "orbit_essay_additional_cellulitis_mgmt",
+    "chapterId": 6,
+    "type": "short-answer",
+    "title": "Surgical and Medical Principles: Orbital Cellulitis Management",
+    "content": "Give the clinical principle of management for orbital cellulitis.",
+    "answer": "1. **Urgent Medical Admission**: High priority hospital admission for immediate, potent ==intravenous broad-spectrum antibiotics (MCQ)==.\n2. **Diagnostic Imaging**: Perform an urgent ==CT scan or MRI of the orbit and brain (MCQ)== to localize any subperiosteal abscess and check for sinus involvement or CST.\n3. **Surgical Intervention**: Indicated if there is no response to IV antibiotics within 24-48 hours, or if a documented ==subperiosteal/orbital abscess (MCQ)== forms, requiring immediate endonasal or external surgical drainage.",
+    "isClinical": false,
+    "topic": "Orbital & Preseptal Cellulitis"
+  },
+  {
+    "id": "orbit_essay_additional_panophthalmitis_diff",
+    "chapterId": 6,
+    "type": "short-answer",
+    "title": "Panophthalmitis vs. Orbital Cellulitis",
+    "content": "Define panophthalmitis and differentiate it from orbital cellulitis.",
+    "answer": "1. **Definition of Panophthalmitis**: ==Panophthalmitis (MCQ)== is an acute, purulent suppurative inflammation involving ==all coats of the eyeball (uvea, retina, sclera) (MCQ)== that extends into surrounding orbital soft tissues.\n\n2. **Visual & Clinical Differences**:\n- **Vision and Red Reflex**:\n  * Panophthalmitis: Marked by ==rapid, complete loss of vision (No PL) (MCQ)== and a ==yellow-white pupillary reflex / absent red reflex (MCQ)== due to vitreous suppuration.\n  * Orbital Cellulitis: Eyeball interior is initially spared, so the patient maintains ==normal vision (MCQ)== and a clean red reflex.\n- **Scleral & Intraocular Involvement**:\n  * Panophthalmitis: Involves severe suppurative, structural destruction of the eyeball interior.\n  * Orbital Cellulitis: The infection is localized strictly post-septal inside the orbital cavity soft tissues, leaving the globe physical layers intact.",
+    "isClinical": false,
+    "topic": "Suppurative Uveitis (Endophthalmitis & Panophthalmitis)"
+  },
+  {
+    "id": "orbit_essay_additional_unilateral_proptosis_inv",
+    "chapterId": 6,
+    "type": "short-answer",
+    "title": "Investigations for Unilateral Proptosis",
+    "content": "Enumerate investigations for unilateral proptosis.",
+    "answer": "The diagnostic investigations for unilateral proptosis are:\n1. ==CT scan or MRI of the orbit and brain (MCQ)==: Essential to visualize structural changes and locate any soft tissue orbital masses.\n2. ==Thyroid function tests (T3, T4, TSH) (MCQ)==: Critical to rule out underlying dysthyroid orbitopathy (Thyroid Eye Disease).\n3. ==Orbit biopsy (MCQ)==: Indicated if an orbital mass is suspected or detected to confirm histopathology.",
+    "isClinical": false,
+    "topic": "Proptosis & Enophthalmos"
   }
 ];

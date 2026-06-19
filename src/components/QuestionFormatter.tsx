@@ -158,6 +158,26 @@ export function renderTextWithHighlights(text: string, title?: string, topic?: s
   return renderCoreTermsHighlights(text, title, topic, 'single');
 }
 
+export function renderBoldAndHighlights(text: string, title?: string, topic?: string): React.ReactNode {
+  if (!text) return "";
+  const boldRegex = /(\*\*.*?\*\*)/g;
+  const parts = text.split(boldRegex);
+  return (
+    <>
+      {parts.map((part, pIdx) => {
+        if (part.startsWith("**") && part.endsWith("**")) {
+          return (
+            <strong key={`bold-${pIdx}`} className="font-extrabold text-slate-950">
+              {renderTextWithHighlights(part.slice(2, -2), title, topic)}
+            </strong>
+          );
+        }
+        return renderTextWithHighlights(part, title, topic);
+      })}
+    </>
+  );
+}
+
 function renderCoreTermsHighlights(text: string, title?: string, topic?: string, keyPrefix: string = ''): React.ReactNode {
   const terms = extractCoreTerms(title, topic);
   if (terms.length === 0) return <React.Fragment key={keyPrefix}>{text}</React.Fragment>;
@@ -377,13 +397,13 @@ export default function QuestionPrompt({ content, topic, chapterTitle, type, tit
       {isCase ? (
         <div className="bg-[#EFF6FF] border-l-[4px] border-[#2563EB] rounded-2xl p-6 md:p-8 text-left shadow-sm">
           <p className="text-base md:text-lg leading-relaxed font-semibold max-w-4xl text-[#1E40AF]">
-            {renderTextWithHighlights(parsed.scenario, title, topic)}
+            {renderBoldAndHighlights(parsed.scenario, title, topic)}
           </p>
         </div>
       ) : (
         <div className="bg-[#F8FAFC] border-l-[4px] border-[#2563EB] rounded-2xl p-6 md:p-8 text-left shadow-sm">
           <p className="text-slate-800 text-base md:text-lg leading-relaxed font-semibold max-w-4xl">
-            {renderTextWithHighlights(cleanContent, title, topic)}
+            {renderBoldAndHighlights(cleanContent, title, topic)}
           </p>
         </div>
       )}
@@ -402,7 +422,7 @@ export default function QuestionPrompt({ content, topic, chapterTitle, type, tit
               >
                 <div className="w-2 h-2 rounded-full bg-slate-900 shrink-0 mt-2" />
                 <span className="text-slate-900 font-bold text-sm md:text-base leading-relaxed">
-                  {renderTextWithHighlights(subQ, title, topic)}
+                  {renderBoldAndHighlights(subQ, title, topic)}
                 </span>
               </div>
             ))}
@@ -624,6 +644,20 @@ export function getCriterionIcon(name: string): string {
   return '📌';
 }
 
+interface TableBlock {
+  type: 'table';
+  headers: string[];
+  alignments: ('left' | 'center' | 'right')[];
+  rows: string[][];
+}
+
+interface TextBlock {
+  type: 'text';
+  lines: string[];
+}
+
+type ContentBlock = TableBlock | TextBlock;
+
 export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatterProps) {
   const [showTraditional, setShowTraditional] = useState(false);
 
@@ -634,10 +668,91 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
 
   const lines = useMemo(() => cleanAnswer.split('\n'), [cleanAnswer]);
 
-  // Try parsing comparison data
+  // Try parsing comparison data (original Criterion/Block comparisons)
   const comparisonData = useMemo(() => {
     return tryParseComparison(cleanAnswer, title, topic);
   }, [cleanAnswer, title, topic]);
+
+  // Sequentially parse cleanAnswer into blocks (paragraphs/lists and markdown tables)
+  const blocks = useMemo(() => {
+    const list = cleanAnswer.split('\n');
+    const result: ContentBlock[] = [];
+    let currentTextBlock: string[] = [];
+
+    for (let i = 0; i < list.length; i++) {
+      const line = list[i];
+      const trimmed = line.trim();
+
+      // Check if it is a table line
+      if (trimmed.startsWith('|') && trimmed.endsWith('|')) {
+        if (currentTextBlock.length > 0) {
+          result.push({ type: 'text', lines: currentTextBlock });
+          currentTextBlock = [];
+        }
+
+        const tableLines: string[] = [];
+        while (i < list.length && list[i].trim().startsWith('|') && list[i].trim().endsWith('|')) {
+          tableLines.push(list[i].trim());
+          i++;
+        }
+        i--; // Adjust index
+
+        if (tableLines.length >= 2) {
+          // Line 0 is headers
+          const headers = tableLines[0]
+            .slice(1, -1)
+            .split('|')
+            .map(h => h.trim());
+
+          // Line 1 is the separator: e.g. |:---|:---|
+          const separatorMatches = tableLines[1].slice(1, -1).split('|');
+          
+          let isRealTable = true;
+          // Verify separator line has only dashes, colons, spaces, and vertical bars
+          if (!/^[:\-\s]+$/.test(tableLines[1].replace(/\|/g, ''))) {
+            isRealTable = false;
+          }
+
+          if (isRealTable) {
+            const alignments = separatorMatches.map(part => {
+              const s = part.trim();
+              if (s.startsWith(':') && s.endsWith(':')) return 'center';
+              if (s.endsWith(':')) return 'right';
+              return 'left';
+            });
+
+            const rows: string[][] = [];
+            for (let j = 2; j < tableLines.length; j++) {
+              const rowData = tableLines[j]
+                .slice(1, -1)
+                .split('|')
+                .map(r => r.trim());
+              rows.push(rowData);
+            }
+
+            result.push({
+              type: 'table',
+              headers,
+              alignments,
+              rows
+            });
+          } else {
+            currentTextBlock.push(...tableLines);
+          }
+        } else {
+          currentTextBlock.push(...tableLines);
+        }
+      } else {
+        currentTextBlock.push(line);
+      }
+    }
+
+    if (currentTextBlock.length > 0) {
+      result.push({ type: 'text', lines: currentTextBlock });
+    }
+
+    return result;
+  }, [cleanAnswer]);
 
   if (comparisonData && !showTraditional) {
     const data = comparisonData;
@@ -711,14 +826,14 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                       {/* Subject A Side Value */}
                       <td className="py-4 px-5 text-slate-800 text-sm leading-relaxed border-l border-slate-100 align-top max-w-[260px]">
                         <span className="block font-medium">
-                          {renderTextWithHighlights(row.valA, title, topic)}
+                          {renderBoldAndHighlights(row.valA, title, topic)}
                         </span>
                       </td>
                       
                       {/* Subject B Side Value */}
                       <td className="py-4 px-5 text-slate-800 text-sm leading-relaxed border-l border-slate-105 border-slate-100 align-top max-w-[260px]">
                         <span className="block font-medium">
-                          {renderTextWithHighlights(row.valB, title, topic)}
+                          {renderBoldAndHighlights(row.valB, title, topic)}
                         </span>
                       </td>
                     </tr>
@@ -762,7 +877,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                       </span>
                     </div>
                     <div className="p-5 text-slate-800 text-sm md:text-base leading-relaxed font-semibold">
-                      {renderTextWithHighlights(row.valA, title, topic)}
+                      {renderBoldAndHighlights(row.valA, title, topic)}
                     </div>
                   </div>
 
@@ -780,7 +895,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                       </span>
                     </div>
                     <div className="p-5 text-slate-800 text-sm md:text-base leading-relaxed font-semibold">
-                      {renderTextWithHighlights(row.valB, title, topic)}
+                      {renderBoldAndHighlights(row.valB, title, topic)}
                     </div>
                   </div>
                 </React.Fragment>
@@ -803,11 +918,12 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
     );
   }
 
+  // Base fallback flow mapping through detected Text & Markdown Table blocks sequentially
   return (
-    <div className="space-y-3 font-sans w-full">
-      {/* Traditional Renderer with Toggle back if we bypassed comparison */}
+    <div className="space-y-4 font-sans w-full">
+      {/* Traditional Toggle if custom comparison exists */}
       {comparisonData && showTraditional && (
-        <div className="bg-blue-50/60 p-3.5 border border-blue-200/70 rounded-2xl flex items-center justify-between gap-4 mb-4 select-none">
+        <div className="bg-blue-50/60 p-3.5 border border-blue-200/70 rounded-2xl flex items-center justify-between gap-4 select-none mb-2">
           <div className="flex items-center gap-2 text-xs font-bold text-blue-800">
             <span>ℹ️ معروض حالياً بنظام الكتل النصية التقليدي.</span>
           </div>
@@ -821,6 +937,118 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
         </div>
       )}
 
+      {blocks.map((block, bIdx) => {
+        if (block.type === 'table') {
+          return (
+            <div 
+              key={`table-block-${bIdx}`} 
+              className="w-full my-6 bg-white border border-slate-200 rounded-3xl shadow-md overflow-hidden border-t-4 border-t-[#154c59] transition-all"
+            >
+              <div className="bg-slate-50/70 p-4 md:p-5 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="bg-[#154c59]/10 text-[#154c59] p-2.5 rounded-xl text-lg shrink-0">
+                    📊
+                  </div>
+                  <div>
+                    <h4 className="text-[#154c59] font-extrabold text-sm md:text-base tracking-tight uppercase">
+                      جدول مقارنة منظم • Structured Comparison Table
+                    </h4>
+                    <p className="text-xs text-slate-500 font-medium mt-0.5">
+                      مقارنة دقيقة وسهلة القراءة مبنية على معايير البورد • Clean Board preparation presentation
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="overflow-x-auto w-full">
+                <table className="w-full text-left border-collapse min-w-[550px]" dir="ltr">
+                  <thead>
+                    <tr className="bg-slate-100/50 border-b border-slate-200">
+                      {block.headers.map((hdr, hIdx) => {
+                        const align = block.alignments[hIdx] || 'left';
+                        const isFirst = hIdx === 0;
+                        return (
+                          <th 
+                            key={hdr + hIdx} 
+                            className={`py-4 px-5 text-xs font-black uppercase tracking-wider ${
+                              isFirst 
+                                ? 'text-slate-900 border-none' 
+                                : hIdx === 1 
+                                  ? 'text-blue-700 bg-blue-50/10 border-l border-slate-200' 
+                                  : 'text-purple-700 bg-purple-50/10 border-l border-slate-200'
+                            } ${
+                              align === 'center' ? 'text-center' : align === 'right' ? 'text-right' : 'text-left'
+                            }`}
+                          >
+                            {renderBoldAndHighlights(hdr, title, topic)}
+                          </th>
+                        );
+                      })}
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-150">
+                    {block.rows.map((row, rIdx) => (
+                      <tr 
+                        key={rIdx} 
+                        className={`hover:bg-slate-50/40 transition-colors ${rIdx % 2 === 1 ? 'bg-slate-50/10' : 'bg-white'}`}
+                      >
+                        {row.map((cell, cIdx) => {
+                          const align = block.alignments[cIdx] || 'left';
+                          const isFirst = cIdx === 0;
+                          return (
+                            <td 
+                              key={cIdx} 
+                              className={`py-4 px-5 text-sm leading-relaxed align-top ${
+                                isFirst 
+                                  ? 'text-slate-950 font-extrabold font-sans w-1/4' 
+                                  : 'text-slate-800 font-semibold w-3/8 border-l border-slate-200'
+                              } ${
+                                align === 'center' ? 'text-center' : align === 'right' ? 'text-right' : 'text-left'
+                              }`}
+                            >
+                              {isFirst ? (
+                                <span className="flex items-center gap-2">
+                                  <span className="text-base leading-none select-none filter drop-shadow-sm shrink-0">
+                                    {getCriterionIcon(cell || "")}
+                                  </span>
+                                  <span>
+                                    {renderBoldAndHighlights(cell, title, topic)}
+                                  </span>
+                                </span>
+                              ) : (
+                                renderBoldAndHighlights(cell, title, topic)
+                              )}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="bg-slate-50/40 py-3 px-5 border-t border-slate-150 border-slate-250 text-slate-500 text-xs font-bold flex flex-col sm:flex-row sm:items-center justify-between gap-3 select-none">
+                <span className="flex items-center gap-1.5 text-slate-500">
+                  <span>💡 اضغط مرتين على أي كلمة لتحديدها والنسخ المباشر.</span>
+                </span>
+              </div>
+            </div>
+          );
+        } else {
+          return (
+            <React.Fragment key={`text-block-${bIdx}`}>
+              {renderTextBlockLines(block.lines, title, topic)}
+            </React.Fragment>
+          );
+        }
+      })}
+    </div>
+  );
+}
+
+function renderTextBlockLines(lines: string[], title?: string, topic?: string) {
+  return (
+    <div className="space-y-3 font-sans w-full text-left">
       {lines.map((line, idx) => {
         const trimmed = line.trim();
         if (trimmed.length === 0) {
@@ -881,7 +1109,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
             <div key={idx} className={`mt-5 mb-2.5 ${indentClass}`}>
               <h4 className="text-[#8a6d2c] font-extrabold text-sm md:text-base tracking-tight uppercase border-b border-slate-100 pb-1.5 flex items-center gap-2">
                 <span className="w-1.5 h-3.5 bg-[#154c59] rounded-full shrink-0" />
-                {renderTextWithHighlights(cleanText, title, topic)}
+                {renderBoldAndHighlights(cleanText, title, topic)}
               </h4>
             </div>
           );
@@ -895,7 +1123,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                   {customBullet}
                 </span>
               ) : (
-                <div className="w-2 h-2 rounded-full bg-[#154c59] shrink-0 mt-2 relative">
+                <div className="w-2 h-2 rounded-full bg-[#154c59] shrink-[#154c59] shrink-0 mt-2 relative">
                   <div className="absolute inset-0 rounded-full bg-[#1e5c6b] animate-pulse" />
                 </div>
               )
@@ -913,7 +1141,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                   {prefix}
                 </strong>
               )}
-              {renderTextWithHighlights(bodyText, title, topic)}
+              {renderBoldAndHighlights(bodyText, title, topic)}
             </span>
           </div>
         );
