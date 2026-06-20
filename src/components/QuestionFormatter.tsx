@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { Copy, Check } from 'lucide-react';
 
 interface QuestionPromptProps {
@@ -126,7 +126,7 @@ export function extractCoreTerms(title?: string, topic?: string): string[] {
     .sort((a, b) => b.length - a.length);
 }
 
-export function renderTextWithHighlights(text: string, title?: string, topic?: string): React.ReactNode {
+export function renderTextWithHighlights(text: string, title?: string, topic?: string, keyPrefix: string = 'text-hl'): React.ReactNode {
   if (!text) return "";
 
   // Split on double equals: (==.*?==)
@@ -135,7 +135,7 @@ export function renderTextWithHighlights(text: string, title?: string, topic?: s
   
   if (markParts.length > 1) {
     return (
-      <>
+      <React.Fragment key={keyPrefix}>
         {markParts.map((markPart, mIdx) => {
           if (markPart.startsWith("==") && markPart.endsWith("==")) {
             const innerText = markPart.slice(2, -2);
@@ -149,13 +149,13 @@ export function renderTextWithHighlights(text: string, title?: string, topic?: s
             );
           }
           // For non-marked parts, apply standard core terms highlight
-          return renderCoreTermsHighlights(markPart, title, topic, `p-${mIdx}`);
+          return renderCoreTermsHighlights(markPart, title, topic, `${keyPrefix}-p-${mIdx}`);
         })}
-      </>
+      </React.Fragment>
     );
   }
 
-  return renderCoreTermsHighlights(text, title, topic, 'single');
+  return renderCoreTermsHighlights(text, title, topic, keyPrefix);
 }
 
 export function renderBoldAndHighlights(text: string, title?: string, topic?: string): React.ReactNode {
@@ -168,11 +168,15 @@ export function renderBoldAndHighlights(text: string, title?: string, topic?: st
         if (part.startsWith("**") && part.endsWith("**")) {
           return (
             <strong key={`bold-${pIdx}`} className="font-extrabold text-slate-950">
-              {renderTextWithHighlights(part.slice(2, -2), title, topic)}
+              {renderTextWithHighlights(part.slice(2, -2), title, topic, `bold-inner-${pIdx}`)}
             </strong>
           );
         }
-        return renderTextWithHighlights(part, title, topic);
+        return (
+          <React.Fragment key={`plain-${pIdx}`}>
+            {renderTextWithHighlights(part, title, topic, `plain-inner-${pIdx}`)}
+          </React.Fragment>
+        );
       })}
     </>
   );
@@ -238,9 +242,9 @@ export function parseQuestionContent(content: string): { scenario: string; quest
       } else if (/^(?:[qQ]|Question\s+)?\d+(?:[.)\]:]\s*|[-]\s+|\s+)/.test(line)) {
         isQuestion = true;
         cleanedLine = line.replace(/^(?:[qQ]|Question\s+)?\d+(?:[.)\]:]\s*|[-]\s+|\s+)/, '').trim();
-      } else if (/^[a-zA-Z][.)\]\-:]+\s+/.test(line)) {
+      } else if (/^[a-zA-Z]{1,4}[.)\]\-:]+\s+/.test(line)) {
         isQuestion = true;
-        cleanedLine = line.replace(/^[a-zA-Z][.)\]\-:]+\s+/, '').trim();
+        cleanedLine = line.replace(/^[a-zA-Z]{1,4}[.)\]\-:]+\s+/, '').trim();
       }
 
       if (isQuestion) {
@@ -325,7 +329,7 @@ export default function QuestionPrompt({ content, topic, chapterTitle, type, tit
 
   const handleCopy = async () => {
     if (!cleanAnswer) return;
-    const plainText = `السؤال:\n${cleanContent}\n\nالإجابة:\n${cleanAnswer}`;
+    const plainText = `Question:\n${cleanContent}\n\nAnswer:\n${cleanAnswer}`;
     try {
       await navigator.clipboard.writeText(plainText);
       setCopied(true);
@@ -359,7 +363,7 @@ export default function QuestionPrompt({ content, topic, chapterTitle, type, tit
         {isPastYear && (
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-amber-300 bg-amber-50 rounded-xl text-amber-800 text-xs font-black tracking-wider select-none max-w-max mr-auto">
             <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse shrink-0" />
-            <span>أسئلة سنوات سابقة 📜</span>
+            <span>Past Exam Question 📜</span>
           </div>
         )}
         {isSurgical && (
@@ -370,38 +374,42 @@ export default function QuestionPrompt({ content, topic, chapterTitle, type, tit
         )}
       </div>
 
-      {/* Copy Button Row */}
-      {cleanAnswer && (
-        <div className="flex justify-end mb-4">
+      {/* Copy row */}
+      <div className="flex justify-end items-center mb-4">
+        {cleanAnswer && (
           <button
             onClick={handleCopy}
-            className="flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 shadow-sm transition-all active:scale-95 shrink-0 cursor-pointer select-none"
-            title="نسخ السؤال والإجابة"
+            className="flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-705 hover:text-slate-900 shadow-sm transition-all active:scale-95 shrink-0 cursor-pointer select-none"
+            title="Copy Question & Answer"
           >
             {copied ? (
               <>
                 <Check className="w-3.5 h-3.5 text-emerald-600 animate-in zoom-in-50 duration-150" />
-                <span className="text-emerald-700 font-medium">تم نسخ السؤال والإجابة!</span>
+                <span className="text-emerald-700 font-medium">Question & Answer copied!</span>
               </>
             ) : (
               <>
                 <Copy className="w-3.5 h-3.5 text-slate-500" />
-                <span className="font-medium">نسخ السؤال والإجابة</span>
+                <span className="font-medium">Copy Question & Answer</span>
               </>
             )}
           </button>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Scenario / Main Prompt Container with Border-Left Accent */}
       {isCase ? (
-        <div className="bg-[#EFF6FF] border-l-[4px] border-[#2563EB] rounded-2xl p-6 md:p-8 text-left shadow-sm">
+        <div 
+          className="bg-[#EFF6FF] border-l-[4px] border-[#2563EB] rounded-2xl p-6 md:p-8 text-left shadow-sm transition-colors relative group"
+        >
           <p className="text-base md:text-lg leading-relaxed font-semibold max-w-4xl text-[#1E40AF]">
             {renderBoldAndHighlights(parsed.scenario, title, topic)}
           </p>
         </div>
       ) : (
-        <div className="bg-[#F8FAFC] border-l-[4px] border-[#2563EB] rounded-2xl p-6 md:p-8 text-left shadow-sm">
+        <div 
+          className="bg-[#F8FAFC] border-l-[4px] border-[#2563EB] rounded-2xl p-6 md:p-8 text-left shadow-sm transition-colors relative group"
+        >
           <p className="text-slate-800 text-base md:text-lg leading-relaxed font-semibold max-w-4xl">
             {renderBoldAndHighlights(cleanContent, title, topic)}
           </p>
@@ -769,10 +777,10 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                 </div>
                 <div>
                   <h4 className="text-[#154c59] font-extrabold text-sm md:text-base tracking-tight uppercase">
-                    جدول مقارنة منظم • Structured Comparison
+                    Structured Comparison
                   </h4>
                   <p className="text-xs text-slate-500 font-medium mt-0.5">
-                    مقارنة تفصيلية مبنية على معايير تشخيصية متعددة
+                    Detailed comparison based on multiple diagnostic criteria
                   </p>
                 </div>
               </div>
@@ -795,7 +803,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                 <thead>
                   <tr className="bg-slate-50/40 border-b border-slate-200">
                     <th className="py-4 px-5 text-xs font-black text-slate-500 uppercase tracking-wider w-1/4 select-none">
-                      المعيار • Criterion
+                      Criterion
                     </th>
                     <th className="py-4 px-5 text-xs font-black text-blue-700 uppercase tracking-wider w-3/8 border-l border-slate-100 bg-blue-50/10">
                       {data.titleA}
@@ -818,7 +826,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                             {getCriterionIcon(row.criterion || "")}
                           </span>
                           <span className="text-slate-950 font-extrabold tracking-tight">
-                            {row.criterion || `النقطة ${rIdx + 1}`}
+                            {row.criterion || `Point ${rIdx + 1}`}
                           </span>
                         </span>
                       </td>
@@ -845,7 +853,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
             {/* Table bottom labels and toggle button */}
             <div className="bg-slate-50/40 py-3 px-5 border-t border-slate-150 border-slate-200/80 text-slate-500 text-xs font-bold flex flex-col sm:flex-row sm:items-center justify-between gap-3 select-none">
               <span className="flex items-center gap-1.5 text-slate-500">
-                <span>💡 اضغط مرتين على أي كلمة لتحديدها والنسخ المباشر.</span>
+                <span>💡 Double-click any word to select and copy directly.</span>
               </span>
               
               <button
@@ -853,7 +861,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                 onClick={() => setShowTraditional(true)}
                 className="text-blue-600 hover:text-blue-800 font-extrabold text-xs flex items-center gap-1 cursor-pointer underline hover:no-underline align-middle shrink-0"
               >
-                <span>عرض كـ قالب نصي تقليدي 📄</span>
+                <span>View as plain text template 📄</span>
               </button>
             </div>
           </div>
@@ -873,7 +881,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                         </h5>
                       </div>
                       <span className="bg-blue-100/50 text-blue-700 text-[10px] font-black px-2.5 py-1 rounded-lg select-none">
-                        المقصد الأول
+                        Concept One
                       </span>
                     </div>
                     <div className="p-5 text-slate-800 text-sm md:text-base leading-relaxed font-semibold">
@@ -891,7 +899,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                         </h5>
                       </div>
                       <span className="bg-purple-100/50 text-purple-700 text-[10px] font-black px-2.5 py-1 rounded-lg select-none">
-                        المقصد الثاني
+                        Concept Two
                       </span>
                     </div>
                     <div className="p-5 text-slate-800 text-sm md:text-base leading-relaxed font-semibold">
@@ -909,7 +917,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                 onClick={() => setShowTraditional(true)}
                 className="text-blue-600 hover:text-blue-800 font-extrabold text-xs flex items-center gap-1 cursor-pointer underline hover:no-underline"
               >
-                <span>عرض كـ قالب نصي تقليدي 📄</span>
+                <span>View as plain text template 📄</span>
               </button>
             </div>
           </div>
@@ -925,14 +933,14 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
       {comparisonData && showTraditional && (
         <div className="bg-blue-50/60 p-3.5 border border-blue-200/70 rounded-2xl flex items-center justify-between gap-4 select-none mb-2">
           <div className="flex items-center gap-2 text-xs font-bold text-blue-800">
-            <span>ℹ️ معروض حالياً بنظام الكتل النصية التقليدي.</span>
+            <span>ℹ️ Currently displayed in plain text blocks format.</span>
           </div>
           <button
             type="button"
             onClick={() => setShowTraditional(false)}
             className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs px-3.5 py-1.5 rounded-xl transition-all cursor-pointer shadow-sm active:scale-95"
           >
-            📊 تحويل لـ جدول مقارنة منظم
+            📊 Convert to Structured Comparison Table
           </button>
         </div>
       )}
@@ -951,10 +959,10 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
                   </div>
                   <div>
                     <h4 className="text-[#154c59] font-extrabold text-sm md:text-base tracking-tight uppercase">
-                      جدول مقارنة منظم • Structured Comparison Table
+                      Structured Comparison Table
                     </h4>
-                    <p className="text-xs text-slate-500 font-medium mt-0.5">
-                      مقارنة دقيقة وسهلة القراءة مبنية على معايير البورد • Clean Board preparation presentation
+                    <p className="text-xs text-slate-550 font-medium mt-0.5">
+                      Precise and clean presentation based on Board preparation criteria
                     </p>
                   </div>
                 </div>
@@ -1029,7 +1037,7 @@ export function AnswerFormatter({ answer, topic, title, content }: AnswerFormatt
 
               <div className="bg-slate-50/40 py-3 px-5 border-t border-slate-150 border-slate-250 text-slate-500 text-xs font-bold flex flex-col sm:flex-row sm:items-center justify-between gap-3 select-none">
                 <span className="flex items-center gap-1.5 text-slate-500">
-                  <span>💡 اضغط مرتين على أي كلمة لتحديدها والنسخ المباشر.</span>
+                  <span>💡 Double-click any word to select and copy directly.</span>
                 </span>
               </div>
             </div>
